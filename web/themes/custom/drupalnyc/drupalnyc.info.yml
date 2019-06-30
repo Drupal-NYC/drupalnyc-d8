@@ -1,0 +1,28 @@
+name: Bones Subtheme
+description: Bones Drupal 8 custom subtheme
+type: theme
+base theme: bones
+# core: 8.x
+
+libraries:
+  - /global-css
+  - /global-js
+  - /color
+
+# Regions
+regions:
+  header: 'Header'
+  navigation: 'Navigation'
+  mobilenav: 'Mobile Navigation'
+  content_top: 'Content Top'
+  content: 'Content'
+  content_bottom: 'Content Bottom'
+  left_sidebar: 'Left Sidebar'
+  right_sidebar: 'Right Sidebar'
+  footer: 'Footer'
+
+# Information added by Drupal.org packaging script on 2019-05-15
+version: '8.x-1.2'
+core: '8.x'
+project: 'bones_theme'
+datestamp: 1557883388
