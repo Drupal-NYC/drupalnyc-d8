@@ -1,0 +1,20 @@
+uuid: c96c9865-6eaf-4c55-aa49-9a5096bebff2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupalnyc
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: drupalnyc_page_title
+theme: drupalnyc
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

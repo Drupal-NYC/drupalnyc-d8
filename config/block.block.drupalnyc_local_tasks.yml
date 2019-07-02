@@ -1,0 +1,22 @@
+uuid: 010e2924-95e3-4a9b-9898-f55391772a0b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupalnyc
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: drupalnyc_local_tasks
+theme: drupalnyc
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

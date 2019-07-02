@@ -1,0 +1,22 @@
+uuid: a179da5b-4718-4662-b690-65e38c310116
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bones
+_core:
+  default_config_hash: EC5jkRoWYDp67-kF1ochRqL2IHfCP8SwDCcx59x1Wyk
+id: bones_help
+theme: bones
+region: content_top
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

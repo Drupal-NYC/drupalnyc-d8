@@ -1,0 +1,27 @@
+uuid: 0c7b6cdf-c6aa-4155-afb2-7c5cdd5614c8
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - bones
+_core:
+  default_config_hash: lp_rDXdxLBPt8tn5Mnemlbcgh4e9vtqoM1jS6hlxqFc
+id: bones_account_menu
+theme: bones
+region: navigation
+weight: -6
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }
