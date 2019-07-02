@@ -1,0 +1,22 @@
+uuid: e16485c5-d632-4c14-9ab7-01357b03b5d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bones
+_core:
+  default_config_hash: giaBaL0ZEJDShLpG_hnl2esbiVdGo_ZqcrgysAwskC4
+id: bones_content
+theme: bones
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

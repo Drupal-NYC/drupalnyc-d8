@@ -1,0 +1,35 @@
+{
+  "name": "drupalnyc",
+  "version": "1.0.0",
+  "description": "Theme for drupalnyc.org",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org:FatherShawn/drupalnyc.git"
+  },
+  "main": "gulpfile.js",
+  "engines": {
+    "node": ">= 10.15.3"
+  },
+  "dependencies": {
+    "del": "^4.1.0",
+    "gulp": "^4.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass-lint": "^1.4.0",
+    "support-for": "^1.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

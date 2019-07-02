@@ -1,7 +1,7 @@
 # Pre-commit
 # @see http://pre-commit.com/
 - repo: https://github.com/pre-commit/pre-commit-hooks.git
-  sha: v0.9.3
+  rev: v2.0.0
   hooks:
   - id: check-yaml
     files: \.(yaml|yml)$
@@ -9,7 +9,7 @@
     exclude: ^(vendor/|web/core/|web/vendor/|web/sites/default/default|web/sites/default/example|web/modules/contrib/|web/themes/contrib/|web/sites/\w+/files/|web/themes/custom/\w+/node_modules/|web/themes/custom/\w+/libraries/)
 # @see http://code.hootsuite.com/using-yelps-pre-commit-hooks/
 - repo: https://github.com/digitalpulp/pre-commit-php.git
-  sha: 1.3.0
+  rev: 1.3.0
   hooks:
   - id: php-lint-all
     files: \.(php|module|inc|install|profile|theme)$
@@ -20,9 +20,17 @@
     files: \.(php|module|inc|install|profile|theme)$
     args: [--standard=./phpcs.xml]
 - repo: git://github.com/pre-commit/mirrors-eslint
-  sha: v4.6.1
+  rev: v5.7.0
   hooks:
   - id: eslint
-    exclude: ^(acquia-utils|vendor/|web/core/|web/vendor/|web/libraries/|web/sites/default/default|web/sites/default/example|web/libraries/|web/modules/contrib/|web/modules/custom/\w+/js/\w+\.min\.js|web/themes/contrib/|web/sites/\w+/files/|web/themes/custom/\w+/node_modules/|web/themes/custom/\w+/libraries/|web/themes/custom/\w+/js/\w+\.min\.js|web/themes/custom/\w+/Gruntfile\.js|ansible/roles/xhprof)
+    exclude: ^(acquia-utils|vendor/|web/core/|web/vendor/|web/libraries/|web/sites/default/default|web/sites/default/example|web/libraries/|web/modules/contrib/|web/modules/custom/\w+/js/\w+\.min\.js|web/themes/contrib/|web/sites/\w+/files/|web/themes/custom/\w+/node_modules/|web/themes/custom/\w+/libraries/|web/themes/custom/\w+/js/\w+\.min\.js|web/themes/custom/\w+/gulpfile\.js)
     stages: [commit]
-
+    additional_dependencies:
+    - eslint
+    - prettier
+    - eslint-config-airbnb
+    - eslint-plugin-import
+    - eslint-plugin-jsx-a11y
+    - eslint-plugin-react
+    - eslint-plugin-prettier
+    - eslint-config-prettier

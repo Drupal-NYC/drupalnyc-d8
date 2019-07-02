@@ -179,7 +179,7 @@ class RemoteRebuildCommands extends Tasks {
         ->printOutput(FALSE)
     );
     $loadRemote->addTask(
-      $this->taskExec("docker-compose $this->dockerFlags exec -T cli drush sqlsan -y --sanitize-password=dp --sanitize-email=user-%uid@example.com")
+      $this->taskExec("docker-compose $this->dockerFlags exec -T cli drush sqlsan -y --sanitize-password=drupal --sanitize-email=user-%uid@example.com")
         ->printMetadata(FALSE)
         ->printOutput(FALSE)
     );

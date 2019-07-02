@@ -1,0 +1,14 @@
+# Node cruft
+npm-debug.log
+
+# Node modules
+node_modules
+
+#external libraries
+external_libraries
+
+# Compiled css
+/css
+
+# Minified js
+/js/dist

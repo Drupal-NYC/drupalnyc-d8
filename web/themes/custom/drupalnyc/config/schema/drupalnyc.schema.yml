@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Bones subtheme.
+
+drupalnyc.settings:
+  type: theme_settings
+  label: 'DrupalNYC subtheme settings'

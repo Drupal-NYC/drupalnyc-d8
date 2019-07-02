@@ -1,0 +1,25 @@
+uuid: da2b4283-a357-4e11-9253-a2eb9d50a94d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bones
+_core:
+  default_config_hash: Fb4sFPqnC3JRJIaoVeezA2Nu44M4PgIYgaQBrw0bKUo
+id: bones_branding
+theme: bones
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

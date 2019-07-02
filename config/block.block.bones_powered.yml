@@ -1,0 +1,22 @@
+uuid: ffc507e2-e74e-4424-97d4-1c2331d94bbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bones
+_core:
+  default_config_hash: J-NiMUToUCMaZg1sXLx2aUH_F6pDf7lMMZSQ92fLrak
+id: bones_powered
+theme: bones
+region: footer
+weight: -3
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }
