@@ -44,6 +44,7 @@ services:
     image: digitalpulp/front-end:1.0.13
     environment:
       THEME_NAME: {site_theme_name}
+      THEME_PATH: /var/www/web/themes/custom
     depends_on:
       - web
     volumes:
