@@ -20,7 +20,7 @@ a {
     cursor: pointer;
     text-decoration: underline;
     -webkit-text-decoration-skip: ink;
-    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
   }
 }
 

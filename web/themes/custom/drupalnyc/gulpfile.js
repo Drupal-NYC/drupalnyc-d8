@@ -18,7 +18,7 @@ var paths = {
     '!js/**/*.min.js'
   ],
   sass: {
-    main: 'sass/bones_subtheme.styles.scss',
+    main: 'sass/drupalnyc.styles.scss',
     watch: 'sass/scss/**/*'
   },
   css: {
