@@ -93,7 +93,8 @@ gulp.task('sass', function () {
       .pipe(sourcemaps.init())
       .pipe(sass({
         includePaths: [
-          'node_modules/support-for/sass'
+          'node_modules/support-for/sass',
+          'node_modules/breakpoint-sass/stylesheets'
         ]
       }).on('error', sass.logError))
       .pipe(autoprefixer({

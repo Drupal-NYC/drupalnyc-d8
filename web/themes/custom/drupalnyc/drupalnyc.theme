@@ -8,7 +8,7 @@
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for block templates.
  */
-function _theme_suggestions_block_alter(&$suggestions, $variables) {
+function drupalnyc_theme_suggestions_block_alter(&$suggestions, $variables) {
 
   // Load theme suggestions for blocks from parent theme.
   foreach ($suggestions as &$suggestion) {
