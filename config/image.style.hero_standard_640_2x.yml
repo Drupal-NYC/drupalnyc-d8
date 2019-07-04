@@ -1,0 +1,17 @@
+uuid: 27cea346-bf42-4507-9df1-6a012643c571
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_standard_640_2x
+label: 'Hero standard 640 2x'
+effects:
+  c4805df0-9045-4f5a-888a-bed9f2d74482:
+    uuid: c4805df0-9045-4f5a-888a-bed9f2d74482
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 750
+      crop_type: focal_point

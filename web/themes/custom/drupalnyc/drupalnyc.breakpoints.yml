@@ -1,18 +1,24 @@
-.mobile:
-  label: mobile
+drupalnyc.mobile:
+  label: default
   mediaQuery: ''
   weight: 0
   multipliers:
     - 1x
-.tablet:
-  label: tablet
-  mediaQuery: 'all and (min-width: 560px)'
+drupalnyc.narrow:
+  label: narrow
+  mediaQuery: 'all and (min-width: 640px)'
   weight: 1
   multipliers:
     - 1x
-.desktop:
-  label: desktop
-  mediaQuery: 'all and (min-width: 1000px)'
+drupalnyc.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 960px)'
+  weight: 2
+  multipliers:
+    - 1x
+drupalnyc.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 1280px)'
   weight: 2
   multipliers:
     - 1x

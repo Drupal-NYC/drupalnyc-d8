@@ -1,0 +1,37 @@
+uuid: 1607a2bd-5a18-420e-b4e0-e7972658a80f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.field.block_content.hero.field_headline
+    - field.field.block_content.hero.field_image
+  module:
+    - field_formatter
+    - text
+id: block_content.hero.default
+targetEntityType: block_content
+bundle: hero
+mode: default
+content:
+  field_headline:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    type: field_formatter_with_inline_settings
+    weight: 0
+    label: hidden
+    settings:
+      field_name: field_media_image
+      label: hidden
+      type: responsive_image
+      settings:
+        responsive_image_style: hero_image
+        image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

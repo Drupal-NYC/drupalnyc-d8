@@ -1,0 +1,17 @@
+uuid: 2d268ad5-f14d-420d-8beb-87d675b42e1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_standard_default_2x
+label: 'Hero standard default 2x'
+effects:
+  d16dd498-43a3-411c-8ca4-012c084d0bfb:
+    uuid: d16dd498-43a3-411c-8ca4-012c084d0bfb
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1280
+      height: 1000
+      crop_type: focal_point

@@ -1,0 +1,17 @@
+uuid: 2e49d1c4-506b-4086-90a0-eed9b5c2afb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_standard_960_1x
+label: 'Hero standard 960 1x'
+effects:
+  2f0674be-5af5-482b-a8e6-12f0efdc6d48:
+    uuid: 2f0674be-5af5-482b-a8e6-12f0efdc6d48
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1280
+      height: 500
+      crop_type: focal_point

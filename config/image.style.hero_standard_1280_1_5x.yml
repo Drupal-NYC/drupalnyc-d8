@@ -1,0 +1,17 @@
+uuid: af45154f-c4f6-4a96-a782-c4e62a3fed56
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_standard_1280_1_5x
+label: 'Hero standard 1280 1.5x'
+effects:
+  2a9dd4ff-029a-4321-a1ac-90c36f70ca19:
+    uuid: 2a9dd4ff-029a-4321-a1ac-90c36f70ca19
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 2700
+      height: 750
+      crop_type: focal_point
