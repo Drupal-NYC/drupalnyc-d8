@@ -1,0 +1,22 @@
+/*  Clearfix for clearing floats within a container
+*
+*   No Params
+*
+*   Example Usage:
+*
+*     .container {
+*       @include clearfix;
+*
+*       .link {
+*          float: left;
+*       }
+*     }
+*
+*/
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

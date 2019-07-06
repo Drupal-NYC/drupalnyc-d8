@@ -97,9 +97,7 @@ gulp.task('sass', function () {
           'node_modules/breakpoint-sass/stylesheets'
         ]
       }).on('error', sass.logError))
-      .pipe(autoprefixer({
-        browsers: ['last 2 versions']
-      }))
+      .pipe(autoprefixer())
       .pipe(sourcemaps.write('./maps'))
       .pipe(gulp.dest(paths.css.root))
       .pipe(livereload());

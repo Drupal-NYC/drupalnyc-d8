@@ -1,0 +1,12 @@
+/*  PX to REM Conversion
+*
+*   @param {Pixel} $px - Unitless pixel value to be converted into rems.
+*
+*   Example Usage:
+*
+*     margin-bottom: rem(20);
+*
+*/
+@function rem($px) {
+  @return ($px / 16) * 1rem;
+}

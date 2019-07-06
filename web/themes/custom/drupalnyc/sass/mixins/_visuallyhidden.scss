@@ -1,0 +1,24 @@
+/*  Visually hide text within an element
+*   Used mostly for accessibility reasonse
+*
+*   No Params
+*
+*   Example Usage:
+*
+*     button {
+*       span {
+*         @include visuallyhidden;
+*       }
+*     }
+*
+*/
+@mixin visuallyhidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+  white-space: nowrap;
+}

@@ -9,23 +9,26 @@ module:
   breakpoint: 0
   ckeditor: 0
   color: 0
-  comment: 0
   config: 0
   config_filter: 0
   config_split: 0
-  contact: 0
+  content_moderation: 0
   contextual: 0
   crop: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
+  dcnyc_pantheon: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
   field_formatter: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
   focal_point: 0
+  google_analytics: 0
   help: 0
   history: 0
   image: 0
@@ -43,6 +46,7 @@ module:
   rdf: 0
   responsive_image: 0
   search: 0
+  settings_tray: 0
   shortcut: 0
   smart_trim: 0
   system: 0
@@ -54,6 +58,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  workflows: 0
   menu_link_content: 1
   views: 10
   standard: 1000

@@ -9,10 +9,23 @@
 // Breakpoints
 $mobile: 0px 767px;
 $tablet: 768px;
-$desktop: 1180px;
+$desktop: 1280px;
+
+// Media queries:
+// Basic breakpoints
+$bp768: 'screen and (min-width: 768px)';
+$bp1024: 'screen and (min-width: 1024px)';
+
+$bp768max: 'screen and (max-width: 767px)';
+$bp1024max: 'screen and (max-width: 1023px)';
+$bp1280max: 'screen and (max-width: 1279px)';
+
+$bp768-1024: 'screen and (min-width: 768px) and (max-width: 1023px)';
+$bp768-1279: 'screen and (min-width: 768px) and (max-width: 1279px)';
+$bp960-1279: 'screen and (min-width: 960px) and (max-width: 1279px)';
 
 // Container
-$container: 1180px;
+$container: 1280px;
 
 // Colours
 // e.g.
@@ -24,13 +37,14 @@ $black: #000000;
 
 $yellow: #e0d74b;
 $red: #ed272f;
-$blue: #0f50de;
+$blue: #0077C0;
+$blue-dark: #00598E;
 $maroon: #7e1e1f;
 $pink: #d7a5ca;
 $peach: #e29186;
 $teal: #178d7e;
 $purple: #543b83;
-$lime: #d0ea17;
+$lime: #96BC44;
 $orange: #ff4e36;
 
 $grey--light: #efefef;
@@ -39,9 +53,9 @@ $grey--dark: #656668;
 
 // Global styles
 $color-primary: $blue;
-$color-secondary: $blue;
-$color-accent: $purple;
-$color-error: $purple;
+$color-secondary: $blue-dark;
+$color-accent: $lime;
+$color-error: $orange;
 
 // Button variables
 $button-color: $color-primary;
@@ -50,13 +64,13 @@ $button-text: white;
 $button-text--hover: white;
 
 // Text variables
-$font-body: Karla, 'Helvetica', 'Arial', sans-serif;
+$font-body: 'Helvetica Neue', Poppins, 'Arial', sans-serif;
 $font-body--size: 17px;
 $font-body--lineheight: 28px;
-$font-body--weight: 400;
+$font-body--weight: 300;
 $font-body--color: $black;
 
-$font-header: Poppins, 'Helvetica', 'Arial', sans-serif;
+$font-header: Ubuntu, 'Helvetica', 'Helvetica Neue', sans-serif;
 $font-header--weight: 700;
 $font-header--color: $color-primary;
 
@@ -65,3 +79,5 @@ $link-color--hover: lighten($color-primary, 15%);
 
 // Misc
 $box-shadow: 0 2px 5px rgba(0,0,0,.26);
+$s-padding: 18px;
+$m-padding: 36px;

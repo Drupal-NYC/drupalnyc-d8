@@ -1,0 +1,20 @@
+/*  Media Query Mixin
+*
+*   @param {Media Query} $mq - Media query in single quotes: eg. 'screen and (min-width: 480px)'
+*
+*   Example Usage:
+*
+*     .selector {
+*       property: value;
+*
+*       @include mq($bp768) {
+*         property: value;
+*       }
+*     }
+*
+*/
+@mixin mq($mq) {
+  @media #{$mq} {
+    @content;
+  }
+}

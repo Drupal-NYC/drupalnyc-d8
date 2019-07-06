@@ -1,0 +1,11 @@
+/**
+ * Returns a percentage width based on the number and total number of columns
+ *
+ * @param 	int 	$num 	Number of columns (e.g. 4)
+ * @param 	int 	$total 	Total number of columns (e.g. 24)
+ * @return 	float 			 Total width (%)
+ */
+
+@function cols($num, $total: $layout-columns) {
+	@return ($num / $total) * 100%;
+}

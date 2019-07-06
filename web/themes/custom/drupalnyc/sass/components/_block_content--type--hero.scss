@@ -1,0 +1,62 @@
+.block-inline-blockhero {
+  position: relative;
+
+  .text-container {
+    @include maxwidth(882px);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-align: center;
+    @include padding(null $s-padding);
+
+    @include mq($bp768) {
+      @include padding(null $m-padding);
+    }
+  }
+
+
+  .field--name-field-headline {
+    @include font-size(24,30);
+
+    color: $white;
+    @include margin(null null rem(10));
+
+    @include mq($bp768) {
+      @include font-size(48,52);
+      @include margin(null null rem(15));
+    }
+  }
+
+  .field--name-field-tagline {
+    @include font-size(16,24);
+    @include margin(0);
+    color: $white;
+    @include maxwidth(872px);
+
+    @include mq($bp768) {
+      @include font-size(18,30);
+    }
+  }
+
+  .field--name-field-image {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba($black, 0.56);
+    }
+  }
+}

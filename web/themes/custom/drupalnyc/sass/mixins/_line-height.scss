@@ -1,0 +1,13 @@
+/*  Unitless line-height
+*
+*   @param {Font Size} $fontSize - Unit-less font size
+*   @param {Leading}   $leading  - Unit-less leading from Photoshop or Sketch
+*
+*   Example Usage:
+*
+*     @include line-height(16, 20);
+*
+*/
+@mixin line-height($fontSize, $leading) {
+  line-height: ceil(($leading / $fontSize) * 10000) / 10000;
+}

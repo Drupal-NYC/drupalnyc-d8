@@ -6,17 +6,39 @@ dependencies:
     - block_content.type.hero
     - field.field.block_content.hero.field_headline
     - field.field.block_content.hero.field_image
+    - field.field.block_content.hero.field_tagline
   module:
     - field_formatter
+    - field_group
     - text
+third_party_settings:
+  field_group:
+    group_text:
+      children:
+        - field_headline
+        - field_tagline
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: Text
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: text-container
+      label: Text
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero
 mode: default
 content:
   field_headline:
-    weight: 1
-    label: above
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
@@ -33,5 +55,12 @@ content:
         responsive_image_style: hero_image
         image_link: ''
     third_party_settings: {  }
+    region: content
+  field_tagline:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
 hidden: {  }

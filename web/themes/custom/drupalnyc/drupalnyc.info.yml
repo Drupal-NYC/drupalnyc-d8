@@ -5,9 +5,9 @@ base theme: bones
 core: 8.x
 
 libraries:
-  - /global-css
-  - /global-js
-  - /color
+  - drupalnyc/global-css
+  - drupalnyc/global-js
+  - drupalnyc/color
 
 # Regions
 regions:

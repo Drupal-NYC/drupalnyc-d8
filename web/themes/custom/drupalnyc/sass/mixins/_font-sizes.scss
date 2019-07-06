@@ -1,0 +1,18 @@
+/*  Set font-size and optionally leading
+*
+*   @param {Font Size} $fontSize - Unit-less font size
+*   @param {Leading}   $leading  - (default: null) - Optional- Unit-less leading from Photoshop or Sketch
+*
+*   Example Usage:
+*
+*     p {
+*       @include font-size(12,14);
+*     }
+*
+*/
+@mixin font-size ($fontsize, $leading: null) {
+  font-size: ($fontsize / 16) * 1rem;
+  @if ($fontsize and $leading) {
+    line-height: ceil(($leading / $fontsize) * 10000) / 10000;
+  }
+}

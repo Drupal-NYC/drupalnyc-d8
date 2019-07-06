@@ -1,0 +1,29 @@
+uuid: b9e6353e-b84f-4adc-9d06-088dd9b21c5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.field_tagline
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    headlines: headlines
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: block_content.hero.field_tagline
+field_name: field_tagline
+entity_type: block_content
+bundle: hero
+label: Tagline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

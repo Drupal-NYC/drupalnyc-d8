@@ -1,0 +1,47 @@
+/*  Hide browser scrollbars
+*
+*   No Params
+*
+*   Example Usage:
+*
+*     .container {
+*       @include hide-scrollbars;
+*     }
+*
+*/
+@mixin hide-scrollbars () {
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+    background:rgba(0,0,0,0);
+  }
+
+  &::-webkit-scrollbar-track {
+    display: none;
+    width: 0;
+    height: 0;
+    background:rgba(0,0,0,0);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    display: none;
+    width: 0;
+    height: 0;
+    background:rgba(0,0,0,0);
+  }
+
+  &::-webkit-scrollbar-thumb:window-inactive {
+    display: none;
+    width: 0;
+    height: 0;
+    background:rgba(0,0,0,0);
+  }
+}

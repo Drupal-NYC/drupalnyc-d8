@@ -1,0 +1,128 @@
+// Mixins
+// http://sass-lang.com/documentation/file.SASS_REFERENCE.html#Mixin_Directives__mixins
+// Mixins are snippets of code to use throughout sass files.
+
+// Container
+@mixin container {
+  max-width: $container;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: auto;
+}
+
+@mixin container-clear {
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+// Buttons
+@mixin button {
+  display: inline-block;
+  margin: 0px 10px 10px 0px;
+  border: 0px;
+  border-radius: 2px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: $button-text;
+  background: $button-color;
+  transition: 0.3s ease all;
+  &:hover {
+    background: $button-color--hover;
+    color: $button-text--hover;
+    text-decoration: none;
+  }
+}
+
+// Basic menu
+@mixin basic-menu {
+  ul.menu {
+    margin: 10px 0;
+    padding: 0px;
+    box-sizing: border-box;
+    li {
+      display: inline-block;
+      padding: 0 20px 0 0;
+      box-sizing: border-box;
+      a {
+        padding: 15px 5px;
+        display: inline;
+        &.is-active {
+          color: $color-primary;
+          text-decoration: none;
+          border-bottom: 5px solid $link-color;
+        }
+      }
+      &:first-child a {
+        padding-left: 5px;
+      }
+      &:last-child {
+        padding-right: 0px;
+      }
+    }
+  }
+}
+
+@mixin dropdown-menu {
+  ul.menu {
+    margin: 10px 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 20px;
+    li {
+      display: inline-block;
+      padding: 0 10px;
+      box-sizing: border-box;
+      a {
+        padding: 5px;
+        display: inline-block;
+        &.is-active {
+          color: $color-primary;
+          text-decoration: underline;
+        }
+      }
+      &:first-child a {
+        padding-left: 5px;
+      }
+      &.menu-item--expanded {
+        position: relative;
+        &:hover {
+          > a:after {
+            content: '\25bc';
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 12px;
+            position: absolute;
+          }
+          ul.menu {
+            display: block;
+          }
+        }
+      }
+      ul.menu {
+        display: none;
+        position: absolute;
+        box-shadow: $box-shadow;
+        width: 200px;
+        z-index: 6;
+        background: white;
+        li {
+          padding: 0;
+          display: block;
+          a {
+            padding: 15px;
+            display: block;
+            &.is-active {
+              border-bottom: 0px;
+            }
+            &:hover {
+              background: $button-color--hover;
+              color: $button-text--hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

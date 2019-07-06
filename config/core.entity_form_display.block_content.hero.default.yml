@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.hero
     - field.field.block_content.hero.field_headline
     - field.field.block_content.hero.field_image
+    - field.field.block_content.hero.field_tagline
   module:
     - allowed_formats
     - media_library
@@ -32,6 +33,17 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+    region: content
+  field_tagline:
+    weight: 28
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '0'
+        hide_guidelines: '0'
+    type: text_textarea
     region: content
   info:
     type: string_textfield

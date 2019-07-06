@@ -1,0 +1,21 @@
+/*  Overflow Scroll
+*   Allows you to set overflow scrolling on the x and y axis
+*
+*   @param {axix} $axis - the axis on which to set scroll
+*/
+@mixin overflow-scroll($axis: null) {
+  @if ($axis == 'x') {
+    overflow-x: auto;
+  } @else {
+    overflow-y: auto;
+  }
+
+  html[data-whatintent="touch"] & {
+    @if ($axis == 'x') {
+      overflow-x: scroll;
+    } @else {
+      overflow-y: scroll;
+    }
+    -webkit-overflow-scrolling: touch;
+  }
+}
