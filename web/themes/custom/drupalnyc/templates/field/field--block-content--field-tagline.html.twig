@@ -36,6 +36,8 @@
  * @see template_preprocess_field()
  */
 #}
+{% set field_class = 'field--name-' ~ field_name|clean_class %}
+
 {% for item in items %}
-  <p{{ attributes }}>{{ item.content }}</p>
+  <p{{ attributes.addClass(field_class) }}>{{ item.content }}</p>
 {% endfor %}
