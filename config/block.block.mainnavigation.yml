@@ -1,4 +1,4 @@
-uuid: 435ffd0c-73d5-4e23-85d7-430f3ca4cb2d
+uuid: 1a891774-b69a-4ee4-9f82-8b44941421cc
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,10 @@ dependencies:
     - system
   theme:
     - drupalnyc
-_core:
-  default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
-id: drupalnyc_main_menu
+id: mainnavigation
 theme: drupalnyc
-region: navigation
-weight: -5
+region: mobilenav
+weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +20,6 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
-  expand_all_items: false
+  depth: 0
+  expand_all_items: true
 visibility: {  }

@@ -1,0 +1,30 @@
+uuid: b0d7aed7-8a1a-48f9-a3e0-f24528baec2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.meetup
+    - field.field.block_content.meetup.field_meetup
+id: block_content.meetup.default
+targetEntityType: block_content
+bundle: meetup
+mode: default
+content:
+  field_meetup:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

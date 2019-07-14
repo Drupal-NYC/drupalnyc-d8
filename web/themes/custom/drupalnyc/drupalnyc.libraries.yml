@@ -5,7 +5,7 @@ global-css:
 
 global-js:
   js:
-    js/.js: {}
+    js/dist/drupalnyc.min.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax

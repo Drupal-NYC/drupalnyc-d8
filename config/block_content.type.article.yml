@@ -1,0 +1,8 @@
+uuid: 11d141d7-a751-41a0-9271-0dcfa2629c0f
+langcode: en
+status: true
+dependencies: {  }
+id: article
+label: Article
+revision: 1
+description: ''

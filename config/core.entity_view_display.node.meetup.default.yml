@@ -1,0 +1,87 @@
+uuid: 0e93928c-e34a-428a-9141-36699d01d7a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.meetup.body
+    - field.field.node.meetup.field_date
+    - field.field.node.meetup.field_meetup_url
+    - field.field.node.meetup.field_video
+    - node.type.meetup
+  module:
+    - datetime
+    - field_group
+    - layout_builder
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_topic:
+      children:
+        - field_video
+        - body
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: meetup-content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Topic
+id: node.meetup.default
+targetEntityType: node
+bundle: meetup
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: month_year
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_meetup_url:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_video:
+    type: entity_reference_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

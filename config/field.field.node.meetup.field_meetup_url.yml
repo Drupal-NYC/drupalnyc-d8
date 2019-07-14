@@ -1,0 +1,28 @@
+uuid: 6d5d60f0-3f4a-4783-a8fa-a385861c194d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meetup_url
+    - node.type.meetup
+  module:
+    - link
+id: node.meetup.field_meetup_url
+field_name: field_meetup_url
+entity_type: node
+bundle: meetup
+label: 'Meetup Url'
+description: 'Enter the url to meetup page for this specific session.'
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://www.meetup.com/drupalnyc/'
+    title: 'Join us on meetup.com'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

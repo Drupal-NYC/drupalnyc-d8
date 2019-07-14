@@ -1,0 +1,28 @@
+uuid: 09a1f3a3-ed29-48b3-97b9-9710ecd9d6f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.meetup
+    - field.storage.block_content.field_meetup
+    - node.type.meetup
+id: block_content.meetup.field_meetup
+field_name: field_meetup
+entity_type: block_content
+bundle: meetup
+label: Meetup
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      meetup: meetup
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

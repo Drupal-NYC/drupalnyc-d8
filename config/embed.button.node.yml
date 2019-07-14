@@ -1,0 +1,26 @@
+uuid: 54a54a77-cc9f-4078-868e-d4883730c729
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.embed
+    - node.type.meetup
+  content:
+    - 'file:file:e3b5151f-fb9e-4e5b-866e-fbb4ffe91a4c'
+  module:
+    - entity_embed
+    - node
+_core:
+  default_config_hash: xgvZUh-eaMilacE1XYCQ9nLH-2-meOjCyofXSO82gqg
+label: Meetup
+id: node
+type_id: entity
+type_settings:
+  entity_type: node
+  bundles:
+    - meetup
+  display_plugins:
+    - 'view_mode:node.embed'
+  entity_browser: ''
+  entity_browser_settings: {  }
+icon_uuid: e3b5151f-fb9e-4e5b-866e-fbb4ffe91a4c

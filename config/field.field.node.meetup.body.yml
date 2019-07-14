@@ -1,0 +1,22 @@
+uuid: f20c98c6-f515-489f-8574-f6dc70185755
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.meetup
+  module:
+    - text
+id: node.meetup.body
+field_name: body
+entity_type: node
+bundle: meetup
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

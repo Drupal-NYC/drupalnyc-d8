@@ -1,0 +1,21 @@
+uuid: 94bfe7b8-51a2-490d-9b66-90a1f826f72a
+langcode: en
+status: true
+dependencies:
+  module:
+    - dcnyc_pantheon
+  theme:
+    - drupalnyc
+id: pantheonlinkblock
+theme: drupalnyc
+region: footer
+weight: 0
+provider: null
+plugin: pantheon_link_block
+settings:
+  id: pantheon_link_block
+  label: 'Pantheon link block'
+  provider: dcnyc_pantheon
+  label_display: '0'
+  pantheon_url: 'https://pantheon.io'
+visibility: {  }

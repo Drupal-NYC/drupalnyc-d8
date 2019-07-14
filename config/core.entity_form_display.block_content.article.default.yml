@@ -1,0 +1,30 @@
+uuid: 34e6df4c-6f91-438d-adcb-00a665566042
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.article
+    - field.field.block_content.article.field_article
+id: block_content.article.default
+targetEntityType: block_content
+bundle: article
+mode: default
+content:
+  field_article:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

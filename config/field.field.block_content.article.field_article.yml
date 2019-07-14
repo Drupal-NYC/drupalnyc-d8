@@ -1,0 +1,28 @@
+uuid: d543fde5-30ef-4e48-b2c6-7332020c774c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.article
+    - field.storage.block_content.field_article
+    - node.type.article
+id: block_content.article.field_article
+field_name: field_article
+entity_type: block_content
+bundle: article
+label: Article
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
