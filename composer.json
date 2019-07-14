@@ -81,13 +81,11 @@
         ],
         "post-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "composer robo setup:drupal",
-            "composer robo setup:prerequisites"
+            "composer robo setup:instructions"
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "composer robo setup:drupal",
-            "composer robo setup:prerequisites"
+            "composer robo setup:instructions"
         ]
     },
     "extra": {
