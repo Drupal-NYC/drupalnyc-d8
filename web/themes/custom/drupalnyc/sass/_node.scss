@@ -82,3 +82,20 @@
         }
     }
 }
+
+.node--view-mode-embed {
+    h2 {
+        a {
+            color: $font-header--color;
+            text-decoration: none;
+            &:hover {
+                color: $link-color--hover;
+                cursor: pointer;
+                text-decoration: underline;
+                -webkit-text-decoration-skip: ink;
+                text-decoration-skip-ink: auto;
+            }
+        }
+    }
+
+}

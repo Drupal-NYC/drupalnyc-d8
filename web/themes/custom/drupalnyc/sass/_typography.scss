@@ -91,10 +91,14 @@ h3, .h3 { @include h3; }
 }
 h4, .h4 { @include h4; }
 
-.button {
+.button  {
     @include button;
     &:first-child {
         margin: 0 10px 10px 0;
+    }
+    a {
+        color: $button-text;
+        text-decoration: none;
     }
 }
 
