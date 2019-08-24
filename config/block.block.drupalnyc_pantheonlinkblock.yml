@@ -1,4 +1,4 @@
-uuid: 94bfe7b8-51a2-490d-9b66-90a1f826f72a
+uuid: 999997b6-5a83-4645-9781-854dfbb14af1
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - dcnyc_pantheon
   theme:
     - drupalnyc
-id: pantheonlinkblock
+id: drupalnyc_pantheonlinkblock
 theme: drupalnyc
 region: footer
 weight: 0

@@ -1,4 +1,4 @@
-uuid: 435ffd0c-73d5-4e23-85d7-430f3ca4cb2d
+uuid: 00c31b77-5585-4e7e-9459-1c60ffdfea56
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: drupalnyc_main_menu
 theme: drupalnyc
-region: navigation
+region: header
 weight: -5
 provider: null
 plugin: 'system_menu_block:main'

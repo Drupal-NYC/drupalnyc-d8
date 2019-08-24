@@ -1,4 +1,4 @@
-uuid: e0b84b96-0768-4fc7-903b-394a2d713068
+uuid: 42a6f03e-eb33-4244-b17a-1d3499a3a116
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: drupalnyc_breadcrumbs
 theme: drupalnyc
-region: content_top
+region: header
 weight: -4
 provider: null
 plugin: system_breadcrumb_block

@@ -1,4 +1,4 @@
-uuid: c6e783cc-ef84-4a2b-8131-d842a90d55af
+uuid: 7af3c67b-8e27-496d-98f2-6d486ef3d7c0
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: drupalnyc_messages
 theme: drupalnyc
-region: content_top
+region: header
 weight: -5
 provider: null
 plugin: system_messages_block

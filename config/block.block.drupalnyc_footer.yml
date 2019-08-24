@@ -1,4 +1,4 @@
-uuid: 90fe0615-c254-4686-a5eb-19ff52592c74
+uuid: 5a74f8e2-0bc5-4e6c-a4f7-a7239857268c
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     - system
   theme:
     - drupalnyc
-id: footer
+id: drupalnyc_footer
 theme: drupalnyc
 region: footer
 weight: 0

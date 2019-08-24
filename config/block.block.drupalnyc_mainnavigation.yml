@@ -1,4 +1,4 @@
-uuid: 1a891774-b69a-4ee4-9f82-8b44941421cc
+uuid: c4480ea2-e278-4fb8-a683-84841f21b109
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ dependencies:
     - system
   theme:
     - drupalnyc
-id: mainnavigation
+id: drupalnyc_mainnavigation
 theme: drupalnyc
-region: mobilenav
+region: header
 weight: 0
 provider: null
 plugin: 'system_menu_block:main'
