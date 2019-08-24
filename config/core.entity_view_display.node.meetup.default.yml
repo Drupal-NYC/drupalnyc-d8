@@ -5,7 +5,9 @@ dependencies:
   config:
     - field.field.node.meetup.body
     - field.field.node.meetup.field_date
+    - field.field.node.meetup.field_headline
     - field.field.node.meetup.field_meetup_url
+    - field.field.node.meetup.field_tagline
     - field.field.node.meetup.field_video
     - node.type.meetup
   module:
@@ -84,4 +86,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_headline: true
+  field_tagline: true

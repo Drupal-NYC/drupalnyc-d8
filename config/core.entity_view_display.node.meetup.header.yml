@@ -1,0 +1,46 @@
+uuid: 05c0ef9f-25f7-44c0-a1a8-b95068b7c214
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.header
+    - field.field.node.meetup.body
+    - field.field.node.meetup.field_date
+    - field.field.node.meetup.field_headline
+    - field.field.node.meetup.field_meetup_url
+    - field.field.node.meetup.field_tagline
+    - field.field.node.meetup.field_video
+    - node.type.meetup
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.meetup.header
+targetEntityType: node
+bundle: meetup
+mode: header
+content:
+  field_headline:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_tagline:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_date: true
+  field_meetup_url: true
+  field_video: true
+  links: true

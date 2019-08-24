@@ -77,3 +77,12 @@ footer.page-footer {
         @include container;
     }
 }
+
+.background-image-wrapper {
+  .field--name-field-headline {
+    h1 {
+      color: $white;
+      text-shadow: 0 0 15px $grey--dark;
+    }
+  }
+}
