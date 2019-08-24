@@ -35,7 +35,7 @@
         "drupal/bones_theme": "^1.2",
         "drupal/config_split": "^1.4",
         "drupal/console": "^1.8",
-        "drupal/core": "8.7.3",
+        "drupal/core": "8.7.6",
         "drupal/entity_embed": "^1.0",
         "drupal/field_formatter": "^1.2",
         "drupal/field_group": "^1.0",
@@ -48,12 +48,12 @@
         "drush/drush": "^9.1",
         "oomphinc/composer-installers-extender": "^1.1",
         "symfony/cache": "^3.1",
-        "webflo/drupal-core-strict": "8.7.3",
+        "webflo/drupal-core-strict": "8.7.6",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
-      "webflo/drupal-core-require-dev": "8.7.3"
+      "webflo/drupal-core-require-dev": "8.7.6"
     },
     "conflict": {
         "drupal/drupal": "*"
