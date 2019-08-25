@@ -1,0 +1,20 @@
+uuid: 562ca759-64ae-4d3a-a704-d1652336824a
+langcode: en
+status: true
+dependencies:
+  module:
+    - background_image
+  theme:
+    - drupalnyc
+id: backgroundimage
+theme: drupalnyc
+region: background_image
+weight: 0
+provider: null
+plugin: background_image
+settings:
+  id: background_image
+  label: 'Background Image'
+  provider: background_image
+  label_display: ''
+visibility: {  }

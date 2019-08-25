@@ -1,0 +1,40 @@
+uuid: 92acd024-0427-44fe-a3e2-64975bd95c1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.header
+    - field.field.node.landing_page.field_headline
+    - field.field.node.landing_page.field_tagline
+    - field.field.node.landing_page.layout_builder__layout
+    - node.type.landing_page
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.landing_page.header
+targetEntityType: node
+bundle: landing_page
+mode: header
+content:
+  field_headline:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tagline:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  layout_builder__layout: true
+  links: true

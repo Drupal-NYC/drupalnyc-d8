@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.header
     - field.field.node.meetup.body
     - field.field.node.meetup.field_date
-    - field.field.node.meetup.field_headline
     - field.field.node.meetup.field_meetup_url
     - field.field.node.meetup.field_tagline
     - field.field.node.meetup.field_video
@@ -24,13 +23,6 @@ targetEntityType: node
 bundle: meetup
 mode: header
 content:
-  field_headline:
-    type: text_default
-    weight: 0
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_tagline:
     type: text_default
     weight: 1

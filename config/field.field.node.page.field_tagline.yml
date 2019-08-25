@@ -1,0 +1,29 @@
+uuid: 14efb5f2-f2f8-4916-a384-59b632e24e44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tagline
+    - node.type.page
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    headlines: headlines
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.page.field_tagline
+field_name: field_tagline
+entity_type: node
+bundle: page
+label: Tagline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

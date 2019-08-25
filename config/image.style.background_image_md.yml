@@ -1,0 +1,17 @@
+uuid: 90a0ad88-b97d-4965-b66f-9b3c4709cda1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: te-0FpmFm5PbSxJeKM2IfWSIB0OPn0k0C9L3kVK8SB0
+name: background_image_md
+label: 'Background Image: Medium'
+effects:
+  df91f281-70f9-4238-847d-b6ef663d9521:
+    uuid: df91f281-70f9-4238-847d-b6ef663d9521
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 992
+      height: 661
+      anchor: center-center

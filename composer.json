@@ -41,6 +41,7 @@
         "drupal/field_group": "^1.0",
         "drupal/focal_point": "^1.0",
         "drupal/google_analytics": "^2.2",
+        "drupal/inline_entity_form": "^1.0@RC",
         "drupal/pathauto": "^1.4",
         "drupal/smart_trim": "^1.1",
         "drupal/stage_file_proxy": "^1.0",

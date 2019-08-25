@@ -1,0 +1,17 @@
+uuid: 29bde504-3b2e-48bd-b134-c4057f372b94
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: amCjIxpyiPmzBKRC3QT5D9jz3f0Wiy25D14Dn3DqSoQ
+name: background_image_md_2x
+label: 'Background Image: Medium @2x (retina)'
+effects:
+  d460d1c2-1ac2-4bff-9b76-e66b3abb8332:
+    uuid: d460d1c2-1ac2-4bff-9b76-e66b3abb8332
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1984
+      height: 1322
+      anchor: center-center

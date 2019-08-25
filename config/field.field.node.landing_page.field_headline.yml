@@ -1,10 +1,10 @@
-uuid: c04e6344-18bf-4b1b-99d0-33c9f3421657
+uuid: c84c982b-5d3c-4828-9301-3a64f92cdc9e
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_headline
-    - node.type.meetup
+    - node.type.landing_page
   module:
     - allowed_formats
     - text
@@ -15,14 +15,14 @@ third_party_settings:
     restricted_html: '0'
     full_html: '0'
     plain_text: '0'
-id: node.meetup.field_headline
+id: node.landing_page.field_headline
 field_name: field_headline
 entity_type: node
-bundle: meetup
+bundle: landing_page
 label: Headline
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

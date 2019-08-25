@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\maw_luminate\Plugin\Block;
+namespace Drupal\dnyc_header_block\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
@@ -92,14 +92,14 @@ class HeaderBlock extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function build() {
     /** @var \Drupal\node\Entity\Node $donationTheme */
-    $donationTheme = $this->routeMatch->getParameter('donation_theme');
+    $node = $this->routeMatch->getParameter('node');
 
     $build = [];
-    if (!empty($donationTheme) && $donationTheme instanceof Node) {
+    if (!empty($node) && $node instanceof Node) {
       $build = $this->entityTypeManager->getViewBuilder('node')
-        ->view($donationTheme, 'full');
+        ->view($node, 'header');
     }
-    $this->renderer->addCacheableDependency($build, $donationTheme);
+    $this->renderer->addCacheableDependency($build, $node);
     $build['#cache']['contexts'][] = 'url.path';
     return $build;
   }

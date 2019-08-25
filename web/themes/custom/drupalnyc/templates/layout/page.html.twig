@@ -97,16 +97,23 @@
       {{ page.mobilenav }}
 
     </div>
+    {{ page.primary_menu }}
+    {{ page.secondary_menu }}
+
+    {{ page.breadcrumb }}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
 
-  {{ page.breadcrumb }}
 
   {{ page.highlighted }}
 
-  {{ page.help }}
+  {{ page.help }}{# Background Image #}
+
+  {% block background_image %}
+    {% if page.background_image %}
+      {{ page.background_image }}
+    {% endif %}
+  {% endblock %}
 
   <main role="main">
 

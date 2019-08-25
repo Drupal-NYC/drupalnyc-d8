@@ -1,10 +1,10 @@
-uuid: 10d31fed-839f-4ddb-8988-0870d321c7b3
+uuid: b8c2dcd5-eba3-49a7-9546-6e3fd11d6875
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.hero
-    - field.storage.block_content.field_headline
+    - field.storage.node.field_tagline
+    - node.type.landing_page
   module:
     - allowed_formats
     - text
@@ -15,14 +15,14 @@ third_party_settings:
     restricted_html: '0'
     full_html: '0'
     plain_text: '0'
-id: block_content.hero.field_headline
-field_name: field_headline
-entity_type: block_content
-bundle: hero
-label: Headline
+id: node.landing_page.field_tagline
+field_name: field_tagline
+entity_type: node
+bundle: landing_page
+label: Tagline
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

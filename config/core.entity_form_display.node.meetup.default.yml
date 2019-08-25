@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.meetup.body
     - field.field.node.meetup.field_date
-    - field.field.node.meetup.field_headline
     - field.field.node.meetup.field_meetup_url
     - field.field.node.meetup.field_tagline
     - field.field.node.meetup.field_video
@@ -58,17 +57,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  field_headline:
-    weight: 0
-    settings:
-      rows: 2
-      placeholder: ''
-    third_party_settings:
-      allowed_formats:
-        hide_help: '0'
-        hide_guidelines: '0'
-    type: text_textarea
     region: content
   field_meetup_url:
     weight: 10
