@@ -10,7 +10,7 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: drupalnyc_messages
 theme: drupalnyc
-region: header
+region: content_top
 weight: -5
 provider: null
 plugin: system_messages_block

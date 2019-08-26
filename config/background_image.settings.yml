@@ -41,7 +41,7 @@ entities:
   view:
     view:
       enable: true
-      embed: false
+      embed: true
       require: false
       group: ''
   media:
@@ -68,7 +68,7 @@ entities:
   taxonomy_term:
     tags:
       enable: true
-      embed: false
+      embed: true
       group: ''
       require: false
 css:

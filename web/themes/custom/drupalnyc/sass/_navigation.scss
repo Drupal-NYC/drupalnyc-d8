@@ -39,6 +39,10 @@
         @include breakpoint($tablet) {
             display: none;
         }
+      svg {
+        color: $link-color;
+        fill: currentColor;
+      }
     }
     .region-mobilenav {
         padding: 40px 0;

@@ -10,8 +10,8 @@ dependencies:
     - drupalnyc
 id: drupalnyc_mainnavigation
 theme: drupalnyc
-region: header
-weight: 0
+region: mobilenav
+weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:
