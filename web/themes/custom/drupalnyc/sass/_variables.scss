@@ -61,7 +61,7 @@ $color-error: $orange;
 $button-color: $color-primary;
 $button-color--hover: lighten($color-primary, 15%);
 $button-text: white;
-$button-text--hover: white;
+$button-text--hover: $grey--mid;
 
 // Text variables
 $font-body: 'Helvetica Neue', Poppins, 'Arial', sans-serif;

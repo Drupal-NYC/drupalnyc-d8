@@ -33,6 +33,7 @@ header.header {
     align-items: center;
     .site-logo {
         img {
+            height: 42px;
             max-width: 60px;
             transition: 0.3s ease all;
             @include breakpoint($tablet) {

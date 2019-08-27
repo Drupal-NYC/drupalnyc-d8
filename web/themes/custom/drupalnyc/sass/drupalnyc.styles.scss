@@ -5,7 +5,7 @@
 
 // Import partials
 @import "variables";
-@import "mixins/**/*";
+@import "mixins";
 @import "typography";
 @import "page";
 @import "header";
@@ -17,4 +17,4 @@
 @import "views";
 @import "forms";
 @import "ds";
-@import "components/**/*";
+@import "components/*";

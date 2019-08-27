@@ -13,11 +13,6 @@ global-js:
     - core/drupalSettings
     - core/jquery.once
 
-color:
-  css:
-    theme:
-      css/color.css: {}
-
 color.preview:
   version: VERSION
   css:

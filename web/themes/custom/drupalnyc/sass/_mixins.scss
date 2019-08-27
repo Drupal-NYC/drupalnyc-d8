@@ -6,7 +6,7 @@
 @mixin container {
   max-width: $container;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   overflow: auto;
 }
 
@@ -77,9 +77,13 @@
       a {
         padding: 5px;
         display: inline-block;
+        text-decoration: none;
         &.is-active {
           color: $color-primary;
-          text-decoration: underline;
+        }
+        &:hover {
+          color: $link-color--hover;
+          font-weight: 400;
         }
       }
       &:first-child a {
@@ -125,4 +129,56 @@
       }
     }
   }
+}
+
+@mixin maxwidth ($width: $max-width) {
+  max-width: $width;
+  margin: 0 auto;
+}
+
+@mixin _directional-property(
+  $property,
+  $suffix,
+  $values
+) {
+  $top:    $property + "-top"    + if($suffix, "-#{$suffix}", "");
+  $bottom: $property + "-bottom" + if($suffix, "-#{$suffix}", "");
+  $left:   $property + "-left"   + if($suffix, "-#{$suffix}", "");
+  $right:  $property + "-right"  + if($suffix, "-#{$suffix}", "");
+  $all:    $property +             if($suffix, "-#{$suffix}", "");
+
+  $values: _compact-shorthand($values);
+
+  @if _contains-falsy($values) {
+    @if nth($values, 1) { #{$top}: nth($values, 1); }
+
+    @if length($values) == 1 {
+      @if nth($values, 1) { #{$right}: nth($values, 1); }
+    } @else {
+      @if nth($values, 2) { #{$right}: nth($values, 2); }
+    }
+
+    @if length($values) == 2 {
+      @if nth($values, 1) { #{$bottom}: nth($values, 1); }
+      @if nth($values, 2) { #{$left}: nth($values, 2); }
+    } @else if length($values) == 3 {
+      @if nth($values, 3) { #{$bottom}: nth($values, 3); }
+      @if nth($values, 2) { #{$left}: nth($values, 2); }
+    } @else if length($values) == 4 {
+      @if nth($values, 3) { #{$bottom}: nth($values, 3); }
+      @if nth($values, 4) { #{$left}: nth($values, 4); }
+    }
+  } @else {
+    #{$all}: $values;
+  }
+}
+
+
+@mixin padding($values) {
+  @include _directional-property(padding, null, $values);
+}
+
+
+@mixin margin($values) {
+  @include _directional-property(margin, null, $values);
 }

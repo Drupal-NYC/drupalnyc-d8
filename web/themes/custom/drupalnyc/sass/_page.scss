@@ -30,18 +30,21 @@ header {
 .region-content-top {
   .region-container {
     @include container;
+    background-color: $grey--light;
   }
 }
 
 .region-content {
   .region-container {
     @include container;
+    background-color: $grey--light;
   }
 }
 
 .region-content-bottom {
   .region-container {
     @include container;
+    background-color: $grey--light;
   }
 }
 
