@@ -84,3 +84,49 @@ header.header {
         }
     }
 }
+
+.background-image-wrapper {
+  .block-dnyc-header-content {
+    padding: 1rem;
+      @include breakpoint($tablet) {
+        padding: 2rem;
+      }
+      @include breakpoint($desktop) {
+        padding: 3rem;
+      }
+  }
+}
+
+.background-image-full-viewport {
+  .background-image-wrapper {
+    .block-dnyc-header-content {
+      align-items: flex-end;
+      bottom: 0;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      position: absolute;
+      top: 0
+    }
+  }
+}
+
+.background-image-wrapper {
+  .field--name-field-headline {
+    h1 {
+      color: $font-header--color;
+      text-shadow: 0 0 15px $grey--light;
+    }
+  }
+}
+
+.background-image-dark {
+  .background-image-wrapper {
+    .field--name-field-headline {
+      h1 {
+        color: $white;
+        text-shadow: 0 0 15px $box-shadow;
+      }
+    }
+  }
+}
