@@ -40,6 +40,7 @@ $red: #ed272f;
 $blue: #0077C0;
 $blue-dark: #00598E;
 $blue-light: #53B0EB;
+$blue-navy: #064771;
 $maroon: #7e1e1f;
 $pink: #d7a5ca;
 $peach: #e29186;
@@ -73,7 +74,7 @@ $font-body--color: $black;
 
 $font-header: Ubuntu, 'Helvetica', 'Helvetica Neue', sans-serif;
 $font-header--weight: 700;
-$font-header--color: $color-primary;
+$font-header--color: $blue-navy;
 
 $link-color: $color-primary;
 $link-color--hover: $blue-light;

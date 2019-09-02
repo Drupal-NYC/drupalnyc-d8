@@ -81,15 +81,15 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
-
-  {{ title_prefix }}
+<div{{ attributes.addClass(classes) }}>
+  <div class="header-container">
+    {{ title_prefix }}
     <h1{{ title_attributes }}>{{ label }}</h1>
-  {{ title_suffix }}
+    {{ title_suffix }}
 
 
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    <div{{ content_attributes.addClass('node__content') }}>
+      {{ content }}
+    </div>
   </div>
-
-</article>
+</div>
