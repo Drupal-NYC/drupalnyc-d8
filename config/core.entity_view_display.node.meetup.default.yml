@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.meetup.field_video
     - node.type.meetup
   module:
-    - datetime
     - field_group
     - layout_builder
     - link
@@ -26,7 +25,7 @@ third_party_settings:
         - field_video
         - body
       parent_name: ''
-      weight: 3
+      weight: 2
       format_type: html_element
       format_settings:
         id: ''
@@ -50,17 +49,8 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_date:
-    weight: 1
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: month_year
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_meetup_url:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       trim_length: 80
@@ -86,4 +76,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_date: true
   field_tagline: true
