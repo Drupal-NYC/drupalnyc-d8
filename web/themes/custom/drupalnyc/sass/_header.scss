@@ -99,7 +99,7 @@ header.header {
 
 .background-image-full-viewport {
   .background-image-wrapper {
-    .block-dnyc-header-content {
+    div.block-dnyc-header-content {
       bottom: 0;
       display: flex;
       justify-content: flex-end;
@@ -111,15 +111,12 @@ header.header {
 }
 
 .background-image-wrapper {
-  .field--name-field-headline {
+  .header-content-container {
     h1 {
+      margin: 0;
       color: $font-header--color;
       text-shadow: 0 0 5px $grey--light;
     }
-  }
-  h1 .field--name-title {
-    color: $font-header--color;
-    text-shadow: 0 0 5px $grey--light;
   }
 }
 
