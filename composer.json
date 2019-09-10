@@ -43,6 +43,7 @@
         "drupal/google_analytics": "^2.2",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/pathauto": "^1.4",
+        "drupal/responsive_favicons": "^1.5",
         "drupal/smart_trim": "^1.1",
         "drupal/stage_file_proxy": "^1.0",
         "drupal/textarea_widget_for_text": "^1.1",

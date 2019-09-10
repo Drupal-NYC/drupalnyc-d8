@@ -107,14 +107,17 @@ header.header {
       display: flex;
       justify-content: flex-end;
       flex-direction: column;
-      top: 0
+      max-width: $desktop;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1em;
     }
   }
 }
 
 .background-image-wrapper {
   .header-content-container {
-    h1 {
+    h1, p {
       margin: 0;
       color: $font-header--color;
       text-shadow: 0 0 5px $grey--light;
@@ -125,9 +128,9 @@ header.header {
 .background-image-dark {
   .background-image-wrapper {
     .header-content-container {
-      h1 {
+      h1, p {
         color: $white;
-        text-shadow: 0 0 15px $box-shadow;
+        text-shadow: $text-shadow;
       }
     }
   }
