@@ -86,8 +86,12 @@ header.header {
 }
 
 .background-image-wrapper {
+  display: flex;
   .block-dnyc-header-content {
     width: 100%;
+    div.node--view-mode-header {
+      position: relative;
+    }
     div.header-content-container {
       max-width: $desktop;
       margin-left: auto;
@@ -100,11 +104,9 @@ header.header {
 .background-image-full-viewport {
   .background-image-wrapper {
     div.block-dnyc-header-content {
-      bottom: 0;
       display: flex;
       justify-content: flex-end;
       flex-direction: column;
-      position: absolute;
       top: 0
     }
   }
@@ -122,15 +124,11 @@ header.header {
 
 .background-image-dark {
   .background-image-wrapper {
-    .field--name-field-headline {
+    .header-content-container {
       h1 {
         color: $white;
         text-shadow: 0 0 15px $box-shadow;
       }
-    }
-    h1 .field--name-title {
-      color: $white;
-      text-shadow: 0 0 15px $box-shadow;
     }
   }
 }
