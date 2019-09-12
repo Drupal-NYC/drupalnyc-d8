@@ -86,31 +86,15 @@ header.header {
 }
 
 .background-image-wrapper {
-  display: flex;
   .block-dnyc-header-content {
     width: 100%;
+    position: absolute;
+    bottom: 0;
     div.node--view-mode-header {
       position: relative;
     }
     div.header-content-container {
-      max-width: $desktop;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 1em;
-    }
-  }
-}
-
-.background-image-full-viewport {
-  .background-image-wrapper {
-    div.block-dnyc-header-content {
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-      max-width: $desktop;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 1em;
+      @include container;
     }
   }
 }
