@@ -8,6 +8,10 @@
   tag: master
   service: deploy
   command: composer install --no-dev --no-interaction --optimize-autoloader
+- name: build_front
+  tag: master
+  service: front-end
+  command: entrypoint.sh
 - name: deploy
   tag: master
   service: deploy
