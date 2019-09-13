@@ -9,7 +9,7 @@ front-end:
   volumes_from:
     - deploy
   environment:
-    THEME_NAME: dcnyc
+    THEME_NAME: drupalnyc
     THEME_PATH: web/themes/custom/drupalnyc
 deploy:
   image: digitalpulp/cli:codeship
