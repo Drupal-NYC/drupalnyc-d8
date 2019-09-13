@@ -10,7 +10,7 @@ front-end:
     - deploy
   environment:
     THEME_NAME: drupalnyc
-    THEME_PATH: web/themes/custom/drupalnyc
+    THEME_PATH: /var/www/web/themes/custom
 deploy:
   image: digitalpulp/cli:codeship
   working_dir: /var/www
