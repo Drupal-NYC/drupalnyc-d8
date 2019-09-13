@@ -162,42 +162,6 @@ class RemoteRebuildCommands extends Tasks {
     );
     $dumpRemote->addTask(
       $this->taskFilesystemStack()->remove("$root/database.sql.gz")
-    );
-    $result = $dumpRemote->setVerbosityThreshold(VerbosityThresholdInterface::VERBOSITY_DEBUG)
-      ->run();
-    return $result instanceof Result && $result->wasSuccessful();
-  }
-
-  /**
-   * Dump the remote database from the host, avoids messing with ssh keys.
-   *
-   * @param string $target
-   *   The full drush alias of the target remote.
-   *
-   * @return bool
-   *   Success of the dump.
-   */
-  protected function getRemotePantheonDump($target) {
-    $root = $this->config->getProjectRoot();
-    $this->io()->text('Dumping remote database');
-    $dumpRemote = $this->collectionBuilder();
-    $dumpRemote->addTask(
-      $this->taskExec("terminus backup:create $target --keep-for=1  --element=db")
-        ->printMetadata(FALSE)
-        ->printOutput(FALSE)
-    );
-    $dumpRemote->addTask(
-      $this->taskExec("terminus backup:get $target --element=db --to=$root/database.sql.gz")
-        ->printMetadata(FALSE)
-        ->printOutput(FALSE)
-    );
-    $dumpRemote->addTask(
-      $this->taskExec("gunzip -c $root/database.sql.gz > $root/target.sql")
-        ->printMetadata(FALSE)
-        ->printOutput(FALSE)
-    );
-    $dumpRemote->addTask(
-      $this->taskFilesystemStack()->remove("$root/database.sql.gz")
         ->printMetadata(FALSE)
         ->printOutput(FALSE)
     );
