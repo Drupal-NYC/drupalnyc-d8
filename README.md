@@ -28,9 +28,37 @@ may follow.
 managed with this approach.
     * If you have any existing files exported via
 NFS they must not be in the chosen folder.
+    * You must also not choose a folder that is a child of an existing
+    NFS export.
     * The easiest way forward is
 to create a new folder such as `~/DockerSites`.
 
+### Using a Passphrase protected key in the CI Service
+
+Some projects, such as ecommerce projects, should have all ssh keys
+protected with a passphrase.  This is not particularly an issue for keys
+used by humans, but the key used by a continuous integration service
+requires automation.  The approach used here assumes that the CI
+environment is using our containers and is therefore created for each
+build. This example expects the CI service to be Codeship, which you
+can adapt if you use a different service.
+
+#### Additional Environment Variables
+1. Add the passphrase into the `env` file described above as
+   `SSHPASS=key` and re-encrypt the file.
+1. Add an environment variable to `environment` section of the `deploy`
+   service in the `codeship-services.yml` file:
+```
+GIT_SSH_COMMAND: SSH_AUTH_SOCK=/root/.ssh/ssh_auth_sock ssh
+```
+
+#### Manually Connect Once
+If the key in question has never been used to authenticate to the remote
+git service, ssh-agent will still prompt for the passphrase as discussed
+in this [StackExchange comment](https://superuser.com/a/1309412/206941).
+Use `ssh -i` to connect once to the git service from the command line on
+your local using the CI key.  Supply the passphrase at the prompt and
+the git service will be primed for use by your CI user.
 
 ## Install the Project
 ```
