@@ -5,12 +5,12 @@ code-quality:
     - deploy
 front-end:
   image: digitalpulp/front-end:codeship
-  working_dir: /var/www/web/themes/custom/dcnyc
+  working_dir: /var/www/web/themes/custom/drupalnyc
   volumes_from:
     - deploy
   environment:
     THEME_NAME: dcnyc
-    THEME_PATH: web/themes/custom/dcnyc
+    THEME_PATH: web/themes/custom/drupalnyc
 deploy:
   image: digitalpulp/cli:codeship
   working_dir: /var/www
@@ -18,5 +18,5 @@ deploy:
   volumes:
     - .:/var/www
   environment:
-    DEPLOY_TARGET: ssh://codeserver.dev.36d6210e-0ea0-4579-9a00-a8d3ef891b81@codeserver.dev.36d6210e-0ea0-4579-9a00-a8d3ef891b81.drush.in:2222/~/repository.git
+    DEPLOY_TARGET: ssh://codeserver.dev.948cdd82-38e2-4769-a8fb-d3e33ee4e161@codeserver.dev.948cdd82-38e2-4769-a8fb-d3e33ee4e161.drush.in:2222/~/repository.git
 
