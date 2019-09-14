@@ -3,7 +3,6 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var del = require('del');
 var rename = require('gulp-rename');
-var eslint = require('gulp-eslint');
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
 var uglify = require('gulp-uglify');
@@ -34,14 +33,6 @@ var paths = {
 gulp.task('clean', function () {
   'use strict';
   return del(paths.clean);
-});
-
-gulp.task('js-lint', function () {
-  'use strict';
-  return gulp.src(paths.scripts)
-      .pipe(eslint())
-      .pipe(eslint.format())
-      .pipe(eslint.failAfterError());
 });
 
 gulp.task('sass-lint', function () {
@@ -76,7 +67,7 @@ gulp.task('sass-lint', function () {
 });
 
 
-gulp.task('lint', gulp.series(gulp.parallel('js-lint', 'sass-lint')));
+gulp.task('lint', gulp.series(gulp.parallel('sass-lint')));
 
 gulp.task('compress', function () {
   'use strict';
