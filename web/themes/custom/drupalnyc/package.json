@@ -13,7 +13,7 @@
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "compass-mixins": "^0.12.10",
-    "del": "^4.1.0",
+    "del": "^4.1.1",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^5.0.0",
@@ -32,7 +32,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "browserslist": ["last 2 versions"],
+  "browserslist": [
+    "last 2 versions"
+  ],
   "author": "",
   "license": "ISC"
 }
