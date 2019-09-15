@@ -95,31 +95,21 @@ header.header {
     }
     div.header-content-container {
       @include container;
+      padding-bottom: 20px;
     }
   }
 }
 
 .background-image-wrapper {
+  background: rgba(70,72,82, 0.3);
   .header-content-container {
     h1, p {
       margin: 0;
-      color: $font-header--color;
-      text-shadow: 0 0 5px $grey--light;
+      color: $white;
+      text-shadow: $text-shadow;
     }
     .field--name-field-tagline {
       @include h4;
-    }
-  }
-}
-
-.background-image-dark {
-  .background-image-wrapper {
-    background: rgba(70,72,82, 0.3);
-    .header-content-container {
-      h1, p {
-        color: $white;
-        text-shadow: $text-shadow;
-      }
     }
   }
 }

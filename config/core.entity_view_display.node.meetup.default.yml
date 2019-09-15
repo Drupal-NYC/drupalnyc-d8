@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.meetup.body
     - field.field.node.meetup.field_date
     - field.field.node.meetup.field_meetup_url
+    - field.field.node.meetup.field_summary
     - field.field.node.meetup.field_tagline
     - field.field.node.meetup.field_video
     - node.type.meetup
@@ -60,6 +61,13 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_summary:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_video:
     type: entity_reference_entity_view
