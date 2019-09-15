@@ -21,41 +21,6 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          a5950100-6635-49a2-a72a-d22b617f7763:
-            uuid: a5950100-6635-49a2-a72a-d22b617f7763
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:landing_page:field_headline'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: text_default
-            additional: {  }
-            weight: 0
-          f6367d64-bf3c-4194-96da-0150b68eb904:
-            uuid: f6367d64-bf3c-4194-96da-0150b68eb904
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:landing_page:field_tagline'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: text_default
-            additional: {  }
-            weight: 1
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
           0df04499-e6c7-40ef-abfd-3a00246a6c2e:
             uuid: 0df04499-e6c7-40ef-abfd-3a00246a6c2e
             region: content
@@ -71,6 +36,11 @@ third_party_settings:
         layout_id: layout_twocol_section
         layout_settings:
           column_widths: 50-50
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
         components: {  }
         third_party_settings: {  }
 id: node.landing_page.default
