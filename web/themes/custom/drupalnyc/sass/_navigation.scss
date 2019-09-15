@@ -26,7 +26,7 @@
 
 .bones-mobile-menu {
     .region-header {
-        margin-bottom: 15px;
+        margin-bottom: 0;
     }
     .region-navigation .block-menu.menu--main {
         @include breakpoint($mobile) {
