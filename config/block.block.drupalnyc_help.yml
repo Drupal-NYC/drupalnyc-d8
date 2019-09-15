@@ -11,7 +11,7 @@ _core:
 id: drupalnyc_help
 theme: drupalnyc
 region: content
-weight: -30
+weight: -6
 provider: null
 plugin: help_block
 settings:

@@ -67,8 +67,8 @@ entities:
       require: false
   taxonomy_term:
     tags:
-      enable: true
-      embed: true
+      enable: false
+      embed: false
       group: ''
       require: false
 css:
