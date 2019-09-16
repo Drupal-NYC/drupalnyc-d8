@@ -98,6 +98,18 @@ header.header {
       padding-bottom: 20px;
     }
   }
+  .block--block-content--view-header {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    div.view-header--inner {
+      position: relative;
+    }
+    div.header-content-container {
+      @include container;
+      padding-bottom: 20px;
+    }
+  }
 }
 
 .background-image-wrapper {
