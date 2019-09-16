@@ -1,0 +1,30 @@
+uuid: f90e80e1-89b4-4322-a742-17863c128385
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view_header
+    - field.field.block_content.view_header.field_headline
+    - field.field.block_content.view_header.field_tagline
+  module:
+    - text
+id: block_content.view_header.default
+targetEntityType: block_content
+bundle: view_header
+mode: default
+content:
+  field_headline:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tagline:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

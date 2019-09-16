@@ -1,0 +1,29 @@
+uuid: 6501d24b-7e87-4d74-b264-c804f1e50430
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view_header
+    - field.storage.block_content.field_tagline
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    headlines: headlines
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: block_content.view_header.field_tagline
+field_name: field_tagline
+entity_type: block_content
+bundle: view_header
+label: Tagline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,8 @@
+uuid: b24e3618-8869-427d-bcdc-f59de98c709b
+langcode: en
+status: true
+dependencies: {  }
+id: view_header
+label: 'View Header'
+revision: 1
+description: ''

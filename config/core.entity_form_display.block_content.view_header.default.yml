@@ -1,0 +1,40 @@
+uuid: 12e57029-3b17-48c0-8a3d-bb98cb410a58
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view_header
+    - field.field.block_content.view_header.field_headline
+    - field.field.block_content.view_header.field_tagline
+  module:
+    - text
+id: block_content.view_header.default
+targetEntityType: block_content
+bundle: view_header
+mode: default
+content:
+  field_headline:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_tagline:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

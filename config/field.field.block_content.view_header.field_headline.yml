@@ -1,0 +1,29 @@
+uuid: 40bab0e6-ff81-4db6-a3ec-4430b7cfdc55
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view_header
+    - field.storage.block_content.field_headline
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    headlines: headlines
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: block_content.view_header.field_headline
+field_name: field_headline
+entity_type: block_content
+bundle: view_header
+label: Headline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
