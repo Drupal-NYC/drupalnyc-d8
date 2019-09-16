@@ -14,6 +14,14 @@ function drupalnyc_theme_suggestions_block_alter(&$suggestions, $variables) {
   foreach ($suggestions as &$suggestion) {
     $suggestion = str_replace('bones_', '_', $suggestion);
   }
+  if (
+    $variables["elements"]["#base_plugin_id"] = 'block_content'
+    && isset($variables["elements"]["content"]["#block_content"])
+  ) {
+    /** @var \Drupal\block_content\Entity\BlockContent $block */
+    $block = $variables["elements"]["content"]["#block_content"];
+    $suggestions[] = 'block__block_content' . '__' . $block->bundle();
+  }
 }
 
 /**

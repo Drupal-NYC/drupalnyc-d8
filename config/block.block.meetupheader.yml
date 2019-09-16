@@ -1,0 +1,31 @@
+uuid: 61661209-1b5b-46cc-b92f-ce36c643c693
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:view_header:00ea3b5b-3cf1-4896-b394-4e7f084ca0de'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupalnyc
+id: meetupheader
+theme: drupalnyc
+region: background_image
+weight: 0
+provider: null
+plugin: 'block_content:00ea3b5b-3cf1-4896-b394-4e7f084ca0de'
+settings:
+  id: 'block_content:00ea3b5b-3cf1-4896-b394-4e7f084ca0de'
+  label: 'Meetup Header'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /meetups
+    negate: false
+    context_mapping: {  }
