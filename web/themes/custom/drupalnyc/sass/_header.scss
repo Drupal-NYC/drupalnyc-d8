@@ -113,3 +113,15 @@ header.header {
     }
   }
 }
+
+.region-content-top {
+  .header-content-container {
+    h1, p {
+      margin: 0;
+      color: $font-header--color;
+    }
+    .field--name-field-tagline {
+      @include h4;
+    }
+  }
+}

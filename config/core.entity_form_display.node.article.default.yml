@@ -5,15 +5,12 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.field_headline
-    - field.field.node.article.field_image
     - field.field.node.article.field_tagline
     - field.field.node.article.field_tags
-    - image.style.thumbnail
     - node.type.article
   module:
     - allowed_formats
     - field_group
-    - image
     - path
     - text
 third_party_settings:
@@ -65,14 +62,6 @@ content:
         hide_guidelines: '1'
     type: text_textarea
     region: content
-  field_image:
-    type: image_image
-    weight: 6
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
   field_tagline:
     weight: 2
     settings:

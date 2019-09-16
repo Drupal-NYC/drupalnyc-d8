@@ -23,6 +23,7 @@ module:
   dcnyc_pantheon: 0
   dnyc_header_block: 0
   dynamic_page_cache: 0
+  easy_breadcrumb: 0
   editor: 0
   embed: 0
   entity_embed: 0
@@ -67,6 +68,7 @@ module:
   user: 0
   views_ui: 0
   workflows: 0
+  extlink: 1
   menu_link_content: 1
   pathauto: 1
   views: 10

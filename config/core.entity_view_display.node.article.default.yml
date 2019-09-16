@@ -5,13 +5,10 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.field_headline
-    - field.field.node.article.field_image
     - field.field.node.article.field_tagline
     - field.field.node.article.field_tags
-    - image.style.large
     - node.type.article
   module:
-    - image
     - text
     - user
 _core:
@@ -35,15 +32,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_image:
-    type: image
-    weight: -1
-    region: content
-    settings:
-      image_style: large
-      image_link: ''
-    third_party_settings: {  }
-    label: hidden
   field_tagline:
     weight: 102
     label: above

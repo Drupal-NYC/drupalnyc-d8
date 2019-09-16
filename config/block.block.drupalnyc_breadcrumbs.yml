@@ -11,7 +11,7 @@ _core:
 id: drupalnyc_breadcrumbs
 theme: drupalnyc
 region: content_top
-weight: -6
+weight: -7
 provider: null
 plugin: system_breadcrumb_block
 settings:

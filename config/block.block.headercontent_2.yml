@@ -1,4 +1,4 @@
-uuid: 126b4b85-db1f-48ad-87b8-3cb97a8702eb
+uuid: eeb7618b-4fff-4bfe-b6dd-ae32fd35076a
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
     - dnyc_header_block
   theme:
     - drupalnyc
-id: headercontent
+id: headercontent_2
 theme: drupalnyc
-region: background_image
-weight: 0
+region: content_top
+weight: -5
 provider: null
 plugin: dnyc_header_content
 settings:
@@ -22,9 +22,7 @@ visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:
-      article: article
-      landing_page: landing_page
-      meetup: meetup
+      page: page
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

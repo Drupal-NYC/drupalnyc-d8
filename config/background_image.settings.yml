@@ -4,7 +4,7 @@ defaults:
     radius: 50
     speed: 1
   dark: false
-  full_viewport: false
+  full_viewport: true
   preload:
     background_color: '#ffffff'
   text:
@@ -18,9 +18,9 @@ entities:
       require: true
       group: ''
     page:
-      enable: true
-      embed: true
-      require: true
+      enable: false
+      embed: false
+      require: false
       group: ''
     landing_page:
       enable: true
@@ -67,8 +67,8 @@ entities:
       require: false
   taxonomy_term:
     tags:
-      enable: true
-      embed: true
+      enable: false
+      embed: false
       group: ''
       require: false
 css:

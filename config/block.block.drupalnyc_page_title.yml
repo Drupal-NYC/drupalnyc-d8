@@ -11,7 +11,7 @@ _core:
 id: drupalnyc_page_title
 theme: drupalnyc
 region: content
-weight: -50
+weight: -3
 provider: null
 plugin: page_title_block
 settings:

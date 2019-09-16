@@ -11,7 +11,7 @@ _core:
 id: drupalnyc_messages
 theme: drupalnyc
 region: content_top
-weight: -5
+weight: -6
 provider: null
 plugin: system_messages_block
 settings:
