@@ -1,43 +1,44 @@
-uuid: 82ada203-439b-4648-a3ee-8d1baff89e3d
+uuid: 5680bd21-94ea-4618-a522-21022a1a0170
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.header
     - field.field.node.article.body
     - field.field.node.article.field_headline
     - field.field.node.article.field_tagline
     - field.field.node.article.field_tags
     - node.type.article
   module:
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
-id: node.article.default
+id: node.article.header
 targetEntityType: node
 bundle: article
-mode: default
+mode: header
 content:
-  body:
+  field_headline:
     type: text_default
     weight: 0
     region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    label: hidden
-  field_tags:
-    type: entity_reference_label
+  field_tagline:
+    type: text_default
     weight: 1
     region: content
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-  links:
-    weight: 2
-    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_headline: true
-  field_tagline: true
+  body: true
+  field_tags: true
+  links: true
