@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.article.field_tags
     - node.type.article
   module:
-    - smart_trim
     - text
     - user
 _core:
@@ -20,25 +19,6 @@ targetEntityType: node
 bundle: article
 mode: teaser
 content:
-  body:
-    type: smart_trim
-    weight: 2
-    region: content
-    settings:
-      trim_length: 20
-      trim_type: words
-      trim_suffix: ''
-      wrap_class: trimmed
-      more_text: More
-      more_class: more-link
-      summary_handler: trim
-      wrap_output: false
-      more_link: false
-      trim_options:
-        text: false
-        trim_zero: false
-    third_party_settings: {  }
-    label: hidden
   field_headline:
     type: text_default
     weight: 0
@@ -53,10 +33,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  body: true
   field_tags: true
+  links: true
