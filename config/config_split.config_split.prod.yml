@@ -1,0 +1,17 @@
+uuid: d69eeb82-00be-4d87-a65b-47bffe543577
+langcode: en
+status: false
+dependencies: {  }
+id: prod
+label: 'Live Site'
+description: 'Configuration confined to the production environment'
+folder: ../config_splits/prod
+module:
+  config_readonly: 0
+theme: {  }
+blacklist:
+  - system.performance
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
