@@ -1,23 +1,28 @@
-uuid: e6a0eee1-f644-46bf-9c04-b729b2101886
+uuid: 5680bd21-94ea-4618-a522-21022a1a0170
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.header
     - field.field.node.article.body
     - field.field.node.article.field_headline
     - field.field.node.article.field_tagline
     - field.field.node.article.field_tags
     - node.type.article
   module:
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
 _core:
-  default_config_hash: 4NcL2hSQZBpJbYtNuh5jC6kyQTcAc1m5bQpTegEWEso
-id: node.article.teaser
+  default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
+id: node.article.header
 targetEntityType: node
 bundle: article
-mode: teaser
+mode: header
 content:
   field_headline:
     type: text_default

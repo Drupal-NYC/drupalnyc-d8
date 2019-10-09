@@ -229,7 +229,7 @@ class DeployCommands extends Tasks {
       $this->taskExec('echo -e ${SSH_PRIVATE_KEY} >> "${HOME}/.ssh/id_rsa"')
     );
     $collection->addTask(
-      $this->taskExec('ssh-keyscan -t rsa github.org >> /root/.ssh/known_hosts')
+      $this->taskExec('ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts')
     );
     $collection->addTask(
       $this->taskFilesystemStack()

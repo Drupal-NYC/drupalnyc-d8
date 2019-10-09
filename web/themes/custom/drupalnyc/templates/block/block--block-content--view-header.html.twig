@@ -27,18 +27,16 @@
 #}
 {% set classes = [
   'block',
+  'block--block-content--view-header',
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
 ] %}
-  {% set classes = [
-    'block',
-    'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
-  ] %}
 <div{{ attributes.addClass(classes) }}>
-  <div class="header-content-container">
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+  <div class="view-header--inner">
+    <div class="header-content-container">
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </div>
   </div>
 </div>

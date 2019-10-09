@@ -48,11 +48,14 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  pantheon_advanced_page_cache: 0
   path: 0
   quickedit: 0
   rdf: 0
   responsive_favicons: 0
   responsive_image: 0
+  scheduler: 0
+  scheduler_content_moderation_integration: 0
   search: 0
   settings_tray: 0
   shortcut: 0
