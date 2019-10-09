@@ -10,7 +10,7 @@
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment.
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
-    $primary_domain = 'www.drupalcamp.nyc';
+    $primary_domain = 'drupalnyc.org';
   }
   else {
     // Redirect to HTTPS on every Pantheon environment.
@@ -46,12 +46,16 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
       break;
 
     case 'live':
-      /*
-        if (PHP_SAPI !== 'cli') {
-          $settings['config_readonly'] = TRUE;
-        }
-      */
+      if (PHP_SAPI !== 'cli') {
+        $settings['config_readonly'] = TRUE;
+        $settings['config_readonly_whitelist_patterns'] = [
+          'core.menu.static_menu_link_overrides',
+          'menu_ui.settings.yml',
+          'system.menu.*',
+        ];
+      }
       $config['config_split.config_split.dev']['status'] = FALSE;
+      $config['config_split.config_split.prod']['status'] = TRUE;
       ini_set('display_errors', '0');
       break;
 

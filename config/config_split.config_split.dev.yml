@@ -1,0 +1,18 @@
+uuid: abfa9c2d-41d3-47c1-8e23-be3a502fa661
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: Development
+description: 'Settings and modules that should be on in development environments.'
+folder: ../config_splits/dev
+module:
+  devel: 0
+  views_ui: 0
+theme: {  }
+blacklist:
+  - system.performance
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
