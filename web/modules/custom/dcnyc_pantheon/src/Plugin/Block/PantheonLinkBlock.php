@@ -67,12 +67,11 @@ class PantheonLinkBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    global $base_root;
     $build = [];
     $build['dcnyc_pantheon_footer'] = [
       '#theme' => 'dcnyc_pantheon_footer',
       '#pantheon_url' => $this->configuration['pantheon_url'],
-      '#pantheon_image' => $base_root . '/modules/custom/dcnyc_pantheon' . '/poweredBYPantheon.png',
+      '#pantheon_image' => 'modules/custom/dcnyc_pantheon/poweredBYPantheon.png',
     ];
     return $build;
   }
