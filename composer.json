@@ -36,7 +36,7 @@
         "drupal/config_readonly": "^1.0@beta",
         "drupal/config_split": "^1.4",
         "drupal/console": "^1.9.2",
-        "drupal/core": "8.7.6",
+        "drupal/core": "8.7.8",
         "drupal/devel": "^2.1",
         "drupal/diff": "^1.0@RC",
         "drupal/easy_breadcrumb": "^1.12",
@@ -57,13 +57,13 @@
         "drush/drush": "^9.7",
         "oomphinc/composer-installers-extender": "^1.1",
         "symfony/cache": "^3.1",
-        "webflo/drupal-core-strict": "8.7.6",
+        "webflo/drupal-core-strict": "8.7.8",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {
-      "webflo/drupal-core-require-dev": "8.7.6"
+      "webflo/drupal-core-require-dev": "8.7.8"
     },
     "conflict": {
         "drupal/drupal": "*"
