@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ecfef52682b60351798538f244a3e587",
+    "content-hash": "09261e39f485651fc4da1b3678dbcfad",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -10704,13 +10704,21 @@
             "time": "2019-10-02T19:31:42+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "1.3.x-dev",
+            "alias_normalized": "1.3.9999999.9999999-dev",
+            "version": "9999999-dev",
+            "package": "behat/mink-selenium2-driver"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/auto_entitylabel": 10,
         "drupal/config_readonly": 10,
         "drupal/diff": 5,
-        "drupal/inline_entity_form": 5
+        "drupal/inline_entity_form": 5,
+        "behat/mink-selenium2-driver": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
