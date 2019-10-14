@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Pantheon debugging script.
+ */
+
 echo "Quicksilver Debugging Output";
 echo "\n\n";
 echo "\n========= START PAYLOAD ===========\n";
