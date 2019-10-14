@@ -4,21 +4,23 @@ php_version: 7.2
 enforce_https: off
 workflows:
   deploy:
+    before:
+      - type: webphp
+        description: Dump debugging info
+        script: private/debug.php
     after:
       - type: webphp
         description: Post deployment site updates.
         script: private/hooks/deploy.php
-      - type: webphp
-        description: Dump debugging info
-        script: private/debug.php
   sync_code:
+    before:
+      - type: webphp
+        description: Dump debugging info
+        script: private/debug.php
     after:
       - type: webphp
         description: Post deployment site updates.
         script: private/hooks/deploy.php
-      - type: webphp
-        description: Dump debugging info
-        script: private/debug.php
   clone_database:
     after:
       - type: webphp
