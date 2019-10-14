@@ -8,11 +8,17 @@ workflows:
       - type: webphp
         description: Post deployment site updates.
         script: private/hooks/deploy.php
+      - type: webphp
+        description: Dump debugging info
+        script: private/debug.php
   sync_code:
     after:
       - type: webphp
         description: Post deployment site updates.
         script: private/hooks/deploy.php
+      - type: webphp
+        description: Dump debugging info
+        script: private/debug.php
   clone_database:
     after:
       - type: webphp
