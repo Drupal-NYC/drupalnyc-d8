@@ -8,6 +8,7 @@ description: 'Configuration confined to the production environment'
 folder: ../config_splits/prod
 module:
   config_readonly: 0
+  pantheon_advanced_page_cache: 0
 theme: {  }
 blacklist:
   - system.performance

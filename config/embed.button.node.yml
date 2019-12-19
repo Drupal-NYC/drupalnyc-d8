@@ -5,8 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.embed
     - node.type.meetup
-  content:
-    - 'file:file:e3b5151f-fb9e-4e5b-866e-fbb4ffe91a4c'
   module:
     - entity_embed
     - node
@@ -23,4 +21,7 @@ type_settings:
     - 'view_mode:node.embed'
   entity_browser: ''
   entity_browser_settings: {  }
-icon_uuid: e3b5151f-fb9e-4e5b-866e-fbb4ffe91a4c
+icon:
+  data: ''
+  uri: 'public://embed_buttons/meetup.png'
+icon_uuid: null
