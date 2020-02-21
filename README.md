@@ -33,6 +33,8 @@ NFS they must not be in the chosen folder.
     * The easiest way forward is
 to create a new folder such as `~/DockerSites`.
 
+4. Install VirtualBox 6.0 (not 6.1) if you do not already have VirtualBox installed. If you already have VirtualBox <6.1 installed, it will probably work. If you have VirtualBox 6.1 or higher installed, uninstall it and install [VirtualBox 6.0](https://www.virtualbox.org/wiki/Download_Old_Builds_6_0) to avoid headaches.
+
 ### Using a Passphrase protected key in the CI Service
 
 Some projects, such as ecommerce projects, should have all ssh keys
@@ -94,7 +96,7 @@ When installing the given `composer.json` some tasks are taken care of:
   development setup.  Any missing dependencies are installed
   via homebrew. The following are required for Mac:
     * Ahoy
-    * VirtualBox
+    * VirtualBox (5.2 and 6.0 are known to work. 6.1 does NOT)
     * Docker
     * Docker Compose
     * pre-commit by Yelp
