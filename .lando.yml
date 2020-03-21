@@ -8,3 +8,8 @@ config:
   index: false
   edge: true
   cache: false
+
+services:
+  appserver:
+    build:
+      - "cd $LANDO_MOUNT && composer install"
