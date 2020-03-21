@@ -1,0 +1,10 @@
+name: drupalnyc
+recipe: pantheon
+config:
+  framework: drupal8
+  site: drupalnyc
+  id: 948cdd82-38e2-4769-a8fb-d3e33ee4e161
+  xdebug: false
+  index: false
+  edge: true
+  cache: false
