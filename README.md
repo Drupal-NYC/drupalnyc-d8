@@ -1,4 +1,63 @@
-# DrupalCamp NYC D8
+# DrupalNYC D8
+
+[drupalnyc.org](https://www.drupalnyc.org/) is hosted on Pantheon. You need to be a member of the [DrupalCampNYC Pantheon site's "Team"](https://dashboard.pantheon.io/sites/948cdd82-38e2-4769-a8fb-d3e33ee4e161) (link only works if you are a member) to be able to:
+* Make a manual backup of the site
+* Download a copy of the site's database and/or files (sites/default/files)
+* Deploy to Pantheon's Test or Stage environment
+
+[Our canonical git repository](https://github.com/Drupal-NYC/drupalnyc-d8) is on GitHub. You need to have write access to that repository in order to:
+* Push changes to the master branch
+* Approve pull requests
+
+When changes are pushed to or merged into the master branch on GitHub, a build should be triggered on CodeShip. You need to be a member of the Drupalnyc [Devs CodeShip team](https://app.codeship.com/orgs/drupalnyc/teams/devs) (link only works if you are a member) to:
+* [View build status and history](https://app.codeship.com/projects/3c4f6b00-b841-0137-09e0-12b8b125274c)
+
+The CodeShip build, among other things, deploys the changes to our Pantheon site's Dev environment.
+
+# Local Environment Using Lando
+
+[Lando documentation](https://docs.lando.dev/)
+
+## Initial Setup
+
+Note that the git repo already has a `.lando.yml` file so you shouldn't run `lando init`.
+
+1. Download and install the latest release of Lando from https://github.com/lando/lando/releases
+2. Create a directory to contain the site (e.g. `mkdir ~/Sites/drupalnyc`)
+3. Change to that directory (e.g. `cd ~/Sites/drupalnyc`)
+4. `git clone git@github.com:Drupal-NYC/drupalnyc-d8.git .`
+5. `lando start`
+6. `lando pull --database=live --files=live --code=none`
+
+The first time it is run, per .lando.yml, `lando start`:
+* copies web/sites/example-lando.settings.local.php to web/sites/default/settings.local.php
+* runs `composer install` for the project
+* runs `npm install gulp` and `gulp` to compile the theme
+
+You now have a fully functional local environment with the latest database and files from the Pantheon site's Live environment, accessible at [https://drupalnyc.lndo.site/](https://drupalnyc.lndo.site/)
+
+## Useful Commands
+
+`git push` as normal.
+
+Drush: `lando drush <command>`
+
+Drupal Console: `lando drupal <command>`
+
+Overwrite local database and files with that of Live: `lando pull --database=live --files=live --code=none`
+
+Turn off Lando: `lando poweroff`
+
+Start the site: `lando start`
+
+## Enable XDebug
+
+1. Edit .lando.yml and set `xdebug` to `true`.
+2. `lando rebuild`
+
+Now everything will run slower :)
+
+# Local Environment Using Ballast
 Uses the Ballast local development toolset developed with the support of [Digital Pulp](https://www.digitalpulp.com).
 
 Key contributors:
