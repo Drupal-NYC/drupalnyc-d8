@@ -10,6 +10,9 @@ config:
   cache: false
 services:
   appserver:
+    overrides:
+      environment:
+        DRUSH_OPTIONS_URI: "https://drupalnyc.lndo.site"
     build:
       - "cp -n /app/web/sites/example-lando.settings.local.php /app/web/sites/default/settings.local.php"
       - "composer install"
