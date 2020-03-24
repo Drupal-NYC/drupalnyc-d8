@@ -28,6 +28,7 @@ Note that the git repo already has a `.lando.yml` file so you shouldn't run `lan
 4. `git clone git@github.com:Drupal-NYC/drupalnyc-d8.git .`
 5. `lando start`
 6. `lando pull --database=live --files=live --code=none`
+7. `lando drush cr`
 
 The first time it is run, per .lando.yml, `lando start`:
 * copies web/sites/example-lando.settings.local.php to web/sites/default/settings.local.php
