@@ -8,8 +8,23 @@ config:
   index: false
   edge: true
   cache: false
-
 services:
   appserver:
     build:
-      - "cd $LANDO_MOUNT && composer install"
+      - "cp -n /app/web/sites/example-lando.settings.local.php /app/web/sites/default/settings.local.php"
+      - "composer install"
+      - "drush cr"
+  node:
+    type: node:10
+    build:
+      - "cd /app/web/themes/custom/drupalnyc && npm install"
+      - "cd /app/web/themes/custom/drupalnyc && gulp"
+    globals:
+      gulp-cli: latest
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
