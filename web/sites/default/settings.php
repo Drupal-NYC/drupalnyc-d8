@@ -775,6 +775,14 @@ $settings['trusted_host_patterns'] = [];
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   // Load shared Pantheon settings.
   require_once __DIR__ . '/settings.pantheon-additional.php';
+
+  if ($_ENV['PANTHEON_ENVIRONMENT'] == 'lando') {
+    // Load local settings file if it exists.
+    $local_conf_file_path = __DIR__ . '/settings.local.php';
+    if (file_exists($local_conf_file_path)) {
+      require_once $local_conf_file_path;
+    }
+  }
 }
 // Load settings suitable outside of Pantheon (e.g. local development).
 else {
