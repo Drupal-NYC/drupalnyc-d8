@@ -32,7 +32,8 @@ Note that the git repo already has a `.lando.yml` file so you shouldn't run `lan
 The first time it is run, per .lando.yml, `lando start`:
 * copies web/sites/example-lando.settings.local.php to web/sites/default/settings.local.php
 * runs `composer install` for the project
-* runs `npm install gulp` and `gulp` to compile the theme
+* runs `npm install gulp` in web/themes/custom/drupalnyc
+* runs `gulp` in web/themes/custom/drupalnyc to compile the theme
 
 You now have a fully functional local environment with the latest database and files from the Pantheon site's Live environment, accessible at [https://drupalnyc.lndo.site/](https://drupalnyc.lndo.site/)
 
@@ -43,6 +44,8 @@ You now have a fully functional local environment with the latest database and f
 Drush: `lando drush <command>`
 
 Drupal Console: `lando drupal <command>`
+
+Gulp: `lando gulp`
 
 Overwrite local database and files with that of Live: `lando pull --database=live --files=live --code=none`
 
