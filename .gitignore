@@ -58,3 +58,15 @@ node_modules
 # Dev files
 *.sql
 web/.ht.router.php
+/.csslintrc
+/.eslintrc.json
+/.ht.router.php
+/.htaccess
+/INSTALL.txt
+/README.txt
+/autoload.php
+/example.gitignore
+/index.php
+/robots.txt
+/update.php
+/web.config
