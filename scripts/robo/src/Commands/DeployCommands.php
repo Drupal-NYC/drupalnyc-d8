@@ -247,6 +247,7 @@ class DeployCommands extends Tasks {
     $shallowCheck = $this->taskExec('git rev-parse --is-shallow-repository --no-revs HEAD')
       ->interactive(FALSE)
       ->run();
+    $this->taskExec('git fetch');
     if (trim($shallowCheck->getMessage()) == 'true') {
       $collection->addTask(
         $this->taskExec('git fetch --unshallow')
