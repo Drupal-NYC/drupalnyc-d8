@@ -13,6 +13,6 @@ deploy:
   volumes:
     - .:/var/www
   environment:
-    DDEV_PHP_VERSION: 7.4
+    PHP_DEFAULT_VERSION: 7.4
     DEPLOY_TARGET: ssh://codeserver.dev.948cdd82-38e2-4769-a8fb-d3e33ee4e161@codeserver.dev.948cdd82-38e2-4769-a8fb-d3e33ee4e161.drush.in:2222/~/repository.git
 
