@@ -1,3 +1,11 @@
+front-end:
+  image: digitalpulp/front-end:codeship
+  working_dir: /var/www/web/themes/custom/drupalnyc
+  volumes_from:
+    - deploy
+  environment:
+    THEME_NAME: drupalnyc
+    THEME_PATH: /var/www/web/themes/custom
 deploy:
   image: drud/ddev-webserver:v1.21.3
   working_dir: /var/www
