@@ -12,7 +12,7 @@ front-end:
     THEME_NAME: drupalnyc
     THEME_PATH: /var/www/web/themes/custom
 deploy:
-  image: digitalpulp/cli:codeship
+  image: digitalpulp/cli:codeship-7.4.16.4
   working_dir: /var/www
   encrypted_env_file: env.encrypted
   volumes:

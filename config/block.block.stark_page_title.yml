@@ -1,0 +1,30 @@
+uuid: 46c2319a-33e6-4f84-8c62-2622078676e2
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+  theme:
+    - stark
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: stark_page_title
+theme: stark
+region: content
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
