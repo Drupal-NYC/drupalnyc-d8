@@ -12,11 +12,12 @@ front-end:
     THEME_NAME: drupalnyc
     THEME_PATH: /var/www/web/themes/custom
 deploy:
-  image: digitalpulp/cli:codeship-7.4.16.4
+  image: drud/ddev-webserver
   working_dir: /var/www
   encrypted_env_file: env.encrypted
   volumes:
     - .:/var/www
   environment:
+    DDEV_PHP_VERSION: 7.4
     DEPLOY_TARGET: ssh://codeserver.dev.948cdd82-38e2-4769-a8fb-d3e33ee4e161@codeserver.dev.948cdd82-38e2-4769-a8fb-d3e33ee4e161.drush.in:2222/~/repository.git
 
