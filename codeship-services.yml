@@ -1,18 +1,5 @@
-code-quality:
-  image: digitalpulp/code-quality
-  working_dir: /var/www
-  volumes_from:
-    - deploy
-front-end:
-  image: digitalpulp/front-end:codeship
-  working_dir: /var/www/web/themes/custom/drupalnyc
-  volumes_from:
-    - deploy
-  environment:
-    THEME_NAME: drupalnyc
-    THEME_PATH: /var/www/web/themes/custom
 deploy:
-  image: drud/ddev-webserver
+  image: drud/ddev-webserver:v1.21.3
   working_dir: /var/www
   encrypted_env_file: env.encrypted
   volumes:
