@@ -1,0 +1,28 @@
+{
+  "name": "bones_subtheme",
+  "version": "1.0.0",
+  "description": "A subtheme of the Bones Drupal 8 theme for development.",
+  "main": "index.js",
+  "repository": "https://www.drupal.org/project/bones_theme/",
+  "author": "Xequals",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "browser-sync": "^2.26.7",
+    "compass-mixins": "^0.12.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass-globbing": "^0.0.23"
+  },
+  "scripts": {
+    "dev": "node ./node_modules/.bin/gulp"
+  },
+    "browserslist": [
+        "last 2 versions",
+        "android 4",
+        "opera 12"
+  ]
+}

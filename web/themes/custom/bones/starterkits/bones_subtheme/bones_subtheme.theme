@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Bones theme.
+ */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for block templates.
+ */
+function bones_subtheme_theme_suggestions_block_alter(&$suggestions, $variables) {
+
+  // Load theme suggestions for blocks from parent theme.
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('bones_', 'bones_subtheme_', $suggestion);
+  }
+}

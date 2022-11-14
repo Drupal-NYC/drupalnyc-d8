@@ -1,0 +1,84 @@
+.color-preview {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    min-width: 500px;
+    font-family: 'Karla', 'Helvetica', Arial, sans-serif;
+}
+
+.color-preview h1,
+.color-preview h2 {
+    color: #0f50de;
+    font-family: 'Poppins', 'Helvetica', Arial, sans-serif;
+}
+
+.color-preview a {
+    color: #0f50de;
+}
+
+.color-preview-header {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.color-preview-branding img {
+    max-width: 60px;
+    float: left;
+    margin-right: 10px;
+}
+
+.color-preview-branding h1 {
+    line-height: 1.5em;
+}
+
+.color-preview-branding p {
+    margin: 0.5em 0;
+}
+
+.color-preview-navigation ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+}
+
+.color-preview-navigation ul li a {
+    margin: 5px;
+    color: #0f50de;
+}
+
+.color-preview-search .color-preview-button {
+    display: inline-block;
+    padding: 5px 7px;
+    background-color: #0f50de;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+.color-preview-search .color-preview-button:hover {
+    cursor: pointer;
+}
+
+.color-preview-layout-container {
+    display: flex;
+    padding: 20px;
+}
+
+.color-preview-layout-container .color-preview-main {
+    flex-basis: 66%;
+}
+
+.color-preview-layout-container .color-preview-sidebar {
+    flex-basis: 33%;
+    padding-left: 10px;
+}
+
+.color-preview-sidebar ul {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.color-preview-footer {
+    padding: 20px;
+}

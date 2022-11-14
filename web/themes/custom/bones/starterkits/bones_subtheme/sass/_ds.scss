@@ -1,0 +1,90 @@
+// Display Suite layouts
+
+
+// Two column layout
+.ds-2col {
+    display: flex;
+    flex-wrap: wrap;
+    > .group-left {
+        flex: 0 1 100%;
+        width: auto;
+        float: none;
+    }
+    > .group-right {
+        flex: 0 1 100%;
+        width: auto;
+        float: none;
+    }
+    @include breakpoint($tablet) {
+        > .group-left {
+            flex: 0 1 50%;
+            padding-right: 15px;
+        }
+        > .group-right {
+            flex: 0 1 50%;
+            padding-left: 15px;
+        }
+    }
+}
+
+// Two column stacked layout
+.ds-2col-stacked {
+    display: flex;
+    flex-wrap: wrap;
+    > .group-left {
+        flex: 0 1 100%;
+        width: auto;
+        float: none;
+    }
+    > .group-right {
+        flex: 0 1 100%;
+        width: auto;
+        float: none;
+    }
+    @include breakpoint($tablet) {
+        > .group-left {
+            flex: 0 1 50%;
+            padding-right: 15px;
+        }
+        > .group-right {
+            flex: 0 1 50%;
+            padding-left: 15px;
+        }
+    }
+}
+
+// Three column 25/50/25
+.ds-3col {
+    display: flex;
+    flex-wrap: wrap;
+    > .group-left {
+        flex: 0 1 100%;
+        width: auto;
+        float: none;
+    }
+    > .group-middle {
+        flex: 0 1 100%;
+        width: auto;
+        float: none;
+    }
+    > .group-right {
+        flex: 0 1 100%;
+        width: auto;
+        float: none;
+    }
+    @include breakpoint($tablet) {
+        > .group-left {
+            flex: 0 1 25%;
+            padding-right: 15px;
+        }
+        > .group-middle {
+            flex: 0 1 50%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        > .group-right {
+            flex: 0 1 25%;
+            padding-left: 15px;
+        }
+    }
+}

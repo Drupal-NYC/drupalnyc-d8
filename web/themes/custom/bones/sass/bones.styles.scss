@@ -1,0 +1,44 @@
+// The file that imports all other scss files
+
+// Import external libraries.
+@import "breakpoint";
+
+
+// Import variables, abstractions, base styles and components using globbing.
+//
+// Globbing will always import files alphabetically. Optimally, all your
+// components should be self-contained and explicit enough to not have any
+// contained styles leak into unrelated components: The import order should not
+// affect the result.
+//
+// If there are variables, functions or mixins that depend on each other and
+// therefore need to be imported in a specific order you can import them
+// directly. Variables-, function- or mixin providing partials should never
+// output any styles themselves: Importing them multiple times to resolve
+// dependencies shouldn't be a problem.
+
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote,
+a, code, img, strong,
+b, u, i, center, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, form, input,
+figure, figcaption, footer, header,
+menu, nav, section, audio, video {
+  box-sizing: border-box;
+}
+
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "page";
+@import "header";
+@import "navigation";
+@import "footer";
+@import "node";
+@import "media";
+@import "blocks";
+@import "views";
+@import "forms";
+@import "ds";

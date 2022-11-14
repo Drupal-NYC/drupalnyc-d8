@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="28" viewBox="0 0 35 28" class="menu-button">
+    <title>menu button</title>
+    <defs>
+    <style type="text/css"><![CDATA[
+        .menu-button { position: relative; overflow: visible; }
+        .menu-button path { transition: 0.8s ease all; }
+        .menu-open .menu-button path.line-1 { transform: rotate(45deg) translate(5px, -5px); }
+        .menu-open .menu-button path.line-2 { transform: rotate(-45deg)  translate(-15px, 12px); }
+        .menu-open .menu-button path.line-3 { transform: rotate(45deg)  translate(5px, -21px); }
+        .menu-open .menu-button path.line-4 { transform: rotate(-45deg)  translate(-15px, -4px); }
+
+    ]]></style>
+    </defs>
+    <g id="Layer_1" data-name="Layer 1">
+        <path class="line-1" d="M33,1a1,1,0,0,1,0,2H2A1,1,0,0,1,2,1H33m0-1H2A2,2,0,0,0,2,4H33a2,2,0,0,0,0-4Z" style="fill:#919191"/>
+        <path class="line-2" d="M33,9a1,1,0,0,1,0,2H2A1,1,0,0,1,2,9H33m0-1H2a2,2,0,0,0,0,4H33a2,2,0,0,0,0-4Z" style="fill:#919191"/>
+        <path class="line-3" d="M33,17a1,1,0,0,1,0,2H2a1,1,0,0,1,0-2H33m0-1H2a2,2,0,0,0,0,4H33a2,2,0,0,0,0-4Z" style="fill:#919191"/>
+        <path class="line-4" d="M33,25a1,1,0,0,1,0,2H2a1,1,0,0,1,0-2H33m0-1H2a2,2,0,0,0,0,4H33a2,2,0,0,0,0-4Z" style="fill:#919191"/>
+    </g>
+</svg>
