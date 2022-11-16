@@ -10,7 +10,7 @@ use Drupal\Core\File\FileSystemInterface;
 /**
  * Move image files from background image entities to media.
  */
-function dnyc_migrate_post_update_background_2() {
+function dnyc_migrate_post_update_background_images() {
   $bg_storage = \Drupal::entityTypeManager()->getStorage('background_image');
   $media_storage = \Drupal::entityTypeManager()->getStorage('media');
   /** @var \Drupal\Core\File\FileSystem $file_system */
