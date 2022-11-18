@@ -1,0 +1,21 @@
+id: background_image
+label: "Background Images to Media"
+migration_group: dnyc
+source:
+  plugin: content_entity:background_image
+  include_translations: false
+destination:
+  plugin: 'entity:media'
+  default_bundle: image
+process:
+  name:
+    plugin: callback
+    callable: strip_tags
+    source: label
+  field_media_image/target_id:
+    plugin: bg_image_file
+    source: image
+dependencies:
+  enforced:
+    module:
+      - dnyc_migrate
