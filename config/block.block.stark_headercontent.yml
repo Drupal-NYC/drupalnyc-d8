@@ -1,0 +1,30 @@
+uuid: 823e8675-df6f-46cf-aec1-5ca8de2549bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - dnyc_header_block
+  theme:
+    - stark
+id: stark_headercontent
+theme: stark
+region: background_image
+weight: 0
+provider: null
+plugin: dnyc_header_content
+settings:
+  id: dnyc_header_content
+  label: 'Header Content'
+  provider: dnyc_header_block
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      landing_page: landing_page
+      meetup: meetup
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

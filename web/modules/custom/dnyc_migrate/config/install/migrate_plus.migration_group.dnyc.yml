@@ -1,7 +1,6 @@
 id: dnyc
 label: DrupalNYC Migration
 description: Migrations to adjust content moving from D8 to D9
-source_type: D8
 dependencies:
   enforced:
     module:

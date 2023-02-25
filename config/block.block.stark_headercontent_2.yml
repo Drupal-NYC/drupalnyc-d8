@@ -1,0 +1,28 @@
+uuid: 8b39f50f-80d5-4e8c-ada1-234ae0c61dd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - dnyc_header_block
+  theme:
+    - stark
+id: stark_headercontent_2
+theme: stark
+region: background_image
+weight: -5
+provider: null
+plugin: dnyc_header_content
+settings:
+  id: dnyc_header_content
+  label: 'Header Content'
+  provider: dnyc_header_block
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

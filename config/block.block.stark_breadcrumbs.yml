@@ -1,6 +1,6 @@
-uuid: 00c29034-9eca-4bde-af45-f4ea68686135
+uuid: e0966843-900a-4caf-8b37-d420791f0d93
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: stark_breadcrumbs
 theme: stark
-region: sidebar_first
+region: background_image
 weight: -7
 provider: null
 plugin: system_breadcrumb_block

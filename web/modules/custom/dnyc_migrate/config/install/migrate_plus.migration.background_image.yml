@@ -12,7 +12,7 @@ process:
     plugin: callback
     callable: strip_tags
     source: label
-  field_media_image/target_id:
+  field_media_image:
     plugin: bg_image_file
     source: image
 dependencies:

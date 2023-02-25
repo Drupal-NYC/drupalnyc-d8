@@ -1,6 +1,6 @@
-uuid: 6ba1b1bb-0149-465c-b761-32af3bc33e66
+uuid: d16ace8f-5ad5-4d80-b98d-8e0be37a5edd
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:view_header:00ea3b5b-3cf1-4896-b394-4e7f084ca0de'
@@ -11,7 +11,7 @@ dependencies:
     - stark
 id: stark_meetupheader
 theme: stark
-region: sidebar_first
+region: background_image
 weight: 0
 provider: null
 plugin: 'block_content:00ea3b5b-3cf1-4896-b394-4e7f084ca0de'

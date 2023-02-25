@@ -55,7 +55,7 @@ class BackgroundImageFiles extends ProcessPluginBase implements MigrateProcessIn
    *   The destination property currently worked on. This is only used together
    *   with the $row above.
    *
-   * @return string
+   * @return \Drupal\file\Entity\File
    *   The given value if it is in fact a file entity id.
    */
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
@@ -68,10 +68,10 @@ class BackgroundImageFiles extends ProcessPluginBase implements MigrateProcessIn
       $result = $this->fileSystem->move($file->getFileUri(), $destination);
       $file->setFileUri($result);
       $file->save();
-      return $value['target_id'];
+      return $file;
     }
     else {
-      return '';
+      return NULL;
     }
   }
 }

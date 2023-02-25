@@ -1,13 +1,13 @@
-uuid: 562ca759-64ae-4d3a-a704-d1652336824a
+uuid: 9eb4def7-a72c-471f-aac9-174e2ad19dd3
 langcode: en
 status: true
 dependencies:
   module:
     - background_image
   theme:
-    - drupalnyc
-id: backgroundimage
-theme: drupalnyc
+    - stark
+id: stark_backgroundimage
+theme: stark
 region: background_image
 weight: 0
 provider: null
