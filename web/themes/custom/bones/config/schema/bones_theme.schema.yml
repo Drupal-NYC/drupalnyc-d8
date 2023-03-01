@@ -1,5 +1,0 @@
-# Schema for the configuration files of the Bones theme.
-
-bones_theme.settings:
-  type: theme_settings
-  label: 'Bones settings'

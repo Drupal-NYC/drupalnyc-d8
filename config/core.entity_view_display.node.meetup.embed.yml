@@ -18,8 +18,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.meetup.embed
 targetEntityType: node
 bundle: meetup
@@ -27,8 +27,6 @@ mode: embed
 content:
   field_meetup_url:
     type: link
-    weight: 2
-    region: content
     label: hidden
     settings:
       trim_length: 80
@@ -37,27 +35,29 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_summary:
     type: text_default
-    weight: 3
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: content
   field_video:
     type: entity_reference_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: embed
       link: false
     third_party_settings: {  }
+    weight: 1
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   body: true
   field_date: true

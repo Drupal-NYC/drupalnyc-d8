@@ -1,6 +1,6 @@
 uuid: 5f84f75e-7c00-4ac3-abb8-7e5c1f192cc9
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,13 +10,13 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: stark_messages
 theme: stark
-region: background_image
+region: sidebar_first
 weight: -6
 provider: null
 plugin: system_messages_block
 settings:
   id: system_messages_block
   label: 'Status messages'
-  provider: system
   label_display: '0'
+  provider: system
 visibility: {  }

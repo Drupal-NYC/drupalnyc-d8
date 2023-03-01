@@ -15,8 +15,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
 id: node.article.header
@@ -26,18 +26,18 @@ mode: header
 content:
   field_headline:
     type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_tagline:
     type: text_default
-    weight: 1
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   body: true
   field_tags: true

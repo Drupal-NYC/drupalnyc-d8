@@ -1,8 +1,0 @@
-.sass-cache
-.DS_store
-
-# Ignore paths that contain node modules.
-node_modules
-node_modules/
-node_modules*
-node_modules/*

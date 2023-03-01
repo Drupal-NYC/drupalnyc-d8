@@ -14,17 +14,17 @@ bundle: view_header
 mode: default
 content:
   field_headline:
-    weight: 0
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 0
     region: content
   field_tagline:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
 hidden: {  }

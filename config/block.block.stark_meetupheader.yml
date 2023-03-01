@@ -1,6 +1,6 @@
 uuid: d16ace8f-5ad5-4d80-b98d-8e0be37a5edd
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:view_header:00ea3b5b-3cf1-4896-b394-4e7f084ca0de'
@@ -11,21 +11,21 @@ dependencies:
     - stark
 id: stark_meetupheader
 theme: stark
-region: background_image
+region: sidebar_first
 weight: 0
 provider: null
 plugin: 'block_content:00ea3b5b-3cf1-4896-b394-4e7f084ca0de'
 settings:
   id: 'block_content:00ea3b5b-3cf1-4896-b394-4e7f084ca0de'
   label: 'Meetup Header'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /meetups
     negate: false
     context_mapping: {  }
+    pages: /meetups

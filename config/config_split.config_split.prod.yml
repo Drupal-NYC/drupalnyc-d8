@@ -5,6 +5,7 @@ dependencies: {  }
 id: prod
 label: 'Live Site'
 description: 'Configuration confined to the production environment'
+weight: 0
 folder: ../config_splits/prod
 module:
   config_readonly: 0
@@ -15,4 +16,3 @@ blacklist:
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0

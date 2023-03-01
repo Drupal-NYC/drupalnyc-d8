@@ -1,6 +1,6 @@
 uuid: 85a88383-1009-421d-b9c0-2b01a03e28ba
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
@@ -10,15 +10,15 @@ dependencies:
     - stark
 id: stark_mainnavigation
 theme: stark
-region: background_image
+region: sidebar_first
 weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
   label: 'Main navigation'
-  provider: system
   label_display: '0'
+  provider: system
   level: 1
   depth: 0
   expand_all_items: true

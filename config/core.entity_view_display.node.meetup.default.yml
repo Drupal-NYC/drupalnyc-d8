@@ -18,40 +18,40 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
   field_group:
     group_topic:
       children:
         - field_video
         - body
+      label: Topic
       parent_name: ''
       weight: 2
       format_type: html_element
       format_settings:
-        id: ''
         classes: meetup-content
+        id: ''
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-      label: Topic
 id: node.meetup.default
 targetEntityType: node
 bundle: meetup
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 6
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 6
     region: content
   field_meetup_url:
-    weight: 1
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -60,29 +60,29 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 1
     region: content
   field_summary:
-    weight: 7
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 7
     region: content
   field_video:
     type: entity_reference_entity_view
-    weight: 5
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 5
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_date: true
   field_tagline: true

@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+langcode: en
 uuid: c900923a-2fdb-479b-917e-04a0c6e8cfc7
 name: DrupalNYC
 mail: domains@drupalnyc.org
@@ -8,7 +11,4 @@ page:
   front: /node/4
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-_core:
-  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

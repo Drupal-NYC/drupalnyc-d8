@@ -22,6 +22,6 @@ type_settings:
   entity_browser: ''
   entity_browser_settings: {  }
 icon:
-  data: ''
   uri: 'public://embed_buttons/meetup.png'
+  data: ''
 icon_uuid: null

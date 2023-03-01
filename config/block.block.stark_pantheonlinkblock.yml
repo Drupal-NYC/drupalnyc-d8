@@ -15,7 +15,7 @@ plugin: pantheon_link_block
 settings:
   id: pantheon_link_block
   label: 'Pantheon link block'
-  provider: dcnyc_pantheon
   label_display: '0'
+  provider: dcnyc_pantheon
   pantheon_url: 'https://pantheon.io'
 visibility: {  }

@@ -5,6 +5,7 @@ dependencies: {  }
 id: dev
 label: Development
 description: 'Settings and modules that should be on in development environments.'
+weight: 0
 folder: ../config_splits/dev
 module:
   devel: 0
@@ -15,4 +16,3 @@ blacklist:
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0

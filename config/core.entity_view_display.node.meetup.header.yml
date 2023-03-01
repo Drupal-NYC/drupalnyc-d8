@@ -16,8 +16,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.meetup.header
 targetEntityType: node
 bundle: meetup
@@ -25,11 +25,11 @@ mode: header
 content:
   field_tagline:
     type: text_default
-    weight: 1
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   body: true
   field_date: true

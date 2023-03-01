@@ -23,39 +23,39 @@ mode: teaser
 content:
   body:
     type: smart_trim
-    weight: 2
-    region: content
     label: hidden
     settings:
       trim_length: 50
       trim_type: words
       trim_suffix: ''
-      wrap_class: trimmed
-      more_text: More
-      more_class: more-link
-      summary_handler: full
       wrap_output: false
+      wrap_class: trimmed
       more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
       trim_options:
         text: false
         trim_zero: false
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_headline:
     type: field_link
-    weight: 0
-    region: content
     label: hidden
     settings:
       type: text_default
       settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_tagline:
     type: text_default
-    weight: 1
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   field_tags: true
   links: true

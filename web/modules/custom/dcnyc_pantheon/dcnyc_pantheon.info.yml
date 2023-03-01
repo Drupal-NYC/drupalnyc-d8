@@ -1,5 +1,5 @@
 name: Pantheon Block
 type: module
 description: Provides a linked image for the Pantheon Footer
-core: 8.x
+core_version_requirement: ^9 || ^10
 package: Other
