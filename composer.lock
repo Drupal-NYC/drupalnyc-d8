@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8f91b0a37dc003bd6a9a203056ec1a2",
+    "content-hash": "debf120ce90897d70a381d07304e378d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1960,50 +1960,6 @@
             }
         },
         {
-            "name": "drupal/background_image",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/background_image.git",
-                "reference": "8.x-1.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/background_image-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "40fb038a86a12af76db5d5441e5a6782c90dc8c6"
-            },
-            "require": {
-                "drupal/core": "^8.4.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1586287174",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "markhalliwell",
-                    "homepage": "https://www.drupal.org/user/501638"
-                }
-            ],
-            "description": "Provides an integrated UI for displaying background images on a site.",
-            "homepage": "https://www.drupal.org/project/background_image",
-            "support": {
-                "source": "https://git.drupalcode.org/project/background_image"
-            }
-        },
-        {
             "name": "drupal/bones_theme",
             "version": "1.5.0",
             "source": {
@@ -3224,29 +3180,29 @@
         },
         {
             "name": "drupal/field_formatter",
-            "version": "1.2.0",
+            "version": "3.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/field_formatter.git",
-                "reference": "8.x-1.2"
+                "reference": "3.0.0-rc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_formatter-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "84c9468d094da49a0cb21784b41715f13cbd28fe"
+                "url": "https://ftp.drupal.org/files/projects/field_formatter-3.0.0-rc1.zip",
+                "reference": "3.0.0-rc1",
+                "shasum": "b64527887449030ef51a0fa9f8b6861e6781bdc5"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.9 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1530788021",
+                    "version": "3.0.0-rc1",
+                    "datestamp": "1648127241",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -3264,16 +3220,16 @@
                     "homepage": "https://www.drupal.org/user/53892"
                 },
                 {
-                    "name": "Drupal Media Team",
-                    "homepage": "https://www.drupal.org/user/3260690"
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
                 },
                 {
                     "name": "Drupal media CI",
                     "homepage": "https://www.drupal.org/user/3057985"
                 },
                 {
-                    "name": "dawehner",
-                    "homepage": "https://www.drupal.org/user/99340"
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
                 },
                 {
                     "name": "slashrsm",
@@ -3610,72 +3566,6 @@
             "homepage": "https://www.drupal.org/project/inline_entity_form",
             "support": {
                 "source": "https://git.drupalcode.org/project/inline_entity_form"
-            }
-        },
-        {
-            "name": "drupal/migrate_plus",
-            "version": "4.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/migrate_plus.git",
-                "reference": "8.x-4.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-4.2.zip",
-                "reference": "8.x-4.2",
-                "shasum": "5736a43e39cc5c091d54ceef2849ea35ba979af3"
-            },
-            "require": {
-                "drupal/core": "^8.3"
-            },
-            "require-dev": {
-                "drupal/entity": "*",
-                "drupal/migrate_example_advanced_setup": "*",
-                "drupal/migrate_example_setup": "*",
-                "drupal/migrate_tools": "*",
-                "drupal/profile": "*"
-            },
-            "suggest": {
-                "ext-soap": "*",
-                "sainsburys/guzzle-oauth2-plugin": "3.0 required for the OAuth2 authentication plugin"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-4.2",
-                    "datestamp": "1555683487",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Mike Ryan",
-                    "homepage": "https://www.drupal.org/u/mikeryan",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Matroskeen",
-                    "homepage": "https://www.drupal.org/user/3426249"
-                },
-                {
-                    "name": "mikeryan",
-                    "homepage": "https://www.drupal.org/user/4420"
-                }
-            ],
-            "description": "Enhancements to core migration support.",
-            "homepage": "https://www.drupal.org/project/migrate_plus",
-            "support": {
-                "source": "https://cgit.drupalcode.org/migrate_plus",
-                "issues": "https://www.drupal.org/project/issues/migrate_plus",
-                "irc": "irc://irc.freenode.org/drupal-migrate"
             }
         },
         {
