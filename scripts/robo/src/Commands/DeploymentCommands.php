@@ -3,7 +3,6 @@
 namespace DrupalNycRobo\Commands;
 
 use DrupalNycRobo\GitHubApi;
-use DrupalNycRobo\NewRelicApi;
 use DrupalNycRobo\Traits\GetResult;
 use DrupalNycRobo\Traits\Roots;
 use Robo\Tasks;
@@ -113,53 +112,6 @@ class DeploymentCommands extends Tasks {
       return;
     }
     $io->error("Updates failed to deploy for $site.$target");
-  }
-
-  /**
-   * Mark a deployment in New Relic.
-   *
-   * This command is designed to be used with Acquia cloud hooks.
-   *
-   * @param string $tag
-   *   The tag value.
-   * @param string $site
-   *   The site key used in the alias file. Example: 'mskcc'.
-   * @param string $target
-   *   The target environment key. Example: 'dev'.
-   *
-   * @command deploy:new-relic
-   */
-  public function newRelic(ConsoleIO $io, $tag, string $site, string $target) {
-    $credentialFinder = new Finder();
-    $credentials = [];
-    $credentialFinder->in("/mnt/gfs/$site.$target/nobackup")
-      ->files()
-      ->name('new_relic.json');
-    if ($credentialFinder->hasResults()) {
-      foreach ($credentialFinder as $file) {
-        // There should only be 1!
-        $credentialsJson = $file->getContents();
-      }
-      $credentials = json_decode($credentialsJson, TRUE);
-    }
-    if (!empty($credentials)) {
-      /** @var \DrupalNycRobo\NewRelicApi $newRelic */
-      $newRelic = $this->task(NewRelicApi::class);
-      $newRelic->setApiKey($credentials['api_key'])
-        ->setApplication($credentials['app_id'])
-        ->markDeployment($tag);
-      $result = $this->getResult($newRelic);
-      if ($result->wasSuccessful()) {
-        $io->text("Marked $tag deployment in New Relic");
-      }
-      else {
-        $io->error('Failed to pushed to GitHub Containers.');
-        $result->stopOnFail();
-      }
-    }
-    else {
-      $io->error('Failed to retrieve New Relic credentials.');
-    }
   }
 
   /**
@@ -378,7 +330,7 @@ class DeploymentCommands extends Tasks {
     $excludedFiles
       ->in([
         $this->getProjectRoot() . '/vendor',
-        $this->getProjectRoot() . '/docroot',
+        $this->getProjectRoot() . '/web',
       ])
       ->directories()
       ->ignoreDotFiles(FALSE)

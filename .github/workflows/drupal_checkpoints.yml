@@ -10,7 +10,7 @@ concurrency:
 jobs:
   check-php-standards:
     runs-on: ubuntu-20.04
-    name: Check MSK Coding Standards
+    name: Check DrupalNYC Coding Standards
     steps:
       - name: Checkout the pull request
         uses: actions/checkout@v3
