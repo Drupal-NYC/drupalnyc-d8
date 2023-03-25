@@ -119,6 +119,17 @@
             ".htaccess",
             "web.config"
           ]
+        },
+        "patches": {
+            "drupal/embed": {
+                "CKEditor5 support initial commit": "https://git.drupalcode.org/project/embed/-/merge_requests/2.patch"
+            },
+            "drupal/entity_embed": {
+                "Support CKEditor4 and CKEditor5": "https://www.drupal.org/files/issues/2023-03-23/3272732-67-COMPOSER-ONLY-drupal-10-ckeditor-5-readiness.patch"
+            },
+            "drupal/textarea_widget_for_text": {
+                "drupal 10 compatibility fix": "https://git.drupalcode.org/project/textarea_widget_for_text/-/merge_requests/2.patch"
+            }
         }
     }
 }
