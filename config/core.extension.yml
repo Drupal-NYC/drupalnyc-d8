@@ -79,7 +79,7 @@ module:
   views: 10
   standard: 1000
 theme:
-  seven: 0
   stark: 0
   olivero: 0
+  claro: 0
 profile: standard
