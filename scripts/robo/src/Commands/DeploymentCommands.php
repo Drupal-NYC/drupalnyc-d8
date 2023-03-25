@@ -378,7 +378,7 @@ class DeploymentCommands extends Tasks {
     $excludedFiles
       ->in([
         $this->getProjectRoot() . '/vendor',
-        $this->getProjectRoot() . '/docroot',
+        $this->getProjectRoot() . '/web',
       ])
       ->directories()
       ->ignoreDotFiles(FALSE)
