@@ -1,0 +1,146 @@
+name: 'DrupalNYC Checkpoints'
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+
+jobs:
+  check-php-standards:
+    runs-on: ubuntu-20.04
+    name: Check MSK Coding Standards
+    steps:
+      - name: Checkout the pull request
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          coverage: none
+
+      - name: Get a filtered list of changed PHP files
+        uses: technote-space/get-diff-action@v6
+        with:
+          PATTERNS: |
+            **/*.+(php|module|inc|install|test|profile|theme)
+
+      - name: Store list of PHP files
+        id: php-filter
+        run: echo "filtered-diff=$(echo ${GIT_DIFF_FILTERED})" >> $GITHUB_OUTPUT
+
+      - name: Build Composer and Yarn Dependencies
+        uses: ./.github/actions/composer-yarn-dependencies
+        with:
+          drupalnyc-domains-key: ${{ secrets.DOMAINS_RSA }}
+          remote-host-key: ${{ secrets.PANTHEON_GIT }}
+          yarn-build: 'false'
+
+      - name: Check PHP Syntax
+        if: steps.php-filter.outputs.filtered-diff
+        run: vendor/bin/parallel-lint --checkstyle  ${{ steps.php-filter.outputs.filtered-diff }} | vendor/bin/cs2pr
+
+      - name: Check Coding Standards
+        if: steps.php-filter.outputs.filtered-diff
+        run: vendor/bin/phpcs --report=checkstyle ${{ steps.php-filter.outputs.filtered-diff }}  | vendor/bin/cs2pr
+
+      - name: Check for Drupal Deprecations
+        if: steps.php-filter.outputs.filtered-diff
+        run: vendor/bin/phpstan analyse --error-format=checkstyle ${{ steps.php-filter.outputs.filtered-diff }}  | vendor/bin/cs2pr
+
+      - name: Store a filtered list of changed YAML files
+        uses: technote-space/get-diff-action@v6
+        with:
+          PATTERNS: |
+            **/*.+(yml|yaml)
+
+      - name: Lint YAML files
+        if: env.GIT_DIFF_FILTERED
+        run: 'yamllint -d "{extends: relaxed, rules: {line-length: disable, new-line-at-end-of-file: disable, trailing-spaces: disable, braces: {max-spaces-inside: 2}, brackets: {max-spaces-inside: 2}}}" ${{ env.GIT_DIFF_FILTERED }}'
+
+  run-unit-tests:
+    runs-on: ubuntu-20.04
+    name: Run MSK Unit, Functional & Live Tests
+    if: ${{ false }}  # disable for now.  Update `needs` of `deploy-pr` if enabled.
+    steps:
+#     See: https://github.com/apache/flink/blob/02d30ace69dc18555a5085eccf70ee884e73a16e/tools/azure-pipelines/free_disk_space.sh
+      - name: Free space on GitHub Runner
+        run: |
+          echo "Listing 100 largest packages"
+          dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | tail -n 100
+          df -h
+          echo "Removing large packages we do not use"
+          sudo apt-get remove -y '^aspnetcore-.*'
+          sudo apt-get remove -y '^dotnet-.*'
+          sudo apt-get remove -y '^llvm-.*'
+          sudo apt-get remove -y '^temurin-.*'
+          sudo apt-get remove -y '^postgresql-.*'
+          sudo apt-get remove -y azure-cli google-cloud-sdk hhvm firefox microsoft-edge-stable powershell mono-devel
+          sudo apt-get autoremove -y
+          sudo apt-get clean
+          df -h
+          echo "Removing large directories"
+          rm -rf /usr/share/dotnet/
+          # Deleted ~8GB
+          df -h
+
+      - name: Checkout the pull request
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Build Composer and Yarn Dependencies
+        uses: ./.github/actions/composer-yarn-dependencies
+        with:
+          drupalnyc-domains-key: ${{ secrets.DOMAINS_RSA }}
+          remote-host-key: ${{ secrets.PANTHEON_GIT }}
+          yarn-build: 'false'
+
+      - name: Start DDEV
+        uses: jonaseberle/github-action-setup-ddev@v1
+
+      - name: Copy DB snapshot
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+          docker pull ghcr.io/mskcc-marketing/stage_db:latest
+          docker run --name msk-remote-db ghcr.io/mskcc-marketing/stage_db:latest
+          docker cp msk-remote-db:/latest-mariadb_10.3.gz "$GITHUB_WORKSPACE"/.ddev/db_snapshots
+          docker rm msk-remote-db
+
+      - name: Restore snapshot
+        run: |
+          ddev snapshot restore latest
+          ddev snapshot --cleanup -y
+          ddev drush deploy
+
+      - name: Run Tests
+        run: ddev tests:all
+
+  deploy-pr:
+    name: Build and Push PR
+    needs: check-php-standards # [check-php-standards, run-unit-tests]
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout the pull request
+        uses: actions/checkout@v3
+        with:
+          # Acquia dis-allows shallow clones.
+          fetch-depth: 0
+
+      - name: Build Composer and Yarn Dependencies
+        uses: ./.github/actions/composer-yarn-dependencies
+        with:
+          drupalnyc-domains-key: ${{ secrets.DOMAINS_RSA }}
+          remote-host-key: ${{ secrets.PANTHEON_GIT }}
+          composer-options: '--no-dev --optimize-autoloader'
+          yarn-build: 'false'
+
+      - name: Push build to Acquia
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: php "$GITHUB_WORKSPACE"/scripts/robo/dnyc.php deploy --remote-branch="pr-${{ github.event.number }}-${{ github.head_ref }}"
+

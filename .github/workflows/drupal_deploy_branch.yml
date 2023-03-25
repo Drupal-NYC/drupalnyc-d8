@@ -1,0 +1,38 @@
+name: 'DrupalNYC Deploy Branch'
+on:
+  pull_request:
+    branches:
+      - master
+    types: closed
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+
+jobs:
+  deploy-branch:
+    name: Build and Push Branch
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout the pull request
+        uses: actions/checkout@v3
+        with:
+          # Acquia dis-allows shallow clones.
+          fetch-depth: 0
+          ref: ${{ github.base_ref }}
+
+      - name: Build Composer and Yarn Dependencies
+        uses: ./.github/actions/composer-yarn-dependencies
+        with:
+          drupalnyc-domains-key: ${{ secrets.DOMAINS_RSA }}
+          remote-host-key: ${{ secrets.PANTHEON_GIT }}
+          composer-options: '--no-dev --optimize-autoloader'
+          yarn-build: 'false'
+
+      - name: Push build to Pantheon
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+          GIT_NAME: Github-CI-CD
+          GIT_EMAIL: domains@drupalnyc.org
+        run: php "$GITHUB_WORKSPACE"/scripts/robo/dnyc.php deploy --branch=${{ github.base_ref }} --remote-branch="${{ github.base_ref }}-artifact"
