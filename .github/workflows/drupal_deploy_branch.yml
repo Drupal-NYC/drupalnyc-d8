@@ -35,4 +35,4 @@ jobs:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
           GIT_NAME: Github-CI-CD
           GIT_EMAIL: domains@drupalnyc.org
-        run: php "$GITHUB_WORKSPACE"/scripts/robo/dnyc.php deploy --branch=${{ github.base_ref }} --remote-branch="${{ github.base_ref }}-artifact"
+        run: php "$GITHUB_WORKSPACE"/scripts/robo/dnyc.php deploy --branch=${{ github.base_ref }} --remote-branch="${{ github.base_ref }}"
