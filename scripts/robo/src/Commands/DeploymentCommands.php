@@ -50,7 +50,6 @@ class DeploymentCommands extends Tasks {
    * @option github-token A GitHub API token.
    * @option github-repo A GitHub repo in the format `owner/repo_name`.
    * @option github-sha A commit SHA, usually provide by actions environment.
-   * @option release-tag When present, calculate and deploy a release tag.
    */
   public function deployBuild(ConsoleIO $io, array $options = [
     'branch' => NULL,
@@ -61,19 +60,9 @@ class DeploymentCommands extends Tasks {
     'github-token' => NULL,
     'github-repo' => NULL,
     'github-sha' => NULL,
-    'release-tag' => FALSE,
   ]) {
     $this->setDeploymentOptions($options);
-    if (!empty($options['tag']) || $options['release-tag']) {
-      // If the release-tag option is set then create the tag.
-      if ($options['release-tag']) {
-        $this->setReleaseTag($io, $options);
-      }
-      $result = $this->getTagPush($io, $options);
-    }
-    else {
-      $result = $this->getBranchPush($io, $options);
-    }
+    $result = $this->getBranchPush($io, $options);
     if ($result->wasSuccessful()) {
       $io->success('Deployment succeeded.');
     }
@@ -81,64 +70,6 @@ class DeploymentCommands extends Tasks {
       $io->error('Deployment failed');
       $result->stopOnFail();
     }
-  }
-
-  /**
-   * Run the deployment sequence for a site.
-   *
-   * This command is designed to be used with Acquia cloud hooks.
-   *
-   * @param string $site
-   *   The site key used in the alias file. Example: 'mskcc'.
-   * @param string $target
-   *   The target environment key. Example: 'dev'.
-   *
-   * @command deploy:update
-   *
-   * @description Execute update tasks a remote site.
-   *
-   * @throws \Robo\Exception\TaskException
-   * @throws \Exception
-   */
-  public function deployPostUpdate(ConsoleIO $io, string $site = 'self', string $target = '') {
-    $alias = empty($target) ? $site : "$site.$target";
-    $task = $this->taskExecStack()
-      ->stopOnFail()
-      ->exec($this->getDrushPath() . " @$alias deploy")
-      ->exec($this->getDrushPath() . " @$alias msk-update custom");
-    $result = $this->getResult($task);
-    if ($result->wasSuccessful()) {
-      $io->text("Updates deployed for $site.$target");
-      return;
-    }
-    $io->error("Updates failed to deploy for $site.$target");
-  }
-
-  /**
-   * Builds separate artifact and pushes as a tag.
-   *
-   * @param \Robo\Symfony\ConsoleIO $io
-   *   Injected input-output service.
-   * @param array $options
-   *   Options prepared in ::deployBuild.
-   *
-   * @return \Robo\Result
-   *   The result of the final push.
-   *
-   * @throws \Exception
-   *   Throws an exception if the tasks fail so that deployment will abort.
-   */
-  public function getTagPush(ConsoleIO $io, array $options): Result {
-    if (empty($options['tag'])) {
-      // A tag is required.
-      throw new \UnexpectedValueException('A tag must be specified.');
-    }
-    $io->text('Deploying to tag ' . $options['tag']);
-    $this->setDeploymentVersionControl($io, $options);
-    $this->getSanitizedBuild($io);
-    $this->setDeploymentCommit($io, $options);
-    $this->setCleanMerge($io, $options);
-    return $this->getPushResult($options);
   }
 
   /**
@@ -201,64 +132,6 @@ class DeploymentCommands extends Tasks {
       if (!empty($options['commit-id'])) {
         $options['commit-msg'] .= ' GitHub commit: ' . $options['commit-id'];
       }
-    }
-  }
-
-  /**
-   * Calculates a tag value based on target branch.
-   *
-   * @param \Robo\Symfony\ConsoleIO $io
-   *   Injected input-output service.
-   * @param array $options
-   *   Options passed from the command and refined ::setDeploymentOptions().
-   *
-   * @throws \Exception
-   */
-  protected function setReleaseTag(ConsoleIO $io, array &$options): void {
-    $releaseCandidatePattern = '/^rc-\d{4}-\d{2}-\d{2}$/';
-    $releasePattern = '/^release$/';
-    $date = date('Y-m-d');
-    $suffix = 0;
-    if (preg_match($releaseCandidatePattern, $options['branch'])) {
-      $stem = "RC-$date";
-      $io->text('Release candidate detected for tag.');
-    }
-    elseif (preg_match($releasePattern, $options['branch'])) {
-      $stem = $date;
-      $io->text('Release detected for tag.');
-    }
-    else {
-      throw new \UnexpectedValueException("The branch {$options['branch']} is not enabled for automated date tags.");
-    }
-    if (
-      !empty($options['github-token'])
-      && !empty($options['github-repo'])
-      && !empty($options['github-sha'])
-    ) {
-      /** @var \DrupalNycRobo\GitHubApi $api */
-      $api = $this->task(GitHubApi::class);
-      $api->accessToken($options['github-token']);
-      $api->uri($options['github-repo']);
-      $existingTags = $this->getResult($api->existingTag($stem));
-      if ($existingTags->wasSuccessful()) {
-        $data = $existingTags->getData();
-        $response = $data['response'] ?? [];
-        $suffix = count($response);
-      }
-      $options['tag'] = "$stem.$suffix";
-      $options['tag-remote'] = $options['tag'] . '-artifact';
-      $io->text("Setting automated release tag as $stem.$suffix which will push as $stem.$suffix-artifact");
-      $result = $this->getResult($api->createTag($options['tag'], $options['github-sha']));
-      if ($result->wasSuccessful()) {
-        $io->success("Created tag: {$options['tag']}");
-      }
-      else {
-        $io->text('Failed to create release tag.');
-        $result->stopOnFail();
-      }
-    }
-    else {
-      $io->error('Unable to set release tag.  GitHub options are not all present.');
     }
   }
 
