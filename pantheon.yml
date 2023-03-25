@@ -2,6 +2,8 @@ api_version: 1
 web_docroot: true
 php_version: 8.1
 enforce_https: transitional
+database:
+  version: 10.3
 workflows:
   deploy:
     after:
