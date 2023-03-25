@@ -30,6 +30,7 @@
         "drupal/admin_toolbar": "^3.2",
         "drupal/allowed_formats": "^2.0.0",
         "drupal/auto_entitylabel": "^3.0@beta",
+        "drupal/ckeditor": "^1.0",
         "drupal/config_readonly": "^1.0@beta",
         "drupal/config_split": "^1.4",
         "drupal/core-composer-scaffold": "^10.0",
