@@ -1,0 +1,16 @@
+uuid: 60db0c63-85f3-41f8-95c6-856eabcc0524
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: Local
+description: 'Settings for local dev'
+weight: -1
+folder: ../config_splits/dev
+module:
+  devel: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
