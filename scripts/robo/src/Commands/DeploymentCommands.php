@@ -463,7 +463,7 @@ class DeploymentCommands extends Tasks {
       ->exec('reset --soft branch-temp')
       ->exec('commit --amend -C HEAD')
       ->exec('branch -D branch-temp');
-    if ($options['tag-remote']) {
+    if (!empty($options['tag-remote'])) {
       $merge->tag($options['tag-remote']);
     }
     $result = $this->getResult($merge);
