@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run custom Robo commands
+## Usage: robo
+## Example: ddev robo
+
+php scripts/robo/dnyc.php "$@"

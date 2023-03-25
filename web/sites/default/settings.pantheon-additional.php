@@ -34,6 +34,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
 }
 
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  $dir = dirname(DRUPAL_ROOT);
+  $settings['config_sync_directory'] = $dir . '/config';
 
   switch ($_ENV['PANTHEON_ENVIRONMENT']) {
     case 'dev':

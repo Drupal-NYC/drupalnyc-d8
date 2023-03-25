@@ -1,0 +1,64 @@
+name: 'DrupalNYC Checkpoints'
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+
+jobs:
+  check-php-standards:
+    runs-on: ubuntu-20.04
+    name: Check MSK Coding Standards
+    steps:
+      - name: Checkout the pull request
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          coverage: none
+
+      - name: Get a filtered list of changed PHP files
+        uses: technote-space/get-diff-action@v6
+        with:
+          PATTERNS: |
+            **/*.+(php|module|inc|install|test|profile|theme)
+
+      - name: Store list of PHP files
+        id: php-filter
+        run: echo "filtered-diff=$(echo ${GIT_DIFF_FILTERED})" >> $GITHUB_OUTPUT
+
+      - name: Build Composer and Yarn Dependencies
+        uses: ./.github/actions/composer-yarn-dependencies
+        with:
+          drupalnyc-domains-key: ${{ secrets.DOMAINS_RSA }}
+          remote-host-key: ${{ secrets.PANTHEON_GIT }}
+          yarn-build: 'false'
+
+      - name: Check PHP Syntax
+        if: steps.php-filter.outputs.filtered-diff
+        run: vendor/bin/parallel-lint --checkstyle  ${{ steps.php-filter.outputs.filtered-diff }} | vendor/bin/cs2pr
+
+      - name: Check Coding Standards
+        if: steps.php-filter.outputs.filtered-diff
+        run: vendor/bin/phpcs --report=checkstyle ${{ steps.php-filter.outputs.filtered-diff }}  | vendor/bin/cs2pr
+
+      - name: Check for Drupal Deprecations
+        if: steps.php-filter.outputs.filtered-diff
+        run: vendor/bin/phpstan analyse --error-format=checkstyle ${{ steps.php-filter.outputs.filtered-diff }}  | vendor/bin/cs2pr
+
+      - name: Store a filtered list of changed YAML files
+        uses: technote-space/get-diff-action@v6
+        with:
+          PATTERNS: |
+            **/*.+(yml|yaml)
+
+      - name: Lint YAML files
+        if: env.GIT_DIFF_FILTERED
+        run: 'yamllint -d "{extends: relaxed, rules: {line-length: disable, new-line-at-end-of-file: disable, trailing-spaces: disable, braces: {max-spaces-inside: 2}, brackets: {max-spaces-inside: 2}}}" ${{ env.GIT_DIFF_FILTERED }}'
+

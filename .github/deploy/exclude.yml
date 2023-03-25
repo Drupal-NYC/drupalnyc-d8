@@ -1,0 +1,12 @@
+---
+# A configurable list of directories and files to remove from the build artifact.
+# .git folders are found and removed in addition to this list to prevent any submodule issues with the artifact.
+# Files listed in .github/deploy/deploy-gitignore should not be repeated here unless those files are not ignored in
+# the root .gitignore file.
+# Names with trailing slashes will be treated as whole directories.  Glob patterns are supported.
+- CHANGELOG.txt
+- .github/
+- README.md
+- Vagrantfile
+- tmp/
+- tests/
