@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ecc51b9a305e1838b19bee88ef0716d0",
+    "content-hash": "10fc6c1e781102998755b0da7003b280",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3115,66 +3115,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/scheduler_content_moderation_integration",
                 "error": "Invalid dependency: \"scheduler\", Could not parse version constraint ~: Invalid version string \"~\""
-            }
-        },
-        {
-            "name": "drupal/seven",
-            "version": "1.0.0-alpha1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/seven.git",
-                "reference": "1.0.0-alpha1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/seven-1.0.0-alpha1.zip",
-                "reference": "1.0.0-alpha1",
-                "shasum": "8e3472d4d0c52abba3d6159ed80177933fc7e00e"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "1.0.0-alpha1",
-                    "datestamp": "1660152561",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "bnjmnm",
-                    "homepage": "https://www.drupal.org/user/2369194"
-                },
-                {
-                    "name": "lauriii",
-                    "homepage": "https://www.drupal.org/user/1078742"
-                },
-                {
-                    "name": "mcrittenden",
-                    "homepage": "https://www.drupal.org/user/420631"
-                },
-                {
-                    "name": "mrfelton",
-                    "homepage": "https://www.drupal.org/user/305669"
-                },
-                {
-                    "name": "TravisCarden",
-                    "homepage": "https://www.drupal.org/user/236758"
-                }
-            ],
-            "description": "The Seven theme from Drupal 8/9 moved to contrib",
-            "homepage": "https://www.drupal.org/project/seven",
-            "support": {
-                "source": "https://git.drupalcode.org/project/seven"
             }
         },
         {
@@ -12783,8 +12723,7 @@
         "drupal/config_readonly": 10,
         "drupal/diff": 5,
         "drupal/field_group": 5,
-        "drupal/inline_entity_form": 5,
-        "drupal/seven": 15
+        "drupal/inline_entity_form": 5
     },
     "prefer-stable": true,
     "prefer-lowest": false,
