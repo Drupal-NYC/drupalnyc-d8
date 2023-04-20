@@ -27,4 +27,9 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_date: true
+  field_meetup_url: true
+  field_summary: true
+  field_tagline: true
+  field_video: true

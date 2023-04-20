@@ -23,6 +23,11 @@ targetEntityType: node
 bundle: page
 mode: header
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_headline:
     type: text_default
     label: hidden

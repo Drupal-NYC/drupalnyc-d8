@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: HwbPAleld8fGYWEBocmgnJpHIFH5k4-fdA0eRR2nMKU
+path_type: upload
 path: favicons
 tags:
   - '<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">'
@@ -8,6 +11,3 @@ tags:
   - '<meta name="msapplication-TileColor" content="#da532c">'
   - '<meta name="theme-color" content="#ffffff">'
 remove_default: 1
-_core:
-  default_config_hash: HwbPAleld8fGYWEBocmgnJpHIFH5k4-fdA0eRR2nMKU
-path_type: upload
