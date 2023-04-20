@@ -14,27 +14,19 @@ When changes are pushed to or merged into the master branch on GitHub, a build s
 
 The CodeShip build, among other things, deploys the changes to our Pantheon site's Dev environment.
 
-# Local Environment Using Lando
+# Local Environment Using DDEV
 
-[Lando documentation](https://docs.lando.dev/)
+[DDEV documentation](https://ddev.readthedocs.io/en/stable/)
 
 ## Initial Setup
 
-Note that the git repo already has a `.lando.yml` file so you shouldn't run `lando init`.
-
-1. Download and install the latest release of Lando from https://github.com/lando/lando/releases
+1. Follow the documentation to install DDEV.
 2. Create a directory to contain the site (e.g. `mkdir ~/Sites/drupalnyc`)
 3. Change to that directory (e.g. `cd ~/Sites/drupalnyc`)
 4. `git clone git@github.com:Drupal-NYC/drupalnyc-d8.git .`
-5. `lando start`
-6. `lando pull --database=live --files=live --code=none`
-7. `lando drush cr`
-
-The first time it is run, per .lando.yml, `lando start`:
-* copies web/sites/example-lando.settings.local.php to web/sites/default/settings.local.php
-* runs `composer install` for the project
-* runs `npm install gulp` in web/themes/custom/drupalnyc
-* runs `gulp` in web/themes/custom/drupalnyc to compile the theme
+5. `ddev start`
+6. `terminus login`
+7. `ddev robo rebuild:db drupalnyc.live`
 
 You now have a fully functional local environment with the latest database and files from the Pantheon site's Live environment, accessible at [https://drupalnyc.lndo.site/](https://drupalnyc.lndo.site/)
 
@@ -42,22 +34,13 @@ You now have a fully functional local environment with the latest database and f
 
 `git push` as normal.
 
-Drush: `lando drush <command>`
+Drush: `ddev drush <command>`
 
-Drupal Console: `lando drupal <command>`
-
-Gulp: `lando gulp`
-
-Overwrite local database and files with that of Live: `lando pull --database=live --files=live --code=none`
-
-Turn off Lando: `lando poweroff`
-
-Start the site: `lando start`
+Robo: `ddev robo list`
 
 ## Enable XDebug
 
-1. Edit .lando.yml and set `xdebug` to `true`.
-2. `lando rebuild`
+`ddev xdebug on`
 
 Now everything will run slower :)
 
