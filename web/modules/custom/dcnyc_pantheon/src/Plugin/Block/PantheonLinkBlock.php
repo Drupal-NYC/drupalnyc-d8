@@ -71,7 +71,7 @@ class PantheonLinkBlock extends BlockBase {
     $build['dcnyc_pantheon_footer'] = [
       '#theme' => 'dcnyc_pantheon_footer',
       '#pantheon_url' => $this->configuration['pantheon_url'],
-      '#pantheon_image' => '/modules/custom/dcnyc_pantheon/poweredBYPantheon.png',
+      '#pantheon_image' => '/modules/custom/dcnyc_pantheon/logo-pantheon--logotype.svg',
     ];
     return $build;
   }
