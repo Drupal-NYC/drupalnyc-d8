@@ -24,7 +24,7 @@ class PantheonLinkBlock extends BlockBase {
       '#type' => 'textfield',
       '#title' => $this->t('Pantheon URL'),
       '#description' => $this->t('Pantheon URL to link the image'),
-      '#default_value' => isset($this->configuration['pantheon_url']) ? $this->configuration['pantheon_url'] : 'https://pantheon.io',
+      '#default_value' => $this->configuration['pantheon_url'] ?? 'https://pantheon.io',
       '#maxlength' => 64,
       '#size' => 64,
       '#weight' => '0',
@@ -71,7 +71,7 @@ class PantheonLinkBlock extends BlockBase {
     $build['dcnyc_pantheon_footer'] = [
       '#theme' => 'dcnyc_pantheon_footer',
       '#pantheon_url' => $this->configuration['pantheon_url'],
-      '#pantheon_image' => '/modules/custom/dcnyc_pantheon/poweredBYPantheon.png',
+      '#pantheon_image' => '/modules/custom/dcnyc_pantheon/logo-pantheon--logotype.svg',
     ];
     return $build;
   }
