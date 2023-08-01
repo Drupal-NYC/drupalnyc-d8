@@ -843,25 +843,12 @@ $settings['trusted_host_patterns'] = [];
  * By checking $_ENV['PANTHEON_ENVIRONMENT'] we know if we are on Pantheon.
  */
 // Load Pantheon specific settings files.
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  // Load shared Pantheon settings.
-  require_once __DIR__ . '/settings.pantheon-additional.php';
-
-  if ($_ENV['PANTHEON_ENVIRONMENT'] == 'lando') {
-    // Load local settings file if it exists.
-    $local_conf_file_path = __DIR__ . '/settings.local.php';
-    if (file_exists($local_conf_file_path)) {
-      require_once $local_conf_file_path;
-    }
-  }
+if (isset($_ENV['LAGOON '])) {
+  // Load Lagoon settings.
+  require_once __DIR__ . '/settings.lagoon.php';
 }
 // Load settings suitable outside of Pantheon (e.g. local development).
 else {
-  // Load non-Pantheon settings if it exists.
-  $non_pantheon_conf_file_path = __DIR__ . '/settings.non-pantheon.php';
-  if (file_exists($non_pantheon_conf_file_path)) {
-    require_once $non_pantheon_conf_file_path;
-  }
 
   // Load local settings file if it exists.
   $local_conf_file_path = __DIR__ . '/settings.local.php';

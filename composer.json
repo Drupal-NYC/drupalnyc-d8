@@ -14,6 +14,7 @@
         }
     ],
     "require": {
+        "amazeeio/drupal_integrations": "^0.3.7",
         "composer/installers": "^2.0",
         "consolidation/robo": "^4.0",
         "cweagans/composer-patches": "^1.7.2",
@@ -33,6 +34,7 @@
         "drupal/focal_point": "^2.0.0-alpha2",
         "drupal/google_tag": "^1.6",
         "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/lagoon_logs": "^3.0",
         "drupal/pantheon_advanced_page_cache": "^2.1.1",
         "drupal/pathauto": "^1.6",
         "drupal/responsive_favicons": "^2.0.0",
@@ -74,39 +76,56 @@
     },
     "autoload": {
         "psr-4": {
-          "DrupalNycRobo\\": "scripts/robo/src"
+            "DrupalNycRobo\\": "scripts/robo/src"
         },
         "classmap": [
             "scripts/composer/ScriptHandler.php"
         ]
     },
     "extra": {
-        "installer-types": ["bower-asset"],
+        "installer-types": [
+            "bower-asset"
+        ],
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
         },
         "drupal-scaffold": {
-          "locations": {
-              "web-root": "web/"
-          },
-          "source": "https://raw.githubusercontent.com/pantheon-systems/drops-8-scaffolding/{version}/{path}",
-          "includes": [
-            "sites/default/default.services.pantheon.preproduction.yml",
-            "sites/default/settings.pantheon.php"
-          ],
-          "excludes": [
-            ".csslintrc",
-            ".editorconfig",
-            ".eslintignore",
-            ".eslintrc.json",
-            ".htaccess",
-            "web.config"
-          ]
+            "locations": {
+                "web-root": "web/"
+            },
+            "source": "https://raw.githubusercontent.com/pantheon-systems/drops-8-scaffolding/{version}/{path}",
+            "includes": [
+                "sites/default/default.services.pantheon.preproduction.yml",
+                "sites/default/settings.pantheon.php"
+            ],
+            "excludes": [
+                ".csslintrc",
+                ".editorconfig",
+                ".eslintignore",
+                ".eslintrc.json",
+                ".htaccess",
+                "web.config"
+            ],
+            "allowed-packages": [
+                "amazeeio/drupal_integrations"
+            ]
         },
         "patches": {
             "drupal/embed": {
