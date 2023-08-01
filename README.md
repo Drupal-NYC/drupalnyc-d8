@@ -1,18 +1,6 @@
-# DrupalNYC D8
+# DrupalNYC Drupal Site
 
-[drupalnyc.org](https://www.drupalnyc.org/) is hosted on Pantheon. You need to be a member of the [DrupalCampNYC Pantheon site's "Team"](https://dashboard.pantheon.io/sites/948cdd82-38e2-4769-a8fb-d3e33ee4e161) (link only works if you are a member) to be able to:
-* Make a manual backup of the site
-* Download a copy of the site's database and/or files (sites/default/files)
-* Deploy to Pantheon's Test or Stage environment
-
-[Our canonical git repository](https://github.com/Drupal-NYC/drupalnyc-d8) is on GitHub. You need to have write access to that repository in order to:
-* Push changes to the master branch
-* Approve pull requests
-
-When changes are pushed to or merged into the master branch on GitHub, a build should be triggered on CodeShip. You need to be a member of the Drupalnyc [Devs CodeShip team](https://app.codeship.com/orgs/drupalnyc/teams/devs) (link only works if you are a member) to:
-* [View build status and history](https://app.codeship.com/projects/3c4f6b00-b841-0137-09e0-12b8b125274c)
-
-The CodeShip build, among other things, deploys the changes to our Pantheon site's Dev environment.
+[drupalnyc.org](https://www.drupalnyc.org/) is hosted on Amazee.io.
 
 # Local Environment Using DDEV
 
