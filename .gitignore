@@ -45,14 +45,7 @@ files-private
 npm-debug.log
 web/console/log
 
-# robo managed
-docker-compose.yml
-services.dev.yml
-!setup/drupal/services.dev.yml
-.ahoy.yml
-!setup/ahoy/*.ahoy.yml
-
-# ahoy/docker managed
+# managed
 node_modules
 
 # Dev files
