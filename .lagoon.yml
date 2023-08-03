@@ -1,8 +1,11 @@
 docker-compose-yaml: docker-compose.yml
 
 project: drupalnyc-dot-org
-
 tasks:
+
+  # The ssh and api settings are needed to configure Lagoon outside of amazeeio.cloud infrastructure
+  # ssh: ssh.amazeeio.cloud:32222
+  # api: https://api.amazeeio.cloud/graphql
   #   pre-rollout:
   #     - run:
   #         name: drush sql-dump
@@ -15,11 +18,20 @@ tasks:
     #     name: drush cim
     #     command: drush -y cim
     #     service: cli
-    # - run:
-    #     name: drush updb
-    #     command: drush -y updb
-    #     service: cli
+    - run:
+        name: drush updb
+        command: drush -y updb
+        service: cli
     - run:
         name: drush cr
         command: drush -y cr
+        service: cli
+
+environments:
+  main:
+    # routes:
+    cronjobs:
+      - name: drush cron
+        schedule: "*/30 * * * *"
+        command: drush cron
         service: cli

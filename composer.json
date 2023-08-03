@@ -40,6 +40,7 @@
         "drupal/responsive_favicons": "^2.0.0",
         "drupal/scheduler": "^2.0",
         "drupal/scheduler_content_moderation_integration": "^2.0.0-beta1",
+        "drupal/search_api_solr": "^4.2",
         "drupal/smart_trim": "^2.0",
         "drupal/stage_file_proxy": "^2.0.",
         "drush/drush": "^11",
@@ -77,10 +78,7 @@
     "autoload": {
         "psr-4": {
             "DrupalNycRobo\\": "scripts/robo/src"
-        },
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ]
+        }
     },
     "extra": {
         "installer-types": [
