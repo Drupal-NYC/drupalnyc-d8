@@ -873,6 +873,7 @@ $settings['trusted_host_patterns'] = [];
  * By checking $_ENV['LAGOON'] we know if we are on Lagoon.
  */
 if (isset($_ENV['LAGOON '])) {
+  print "Load lagoon settings";
   // Load Lagoon settings.
   require_once __DIR__ . '/settings.lagoon.php';
 }
