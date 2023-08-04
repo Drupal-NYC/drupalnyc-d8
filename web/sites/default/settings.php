@@ -816,25 +816,10 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 
-if (file_exists(__DIR__ . '/settings.pantheon.php')) {
-  include __DIR__ . "/settings.pantheon.php";
-}
-
-/**
- * Load local development override configuration, if available.
- *
- * Use settings.local.php to override variables on secondary (staging,
- * development, etc) installations of this site. Typically used to disable
- * caching, JavaScript/CSS compression, re-routing of outgoing emails, and
- * other things that should not happen on development and testing sites.
- *
- * Keep this code block at the end of this file to take full effect.
- */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
-$settings['config_sync_directory'] = '../config';
+// Get the path to the parent of docroot.
+$application_directory = dirname(DRUPAL_ROOT);
+// Config directories.
+$settings['config_sync_directory'] = $application_directory . '/config/sync';
 
 // Trusted host patterns are set in dynamically included files below.
 $settings['trusted_host_patterns'] = [];
@@ -847,7 +832,7 @@ if (isset($_ENV['LAGOON '])) {
   // Load Lagoon settings.
   require_once __DIR__ . '/settings.lagoon.php';
 }
-// Load settings suitable outside of Pantheon (e.g. local development).
+// Load settings suitable outside of Lagoon (e.g. local development).
 else {
 
   // Load local settings file if it exists.
@@ -855,11 +840,9 @@ else {
   if (file_exists($local_conf_file_path)) {
     require_once $local_conf_file_path;
   }
-}
-
-
-// Automatically generated include for settings managed by ddev.
-$ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
-if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
-  require $ddev_settings;
+  // Automatically generated include for settings managed by ddev.
+  $ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
+  if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+    require $ddev_settings;
+  }
 }
