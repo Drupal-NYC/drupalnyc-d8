@@ -24,3 +24,11 @@ environments:
         schedule: "*/30 * * * *"
         command: drush cron
         service: cli
+    routes:
+      - nginx:
+          - drupalnyc.org:
+              tls-acme: 'true'
+              insecure: Redirect
+          - www.drupalnyc.org:
+              tls-acme: 'true'
+              insecure: Redirect
