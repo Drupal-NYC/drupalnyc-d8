@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for DrupalNYC Amazee.io module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function dnyc_amazee_theme($existing, $type, $theme, $path) {
+  $theme = [];
+  $theme['dcnyc_amazee_footer'] = [
+    'template' => 'dcnyc-amazee-block',
+    'variables' => [
+      'amazee_url' => NULL,
+      'amazee_image' => NULL,
+    ],
+  ];
+  return $theme;
+}

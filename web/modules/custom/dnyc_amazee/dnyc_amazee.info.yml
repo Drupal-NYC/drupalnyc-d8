@@ -1,0 +1,5 @@
+name: 'DrupalNYC Amazee.io'
+type: module
+description: 'Sponsorship block for Amazee.io'
+package: Other
+core_version_requirement: ^10

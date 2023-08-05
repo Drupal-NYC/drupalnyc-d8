@@ -1,0 +1,7 @@
+block.settings.dnyc_amazee_link:
+  type: block_settings
+  label: 'Amazee Link block'
+  mapping:
+    amazee_url:
+      type: string
+      label: Url

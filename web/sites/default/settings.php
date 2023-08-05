@@ -864,7 +864,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 // Get the path to the parent of docroot.
 $application_directory = dirname(DRUPAL_ROOT);
 // Config directories.
-$settings['config_sync_directory'] = $application_directory . '/config/sync';
+$settings['config_sync_directory'] = $application_directory . '/config';
 
 // Trusted host patterns are set in dynamically included files below.
 $settings['trusted_host_patterns'] = [];
