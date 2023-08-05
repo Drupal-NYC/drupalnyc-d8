@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.article.field_tags
     - node.type.article
   module:
-    - field_formatter
     - smart_trim
     - text
     - user
@@ -30,32 +29,28 @@ content:
       trim_suffix: ''
       wrap_output: false
       wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
       summary_handler: full
       trim_options:
         text: false
         trim_zero: false
-      more_link: false
-      more_class: more-link
-      more_text: More
     third_party_settings: {  }
-    weight: 2
-    region: content
-  field_headline:
-    type: field_link
-    label: hidden
-    settings:
-      type: text_default
-      settings: {  }
-    third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_tagline:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
+  field_headline: true
   field_tags: true
   links: true
