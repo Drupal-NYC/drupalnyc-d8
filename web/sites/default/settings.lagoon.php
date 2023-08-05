@@ -24,8 +24,6 @@
  *   For services only for the local environment.
  */
 
-print "Loading lagoon settings";
-
 // Lagoon version.
 if (!defined("LAGOON_VERSION")) {
   define("LAGOON_VERSION", "1");
@@ -33,7 +31,6 @@ if (!defined("LAGOON_VERSION")) {
 
 // Lagoon database connection.
 if (getenv('LAGOON')) {
-  print "Set lagoon db";
   $databases['default']['default'] = [
     'driver' => 'mysql',
     'database' => getenv('MARIADB_DATABASE') ?: 'drupal',
