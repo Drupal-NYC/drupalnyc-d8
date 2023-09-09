@@ -1,0 +1,18 @@
+uuid: 9abb23a3-dd86-4f33-aa84-0f41de04350c
+langcode: en
+status: true
+dependencies: {  }
+id: smtp
+label: SMTP
+plugin: smtp
+configuration:
+  user: webhost@drupalnyc.org
+  pass: null
+  host: smtp.gmail.com
+  port: 587
+  query:
+    verify_peer: true
+    local_domain: ''
+    restart_threshold: null
+    restart_threshold_sleep: null
+    ping_threshold: null
