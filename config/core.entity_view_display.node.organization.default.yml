@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.organization.field_subheading
     - field.field.node.organization.schema_address
     - field.field.node.organization.schema_area_served
     - field.field.node.organization.schema_description
@@ -19,12 +20,20 @@ dependencies:
     - node.type.organization
   module:
     - layout_paragraphs
+    - text
     - user
 id: node.organization.default
 targetEntityType: node
 bundle: organization
 mode: default
 content:
+  field_subheading:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }

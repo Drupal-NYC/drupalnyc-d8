@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.organization.field_subheading
     - field.field.node.organization.schema_address
     - field.field.node.organization.schema_area_served
     - field.field.node.organization.schema_description
@@ -21,11 +22,72 @@ dependencies:
     - address
     - content_moderation
     - datetime
+    - field_group
     - layout_paragraphs
     - link
     - media_library
     - path
     - text
+third_party_settings:
+  field_group:
+    group_hero:
+      children:
+        - title
+        - field_subheading
+        - schema_image
+      label: Hero
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        description: 'These elements are used to build the page hero'
+        required_fields: true
+    group_schema_data:
+      children:
+        - schema_legal_name
+        - schema_description
+        - schema_address
+        - schema_area_served
+        - schema_founding_date
+        - schema_founding_location
+        - schema_nonprofit_status
+        - schema_subject_of
+        - schema_logo
+      label: 'Schema Data'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        open: false
+        description: 'Used to form the JSON-LD for schema.org structured data'
+        required_fields: true
+    group_links:
+      children:
+        - schema_related_link
+        - schema_significant_link
+      label: Links
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
 id: node.organization.default
 targetEntityType: node
 bundle: organization
@@ -33,39 +95,47 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 200
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_subheading:
+    type: text_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 210
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 220
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 210
+    weight: 7
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   schema_address:
     type: address_default
-    weight: 150
+    weight: 10
     region: content
     settings:
       wrapper_type: fieldset
     third_party_settings: {  }
   schema_area_served:
     type: string_textfield
-    weight: 110
+    weight: 11
     region: content
     settings:
       size: 60
@@ -73,7 +143,7 @@ content:
     third_party_settings: {  }
   schema_description:
     type: text_textarea
-    weight: 17
+    weight: 9
     region: content
     settings:
       rows: 5
@@ -81,13 +151,13 @@ content:
     third_party_settings: {  }
   schema_founding_date:
     type: datetime_default
-    weight: 111
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   schema_founding_location:
     type: string_textfield
-    weight: 110
+    weight: 14
     region: content
     settings:
       size: 60
@@ -95,14 +165,14 @@ content:
     third_party_settings: {  }
   schema_image:
     type: media_library_widget
-    weight: 8
+    weight: 2
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   schema_legal_name:
     type: string_textfield
-    weight: 110
+    weight: 8
     region: content
     settings:
       size: 60
@@ -110,14 +180,14 @@ content:
     third_party_settings: {  }
   schema_logo:
     type: media_library_widget
-    weight: 9
+    weight: 17
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   schema_main_entity:
     type: layout_paragraphs
-    weight: 97
+    weight: 1
     region: content
     settings:
       view_mode: default
@@ -129,7 +199,7 @@ content:
     third_party_settings: {  }
   schema_nonprofit_status:
     type: string_textfield
-    weight: 110
+    weight: 15
     region: content
     settings:
       size: 60
@@ -137,7 +207,7 @@ content:
     third_party_settings: {  }
   schema_related_link:
     type: link_default
-    weight: 95
+    weight: 5
     region: content
     settings:
       placeholder_url: ''
@@ -145,7 +215,7 @@ content:
     third_party_settings: {  }
   schema_significant_link:
     type: link_default
-    weight: 94
+    weight: 6
     region: content
     settings:
       placeholder_url: ''
@@ -153,7 +223,7 @@ content:
     third_party_settings: {  }
   schema_subject_of:
     type: entity_reference_autocomplete
-    weight: 165
+    weight: 16
     region: content
     settings:
       match_operator: CONTAINS
@@ -163,21 +233,21 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 220
+    weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 210
+    weight: 8
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -185,7 +255,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 200
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS

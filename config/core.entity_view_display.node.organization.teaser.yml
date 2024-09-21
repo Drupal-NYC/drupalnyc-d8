@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.organization.field_subheading
     - field.field.node.organization.schema_address
     - field.field.node.organization.schema_area_served
     - field.field.node.organization.schema_description
@@ -39,6 +40,7 @@ content:
     weight: 17
     region: content
 hidden:
+  field_subheading: true
   schema_address: true
   schema_area_served: true
   schema_founding_date: true
