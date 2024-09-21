@@ -1,18 +1,16 @@
-uuid: 2ddfe7e6-2d3f-434e-8ce5-19ee3f2c9da4
+uuid: ac8575f0-b90d-472d-9b16-f25f77deb38e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.remote_video.field_media_oembed_video
-    - media.type.remote_video
+    - field.field.media.video.field_media_oembed_video
+    - media.type.video
   module:
     - media
     - path
-_core:
-  default_config_hash: uWhRDlQVs_4mPe2Ndg4OPnEbSc_MDRwz-QBCGlnm-zs
-id: media.remote_video.default
+id: media.video.default
 targetEntityType: media
-bundle: remote_video
+bundle: video
 mode: default
 content:
   created:

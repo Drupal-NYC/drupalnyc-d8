@@ -1,0 +1,40 @@
+uuid: bc718e53-ef43-4adc-9035-67f79bf6f044
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.schema_about
+    - field.field.node.news.schema_image
+    - field.field.node.news.schema_main_entity
+    - field.field.node.news.schema_related_link
+    - field.field.node.news.schema_significant_link
+    - field.field.node.news.schema_subject_of
+    - node.type.news
+  module:
+    - node
+id: node.news
+target_entity_type_id: node
+target_bundle: news
+schema_type: Article
+schema_properties:
+  schema_about: about
+  body: articleBody
+  created: dateCreated
+  changed: dateModified
+  title: headline
+  schema_image: image
+  langcode: inLanguage
+  schema_main_entity: mainEntity
+  schema_subject_of: subjectOf
+additional_mappings:
+  WebPage:
+    schema_type: WebPage
+    schema_properties:
+      created: dateCreated
+      changed: dateModified
+      langcode: inLanguage
+      title: name
+      schema_image: primaryImageOfPage
+      schema_related_link: relatedLink
+      schema_significant_link: significantLink

@@ -1,0 +1,19 @@
+uuid: f4eae6dd-ae00-4ba1-a122-b36ded66118f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.schema_parent_organization
+field_name: schema_parent_organization
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

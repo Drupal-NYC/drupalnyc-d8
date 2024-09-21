@@ -1,0 +1,19 @@
+uuid: 4da00673-7194-4538-b882-5f2ad5d50be3
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - node
+id: node.schema_address
+field_name: schema_address
+entity_type: node
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

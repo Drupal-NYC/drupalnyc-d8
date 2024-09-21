@@ -1,0 +1,11 @@
+uuid: 6b588820-54ce-41a7-a116-a89f15828d55
+langcode: en
+status: true
+dependencies: {  }
+name: Page
+type: web_page
+description: 'A web page.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

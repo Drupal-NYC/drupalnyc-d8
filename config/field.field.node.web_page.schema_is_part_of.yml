@@ -1,0 +1,30 @@
+uuid: 36f8c8f9-34fc-4a68-aed3-45703cb2192c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_is_part_of
+    - node.type.news
+    - node.type.web_page
+id: node.web_page.schema_is_part_of
+field_name: schema_is_part_of
+entity_type: node
+bundle: web_page
+label: 'Is part of'
+description: 'Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'schemadotorg:node'
+  handler_settings:
+    target_type: node
+    schema_types:
+      CreativeWork: CreativeWork
+    excluded_schema_types: {  }
+    ignore_additional_mappings: true
+    target_bundles:
+      news: news
+      web_page: web_page
+field_type: entity_reference

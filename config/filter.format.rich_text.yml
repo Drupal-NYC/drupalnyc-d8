@@ -1,0 +1,23 @@
+uuid: a7645939-da5c-4555-86a2-89f4b827df42
+langcode: en
+status: true
+dependencies: {  }
+name: 'Rich text'
+format: rich_text
+weight: 0
+filters:
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <strong> <em> <u> <s> <sub> <sup> <ul> <ol reversed start> <li>'
+      filter_html_help: true
+      filter_html_nofollow: false

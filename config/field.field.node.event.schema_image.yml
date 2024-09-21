@@ -1,0 +1,29 @@
+uuid: b88a3a27-252c-4ba6-a4f2-8c9eabc6c850
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_image
+    - media.type.image
+    - node.type.event
+id: node.event.schema_image
+field_name: schema_image
+entity_type: node
+bundle: event
+label: Image
+description: 'Indicates the main image on the page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'schemadotorg:media'
+  handler_settings:
+    target_type: media
+    schema_types:
+      ImageObject: ImageObject
+    excluded_schema_types: {  }
+    ignore_additional_mappings: false
+    target_bundles:
+      image: image
+field_type: entity_reference

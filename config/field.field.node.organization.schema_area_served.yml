@@ -1,0 +1,19 @@
+uuid: b6ffec3c-fd64-4de8-a216-4a7e683768eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_area_served
+    - node.type.organization
+id: node.organization.schema_area_served
+field_name: schema_area_served
+entity_type: node
+bundle: organization
+label: 'Area served'
+description: 'The geographic area where a service or offered item is provided.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

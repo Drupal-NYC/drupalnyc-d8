@@ -1,0 +1,24 @@
+_core:
+  default_config_hash: t4OwyWVov2EL0wVuIRk03eEbtwz13Mm2F52bSv1KSSs
+paragraphs_library:
+  - ContactPoint
+  - MedicalAudience
+  - MedicalContraindication
+  - MedicalIndication
+  - MedicalCause
+  - MedicalProcedure
+  - MedicalRiskFactor
+  - MedicalTherapy
+  - MedicalSignOrSymptom
+  - Statement
+  - Quotation
+  - CollectionPage
+  - ItemList
+  - MediaGallery
+  - ImageGallery
+  - VideoGallery
+  - WebContent
+schema_property_access:
+  Person--ContactPoint:
+    - contactType
+    - telephone
