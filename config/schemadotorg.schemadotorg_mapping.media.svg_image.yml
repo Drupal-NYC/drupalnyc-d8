@@ -1,0 +1,21 @@
+uuid: 51661e9b-c74f-42c1-8445-0b075f0c5961
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.svg_image.field_media_svg
+    - media.type.svg_image
+  module:
+    - media
+id: media.svg_image
+target_entity_type_id: media
+target_bundle: svg_image
+schema_type: ImageObject
+schema_properties:
+  created: dateCreated
+  changed: dateModified
+  field_media_svg: image
+  langcode: inLanguage
+  name: name
+  thumbnail: thumbnail
+additional_mappings: {  }

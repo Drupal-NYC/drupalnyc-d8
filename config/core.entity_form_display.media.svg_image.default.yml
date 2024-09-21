@@ -1,0 +1,66 @@
+uuid: 44f0cc13-b355-4e05-bfa3-e4d905a73ebd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.svg_image.field_media_svg
+    - media.type.svg_image
+  module:
+    - path
+    - svg_image_field
+id: media.svg_image.default
+targetEntityType: media
+bundle: svg_image
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 200
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_svg:
+    type: svg_image_field_widget
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_max_width: 300
+      preview_image_max_height: 300
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 210
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 200
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 200
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  publish_state: true
+  unpublish_on: true
+  unpublish_state: true
