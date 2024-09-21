@@ -1,7 +1,0 @@
-{
-  "name": "drupal/embed",
-  "type": "drupal-module",
-  "license": "GPL-2.0-or-later",
-  "minimum-stability": "stable",
-  "require": {}
-}
