@@ -2412,26 +2412,26 @@
         },
         {
             "name": "drupal/field_formatter",
-            "version": "3.0.0-rc2",
+            "version": "3.0.0-rc5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/field_formatter.git",
-                "reference": "3.0.0-rc2"
+                "reference": "3.0.0-rc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_formatter-3.0.0-rc2.zip",
-                "reference": "3.0.0-rc2",
-                "shasum": "a96bca9512340881237597e5d95f27cefd42e18e"
+                "url": "https://ftp.drupal.org/files/projects/field_formatter-3.0.0-rc5.zip",
+                "reference": "3.0.0-rc5",
+                "shasum": "735c3fea8991a3ce01c58a611ebe5e2b3a537b4a"
             },
             "require": {
-                "drupal/core": "^9.1 || ^10"
+                "drupal/core": "^9.1 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-rc2",
-                    "datestamp": "1671205508",
+                    "version": "3.0.0-rc5",
+                    "datestamp": "1724167089",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -2448,7 +2448,7 @@
                     "homepage": "https://www.drupal.org/user/291091"
                 },
                 {
-                    "name": "Dave Reid",
+                    "name": "dave reid",
                     "homepage": "https://www.drupal.org/user/53892"
                 },
                 {
