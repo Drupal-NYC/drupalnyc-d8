@@ -27,7 +27,9 @@ tasks:
          service: cli
      - run:
          name: drush deploy
-         command: drush -y deploy
+         command: |
+           fix-permissions(/app/web/sites/default)
+           drush -y deploy
          service: cli
 
 environments:
