@@ -22,6 +22,10 @@ tasks:
          service: cli
          when: LAGOON_ENVIRONMENT_TYPE != "production"
      - run:
+         name: Get status
+         command: drush status
+         service: cli
+     - run:
          name: drush deploy
          command: drush -y deploy
          service: cli
