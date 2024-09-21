@@ -2925,27 +2925,27 @@
         },
         {
             "name": "drupal/lagoon_logs",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/lagoon_logs.git",
-                "reference": "3.0.0"
+                "reference": "3.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/lagoon_logs-3.0.0.zip",
-                "reference": "3.0.0",
-                "shasum": "a0286a01e96cb7632d59e6074414352d6cd3026d"
+                "url": "https://ftp.drupal.org/files/projects/lagoon_logs-3.0.1.zip",
+                "reference": "3.0.1",
+                "shasum": "3bec3d2833749510b3fb72898f0d555cfe79bb39"
             },
             "require": {
-                "drupal/core": "^10",
+                "drupal/core": ">=10",
                 "monolog/monolog": "^3.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1689723042",
+                    "version": "3.0.1",
+                    "datestamp": "1720402778",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2963,12 +2963,8 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "fjgarlin",
-                    "homepage": "https://www.drupal.org/user/2495842"
-                },
-                {
-                    "name": "tim.clifford",
-                    "homepage": "https://www.drupal.org/user/3460013"
+                    "name": "rocketeerbkw",
+                    "homepage": "https://www.drupal.org/user/615672"
                 },
                 {
                     "name": "tobybellwood",
