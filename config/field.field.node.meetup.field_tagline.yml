@@ -4,14 +4,10 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_tagline
+    - filter.format.headlines
     - node.type.meetup
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats:
-      - headlines
 id: node.meetup.field_tagline
 field_name: field_tagline
 entity_type: node
@@ -22,5 +18,7 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats:
+    - headlines
 field_type: text
