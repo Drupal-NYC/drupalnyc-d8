@@ -1,0 +1,23 @@
+uuid: 87601bfb-e133-4fbe-90da-1ab5492708e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_related_link
+    - node.type.news
+  module:
+    - link
+id: node.news.schema_related_link
+field_name: schema_related_link
+entity_type: node
+bundle: news
+label: 'Related links'
+description: 'A link related to this web page, for example to other related web pages.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

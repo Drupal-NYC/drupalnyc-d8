@@ -1,0 +1,19 @@
+uuid: e3c4271e-8f78-4a17-8267-5800bb9999b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_duration
+    - node.type.event
+id: node.event.schema_duration
+field_name: schema_duration
+entity_type: node
+bundle: event
+label: Duration
+description: 'The duration of the item (movie, audio recording, event, etc.) in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

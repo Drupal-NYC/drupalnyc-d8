@@ -1,0 +1,24 @@
+uuid: d623df4b-5d6e-4025-bacf-2789d41c5af9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - filter.format.headlines
+    - paragraphs.paragraphs_type.text
+  module:
+    - text
+id: paragraph.text.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: text
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - headlines
+field_type: text

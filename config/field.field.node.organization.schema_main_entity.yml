@@ -1,0 +1,25 @@
+uuid: 818053ff-200b-4948-8acf-a9a182f0de9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_main_entity
+    - node.type.organization
+  module:
+    - entity_reference_revisions
+id: node.organization.schema_main_entity
+field_name: schema_main_entity
+entity_type: node
+bundle: organization
+label: Layout
+description: 'A layout built using paragraphs. Layout paragraphs allows site builders to construct a multi-column landing page using Schema.org related paragraphs types.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: {  }
+    target_bundles_drag_drop: {  }
+field_type: entity_reference_revisions

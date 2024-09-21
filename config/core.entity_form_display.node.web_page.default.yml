@@ -1,0 +1,162 @@
+uuid: 9ffce43d-2088-42dd-95f7-47bfe30b2f32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.web_page.schema_about
+    - field.field.node.web_page.schema_has_part
+    - field.field.node.web_page.schema_image
+    - field.field.node.web_page.schema_is_part_of
+    - field.field.node.web_page.schema_main_entity
+    - field.field.node.web_page.schema_related_link
+    - field.field.node.web_page.schema_significant_link
+    - field.field.node.web_page.schema_subject_of
+    - node.type.web_page
+  module:
+    - content_moderation
+    - layout_paragraphs
+    - link
+    - media_library
+    - path
+id: node.web_page.default
+targetEntityType: node
+bundle: web_page
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 200
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 210
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 220
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 210
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  schema_about:
+    type: entity_reference_autocomplete
+    weight: 165
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  schema_has_part:
+    type: entity_reference_autocomplete
+    weight: 96
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  schema_image:
+    type: media_library_widget
+    weight: 10
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  schema_is_part_of:
+    type: entity_reference_autocomplete
+    weight: 160
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  schema_main_entity:
+    type: layout_paragraphs
+    weight: 97
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: 'Click the [+] sign below to choose your first component.'
+    third_party_settings: {  }
+  schema_related_link:
+    type: link_default
+    weight: 95
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  schema_significant_link:
+    type: link_default
+    weight: 94
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  schema_subject_of:
+    type: entity_reference_autocomplete
+    weight: 165
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 220
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 210
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 200
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  publish_state: true
+  unpublish_on: true
+  unpublish_state: true

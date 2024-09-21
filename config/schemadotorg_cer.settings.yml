@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: cyF_TeB3JWVxRjXqK5b5DQZj9VtIIN_gvrbk8EbCg74
+default_schema_properties:
+  subOrganization: parentOrganization
+  subEvent: superEvent
+  memberOf: member
+  subjectOf: about
+  containedInPlace: containsPlace
+  worksFor: employee
+  department: parentOrganization
+  offeredBy: makesOffer
+  performerIn: performer
+  healthCondition: study
+  relatedDrug: relatedDrug
+  isPartOf: hasPart

@@ -1,0 +1,19 @@
+uuid: 9294f12d-dd79-4715-b3f9-d9e220cbd404
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_founding_location
+    - node.type.organization
+id: node.organization.schema_founding_location
+field_name: schema_founding_location
+entity_type: node
+bundle: organization
+label: 'Founding location'
+description: 'The place where the Organization was founded.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

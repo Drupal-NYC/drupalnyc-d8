@@ -1,0 +1,72 @@
+uuid: 78035f0e-d0c4-44dd-9211-e530806d7684
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: OcWRCfFaUJqMIYVNHRLIrvy6phHMba2rbVJaXu2bWOI
+id: media
+target_entity_type_id: media
+multiple: false
+label_prefix: ''
+id_prefix: ''
+recommended_schema_types:
+  media_objects:
+    label: Common
+    types:
+      - AudioObject
+      - ImageObject
+      - VideoObject
+      - DataDownload
+default_schema_types:
+  audio: AudioObject
+  document: DataDownload
+  image: ImageObject
+  remote_video: VideoObject
+  video: VideoObject
+default_schema_type_properties:
+  MediaObject:
+    - dateCreated
+    - dateModified
+default_schema_type_view_displays: {  }
+default_base_fields:
+  path: {  }
+  revision_created: {  }
+  revision_user: {  }
+  uid: {  }
+  uuid: {  }
+  langcode:
+    - inLanguage
+  name:
+    - name
+  thumbnail:
+    - thumbnail
+  created:
+    - dateCreated
+  changed:
+    - dateModified
+  field_media_audio_file:
+    - contentUrl
+  field_media_document:
+    - contentUrl
+  field_media_image:
+    - image
+    - contentUrl
+  field_media_oembed_video:
+    - video
+    - contentUrl
+  field_media_video_file:
+    - video
+    - contentUrl
+default_component_weights:
+  field_media_audio_file: 0
+  field_media_document: 0
+  field_media_image: 0
+  field_media_oembed_video: 0
+  field_media_video_file: 0
+  langcode: 200
+  created: 200
+  uid: 200
+  status: 200
+  path: 210

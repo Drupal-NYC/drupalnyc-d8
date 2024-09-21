@@ -1,0 +1,29 @@
+uuid: 3e7931fe-2ba8-4f46-a4d5-a2009efc47d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_logo
+    - media.type.image
+    - node.type.organization
+id: node.organization.schema_logo
+field_name: schema_logo
+entity_type: node
+bundle: organization
+label: Logo
+description: 'An associated logo.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'schemadotorg:media'
+  handler_settings:
+    target_type: media
+    schema_types:
+      ImageObject: ImageObject
+    excluded_schema_types: {  }
+    ignore_additional_mappings: false
+    target_bundles:
+      image: image
+field_type: entity_reference

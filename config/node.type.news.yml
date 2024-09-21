@@ -1,0 +1,11 @@
+uuid: 24ffb13d-b185-4c86-8c9c-fac8c2c830cc
+langcode: en
+status: true
+dependencies: {  }
+name: News
+type: news
+description: 'An article, such as a news article or piece of investigative report.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

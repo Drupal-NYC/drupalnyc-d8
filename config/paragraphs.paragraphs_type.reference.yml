@@ -1,0 +1,14 @@
+uuid: 34d0d495-c7ed-4830-94b1-376111f042ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+id: reference
+label: Reference
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  style_options:
+    enabled: true

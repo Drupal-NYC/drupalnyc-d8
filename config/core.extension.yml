@@ -2,6 +2,7 @@ _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   auto_entitylabel: -100
+  address: 0
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
@@ -10,6 +11,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  cer: 0
   ckeditor5: 0
   config: 0
   config_filter: 0
@@ -27,6 +29,7 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
+  entity_reference_revisions: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -43,10 +46,12 @@ module:
   layout_builder: 0
   layout_builder_expose_all_field_blocks: 0
   layout_discovery: 0
+  layout_paragraphs: 0
   link: 0
   media: 0
   media_library: 0
   menu_ui: 0
+  mercury_editor: 0
   mysql: 0
   node: 0
   options: 0
@@ -57,13 +62,21 @@ module:
   responsive_image: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
+  schemadotorg: 0
+  schemadotorg_address: 0
+  schemadotorg_cer: 0
+  schemadotorg_media: 0
+  schemadotorg_paragraphs: 0
+  schemadotorg_ui: 0
   search: 0
   settings_tray: 0
   shortcut: 0
   smart_trim: 0
+  style_options: 0
   symfony_mailer: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   textarea_widget_for_text: 0
   token: 0
@@ -75,7 +88,11 @@ module:
   extlink: 1
   menu_link_content: 1
   pathauto: 1
+  schemadotorg_layout_paragraphs: 1
+  schemadotorg_mercury_editor: 2
+  schemadotorg_additional_mappings: 10
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   stark: 0

@@ -1,0 +1,19 @@
+uuid: 8392c8dd-4383-4858-944e-57d719b0e411
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.schema_significant_link
+field_name: schema_significant_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

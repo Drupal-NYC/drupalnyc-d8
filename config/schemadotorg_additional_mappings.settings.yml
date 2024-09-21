@@ -1,0 +1,90 @@
+_core:
+  default_config_hash: ivbIldphnRDBIr8_CJShQRdm3UKb4V5GGhPHtd131Us
+default_additional_mappings:
+  node--IndividualPhysician:
+    - ProfilePage
+    - Person
+  node--Person:
+    - ProfilePage
+  node--MedicalCondition:
+    - MedicalWebPage
+    - HealthTopicContent
+  node--MedicalStudy:
+    - MedicalWebPage
+    - ResearchProject
+  node--Substance:
+    - MedicalWebPage
+    - CreativeWork
+    - PronounceableText
+  node--HealthTopicContent:
+    - MedicalWebPage
+  node--MedicalEntity:
+    - MedicalWebPage
+  node--CreativeWork:
+    - WebPage
+  node--Organization:
+    - WebPage
+  node--Place:
+    - WebPage
+  node--Event:
+    - WebPage
+  node--Intangible:
+    - WebPage
+  paragraph--Quotation:
+    - Person
+default_properties:
+  CreativeWork:
+    - citation
+    - isBasedOn
+    - license
+  HealthTopicContent:
+    - hasHealthAspect
+    - about
+  PronounceableText:
+    - inLanguage
+    - textValue
+    - phoneticText
+  WebPage:
+    - dateCreated
+    - dateModified
+    - inLanguage
+    - name
+    - primaryImageOfPage
+    - relatedLink
+    - significantLink
+  MedicalWebPage:
+    - dateCreated
+    - dateModified
+    - inLanguage
+    - name
+    - primaryImageOfPage
+    - relatedLink
+    - significantLink
+    - medicalAudience
+  ProfilePage:
+    - dateCreated
+    - dateModified
+    - inLanguage
+    - name
+    - primaryImageOfPage
+    - relatedLink
+    - significantLink
+  ResearchProject:
+    - member
+  Person:
+    - additionalName
+    - description
+    - email
+    - familyName
+    - givenName
+    - image
+    - knowsLanguage
+    - memberOf
+    - name
+    - sameAs
+    - telephone
+    - worksFor
+  Quotation--Person:
+    - name
+    - jobTitle
+    - image
