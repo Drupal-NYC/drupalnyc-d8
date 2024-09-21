@@ -27,7 +27,7 @@ tasks:
          service: cli
      - run:
          name: drush deploy
-         command: drush -y -vvv deploy
+         command: drush -y deploy
          service: cli
 
 environments:
