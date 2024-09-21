@@ -23,9 +23,7 @@ tasks:
          when: LAGOON_ENVIRONMENT_TYPE != "production"
      - run:
          name: drush deploy
-         command: |
-           fix-permissions(/app/web/sites/default)
-           drush -y deploy
+         command: drush -y deploy
          service: cli
 
 environments:
