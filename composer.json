@@ -36,7 +36,10 @@
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/key": "^1.17",
         "drupal/lagoon_logs": "^3.0",
+        "drupal/layout_paragraphs": "^2.1",
+        "drupal/mercury_editor": "^2.1",
         "drupal/pantheon_advanced_page_cache": "^2.1.1",
+        "drupal/paragraphs": "^1.18",
         "drupal/pathauto": "^1.13",
         "drupal/responsive_favicons": "^2.0.0",
         "drupal/scheduler": "^2.1.0",
@@ -46,6 +49,7 @@
         "drupal/smart_trim": "^2.0",
         "drupal/stage_file_proxy": "^2.0.",
         "drupal/symfony_mailer": "^1.5",
+        "drupal/textarea_widget_for_text": "^1.3",
         "drush/drush": "^12",
         "oomphinc/composer-installers-extender": "^2.0",
         "webflo/drupal-finder": "^1.2.0",
@@ -114,29 +118,18 @@
             "locations": {
                 "web-root": "web/"
             },
-            "excludes": [
-                ".csslintrc",
-                ".editorconfig",
-                ".eslintignore",
-                ".eslintrc.json",
-                ".htaccess",
-                "web.config",
-                "lagoon.site.yml"
-            ],
+            "file-mapping": {
+                "[web-root]/.csslintrc": false,
+                "[web-root]/.editorconfig": false,
+                "[web-root]/.eslintignore": false,
+                "[web-root]/.eslintrc.json": false,
+                "[web-root]/.htaccess": false,
+                "[web-root]/web.config": false,
+                "[project-root]/drush/sites/lagoon.site.yml": false
+            },
             "allowed-packages": [
                 "amazeeio/drupal_integrations"
             ]
-        },
-        "patches": {
-            "drupal/embed": {
-                "CKEditor5 support initial commit": "https://git.drupalcode.org/project/embed/-/merge_requests/2.patch"
-            },
-            "drupal/entity_embed": {
-                "Support CKEditor4 and CKEditor5": "https://www.drupal.org/files/issues/2023-03-23/3272732-67-COMPOSER-ONLY-drupal-10-ckeditor-5-readiness.patch"
-            },
-            "drupal/textarea_widget_for_text": {
-                "drupal 10 compatibility fix": "https://git.drupalcode.org/project/textarea_widget_for_text/-/merge_requests/2.patch"
-            }
         }
     }
 }

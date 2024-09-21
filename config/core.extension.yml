@@ -22,7 +22,6 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
-  dcnyc_pantheon: 0
   dnyc_amazee: 0
   dnyc_header_block: 0
   dynamic_page_cache: 0
