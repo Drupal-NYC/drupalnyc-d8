@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: view_header
 label: 'View Header'
-revision: 1
+revision: true
 description: ''

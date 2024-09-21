@@ -1,5 +1,6 @@
 _core:
   default_config_hash: rHbHZIIF9TP3H2Vs37uCHz4Gm4phULg0rQ_OKihxJfM
+langcode: en
 extlink_exclude_admin_routes: false
 extlink_target: true
 extlink_target_no_override: true
