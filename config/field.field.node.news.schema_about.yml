@@ -7,6 +7,7 @@ dependencies:
     - node.type.event
     - node.type.news
     - node.type.organization
+    - node.type.web_page
 id: node.news.schema_about
 field_name: schema_about
 entity_type: node

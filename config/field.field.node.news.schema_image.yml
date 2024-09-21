@@ -26,4 +26,5 @@ settings:
     ignore_additional_mappings: false
     target_bundles:
       image: image
+      svg_image: svg_image
 field_type: entity_reference
