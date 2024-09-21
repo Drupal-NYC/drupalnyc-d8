@@ -1,0 +1,46 @@
+diff --git a/scheduler_content_moderation_integration.install b/scheduler_content_moderation_integration.install
+index ac3f7c1..6979534 100644
+--- a/scheduler_content_moderation_integration.install
++++ b/scheduler_content_moderation_integration.install
+@@ -39,3 +39,41 @@ function scheduler_content_moderation_integration_update_9003() {
+   $output = _scheduler_content_moderation_integration_remove_fields();
+   return $output ? implode('</li><li>', $output) : t('No update required.');
+ }
++
++/**
++ * Install missing "Publish state" and "Unpublish state" fields.
++ */
++function scheduler_content_moderation_integration_update_9004() {
++  installPublishStateAndUnpublishStateFields('node');
++  installPublishStateAndUnpublishStateFields('media');
++  installPublishStateAndUnpublishStateFields('taxonomy_term');
++}
++
++/**
++ * Install Publish and Unpublish states fields for an entity type.
++ */
++function installPublishStateAndUnpublishStateFields($entity_type_name) {
++  $output = [];
++  if (\Drupal::service('module_handler')->moduleExists('scheduler_content_moderation_integration')) {
++    $entity_type = \Drupal::service('entity.definition_update_manager')->getEntityType($entity_type_name);
++    $installed = \Drupal::service('entity.last_installed_schema.repository')->getLastInstalledFieldStorageDefinitions($entity_type->id());
++    $definitions = scheduler_content_moderation_integration_entity_base_field_info($entity_type);
++    foreach ($definitions as $field_name => $definition) {
++      if (empty($installed[$field_name])) {
++        \Drupal::service('entity.definition_update_manager')->installFieldStorageDefinition($field_name, $entity_type->id(), 'scheduler_content_workbench_moderation_integration', $definition);
++        \Drupal::messenger()
++          ->addMessage(t('Field %field_name installed for %entity_type.', [
++            '%field_name' => $field_name,
++            '%entity_type' => $entity_type_name,
++          ]));
++      }
++    }
++  }
++
++  if (empty($output)) {
++    \Drupal::messenger()
++      ->addMessage(t('No schema updates required for %entity_type.', [
++        '%entity_type' => $entity_type_name,
++      ]));
++  }
++}

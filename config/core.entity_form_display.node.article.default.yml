@@ -10,7 +10,6 @@ dependencies:
     - node.type.article
     - workflows.workflow.editorial
   module:
-    - allowed_formats
     - content_moderation
     - field_group
     - path
@@ -61,10 +60,7 @@ content:
     settings:
       rows: 2
       placeholder: ''
-    third_party_settings:
-      allowed_formats:
-        hide_help: '1'
-        hide_guidelines: '1'
+    third_party_settings: {  }
   field_tagline:
     type: text_textarea
     weight: 2
@@ -72,10 +68,7 @@ content:
     settings:
       rows: 2
       placeholder: ''
-    third_party_settings:
-      allowed_formats:
-        hide_help: '0'
-        hide_guidelines: '0'
+    third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 5
