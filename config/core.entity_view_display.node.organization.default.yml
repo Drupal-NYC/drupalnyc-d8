@@ -13,18 +13,12 @@ dependencies:
     - field.field.node.organization.schema_logo
     - field.field.node.organization.schema_main_entity
     - field.field.node.organization.schema_nonprofit_status
-    - field.field.node.organization.schema_parent_organization
     - field.field.node.organization.schema_related_link
     - field.field.node.organization.schema_significant_link
-    - field.field.node.organization.schema_sub_organization
     - field.field.node.organization.schema_subject_of
     - node.type.organization
   module:
-    - address
-    - datetime
     - layout_paragraphs
-    - link
-    - text
     - user
 id: node.organization.default
 targetEntityType: node
@@ -34,65 +28,7 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 200
-    region: content
-  schema_address:
-    type: address_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 150
-    region: content
-  schema_area_served:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 110
-    region: content
-  schema_founding_date:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
-    weight: 111
-    region: content
-  schema_founding_location:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 110
-    region: content
-  schema_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 8
-    region: content
-  schema_legal_name:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 110
-    region: content
-  schema_logo:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 9
+    weight: 0
     region: content
   schema_main_entity:
     type: layout_paragraphs
@@ -101,63 +37,18 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 97
-    region: content
-  schema_nonprofit_status:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 110
-    region: content
-  schema_parent_organization:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 165
-    region: content
-  schema_related_link:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 95
-    region: content
-  schema_significant_link:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 94
-    region: content
-  schema_sub_organization:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 165
-    region: content
-  schema_subject_of:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 165
+    weight: 1
     region: content
 hidden:
+  schema_address: true
+  schema_area_served: true
   schema_description: true
+  schema_founding_date: true
+  schema_founding_location: true
+  schema_image: true
+  schema_legal_name: true
+  schema_logo: true
+  schema_nonprofit_status: true
+  schema_related_link: true
+  schema_significant_link: true
+  schema_subject_of: true

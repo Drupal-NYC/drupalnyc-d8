@@ -13,10 +13,8 @@ dependencies:
     - field.field.node.organization.schema_logo
     - field.field.node.organization.schema_main_entity
     - field.field.node.organization.schema_nonprofit_status
-    - field.field.node.organization.schema_parent_organization
     - field.field.node.organization.schema_related_link
     - field.field.node.organization.schema_significant_link
-    - field.field.node.organization.schema_sub_organization
     - field.field.node.organization.schema_subject_of
     - node.type.organization
   module:
@@ -137,16 +135,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  schema_parent_organization:
-    type: entity_reference_autocomplete
-    weight: 165
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   schema_related_link:
     type: link_default
     weight: 95
@@ -162,16 +150,6 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
-  schema_sub_organization:
-    type: entity_reference_autocomplete
-    weight: 165
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   schema_subject_of:
     type: entity_reference_autocomplete

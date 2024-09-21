@@ -13,10 +13,8 @@ dependencies:
     - field.field.node.organization.schema_logo
     - field.field.node.organization.schema_main_entity
     - field.field.node.organization.schema_nonprofit_status
-    - field.field.node.organization.schema_parent_organization
     - field.field.node.organization.schema_related_link
     - field.field.node.organization.schema_significant_link
-    - field.field.node.organization.schema_sub_organization
     - field.field.node.organization.schema_subject_of
     - node.type.organization
   module:
@@ -36,9 +34,7 @@ schema_properties:
   schema_logo: logo
   title: name
   schema_nonprofit_status: nonprofitStatus
-  schema_parent_organization: parentOrganization
   schema_subject_of: subjectOf
-  schema_sub_organization: subOrganization
   schema_main_entity: mainEntity
 additional_mappings:
   WebPage:
