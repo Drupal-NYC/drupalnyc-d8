@@ -18,16 +18,17 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  available_countries: {  }
-  langcode_override: null
+  available_countries:
+    US: US
+  langcode_override: ''
   field_overrides:
     givenName:
-      override: optional
+      override: hidden
     additionalName:
-      override: optional
+      override: hidden
     familyName:
-      override: optional
+      override: hidden
     organization:
-      override: optional
+      override: hidden
   fields: {  }
 field_type: address
