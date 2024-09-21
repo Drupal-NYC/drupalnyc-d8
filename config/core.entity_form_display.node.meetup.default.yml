@@ -12,7 +12,6 @@ dependencies:
     - node.type.meetup
     - workflows.workflow.editorial
   module:
-    - allowed_formats
     - content_moderation
     - datetime
     - field_group
@@ -84,10 +83,7 @@ content:
     settings:
       rows: 2
       placeholder: ''
-    third_party_settings:
-      allowed_formats:
-        hide_help: '0'
-        hide_guidelines: '0'
+    third_party_settings: {  }
   field_video:
     type: media_library_widget
     weight: 8

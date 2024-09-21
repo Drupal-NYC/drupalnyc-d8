@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: meetup
 label: Meetup
-revision: 1
+revision: true
 description: ''

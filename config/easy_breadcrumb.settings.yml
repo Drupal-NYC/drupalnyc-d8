@@ -1,5 +1,6 @@
 _core:
   default_config_hash: mmRzotiiDIFi2Ozs3xKRCRENuR9Dpd6sXlXoaI8FNTo
+langcode: en
 applies_admin_routes: false
 include_invalid_paths: false
 excluded_paths: ''
@@ -27,3 +28,4 @@ capitalizator_forced_words:
 capitalizator_forced_words_case_sensitivity: false
 capitalizator_forced_words_first_letter: false
 follow_redirects: true
+segment_display_minimum: 1

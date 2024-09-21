@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: call_to_action
 label: 'Call to Action'
-revision: 1
+revision: true
 description: ''

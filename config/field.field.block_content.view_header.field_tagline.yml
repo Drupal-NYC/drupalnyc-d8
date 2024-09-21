@@ -5,13 +5,9 @@ dependencies:
   config:
     - block_content.type.view_header
     - field.storage.block_content.field_tagline
+    - filter.format.headlines
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats:
-      - headlines
 id: block_content.view_header.field_tagline
 field_name: field_tagline
 entity_type: block_content
@@ -22,5 +18,7 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats:
+    - headlines
 field_type: text

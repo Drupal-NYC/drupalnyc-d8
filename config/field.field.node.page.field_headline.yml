@@ -4,14 +4,10 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_headline
+    - filter.format.headlines
     - node.type.page
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats:
-      - headlines
 id: node.page.field_headline
 field_name: field_headline
 entity_type: node
@@ -22,5 +18,7 @@ required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats:
+    - headlines
 field_type: text
