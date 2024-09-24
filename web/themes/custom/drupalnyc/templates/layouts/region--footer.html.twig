@@ -1,0 +1,25 @@
+{% set classes = [
+    'region',
+    'region__name--' ~ region|clean_class,
+		'site-footer',
+    'l-stack__minimal'
+] %}
+
+{{ attach_library('drupalnyc/region--' ~ region|clean_class) }}
+
+<footer role='contentinfo' {{ attributes.addClass(classes) }}>
+  <div class='site-footer__inner l-constrained'>
+    <a href="{{ path('<front>') }}" title="{{ title ? title : 'Home' }}" rel='home' class='site-footer__logo'>
+      <img src='/{{ base_path ~ directory }}/logo.svg' class='logo__image' alt="{{ 'Home'|t }}"/>
+    </a>
+    {# Footer Menus #}
+    <div class='site-footer__content'>
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </div>
+  </div>
+  {% if backToTop %}
+    {{backToTop}}
+  {% endif %}
+</footer>

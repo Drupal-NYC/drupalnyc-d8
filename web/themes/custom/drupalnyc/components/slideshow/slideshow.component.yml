@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Slideshow
+status: 'experimental'
+description: A slideshow component
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+    - drupalnyc/splide
+slots:
+  slides_block: {}
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Header for the slideshow
+      examples:
+        - 'A slideshow of our latest products'

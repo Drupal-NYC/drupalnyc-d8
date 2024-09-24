@@ -1,7 +1,7 @@
 cache:
   page:
-    max_age: 8640000
+    max_age: 0
 css:
-  preprocess: true
+  preprocess: false
 js:
-  preprocess: true
+  preprocess: false

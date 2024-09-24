@@ -1,0 +1,8 @@
+# Schema for the configuration files of the drupalnyc theme.
+drupalnyc.settings:
+  type: theme_settings
+  label: 'drupalnyc settings'
+  mapping:
+    display_back_to_top:
+      type: boolean
+      label: 'Display a back to top button on the site'

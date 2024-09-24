@@ -1,0 +1,35 @@
+{% set cta_classes = ['c-cta']|merge(classes|default([])) %}
+<section {{ attributes.addClass(cta_classes).merge(attributes) }}>
+
+  <div class='c-cta__wrap'>
+    <div class='c-cta__inner-wrap'>
+
+      {% block cta_title_block %}
+        {% if cta_title %}
+          <h2 class='c-cta__title'>{{cta_title}}</h2>
+        {% endif %}
+      {% endblock %}
+
+
+      {% block cta_text_block %}
+        {% if cta_text %}
+          <div class='c-cta__text'>
+            {{ cta_text }}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+
+      {% block cta_link_block %}
+        {% if cta_link.url %}
+          {{ include('drupalnyc:link', {
+            classes: ['c-cta__link'],
+            link_link: { url: cta_link.url, title: cta_link.title },
+            link_icon: cta_icon,
+            attr: create_attribute(),
+          }, with_context = false) }}
+        {% endif %}
+      {% endblock %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Component for Tabs Content
+ * This component will automatically, and responsively format a group of tab items
+ * with a title and content, into both a horizontal tabs group for desktop devices
+ * and accordion for smaller device sizes.
+ *
+ * Available props:
+ * - tabs_content_attributes: [string] Any custom attributes needed for this component.
+ * - tabs_content_breakpoint: [interger] The numeric value at which to switch between tabs and accordions.
+ * - tabs_content_items: [array] Expecting a grouping of tab items.
+ *      - id: [string] Expecting an unique identifying machine name.
+ *      - title: [string] Expecting the primary title for a tab group.
+ *      - content: [string] Expecting the primary content for a tab group.
+ *
+ * Available slots:
+ * - tabs_content_items_override
+ */
+#}
+
+{% set classes = [
+  'c-tabs-content'
+] %}
+
+<div {{ tabs_content_attributes.addClass(classes) }} {{ tabs_content_breakpoint ? 'data-tabs-content-breakpoint=' ~ tabs_content_breakpoint }}>
+  {# JavaScript will append all desktop navigation tabs from the buttons within each grouping. #}
+  <div role="tablist" class="c-tabs-content__navigation"></div>
+
+  {% block tabs_content_items_override %}
+    {% if tabs_content_items is not empty %}
+      {% for item in tabs_content_items %}
+        <div id="{{ item.id }}"
+             class="c-tabs-content__group {{ loop.index0 == 0 ? 'expanded' }}"
+             role="tabpanel"
+             aria-labelledby="tab-{{ item.id }}">
+          <button type="button"
+                  id="tab-{{ item.id }}"
+                  class="c-tabs-content__trigger {{ loop.index0 == 0 ? 'expanded' }}"
+                  role="tab"
+                  aria-haspopup="true"
+                  aria-selected="true"
+                  aria-expanded="true"
+                  aria-controls="{{ item.id }}">
+            {{ item.title }}
+          </button>
+
+          <div class="c-tabs-content__content">
+            {{ item.content }}
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endblock %}
+</div>

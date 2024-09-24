@@ -1,0 +1,32 @@
+//
+// Global - Media
+//
+// - 01 - General
+//
+
+//------------------------------------
+//  01 - General
+//  A mixin is created and than instantly called here so that we can utilize the same styles within other
+//  stylesheets, like the `wysiwyg.scss` file.
+//------------------------------------
+
+@mixin media-general() {
+  figure {
+    margin: 0;
+
+    img {
+      display: block;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    margin: 16px 0;
+  }
+}
+
+@include media-general();

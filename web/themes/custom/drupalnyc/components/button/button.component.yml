@@ -1,0 +1,29 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Button
+description: A basic button component
+status: 'experimental'
+props:
+  type: object
+  properties:
+    button_icon:
+      type: string
+      title: Icon Type
+      examples:
+        - icon-arrow-right
+        - external-link
+    button_link:
+      title: Link
+      type: object
+      properties:
+        title:
+          type: string
+          title: Link Text
+          examples:
+            - Read more about this topic
+            - Submit now
+        url:
+          title: Link Url
+          type: string
+          examples:
+            - 'https://www.example.org'
+

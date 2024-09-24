@@ -1,0 +1,22 @@
+uuid: 40708b8c-b454-4ece-8343-28defe616aac
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - drupalnyc
+_core:
+  default_config_hash: SDOIyF-5oTJ-OhQKwhEE8cRyVvyyx6Ab_f6mLYqX1TU
+id: drupalnyc_help
+theme: drupalnyc
+region: help
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

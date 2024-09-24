@@ -1,0 +1,14 @@
+uuid: ef9bfdc1-5eef-44bc-a0be-9b43bf7272e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+id: hero
+label: Hero
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  style_options:
+    enabled: true

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.organization.field_subheading
+    - field.field.node.organization.field_hero
     - field.field.node.organization.schema_address
     - field.field.node.organization.schema_area_served
     - field.field.node.organization.schema_description
@@ -33,7 +33,6 @@ third_party_settings:
     group_hero:
       children:
         - title
-        - field_subheading
         - schema_image
       label: Hero
       region: content
@@ -45,7 +44,7 @@ third_party_settings:
         show_empty_fields: true
         id: ''
         label_as_html: false
-        description: 'These elements are used to build the page hero'
+        description: 'The <em>Name</em> is used in the hero if the optional headline is left blank.  The <em>Image</em> is also used in the hero and provided to JSON-LD as the main image of the page.'
         required_fields: true
     group_schema_data:
       children:
@@ -61,7 +60,7 @@ third_party_settings:
       label: 'Schema Data'
       region: content
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: details
       format_settings:
         classes: ''
@@ -78,7 +77,7 @@ third_party_settings:
       label: Links
       region: content
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: details
       format_settings:
         classes: ''
@@ -95,17 +94,21 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_subheading:
-    type: text_textfield
+  field_hero:
+    type: layout_paragraphs
     weight: 1
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
@@ -135,7 +138,7 @@ content:
     third_party_settings: {  }
   schema_area_served:
     type: string_textfield
-    weight: 11
+    weight: 12
     region: content
     settings:
       size: 60
@@ -151,7 +154,7 @@ content:
     third_party_settings: {  }
   schema_founding_date:
     type: datetime_default
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -165,7 +168,7 @@ content:
     third_party_settings: {  }
   schema_image:
     type: media_library_widget
-    weight: 2
+    weight: 1
     region: content
     settings:
       media_types: {  }
@@ -187,7 +190,7 @@ content:
     third_party_settings: {  }
   schema_main_entity:
     type: layout_paragraphs
-    weight: 1
+    weight: 2
     region: content
     settings:
       view_mode: default
@@ -215,7 +218,7 @@ content:
     third_party_settings: {  }
   schema_significant_link:
     type: link_default
-    weight: 6
+    weight: 7
     region: content
     settings:
       placeholder_url: ''
@@ -255,7 +258,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS

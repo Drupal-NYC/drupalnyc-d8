@@ -1,0 +1,56 @@
+@use 'partials' as *;
+
+.site-footer {
+  position: relative;
+
+  .site-footer__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-footer__content {
+    flex: initial;
+  }
+  .site-footer__logo {
+    display: block;
+    width: fit-content;
+
+    img {
+      display: block;
+      max-height: rem(60px);
+      max-width: rem(60px);
+      width: 100%;
+    }
+  }
+
+  .sponsor-linked-logo {
+    width: rem(200px);
+    img {
+      max-height: rem(60px);
+    }
+  }
+
+  .amazee-link {
+    color: var(--dnyc-color-black);
+    font-size: var(--dnyc-fw-light);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    img {
+      display: block;
+    }
+  }
+
+  .amazee-image {
+    max-width: 200px;
+  }
+}

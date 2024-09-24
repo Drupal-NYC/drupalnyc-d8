@@ -1,0 +1,50 @@
+//
+// @file
+// Menu Tabs Container Styles
+//
+
+@use 'partials' as *;
+
+.c-menu-tabs {
+  > ul {
+    display: flex;
+    margin: 1rem;
+    border-bottom: 1px solid var(--dnyc-color-light); // Give the tabs something to sit on
+    @include list--no-bullets;
+  }
+
+  // c-tabs item
+  .c-menu-tabs__item {
+    display: block;
+    list-style: none;
+    margin-bottom: -1px; // Make the list-items overlay the bottom border
+    margin-top: 0;
+    padding-left: 0;
+
+    a {
+      background-color: var(--dnyc-color-light);
+      border: 1px solid var(--dnyc-color-dark);
+      border-bottom-color: var(--dnyc-color-light);
+      border-radius: 3px 3px 0 0;
+      color: var(--dnyc-color-black);
+      display: block;
+      margin-right: -1px;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+
+      &:hover {
+        background-color: var(--dnyc-color-dark);
+        color: var(--dnyc-color-white);
+      }
+    }
+
+    // Active Styles
+    &.is-active > a,
+    &.is-active > a:hover {
+      background-color: #fff;
+      border: 1px solid var(--dnyc-color-light);
+      border-bottom-color: transparent;
+      color: var(--dnyc-color-black);
+    }
+  }
+}

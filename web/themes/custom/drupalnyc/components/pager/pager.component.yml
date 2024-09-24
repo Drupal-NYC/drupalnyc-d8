@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: 'Pager'
+status: 'experimental'
+slot:
+  pager: {}
+props:
+  type: object
+  properties:
+    items:
+      type: array
+      title: Pager items
+      description: Individual page items to be rendered.
+      items:
+        type: string

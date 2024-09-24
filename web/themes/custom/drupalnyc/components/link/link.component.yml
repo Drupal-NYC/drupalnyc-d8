@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Link
+description: A basic link component
+props:
+  type: object
+  properties:
+    link_icon:
+      type: string
+      title: Icon Type
+      examples:
+        - icon-arrow-right
+        - external-link
+    link_link:
+      title: Link
+      type: object
+      properties:
+        title:
+          type: string
+          title: Link Text
+          examples:
+            - Read more about this topic
+            - Submit now
+        url:
+          title: Link Url
+          type: string
+          examples:
+            - 'https://www.example.org'

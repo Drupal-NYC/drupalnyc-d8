@@ -1,0 +1,24 @@
+uuid: bde65350-6fb1-4dea-9078-11e38f025b04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - filter.format.headlines
+    - paragraphs.paragraphs_type.hero
+  module:
+    - text
+id: paragraph.hero.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: hero
+label: Heading
+description: '(Optional) Displayed in place of the default page title.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - headlines
+field_type: text

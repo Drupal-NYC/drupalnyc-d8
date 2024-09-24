@@ -1,0 +1,50 @@
+//
+// Global - Page
+//
+// - 01 - Page
+// - 02 - Skip Link
+// - 03 - Rule
+//
+
+//------------------------------------
+//  01 - Page
+//------------------------------------
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  font-size: 100%;
+  scroll-behavior: smooth;
+  tab-size: 4;
+}
+
+//------------------------------------
+//  02 - Skip Link
+//------------------------------------
+
+.skip-link {
+  display: block;
+  background-color: var(--dnyc-color-black);
+  border-radius: 0 0 4px 4px;
+  color: var(--dnyc-color-white) !important;
+  font-size: 1em;
+  left: 50%;
+  outline: red dotted 2px;
+  padding: 10px 18px;
+  text-decoration: none;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  &.focusable:focus {
+    position: absolute !important;
+  }
+}
+
+//------------------------------------
+//  03 - Rule
+//------------------------------------
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--dnyc-color-dark);
+}

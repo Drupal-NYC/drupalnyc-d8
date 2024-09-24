@@ -1,0 +1,155 @@
+{% set url = 'https://www.google.com' %}
+{% set content_demo %}
+<p>Item content</p>
+{% endset %}
+
+
+<a id='accordion-group'></a>
+<h2 class='styleguide'>Accordion Group</h2>
+<div class='styleguide'>
+  {% embed "drupalnyc:accordion-group" with {
+    attributes: create_attribute(),
+    accordion_group_title: 'Example Accordion Group',
+  } %}
+    {% block accordion_group_items %}
+      {{ include('drupalnyc:accordion', {
+      accordion_title: 'Example Accordion - 1',
+      accordion_content: content_demo,
+      accordion_expand_icon: 'icon-plus',
+      accordion_collapse_icon: 'icon-minus',
+    })}}
+      {{ include('drupalnyc:accordion', {
+      accordion_title: 'Example Accordion - 2',
+      accordion_content: content_demo,
+      accordion_expand_icon: 'icon-plus',
+      accordion_collapse_icon: 'icon-minus',
+    })}}
+    {% endblock  %}
+  {% endembed %}
+</div>
+
+<a id='accordion'></a>
+<h2 class='styleguide'>Accordion
+</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:accordion', {
+      accordion_title: 'Example Single Accordion',
+      accordion_content: content_demo,
+      accordion_expand_icon: 'icon-plus',
+      accordion_collapse_icon: 'icon-minus',
+    })}}
+</div>
+
+<a id='button'></a>
+<h2 class='styleguide'>Button</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:button', {
+  button_link: {url: url, title: 'Example button'},
+  attr: attributes
+}, with_context = false) }}
+</div>
+
+<a id='button_icon'></a>
+<h2 class='styleguide'>
+  Button with Icon</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:button', {
+  button_link: {url: url, title: 'Example button with icon'},
+  button_icon: 'icon-arrow-right',
+  attr: attributes,
+}, with_context = false) }}
+</div>
+
+<a id='cta'></a>
+<h2 class='styleguide'>CTA</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:cta', {
+  cta_title: 'Example CTA',
+  cta_link: {url: url, title: 'Example link'},
+  cta_text: 'Interdum risus tortor turpis gravida sed. Risus sit et egestas tellus ac sed. Purus ut eu fermentum non. Arcu lectus sed in quisque vitae posuere. Adipiscing nullam mauris iaculis leo turpis leo, congue.',
+  cta_icon: 'icon-arrow-right',
+  attr: attributes,
+}, with_context = false) }}
+</div>
+
+<a id='figure'></a>
+<h2 class='styleguide'>Figure</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:figure', {
+  figure_media_caption: 'Example caption',
+  figure_media: content.40['#content'],
+  attr: attributes,
+}, with_context = false) }}
+</div>
+
+<a id='link'></a>
+<h2 class='styleguide'>Link</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:link', {
+  link_link: {url: url, title: 'Example link'},
+  attr: attributes
+}, with_context = false) }}
+</div>
+
+<a id='link_icon'></a>
+<h2 class='styleguide'>Link with icon</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:link', {
+  link_link: {url: url, title: 'Example link'},
+  link_icon: 'icon-arrow-right',
+  attr: attributes
+}, with_context = false) }}
+</div>
+
+<a id='page_title'></a>
+<h2 class='styleguide'>Page Title</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:page-title', {
+  page_title_title: 'Page Title',
+  attr: attributes
+}, with_context = false) }}
+</div>
+
+
+<a id='pullquote'></a>
+<h2 class='styleguide'>Pullquote</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:pullquote', {
+  pullquote_text: 'Example quote paragraph. Interdum risus tortor turpis gravida sed. Risus sit et egestas tellus ac sed.',
+  pullquote_credit: 'Example Quote Credit',
+  attr: attributes
+}, with_context = false) }}
+</div>
+
+<a id='sidebar'></a>
+<h2 class='styleguide'>Sidebar</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:sidebar', {
+  sidebar_content: 'Interdum risus tortor turpis gravida sed. Risus sit et egestas tellus ac sed. Purus ut eu fermentum non. Arcu lectus sed in quisque vitae posuere. Adipiscing nullam mauris iaculis leo turpis leo, congue.',
+  attr: attributes
+}, with_context = false) }}
+</div>
+
+<a id='teaser'></a>
+<h2 class='styleguide'>Teaser</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:teaser', {
+  teaser_title: 'Example teaser title',
+  teaser_body: 'Interdum risus tortor turpis gravida sed. Risus sit et egestas tellus ac sed. Purus ut eu fermentum non. Arcu lectus sed in quisque vitae posuere. Adipiscing nullam mauris iaculis leo turpis leo, congue.',
+  teaser_link: {url: url, text: 'Example link'},
+  teaser_media: content.40['#content'],
+  attr: attributes
+}, with_context = false) }}
+</div>
+
+<a id='video'></a>
+<h2 class='styleguide'>Video</h2>
+<div class='styleguide'>
+  {{ include('drupalnyc:video', {
+  video_caption: 'Example caption',
+  video_media: 'https://www.youtube.com/embed/TGBTesjW93M?si=AeZq6ZOqrj85tVtM',
+  attr: attributes
+}, with_context = false) }}
+</div>
+
+<div class='l-constrained'>{{ content }}</div>

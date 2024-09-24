@@ -1,0 +1,79 @@
+@use '../../../libraries/partials/partials' as *;
+
+:root {
+  --teaser-panel-padding: var(--dnyc-space-60);
+}
+
+.c-teaser__title {
+  @include type-scale('heading', 'h4');
+}
+
+.c-teaser__media {
+  margin-bottom: var(--dnyc-space-36);
+  overflow: hidden;
+}
+
+.c-teaser__content > * + * {
+  margin-top: var(--dnyc-space-rem-8);
+}
+
+.c-teaser__body {
+  @include type-scale('body', '16');
+}
+
+.c-teaser__actions {
+  margin-top: var(--dnyc-space-rem-36);
+}
+
+.c-teaser__more-link {
+  @include type-scale('body', '16');
+  color: var(--dnyc-color-gray-700);
+  font-weight: 900;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+//
+// Variant: Panel
+//
+// This variant is used for teasers in which the content is displayed on top
+// of the media. The media is treated as a background image.
+//
+.c-teaser--panel {
+  position: relative;
+
+  .c-teaser__title,
+  .c-teaser__body,
+  .c-teaser__actions {
+    color: var(--dnyc-color-white);
+  }
+
+  .c-teaser__media {
+    background-color: var(--dnyc-color-gray-800);
+    margin: 0;
+
+    img {
+      mask-image: linear-gradient(to bottom, rgba(#000, 0.8), rgba(#000, 0.15));
+    }
+  }
+
+  .c-teaser__content {
+    bottom: 0;
+    left: 0;
+    max-width: rem(500px);
+    padding: var(--teaser-panel-padding);
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .c-teaser__more-link {
+    color: var(--dnyc-color-gray-200);
+
+    &:hover {
+      color: var(--dnyc-color-white);
+    }
+  }
+}

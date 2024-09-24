@@ -1,0 +1,20 @@
+title: Accordion
+args:
+  accordion_items: |
+    {% set content_demo %}
+      <p>Item 1 content</p>
+    {% endset %}
+    {{ include('drupalnyc:accordion', {
+      accordion_title: 'Example Accordion - 1',
+      accordion_content: content_demo,
+      accordion_expand_icon: 'icon-plus',
+      accordion_collapse_icon: 'icon-minus',
+    })}}
+    {{ include('drupalnyc:accordion', {
+      accordion_title: 'Example Accordion - 2',
+      accordion_content: content_demo,
+      accordion_expand_icon: 'icon-plus',
+      accordion_collapse_icon: 'icon-minus',
+    })}}
+stories:
+  - name: Default

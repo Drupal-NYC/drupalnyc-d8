@@ -1,0 +1,14 @@
+title: Breadcrumb
+args:
+  items:
+    - text: 'Home'
+      url: '/'
+      current: false
+    - text: 'Events'
+      url: '/events'
+      current: false
+    - text: 'Event example title'
+      url: '/event/test'
+      current: true
+stories:
+  - name: Default

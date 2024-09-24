@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Search bar
+status: experimental
+description: Search bar component for the global header.
+props:
+  type: object
+  properties:
+    form_action:
+      title: Form Action
+      type: string
+    form_children:
+      title: Form Children
+      type: string
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once

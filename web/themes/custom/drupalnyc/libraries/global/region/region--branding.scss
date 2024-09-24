@@ -1,0 +1,27 @@
+@use 'partials' as *;
+
+.site-branding {
+  align-items: center;
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: var(--size-width, rem(90px));
+  z-index: 1;
+
+  @include bp-min(lg-tablet) {
+    width: rem(120px);
+    max-width: rem(300px);
+  }
+
+  a,
+  img {
+    display: block;
+    width: 100%;
+
+    @include bp-min(tablet) {
+      min-width: rem(120px);
+    }
+  }
+}

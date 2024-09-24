@@ -1,0 +1,6 @@
+{{ include('drupalnyc:teaser', {
+  teaser_title: label|default(''),
+  teaser_body: content.body,
+  teaser_link:{ url: url, text: label|render},
+  attr: attributes
+}) }}

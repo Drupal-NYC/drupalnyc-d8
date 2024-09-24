@@ -1,0 +1,7 @@
+{% import 'drupalnyc:icons' as icon %}
+<div class='to-top'>
+  <a class='to-top__inner' href='#top'>
+    {{ icon.inline(iconType|default('icon-arrow-up')) }}
+    <span class='visually-hidden'>{{ text|default('Back to Top') }}</span>
+  </a>
+</div>

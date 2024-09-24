@@ -1,0 +1,5 @@
+{% set page_title_classes = ['c-page-title']|merge(classes|default([])) %}
+
+<h1 {{ attributes.addClass(page_title_classes) }}>
+  {{page_title_title}}
+</h1>

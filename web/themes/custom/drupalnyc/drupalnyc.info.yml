@@ -1,0 +1,30 @@
+name: DrupalNYC
+type: theme
+description: ''
+package: drupalnyc
+core_version_requirement: ^10
+dependencies:
+  - 'twig_field_value:twig_field_value'
+  - 'twig_tweak:twig_tweak'
+'base theme': stable9
+regions:
+  alert: Alert
+  branding: Branding
+  navigation: Navigation
+  highlighted: Highlighted
+  help: Help
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: 'First Sidebar'
+  sidebar_second: 'Second Sidebar'
+  footer: Footer
+libraries:
+  - drupalnyc/global
+ckeditor5-stylesheets:
+  - dist/css/global/wysiwyg.css
+starterkit: true
+enforce_sdc_schemas: true
+version: 1.0.0
+project: drupalnyc
+datestamp: 1725552847
+generator: 'prototype:5.2.1-alpha2'

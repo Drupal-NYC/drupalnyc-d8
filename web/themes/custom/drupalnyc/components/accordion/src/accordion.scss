@@ -1,0 +1,94 @@
+@use 'partials' as *;
+
+.c-accordion {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  .c-accordion__title {
+    @include type-scale(body, base);
+    font-weight: var(--dnyc-fw-regular);
+  }
+
+  .c-accordion__button {
+    align-items: center;
+    border: none;
+    background: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: flex;
+    gap: rem(8px);
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    .c-accordion__button-icon,
+    .c-accordion__button-icon span {
+      display: flex;
+      height: rem(24px);
+      width: rem(24px);
+    }
+
+    .c-accordion__button-icon span {
+      position: absolute;
+      left: 0;
+
+      svg {
+        transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .expand {
+        opacity: 1;
+      }
+
+      .collapse {
+        opacity: 0;
+      }
+    }
+  }
+
+  .c-accordion__button[aria-expanded='true'] {
+    .c-accordion__button-icon {
+      .expand {
+        opacity: 0;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .collapse {
+        opacity: 1;
+        transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+  }
+
+  .c-accordion__content {
+    height: fit-content;
+    transition: max-height 850ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .c-accordion__content-inner-wrapper {
+      opacity: 1;
+      transition: opacity 750ms cubic-bezier(0.4, 0, 0.2, 1);
+      margin: rem(12px) 0 0 0;
+
+      @include bp-min(tablet) {
+        margin: rem(20px) 0 0 0;
+      }
+    }
+  }
+
+  .c-accordion__content[aria-hidden='true'] {
+    height: 0;
+    overflow: hidden;
+    transition: max-height 650ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .c-accordion__content-inner-wrapper {
+      opacity: 0;
+      transition: opacity 550ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}

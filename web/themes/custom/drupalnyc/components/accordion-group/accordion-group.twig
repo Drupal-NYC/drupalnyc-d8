@@ -1,0 +1,9 @@
+{% set accordion_group_classes = ['c-accordion-group']|merge(classes|default([])) %}
+
+<section {{ attributes.addClass(accordion_group_classes) }}>
+  {% block accordion_group_title_block %}
+    <h2 class='c-accordion-group__title'>{{ accordion_group_title }}</h2>
+  {% endblock %}
+  <div class='c-accordion-group__wrapper'> {% block accordion_group_items %}{% endblock accordion_group_items %}
+    </div>
+  </section>

@@ -1,0 +1,76 @@
+//
+// Global - Tables
+//
+// - 01 - Theme Colors
+// - 02 - Elements
+//
+@use 'partials' as *;
+
+//------------------------------------
+//  01 - General
+//  A mixin is created and than instantly called here so that we can utilize the same styles within other
+//  stylesheets, like the `wysiwyg.scss` file.
+//------------------------------------
+
+@mixin tables-general() {
+  table {
+    @include type-scale(label, 16);
+    width: 100%;
+    max-width: 100%;
+    border-spacing: 0;
+    text-align: left;
+    border-collapse: collapse;
+  }
+}
+
+@include tables-general();
+
+//------------------------------------
+//  02 - Elements
+//------------------------------------
+
+@mixin tables-elements() {
+  thead {
+    & th {
+      vertical-align: bottom;
+    }
+
+    & th,
+    & td {
+      border-bottom: 1px solid var(--dnyc-color-dark);
+    }
+  }
+
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    color: var(--dnyc-color-dark);
+    font-weight: var(--dnyc-fw-bold);
+  }
+
+  // Remove top border from thead by default
+  caption + thead tr:first-child th,
+  caption + thead tr:first-child td,
+  colgroup + thead tr:first-child th,
+  colgroup + thead tr:first-child td,
+  thead:first-child tr:first-child th,
+  thead:first-child tr:first-child td {
+    border-top: 0;
+  }
+
+  // Account for multiple tbody instances
+  tbody + tbody {
+    border-top: 2px solid var(--dnyc-color-dark);
+  }
+
+  tr.even {
+    background-color: var(--dnyc-color-gray-200);
+  }
+}
+
+@include tables-elements();

@@ -1,0 +1,75 @@
+//
+// Global - Color
+//
+// - 01 - Theme Colors
+// - 02 - Grayscale
+// - 03 - Utilities
+//
+
+//------------------------------------
+//  01 - Theme Colors
+//  A mixin is created and than instantly called here so that we can utilize the same styles within other
+//  stylesheets, like the `wysiwyg.scss` file.
+//------------------------------------
+
+@mixin colors-theme() {
+  :root {
+    --dnyc-color-blue: #0d6efd;
+    --dnyc-color-indigo: #6610f2;
+    --dnyc-color-purple: #6f42c1;
+    --dnyc-color-pink: #d63384;
+    --dnyc-color-red: #dc3545;
+    --dnyc-color-orange: #fd7e14;
+    --dnyc-color-yellow: #ffc107;
+    --dnyc-color-green: #198754;
+    --dnyc-color-teal: #20c997;
+    --dnyc-color-cyan: #0dcaf0;
+  }
+}
+
+@include colors-theme();
+
+//------------------------------------
+//  02 - Grayscale
+//  A mixin is created and than instantly called here so that we can utilize the same styles within other
+//  stylesheets, like the `wysiwyg.scss` file.
+//------------------------------------
+
+@mixin colors-grayscale() {
+  :root {
+    --dnyc-color-white: #ffffff;
+    --dnyc-color-gray-100: #f8f9fa;
+    --dnyc-color-gray-200: #e9ecef;
+    --dnyc-color-gray-300: #dee2e6;
+    --dnyc-color-gray-400: #ced4da;
+    --dnyc-color-gray-500: #adb5bd;
+    --dnyc-color-gray-600: #6c757d;
+    --dnyc-color-gray-700: #495057;
+    --dnyc-color-gray-800: #343a40;
+    --dnyc-color-gray-900: #212529;
+    --dnyc-color-black: #000000;
+  }
+}
+
+@include colors-grayscale();
+
+//------------------------------------
+//  03 - Utilities
+//  A mixin is created and than instantly called here so that we can utilize the same styles within other
+//  stylesheets, like the `wysiwyg.scss` file.
+//------------------------------------
+
+@mixin colors-utilities() {
+  :root {
+    --dnyc-color-primary: var(--dnyc-color-blue);
+    --dnyc-color-secondary: var(--dnyc-color-gray-900);
+    --dnyc-color-success: var(--dnyc-color-green);
+    --dnyc-color-info: var(--dnyc-color-cyan);
+    --dnyc-color-warning: var(--dnyc-color-yellow);
+    --dnyc-color-danger: var(--dnyc-color-red);
+    --dnyc-color-light: var(--dnyc-color-gray-100);
+    --dnyc-color-dark: var(--dnyc-color-gray-900);
+  }
+}
+
+@include colors-utilities();

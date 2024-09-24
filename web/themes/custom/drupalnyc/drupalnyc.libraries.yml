@@ -1,0 +1,35 @@
+global:
+  version: 5.x
+  css:
+    base:
+      dist/css/global/base/forms.css: {}
+      dist/css/global/base/lists.css: {}
+      dist/css/global/base/media.css: {}
+      dist/css/global/base/page.css: {}
+      dist/css/global/base/reset.css: {}
+      dist/css/global/base/tables.css: {}
+    layout:
+      dist/css/global/layout/layout.css: {}
+    theme:
+      dist/css/global/region/region--branding.css: {}
+      dist/css/global/region/region--footer.css: {}
+      dist/css/global/region/region--navigation.css: {}
+      dist/css/global/settings/colors.css: {}
+      dist/css/global/settings/spacing.css: {}
+      dist/css/global/settings/typography.css: {}
+  dependencies:
+    - drupalnyc/fonts
+
+fonts:
+  version: 5.x
+  css:
+    base:
+      'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap': { type: external, minified: true }
+
+splide:
+  version: 4.1.4
+  css:
+    base:
+      'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css': { type: external, minified: true }
+  js:
+    'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js': { type: external, minified: true }

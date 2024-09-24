@@ -1,0 +1,14 @@
+@use 'partials' as *;
+
+.c-accordion-group {
+  .c-accordion-group__title {
+    @include type-scale(heading, h2);
+    margin-bottom: rem(16px);
+  }
+
+  .c-accordion-group__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16px);
+  }
+}

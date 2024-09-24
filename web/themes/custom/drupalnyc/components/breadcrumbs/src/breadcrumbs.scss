@@ -1,0 +1,52 @@
+@use 'partials' as *;
+
+nav.c-breadcrumb {
+  display: none;
+
+  @include bp-min(lg-tablet) {
+    display: block;
+    padding-top: rem(32px);
+    margin: 0 0 rem(40px) 0;
+  }
+}
+
+nav.c-breadcrumb ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav.c-breadcrumb li {
+  color: var(--dnyc-color-black);
+  display: inline-block;
+  margin: 0;
+
+  a {
+    color: var(--dnyc-color-black);
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &[aria-current="page"] {
+      color: var(--dnyc-color-black);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+nav.c-breadcrumb li + li::before {
+  display: inline-block;
+  margin: 0 rem(12px) 0 rem(13px);
+  border-right: rem(1px) solid currentcolor;
+  height: rem(14px);
+  content: "";
+  position: relative;
+  top: rem(2px);
+}

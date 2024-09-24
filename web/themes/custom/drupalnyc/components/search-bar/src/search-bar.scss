@@ -1,0 +1,155 @@
+@use 'partials' as *;
+
+.c-search-bar {
+  align-items: center;
+  position: relative;
+
+  @include bp-min(lg-tablet) {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+  }
+}
+
+.c-search-bar__content {
+  form {
+    position: relative;
+
+    @include bp-max(lg-tablet) {
+      display: inline-flex;
+      gap: 16px;
+      padding: 32px;
+
+      > .js-form-item {
+        width: -webkit-fill-available;
+      }
+    }
+  }
+
+  &[aria-hidden='true'] form {
+    inline-size: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 300ms ease-in-out, width 300ms ease-in-out;
+
+    // Account for screen resize, JS handles aria-hidden
+    @include bp-max(lg-tablet) {
+      inline-size: 100%;
+      opacity: 1;
+      overflow: visible;
+    }
+  }
+
+  &[aria-hidden='false'] form {
+    inline-size: 100%;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out, width 300ms ease-in-out;
+
+    @include bp-min(lg-tablet) {
+      inline-size: 160px;
+    }
+    @include bp-min(desktop) {
+      inline-size: 220px;
+    }
+    @include bp-min(lg-desktop) {
+      inline-size: 300px;
+    }
+  }
+
+  .form-actions {
+    margin: 0;
+    width: fit-content;
+
+    @include bp-min(lg-tablet) {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input[type='submit'] {
+      background-image: svg-load('icon-search.svg', fill= '#000000');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 32px;
+      border: none;
+      border-radius: 32px;
+      cursor: pointer;
+      margin-left: 0;
+      text-indent: -9999px;
+      width: 48px;
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      @include bp-min(lg-tablet) {
+        background-color: transparent;
+        border-radius: 0;
+        margin-left: 8px;
+        padding: 0px;
+      }
+    }
+  }
+
+  .form-element--api-search {
+    background: transparent;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.25) inset,
+      0px -1px 0px 0px rgba(255, 255, 255, 0.25) inset;
+    color: #000000;
+    inline-size: 100%;
+    padding-right: rem(54px);
+
+    @include bp-max(lg-tablet) {
+      height: 48px;
+      padding-right: 12px;
+    }
+  }
+
+  // Hide default input clear
+  input[type='search']::-webkit-search-cancel-button {
+    display: none;
+  }
+}
+
+// Search Toggle button
+.c-search-bar__button {
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+
+  // Hide on mobile screens
+  @include bp-max(lg-tablet) {
+    display: none;
+  }
+
+  &:hover,
+  &[aria-expanded='true'] {
+    transition: all 300ms ease-in-out;
+  }
+
+  // Togggle button is closed, change icon
+  &[aria-expanded='true'] .c-search-bar__button-icon {
+    svg.close {
+      display: block;
+    }
+
+    svg.open {
+      display: none;
+    }
+  }
+
+  // Togggle button is open, change icon
+  &[aria-expanded='false'] .c-search-bar__button-icon {
+    svg.close {
+      display: none;
+    }
+
+    svg.open {
+      display: block;
+    }
+  }
+}

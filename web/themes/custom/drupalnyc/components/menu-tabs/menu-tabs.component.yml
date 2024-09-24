@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Menu - Tabs
+status: stable
+props:
+  type: object
+  properties:
+    menu_tabs_attributes:
+      title: Attributes
+      type: string
+    menu_tabs_content:
+      title: Content
+      type: string
+    menu_tabs_label:
+      title: Label
+      type: string
+  slots:
+    menu_tabs_content:
+      title: Content
+    menu_tabs_prefix:
+      title: Prefix

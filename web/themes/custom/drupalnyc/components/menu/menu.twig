@@ -1,0 +1,28 @@
+{% set menu_attr = create_attribute({
+  'class': ['c-menu']|merge(classes|default([])),
+  'data-mobile': menu_mobile|default(''),
+  'data-breakpoint': menu_breakpoint|default(768),
+  'id': 'c-menu'|clean_unique_id,
+}) %}
+
+{# Utilize Drupal default menu template #}
+{% import _self as menus %}
+
+<div {{ menu_attr }}>
+  {{ menus.menu_links(items, attributes.addClass('c-menu__list'), 0, menu_name) }}
+  {% macro menu_links(items, attributes, menu_depth, modifier) %}
+    {% import _self as menus %}
+    {% if items %}
+      <ul {{ attributes.setAttribute('data-depth', menu_depth) }}>
+        {% for item in items %}
+          <li {{ item.attributes.addClass(classes) }}>
+            {{ link(item.title, item.url) }}
+            {% if item.below %}
+              {{ menus.menu_links(item.below, attributes, menu_depth + 1, modifier) }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endmacro %}
+</div>

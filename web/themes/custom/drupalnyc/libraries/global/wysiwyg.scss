@@ -1,0 +1,39 @@
+//
+// WYSIWYG
+//
+// - 01 - Imports
+// - 02 - CKEditor
+//
+
+//------------------------------------
+//  01 - Imports
+//------------------------------------
+
+@use 'base/lists' as base-lists;
+@use 'base/media' as base-media;
+@use 'base/tables' as base-tables;
+@use 'settings/colors' as settings-colors;
+@use 'settings/typography' as settings-typography;
+
+//------------------------------------
+//  02 - CKEditor
+//------------------------------------
+
+.ck-content {
+  @include settings-colors.colors-theme();
+  @include settings-colors.colors-grayscale();
+  @include settings-colors.colors-utilities();
+  @include settings-typography.typography-families();
+  @include settings-typography.typography-scale();
+  @include settings-typography.typography-weights();
+  @include settings-typography.typography-body();
+  @include settings-typography.typography-headings();
+  @include settings-typography.typography-links();
+  @include settings-typography.typography-bold();
+  @include settings-typography.typography-paragraphs();
+  @include settings-typography.typography-blockquote();
+  @include base-lists.lists-general();
+  @include base-media.media-general();
+  @include base-tables.tables-general();
+  @include base-tables.tables-elements();
+}

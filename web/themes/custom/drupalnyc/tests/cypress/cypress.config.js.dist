@@ -1,0 +1,13 @@
+const { defineConfig } = require("cypress");
+
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
+    env: {
+      "drushCommand": "tugboat shell 64b6b6ca7dc1ba41453f9185 command=\"/var/www/drupal/vendor/bin/drush $COMMAND\""
+    },
+    baseUrl: 'https://2-1-x-eukeksk3u2ly80ggc7tond0hnujwtdkf.tugboatqa.com'
+  },
+});

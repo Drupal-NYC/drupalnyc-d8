@@ -1,0 +1,11 @@
+{% import "drupalnyc:icons" as icons %}
+{% set button_classes = ['c-button']|merge(classes|default([])) %}
+
+<button href="{{button_link.url}}" {{ attributes.addClass(button_classes) }}>
+  {{ button_link.title }}
+  {% if button_icon %}
+    <span class='c-button__icon'>
+      {{ icons.inline(button_icon) }}
+    </span>
+  {% endif %}
+</button>

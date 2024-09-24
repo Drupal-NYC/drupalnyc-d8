@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: 'Sidebar'
+status: 'experimental'
+slots:
+  sidebar_region: {}
+props:
+  type: object
+  properties:
+    sidebar_content:
+      type: string
+      title: 'Sidebar Content'
+      description: 'The content for the sidebar.'
+      examples:
+        - 'Example Sidebar Content'

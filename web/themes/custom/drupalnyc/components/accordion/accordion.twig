@@ -1,0 +1,27 @@
+{% import "drupalnyc:icons" as icons %}
+{% set control_id = "accordion-content"|clean_unique_id  %}
+{% set label_id = "accordion-label"|clean_unique_id  %}
+{% set accordion_classes = ["c-accordion"]|merge(classes|default([])) %}
+
+<article {{ attributes.addClass(accordion_classes).merge(attributes) }}>
+  <h3 class="c-accordion__title">
+    <button class="c-accordion__button" aria-expanded="false" aria-controls="{{ control_id }}" id="{{ label_id }}">
+      <div class="c-accordion__button-icon">
+        <span class="expand" aria-hidden="true" focusable="false">
+          {{ icons.inline(accordion_expand_icon) }}
+        </span>
+        <span class="collapse" aria-hidden="true" focusable="false">
+          {{ icons.inline(accordion_collapse_icon) }}
+        </span>
+      </div>
+      <span>{{ accordion_title }}</span>
+    </button>
+  </h3>
+
+  <div class="c-accordion__content" id="{{ control_id }}" aria-labelby="{{ label_id }}" aria-hidden="true">
+    <div class="c-accordion__content-inner-wrapper">
+      {{ accordion_content }}
+    </div>
+  </div>
+
+</article>

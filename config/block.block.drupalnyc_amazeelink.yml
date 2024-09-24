@@ -1,0 +1,21 @@
+uuid: eede164e-ba69-479f-9d60-22fe43928f67
+langcode: en
+status: true
+dependencies:
+  module:
+    - dnyc_amazee
+  theme:
+    - drupalnyc
+id: drupalnyc_amazeelink
+theme: drupalnyc
+region: footer
+weight: 0
+provider: null
+plugin: dnyc_amazee_link
+settings:
+  id: dnyc_amazee_link
+  label: 'Amazee Link'
+  label_display: '0'
+  provider: dnyc_amazee
+  amazee_url: 'https://www.amazee.io'
+visibility: {  }

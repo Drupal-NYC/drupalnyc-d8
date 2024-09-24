@@ -1,0 +1,10 @@
+{% import "drupalnyc:icons" as icons %}
+{% set link_classes = ['c-link']|merge(classes|default([])) %}
+<a href="{{link_link.url}}" {{ attributes.addClass(link_classes) }}>
+  {{ link_link.title }}
+  {% if link_icon %}
+    <span class='c-link__icon'>
+      {{ icons.inline(link_icon) }}
+    </span>
+  {% endif %}
+</a>

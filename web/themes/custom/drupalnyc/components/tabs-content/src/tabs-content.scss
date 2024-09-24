@@ -1,0 +1,34 @@
+//
+// Component - Tabs Content
+//
+// - 01 - Imports
+// - 02 - General
+//
+
+//------------------------------------
+//  01 - Imports
+//------------------------------------
+
+@use 'partials' as *;
+
+//------------------------------------
+//  02 - General
+//------------------------------------
+
+.c-tabs-content {
+  .c-tabs-content__navigation {
+    display: none;
+
+    @include bp-min(sm-desktop) {
+      display: flex;
+    }
+  }
+
+  .c-tabs-content__group .c-tabs-content__content {
+    display: none;
+  }
+
+  .c-tabs-content__group.expanded .c-tabs-content__content {
+    display: block;
+  }
+}

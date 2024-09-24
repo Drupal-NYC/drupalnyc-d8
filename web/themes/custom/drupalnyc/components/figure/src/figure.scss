@@ -1,0 +1,12 @@
+@use "partials" as *;
+
+.c-figure {
+  figure {
+    display: block;
+  }
+
+  figcaption {
+    caption-side: bottom;
+    position: relative;
+  }
+}

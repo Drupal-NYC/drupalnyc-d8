@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Page Title
+status: 'experimental'
+description: A simple page title component
+props:
+  required:
+    - page_title_title
+  type: object
+  properties:
+    page_title_title:
+      type: string
+      title: Page Title Text
+      description: The title text displayed on screen
+      examples:
+        - Example Page Title
+        - A complex example that is much longer

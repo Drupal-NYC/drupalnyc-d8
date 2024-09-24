@@ -1,0 +1,22 @@
+{% set props = {
+  cta_title: 'Example CTA',
+  cta_text: 'Interdum risus tortor turpis gravida sed. Risus sit et egestas tellus ac sed. Purus ut eu fermentum non. Arcu lectus sed in quisque vitae posuere. Adipiscing nullam mauris iaculis leo turpis leo, congue.',
+  cta_icon: 'icon-arrow-right',
+  cta_link: {
+    url: 'https://aten.io',
+    title: 'Button Text',
+  },
+} %}
+
+{% stories cta with {
+  title: 'Components/CTA',
+} %}
+  {% story default with {
+    name: 'Default',
+    args: props,
+  } %}
+    <div style="max-width: 600px;">
+      {{ include('drupalnyc:cta') }}
+    </div>
+  {% endstory %}
+{% endstories %}

@@ -35,9 +35,9 @@ content:
     weight: 97
     region: content
 hidden:
-  schema_related_link: true
-  schema_significant_link: true
   body: true
   schema_about: true
   schema_image: true
+  schema_related_link: true
+  schema_significant_link: true
   schema_subject_of: true

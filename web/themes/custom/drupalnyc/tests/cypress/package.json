@@ -1,0 +1,20 @@
+{
+  "name": "drupalnyc_cypress",
+  "version": "1.0.0",
+  "description": "Cypress tests for Drupalnyc theme",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "cypress-iframe": "^1.0.1"
+  },
+  "dependencies": {
+    "cypress-mercury-editor": "^0.0.23"
+  }
+}

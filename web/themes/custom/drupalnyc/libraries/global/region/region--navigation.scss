@@ -1,0 +1,192 @@
+@use 'partials' as *;
+
+/**** START - Main tansparency, menu wrappers & placement ****/
+
+// Remove transparency
+main::before {
+  display: none;
+}
+
+// Lock screen
+.js-prevent-scroll {
+  @include bp-max(tablet) {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    // Apply transparency overlay to main content
+    main::before {
+      display: block;
+      content: '';
+      background: rgba(0, 0, 0, 0.3);
+      transition: transition(all, 0.25s, easeInOut);
+      position: fixed; /* Sit on top of the page content */
+      width: 100%; /* Full width (cover the whole page) */
+      height: 100%; /* Full height (cover the whole page) */
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+
+  // Offset top of overlay to header is visible
+  @include bp-max(tablet) {
+    main::before {
+      top: 95px;
+    }
+
+    // For logged in users offset top
+    &.user-logged-in main::before {
+      padding-top: 40px;
+      top: 140px;
+    }
+  }
+}
+
+.site-header {
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+.site-header__inner {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+/**** END - Main tansparency, menu wrappers & placement ****/
+
+/**** START - Main Navigation ****/
+.site-header__navigation {
+  position: fixed;
+
+  @include bp-max(tablet) {
+    background-color: #fff;
+    top: 95px;
+    bottom: 0;
+    // left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transition(all, 0.5s, easeInOut);
+    width: 100%;
+    //Control width for slide out
+    max-width: 375px;
+
+    // For logged in users offset top
+    .user-logged-in & {
+      top: 135px;
+    }
+  }
+
+  @include bp-min(tablet) {
+    align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: column-reverse;
+    position: relative;
+  }
+}
+/**** END - Main Navigation ****/
+
+/**** START - Utility Navigation ****/
+.site-header__utilities {
+  margin-bottom: 20px;
+}
+
+/**** END - Utility Navigation ****/
+
+/**** START - Mobile Navigation Button ****/
+.nav-trigger {
+  display: none;
+  @include bp-max(tablet) {
+    grid-column-start: 2;
+    align-items: center;
+    background: transparent;
+    border: none;
+    display: inline-flex;
+    height: 36px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    max-width: 100px;
+    padding: 0;
+  }
+}
+
+label[for='nav-trigger'] {
+  cursor: pointer;
+  height: 30px;
+  margin: auto;
+  position: absolute;
+  right: 30px; //span(1);
+  top: 18px;
+  width: 30px;
+  z-index: 2;
+
+  @include bp-min(tablet) {
+    display: none;
+  }
+}
+
+.nav-trigger span.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  position: relative;
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+// Controls for when menu  is open
+.nav-trigger__icon--expand {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+  transition: transition(all, 0.35s, easeInOut);
+}
+
+.nav-trigger__icon--collapse {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0);
+  transition: transition(all, 0.35s, easeInOut);
+}
+.nav-trigger[aria-expanded='true'] {
+  .nav-trigger__icon--collapse {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+
+  .nav-trigger__icon--expand {
+    opacity: 0;
+    transform: rotate(90deg) scale(0);
+  }
+}
+
+// On small screens control display for both main menu & utility
+@include bp-max(tablet) {
+  .nav-trigger[aria-expanded='false'] {
+    ~ .site-header__navigation {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate3d(375px, 0, 0);
+    }
+  }
+  .nav-trigger[aria-expanded='true'] {
+    ~ .site-header__navigation {
+      opacity: 1;
+      visibility: visible;
+      overflow-y: auto;
+      transform: translate3d(0, 0, 0);
+      z-index: 3;
+    }
+  }
+}
+/**** END - Mobile Navigation Button ****/

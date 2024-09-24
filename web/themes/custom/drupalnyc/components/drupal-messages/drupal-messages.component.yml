@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Drupal Messages
+status: 'experimental'
+description: A drupal messages component
+slots:
+  messages: {}
+props:
+  type: object
+  required:
+    - message_list
+  properties:
+    message_list:
+      type: string
+      title: Messages
+      description: The list of messages to display
+      example: "['This is a message', 'This is another message']"
