@@ -17,14 +17,7 @@ global:
       dist/css/global/settings/colors.css: {}
       dist/css/global/settings/spacing.css: {}
       dist/css/global/settings/typography.css: {}
-  dependencies:
-    - drupalnyc/fonts
 
-fonts:
-  version: 5.x
-  css:
-    base:
-      'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap': { type: external, minified: true }
 
 splide:
   version: 4.1.4

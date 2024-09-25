@@ -15,6 +15,21 @@
 @use './calculations';
 
 // ------------------------------------
+// 00 - Fonts
+// ------------------------------------
+@font-face {
+  font-family: 'League Spartan Variable';
+  src: url('/themes/custom/drupalnyc/fonts/LeagueSpartan/variable/WOFF2/LeagueSpartan-VF.woff2') format('woff2-variations');
+  font-weight: 100 700;
+}
+
+@font-face {
+  font-family: 'Goudy Bookletter';
+  src: url('/themes/custom/drupalnyc/fonts/goudy-bookletter/webfonts/goudy_bookletter_1911-webfont.woff') format('woff');
+  font-weight: 100 700;
+}
+
+// ------------------------------------
 // 01 - Typography
 // Mixin for determining font sizing and line heights from CSS variables.
 // @param $font-size: [integer] size of font depicted by a number / associates with CSS variables.
@@ -198,5 +213,5 @@
 // ------------------------------------
 
 @mixin body-base() {
-  font-weight: var(--dnyc-fw-regular);
+  font-variation-settings: 'wght' var(--dnyc-fw-regular);
 }

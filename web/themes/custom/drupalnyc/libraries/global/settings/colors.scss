@@ -14,7 +14,9 @@
 
 @mixin colors-theme() {
   :root {
-    --dnyc-color-blue: #0d6efd;
+    --dnyc-color-blue: #0073BA;
+    --dnyc-color-light-blue: #93C5E4;
+    --dnyc-color-dark-blue: #004975;
     --dnyc-color-indigo: #6610f2;
     --dnyc-color-purple: #6f42c1;
     --dnyc-color-pink: #d63384;
@@ -67,8 +69,8 @@
     --dnyc-color-info: var(--dnyc-color-cyan);
     --dnyc-color-warning: var(--dnyc-color-yellow);
     --dnyc-color-danger: var(--dnyc-color-red);
-    --dnyc-color-light: var(--dnyc-color-gray-100);
-    --dnyc-color-dark: var(--dnyc-color-gray-900);
+    --dnyc-color-light: var(--dnyc-color-light-blue);
+    --dnyc-color-dark: var(--dnyc-color-dark-blue);
   }
 }
 

@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "League Spartan Variable";
+  src: url("/themes/custom/drupalnyc/fonts/LeagueSpartan/variable/WOFF2/LeagueSpartan-VF.woff2") format("woff2-variations");
+  font-weight: 100 700;
+}
+@font-face {
+  font-family: "Goudy Bookletter";
+  src: url("/themes/custom/drupalnyc/fonts/goudy-bookletter/webfonts/goudy_bookletter_1911-webfont.woff") format("woff");
+  font-weight: 100 700;
+}
+:root {
+  --teaser-panel-padding: var(--dnyc-space-60);
+}
+
+.c-teaser__title {
+  font-size: var(--dnyc-fs-heading-h4);
+  line-height: var(--dnyc-lh-heading-h4);
+}
+
+.c-teaser__media {
+  margin-bottom: var(--dnyc-space-36);
+  overflow: hidden;
+}
+
+.c-teaser__content > * + * {
+  margin-top: var(--dnyc-space-rem-8);
+}
+
+.c-teaser__body {
+  font-size: var(--dnyc-fs-body-16);
+  line-height: var(--dnyc-lh-body-16);
+}
+
+.c-teaser__actions {
+  margin-top: var(--dnyc-space-rem-36);
+}
+
+.c-teaser__more-link {
+  font-size: var(--dnyc-fs-body-16);
+  line-height: var(--dnyc-lh-body-16);
+  color: var(--dnyc-color-gray-700);
+  font-weight: 900;
+}
+.c-teaser__more-link:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c-teaser--panel {
+  position: relative;
+}
+.c-teaser--panel .c-teaser__title,
+.c-teaser--panel .c-teaser__body,
+.c-teaser--panel .c-teaser__actions {
+  color: var(--dnyc-color-white);
+}
+.c-teaser--panel .c-teaser__media {
+  background-color: var(--dnyc-color-gray-800);
+  margin: 0;
+}
+.c-teaser--panel .c-teaser__media img {
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.15));
+          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.15));
+}
+.c-teaser--panel .c-teaser__content {
+  bottom: 0;
+  left: 0;
+  max-width: 31.25rem;
+  padding: var(--teaser-panel-padding);
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.c-teaser--panel .c-teaser__more-link {
+  color: var(--dnyc-color-gray-200);
+}
+.c-teaser--panel .c-teaser__more-link:hover {
+  color: var(--dnyc-color-white);
+}
