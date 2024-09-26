@@ -1,6 +1,20 @@
 @use 'partials' as *;
 
 .c-menu {
+
+  .menu__item {
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    a {
+      color: var(--dnyc-color-dark-blue);
+      text-decoration: none;
+    }
+  }
+
   // Top level menu wrapper, main menu list element
   ul[data-depth='0'] {
     display: flex;
@@ -12,12 +26,16 @@
       position: relative;
     }
 
+    .menu__item {
+      font-variation-settings: 'wght' var(--dnyc-fw-bold);
+    }
+
     // On larger desktop screens
     @include bp-min(tablet) {
       align-items: center;
       flex-flow: row;
       gap: rem(20px);
-      margin: rem(32px) 0;
+      margin: rem(32px) rem(6px) 0 rem(6px);
     }
   }
 
@@ -35,12 +53,6 @@
     .menu__item {
       margin: 0;
       padding: 12px 0;
-
-      &:focus,
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
     }
   }
 

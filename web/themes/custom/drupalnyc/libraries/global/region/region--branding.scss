@@ -7,12 +7,11 @@
   justify-content: center;
   margin: 0;
   padding: 0;
-  width: var(--size-width, rem(90px));
+  width: var(--size-width, rem(75px));
   z-index: 1;
 
   @include bp-min(lg-tablet) {
-    width: rem(120px);
-    max-width: rem(300px);
+    width: rem(90px);
   }
 
   a,
@@ -21,7 +20,7 @@
     width: 100%;
 
     @include bp-min(tablet) {
-      min-width: rem(120px);
+      min-width: rem(90px);
     }
   }
 }

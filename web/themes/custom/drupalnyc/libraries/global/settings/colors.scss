@@ -64,7 +64,7 @@
 @mixin colors-utilities() {
   :root {
     --dnyc-color-primary: var(--dnyc-color-blue);
-    --dnyc-color-secondary: var(--dnyc-color-gray-900);
+    --dnyc-color-secondary: var(--dnyc-color-light-blue);
     --dnyc-color-success: var(--dnyc-color-green);
     --dnyc-color-info: var(--dnyc-color-cyan);
     --dnyc-color-warning: var(--dnyc-color-yellow);

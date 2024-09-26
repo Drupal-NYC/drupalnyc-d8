@@ -274,7 +274,7 @@ $typographic-scale: (
 @mixin typography-bold() {
   strong,
   b {
-    font-weight: var(--dnyc-fw-bold);
+    font-variation-settings: 'wght' var(--dnyc-fw-bold);
   }
 }
 
