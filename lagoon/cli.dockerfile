@@ -1,11 +1,11 @@
 FROM uselagoon/php-8.3-cli-drupal:latest
-FROM node:20.11.0-alpine AS node
+FROM node:20.11.0-alpine AS node-20
 
-COPY --from=node /usr/lib/* /usr/lib
-COPY --from=node /usr/local/share/* /usr/local/share
-COPY --from=node /usr/local/lib/* /usr/local/lib
-COPY --from=node /usr/local/include/* /usr/local/include
-COPY --from=node /usr/local/bin/* /usr/local/bin
+COPY --from=node-20 /usr/lib /usr/lib
+COPY --from=node-20 /usr/local/share /usr/local/share
+COPY --from=node-20 /usr/local/lib /usr/local/lib
+COPY --from=node-20 /usr/local/include /usr/local/include
+COPY --from=node-20 /usr/local/bin /usr/local/bin
 
 COPY composer.* /app/
 COPY assets /app/assets
