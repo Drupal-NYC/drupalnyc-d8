@@ -18,7 +18,7 @@ COPY . /app
 RUN cd /app/web/themes/custom/drupalnyc \
     && npm install \
     && npm run build \
-    && rm -rf ./node_modules \
+    && rm -rf ./node_modules
 
 RUN mkdir -p -v -m775 /app/web/sites/default/files && chmod 775 /app/web/sites/default
 
