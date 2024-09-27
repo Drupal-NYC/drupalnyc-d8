@@ -53,4 +53,4 @@
   file.uri.value|image_url('responsive_3_1_2800w') ~ ' 2800w',
   file.uri.value|image_url('responsive_3_1_2900w') ~ ' 2900w',
 ] %}
-<img src="{{ src }}" data-srcset="{{ srcset|join(',') }}" alt="{{ media.field_media_image.alt }}" loading="lazy" />
+<img src="{{ src }}" data-srcset="{{ srcset|join(',') }}" data-multiplier="2x" alt="{{ media.field_media_image.alt }}" loading="lazy" />
