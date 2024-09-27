@@ -1,0 +1,15 @@
+uuid: eac3936b-aec7-4447-be9b-4ba62e327bcb
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_600w
+label: responsive_600w
+effects:
+  3beeefb1-2193-43cb-9472-3587c37733e0:
+    uuid: 3beeefb1-2193-43cb-9472-3587c37733e0
+    id: image_scale
+    weight: null
+    data:
+      width: 600
+      height: null
+      upscale: true

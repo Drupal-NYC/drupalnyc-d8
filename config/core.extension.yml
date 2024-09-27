@@ -25,6 +25,7 @@ module:
   datetime_range: 0
   dblog: 0
   dnyc_amazee: 0
+  dnyc_extra_field: 0
   dnyc_header_block: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
@@ -36,6 +37,7 @@ module:
   field_group: 0
   field_ui: 0
   file: 0
+  file_mdm: 0
   file_replace: 0
   filter: 0
   focal_point: 0
@@ -44,6 +46,9 @@ module:
   help: 0
   history: 0
   image: 0
+  imageapi_optimize: 0
+  imageapi_optimize_avif_webp: 0
+  imagemagick: 0
   inline_entity_form: 0
   key: 0
   layout_builder: 0
@@ -75,6 +80,7 @@ module:
   settings_tray: 0
   shortcut: 0
   smart_trim: 0
+  sophron: 0
   style_options: 0
   svg_image_field: 0
   symfony_mailer: 0

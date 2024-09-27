@@ -1,0 +1,15 @@
+uuid: fb012834-0734-4a31-b3d3-ad0361a2a52e
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_2250w
+label: responsive_2250w
+effects:
+  1bb28bc6-13e4-428b-be5d-5cd56454f243:
+    uuid: 1bb28bc6-13e4-428b-be5d-5cd56454f243
+    id: image_scale
+    weight: null
+    data:
+      width: 2250
+      height: null
+      upscale: true

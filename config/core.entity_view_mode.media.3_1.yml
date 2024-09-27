@@ -1,0 +1,11 @@
+uuid: 3d16ae21-99d2-41ea-aaf5-4fb3e269cdac
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.3_1
+label: '3_1'
+description: 'A responsive 3:1 image'
+targetEntityType: media
+cache: true

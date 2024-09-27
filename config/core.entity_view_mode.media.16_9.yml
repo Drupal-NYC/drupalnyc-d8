@@ -1,0 +1,11 @@
+uuid: 9f18e416-46f7-4d7f-9cfe-f9e9d093a3a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.16_9
+label: '16_9'
+description: 'A responsive 16:9 image'
+targetEntityType: media
+cache: true

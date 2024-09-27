@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.web_page.field_hero
     - field.field.node.web_page.schema_about
     - field.field.node.web_page.schema_has_part
     - field.field.node.web_page.schema_image
@@ -26,6 +27,7 @@ content:
     weight: 200
     region: content
 hidden:
+  field_hero: true
   schema_about: true
   schema_has_part: true
   schema_image: true

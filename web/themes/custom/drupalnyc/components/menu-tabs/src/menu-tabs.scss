@@ -6,9 +6,10 @@
 @use 'partials' as *;
 
 .c-menu-tabs {
+  margin-top: 0.5rem;
+
   > ul {
     display: flex;
-    margin: 1rem;
     border-bottom: 1px solid var(--dnyc-color-light); // Give the tabs something to sit on
     @include list--no-bullets;
   }

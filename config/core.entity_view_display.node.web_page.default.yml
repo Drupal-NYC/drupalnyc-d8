@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.web_page.field_hero
     - field.field.node.web_page.schema_about
     - field.field.node.web_page.schema_has_part
     - field.field.node.web_page.schema_image
@@ -20,6 +21,15 @@ targetEntityType: node
 bundle: web_page
 mode: default
 content:
+  field_hero:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }

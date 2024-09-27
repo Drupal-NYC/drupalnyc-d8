@@ -1,0 +1,16 @@
+uuid: ce6761fd-dc23-4dd0-aaa9-9f7860f074d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - imageapi_optimize_avif_webp
+name: modern_image_formats
+label: 'Modern image formats'
+processors:
+  bd226ca6-ffba-4dcb-9b52-84d206607b56:
+    id: imageapi_optimize_avif_webp
+    data:
+      avif_quality: '75'
+      webp_quality: '75'
+    weight: 1
+    uuid: bd226ca6-ffba-4dcb-9b52-84d206607b56

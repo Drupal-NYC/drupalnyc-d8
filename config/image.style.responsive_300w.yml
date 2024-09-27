@@ -1,0 +1,15 @@
+uuid: e5b41825-a488-4b1b-ab66-620a8843c533
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_300w
+label: responsive_300w
+effects:
+  bb6d008a-b98a-485c-982b-2f54971b8d77:
+    uuid: bb6d008a-b98a-485c-982b-2f54971b8d77
+    id: image_scale
+    weight: null
+    data:
+      width: 300
+      height: null
+      upscale: true

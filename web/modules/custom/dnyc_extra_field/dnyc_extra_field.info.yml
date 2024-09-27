@@ -1,0 +1,7 @@
+name: 'DrupalNYC Extra Field Plugins'
+type: module
+description: 'Provides custom plugins'
+package: DrupalNYC
+core_version_requirement: ^10 || ^11
+dependencies:
+  - extra_field:extra_field

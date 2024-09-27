@@ -1,0 +1,15 @@
+uuid: fadda3cb-200b-4b5b-9b10-575cd1eabb01
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_900w
+label: responsive_900w
+effects:
+  c0abea29-cff3-471f-b6ce-eaf5a7e05169:
+    uuid: c0abea29-cff3-471f-b6ce-eaf5a7e05169
+    id: image_scale
+    weight: null
+    data:
+      width: 900
+      height: null
+      upscale: true

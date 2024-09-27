@@ -1,0 +1,15 @@
+uuid: 9af993a1-e557-4af5-bc22-7e94110bec3b
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_2750w
+label: responsive_2750w
+effects:
+  fbc439c9-73f3-4566-b466-22d525794a57:
+    uuid: fbc439c9-73f3-4566-b466-22d525794a57
+    id: image_scale
+    weight: null
+    data:
+      width: 2750
+      height: null
+      upscale: true

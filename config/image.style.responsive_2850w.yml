@@ -1,0 +1,15 @@
+uuid: 25a53b68-1b77-4fcd-aaa1-5331a3f18b54
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_2850w
+label: responsive_2850w
+effects:
+  38cbb0e1-116d-41e9-a0f2-002d319dc3c0:
+    uuid: 38cbb0e1-116d-41e9-a0f2-002d319dc3c0
+    id: image_scale
+    weight: null
+    data:
+      width: 2850
+      height: null
+      upscale: true
