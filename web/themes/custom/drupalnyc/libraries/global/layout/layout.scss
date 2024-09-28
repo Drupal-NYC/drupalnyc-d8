@@ -107,6 +107,10 @@
   justify-content: flex-end;
 }
 
+.l-flex__direction--column > * {
+  flex-direction: column;
+}
+
 .l-flex__no-wrap > * {
   flex-wrap: nowrap;
 }

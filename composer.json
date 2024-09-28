@@ -46,6 +46,7 @@
         "drupal/lagoon_logs": "^3.0",
         "drupal/layout_paragraphs": "^2.1",
         "drupal/mercury_editor": "^2.1",
+        "drupal/nomarkup": "^1.0",
         "drupal/pantheon_advanced_page_cache": "^2.1.1",
         "drupal/paragraphs": "^1.18",
         "drupal/pathauto": "^1.13",

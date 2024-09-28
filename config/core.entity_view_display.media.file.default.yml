@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.field.media.file.field_media_file
     - media.type.file
-  module:
-    - file
 _core:
   default_config_hash: 9s0lWIanCnW5Xrrkmedxohs9F0yk4LO8ZcmVQ9xyuu4
 id: media.file.default
@@ -14,16 +12,34 @@ targetEntityType: media
 bundle: file
 mode: default
 content:
-  field_media_file:
-    type: file_default
-    label: visually_hidden
+  created:
+    type: timestamp
+    label: above
     settings:
-      use_description_as_link_text: true
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 1
     region: content
 hidden:
-  created: true
-  name: true
+  field_media_file: true
   thumbnail: true
   uid: true

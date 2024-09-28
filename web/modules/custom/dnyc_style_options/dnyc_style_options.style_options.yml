@@ -1,0 +1,23 @@
+# The "options" section defines all available options.
+options:
+  media_position:
+    # See \Drupal\dnyc_style_options\Plugin\StyleOption\OptionSelector
+    plugin: option_selector
+    label: Media position
+    default: overlay
+    options:
+      - value: overlay
+        label: Overlay
+      - value: start
+        label: Start
+      - value: end
+        label: End
+      - value: top
+        label: Top
+      - value: bottom
+        label: Bottom
+contexts:
+  paragraphs:
+    hero:
+      options:
+        media_position: true

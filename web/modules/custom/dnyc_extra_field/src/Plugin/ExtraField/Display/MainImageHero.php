@@ -42,6 +42,7 @@ class MainImageHero extends ExtraFieldDisplayBase implements ContainerFactoryPlu
    */
   public function view(ContentEntityInterface $entity) {
     /** @var \Drupal\paragraphs\Entity\Paragraph $entity */
+    $mediaPosition = $entity->getBehaviorSetting('style_options', ['media_position', 'option_selector'], 'default');
     $node = $entity->getParentEntity();
     if (!($node instanceof Node)) {
       return [];
@@ -58,7 +59,11 @@ class MainImageHero extends ExtraFieldDisplayBase implements ContainerFactoryPlu
     // Should be only one.
     /** @var \Drupal\media\Entity\Media $image */
     $image = reset($media);
-    return $this->viewBuilder->view($image, '3_1', $image->language()->getId());
+    $viewMode = match($mediaPosition) {
+      'start', 'end' => '3_2',
+      default => '3_1',
+    };
+    return $this->viewBuilder->view($image, $viewMode, $image->language()->getId());
   }
 
 }

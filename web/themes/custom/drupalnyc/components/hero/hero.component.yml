@@ -1,0 +1,29 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: 'Hero'
+status: experimental
+description: 'Hero card component for a media and a content over the media'
+props:
+  type: object
+  properties:
+    media_position:
+      type: string
+      title: 'Media position'
+      description: 'Choose the location of the media from (overlay|start|end|top|bottom).'
+      default: 'overlay'
+      enum:
+        - overlay
+        - start
+        - end
+        - top
+        - bottom
+
+slots:
+  media:
+    title: 'Card Media'
+    description: 'The media image/video slot for the card.'
+  heading:
+    title: 'Heading'
+    description: 'The heading slot for the card.'
+  sub_heading:
+    title: 'Sub-heading'
+    description: 'The Sub-heading slot for the card.'

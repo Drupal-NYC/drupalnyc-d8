@@ -1,0 +1,18 @@
+uuid: 9e6b4654-7a19-4bd8-b4d8-032dc60c0f2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: responsive_3_2_1850w
+label: responsive_3_2_1850w
+effects:
+  33d429c1-7003-4f4e-bf64-a15243359237:
+    uuid: 33d429c1-7003-4f4e-bf64-a15243359237
+    id: focal_point_scale_and_crop
+    weight: null
+    data:
+      width: 1850
+      height: 1233
+      crop_type: focal_point
+pipeline: __default__

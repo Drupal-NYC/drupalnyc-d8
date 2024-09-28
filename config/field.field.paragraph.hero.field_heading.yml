@@ -13,7 +13,7 @@ field_name: field_heading
 entity_type: paragraph
 bundle: hero
 label: Heading
-description: '(Optional) Displayed in place of the default page title.'
+description: '(Optional) If used, is displayed in place of the default page title'
 required: false
 translatable: false
 default_value: {  }

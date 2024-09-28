@@ -193,7 +193,7 @@ $spacing-scale: (
 // }
 // ...
 
-// @include mixins-spacing.padding-utility-classes($spacing-scale);
+@include mixins-spacing.padding-utility-classes($spacing-scale);
 
 // Margin utility classes
 //
@@ -214,4 +214,4 @@ $spacing-scale: (
 // }
 // ...
 
-// @include mixins-spacing.margin-utility-classes($spacing-scale);
+@include mixins-spacing.margin-utility-classes($spacing-scale);

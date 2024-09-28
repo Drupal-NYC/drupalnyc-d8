@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.hero.field_heading
-    - field.field.paragraph.hero.field_text
+    - field.field.paragraph.hero.field_subheading
     - paragraphs.paragraphs_type.hero
   module:
     - text
@@ -25,9 +25,9 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_text:
+  field_subheading:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 2
