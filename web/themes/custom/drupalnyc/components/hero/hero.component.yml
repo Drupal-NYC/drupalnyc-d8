@@ -16,7 +16,6 @@ props:
         - end
         - top
         - bottom
-
 slots:
   media:
     title: 'Card Media'

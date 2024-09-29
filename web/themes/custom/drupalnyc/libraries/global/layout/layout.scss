@@ -111,6 +111,14 @@
   flex-direction: column;
 }
 
+.l-flex__direction--row-reverse > * {
+  flex-direction: row-reverse;
+}
+
+.l-flex__direction--column-reverse > * {
+  flex-direction: column-reverse;
+}
+
 .l-flex__no-wrap > * {
   flex-wrap: nowrap;
 }
@@ -152,13 +160,21 @@
 //------------------------------------
 
 .l-grid {
+
   .l-grid__inner {
     @include bp-min(tablet) {
       display: flex;
       flex-flow: nowrap row;
       margin: 0 -#{var(--dnyc-grid-gap)};
     }
+
+    &.l-grid__row-reverse {
+      @include bp-min(tablet) {
+        flex-direction: row-reverse;
+      }
+    }
   }
+
 
   .l-grid__inner > * + * {
     margin-top: var(--dnyc-grid-gap);

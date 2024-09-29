@@ -27,11 +27,11 @@ class OptionSelector extends StyleOptionPluginBase {
       foreach ($this->getConfiguration('options') as $option) {
         $options[$option['value']] = $option['label'];
       }
-      $plugin_id = $this->getPluginId();
-      $form[$plugin_id] = [
+      $option_id = $this->getConfiguration('option_id');
+      $form[$option_id] = [
         '#type' => 'select',
         '#title' => $this->getLabel(),
-        '#default_value' => $this->getValue($plugin_id) ?? $this->getDefaultValue(),
+        '#default_value' => $this->getValue($option_id) ?? $this->getDefaultValue(),
         '#description' => $this->getConfiguration('description'),
         '#options' => $options,
       ];
@@ -43,10 +43,10 @@ class OptionSelector extends StyleOptionPluginBase {
    * {@inheritDoc}
    */
   public function build(array $build) {
-    $plugin_id = $this->getPluginId();
-    $value = $this->getValue($plugin_id) ?? NULL;
+    $option_id = $this->getConfiguration('option_id');
+    $value = $this->getValue($option_id) ?? NULL;
     if (!empty($value)) {
-      $build['#' . $plugin_id] = $value;
+      $build['#' . $option_id] = $value;
     }
     return $build;
   }

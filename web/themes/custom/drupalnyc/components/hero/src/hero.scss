@@ -1,40 +1,21 @@
 @use 'partials' as *;
 
-// Text color.
-$hero-title-text-color: var(--dnyc-color-white);
-$hero-brief-text-color: var(--dnyc-color-white);
-$hero-link-text-color: var(--dnyc-color-white);
-
-// Font sizes with responsive sizes.
-$hero-xlarge-title-font-size-xs: 3.3rem;
-$hero-xlarge-title-font-size-sm: 3.3rem;
-$hero-xlarge-title-font-size-md: 57px;
-$hero-xlarge-title-font-size-lg: 57px;
-$hero-xlarge-title-font-size-xl: 57px;
-
-// Hero Card default styles.
-$hero-card-title-color: var(--dnyc-color-white);
-$hero-card-xlarge-title-font-size: 3.5rem;
-$hero-card-content-hover-opacity: 0.7;
-$hero-card-content-background-color1: var(--dnyc-color-black);
-$hero-card-content-background-color2: var(--dnyc-color-gray-900);
-
-$hero-card-max-height-xs: auto;
-$hero-card-min-height-xs: auto;
-
-$hero-card-max-height-lg: 43.75rem;
-$hero-card-min-height-lg: 43.75rem;
-
 .c-hero-card {
-  &.hero-style-overlay {
 
-    min-height: $hero-card-min-height-lg;
-    max-height: $hero-card-max-height-lg;
+  .hero-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+  }
+
+  &.hero-style-overlay {
 
     .ratio {
       width: 100vw;
 
-      @media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+      @include bp-min(sm-desktop) {
         > .card__image,
         > video,
         > iframe {
@@ -53,96 +34,40 @@ $hero-card-min-height-lg: 43.75rem;
       right: 0;
       padding: 1.88rem;
       z-index: 2;
-      color: $hero-brief-text-color;
-      background-image: linear-gradient(180deg, $hero-card-content-background-color1, $hero-card-content-background-color2);
+      color: var(--dnyc-color-white);
+      background: linear-gradient(
+          rgba(0, 0, 0, 0) 2.22%,
+          rgba(0, 0, 0, .5) 73.4%
+      );
+
 
       > * {
         max-width: 53rem;
       }
 
-      @media screen and (max-width: map-get($grid-breakpoints, "sm")) {
-        padding-bottom: 9.375rem;
-      }
-
-      @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-        padding: 1.88rem calc((100vw - map-get($container-max-widths, "sm"))/2) 3.88rem;
-      }
-
-      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-        padding: 1.88rem calc(((100vw - map-get($container-max-widths, "md"))/2) + $grid-gutter-width/2) 3.88rem;
-      }
-
-      @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-        padding: 1.88rem calc(((100vw - map-get($container-max-widths, "lg"))/2) + $grid-gutter-width/2) 9.375rem;
-      }
-
-      @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
-        padding: 1.88rem calc(((100vw - map-get($container-max-widths, "xl"))/2) + $grid-gutter-width/2) 9.375rem;
-      }
-
-      @media screen and (min-width: map-get($grid-breakpoints, "xxl")) {
-        padding: 1.88rem calc(((100vw - map-get($container-max-widths, "xxl"))/2) + $grid-gutter-width/2) 9.375rem;
-      }
-
-      .card-title {
-        color: $hero-card-title-color;
-        @include font-size($hero-card-xlarge-title-font-size);
-
-        a {
-          color: $hero-card-title-color;
-          text-transform: none;
-        }
-
-        h2,
-        h3 {
-
-          @include font-size($hero-xlarge-title-font-size-xs);
-
-          @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-            @include font-size($hero-xlarge-title-font-size-sm);
-          }
-
-          @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-            @include font-size($hero-xlarge-title-font-size-md);
-          }
-
-          @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-            @include font-size($hero-xlarge-title-font-size-lg);
-          }
-
-          @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
-            @include font-size($hero-xlarge-title-font-size-xl);
-          }
-        }
-
-      }
-
-      &.card-body {
-        @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-          min-height: $hero-card-min-height-lg;
-        }
+      .c-page-title {
+        color: var(--dnyc-color-white);
       }
     }
-
 
 
     .media {
       position: relative;
       width: 100vw;
       height: 130vh;
-      @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
-        height: auto;
-      }
       top: 50%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
       padding-bottom: 0;
 
+      @include bp-min(desktop) {
+        height: auto;
+      }
+
       img {
         top: 0;
         left: 0;
         width: 100%;
-        min-height: $hero-card-min-height-lg;
         object-fit: cover;
       }
 
@@ -151,7 +76,6 @@ $hero-card-min-height-lg: 43.75rem;
           top: 0;
           left: 0;
           width: 100%;
-          min-height: $hero-card-min-height-lg;
           object-fit: cover;
         }
 
@@ -166,70 +90,44 @@ $hero-card-min-height-lg: 43.75rem;
 
   &.hero-style-top,
   &.hero-style-bottom {
-
-    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-      padding: 0 calc(((100vw - map-get($container-max-widths, "md"))/2) + $grid-gutter-width/2);
-    }
-
-    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-      padding: 0 calc(((100vw - map-get($container-max-widths, "lg"))/2) + $grid-gutter-width/2);
-    }
-
-    @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
-      padding: 0 calc(((100vw - map-get($container-max-widths, "xl"))/2) + $grid-gutter-width/2);
-    }
-
-    @media screen and (min-width: map-get($grid-breakpoints, "xxl")) {
-      padding: 0 calc(((100vw - map-get($container-max-widths, "xxl"))/2) + $grid-gutter-width/2);
-    }
+    display: flex;
 
     .card-body {
-      @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+      @include bp-min(sm-desktop) {
         padding-right: 9.375rem;
         padding-left: 9.375rem;
       }
     }
 
+    .hero-card-content {
+      text-align: center;
+      align-items: center;
+    }
+
     .hero-img {
       overflow: hidden;
       width: 100%;
-
-      @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-        min-height: $hero-card-min-height-lg;
-        max-height: $hero-card-max-height-lg;
-      }
     }
-
-    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-      min-height: $hero-card-min-height-lg;
-    }
-    .ima
 
     .media {
       position: relative;
       width: 100vw;
       height: 130vh;
-      @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
-        height: auto;
-      }
       top: 50%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
       padding-bottom: 0;
 
-      .card__image  {
+      @include bp-min(lg-desktop) {
+        height: auto;
+      }
+
+      .card__image {
         img {
           top: 0;
           left: 0;
           width: 100%;
-          min-height: $hero-card-min-height-lg;
           object-fit: cover;
-        }
-
-        picture {
-          @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-            max-height: $hero-card-max-height-lg;
-          }
         }
       }
 
@@ -238,7 +136,6 @@ $hero-card-min-height-lg: 43.75rem;
           top: 0;
           left: 0;
           width: 100%;
-          min-height: $hero-card-min-height-lg;
           object-fit: cover;
         }
 
@@ -251,9 +148,17 @@ $hero-card-min-height-lg: 43.75rem;
     }
   }
 
+  &.hero-style-top {
+    flex-direction: column;
+  }
+
+  &.hero-style-bottom {
+    flex-direction: column-reverse;
+  }
+
   &.hero-style-start,
   &.hero-style-end {
-    @media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+    @include bp-min(sm-desktop) {
       margin-right: 1.88rem;
       margin-left: 1.88rem;
 
@@ -261,6 +166,10 @@ $hero-card-min-height-lg: 43.75rem;
         overflow: hidden;
         width: 100%;
       }
+    }
+
+    .hero-card-content {
+      height: 100%;
     }
 
     .media {
@@ -281,7 +190,7 @@ $hero-card-min-height-lg: 43.75rem;
         overflow: hidden;
         position: static;
 
-        @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        @include bp-min(sm-desktop) {
           video {
             position: absolute;
             width: 80vw;

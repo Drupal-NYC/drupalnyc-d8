@@ -36,7 +36,7 @@
   set card_classes = [
   'c-hero-card',
   'hero-style-' ~ media_position
-]|
+]
 %}
 
 {# Media position of media overlay #}
@@ -55,7 +55,6 @@
     set content_classes = [
     'card-body',
     'hero-card-content',
-    'l-flex__direction--column',
   ]
   %}
 
@@ -80,31 +79,30 @@
   {# Media position of media start or end #}
 {% elseif media_position == 'start' or media_position == 'end' %}
 
+  {% set card_attributes = card_attributes.addClass('l-grid') %}
+
   {%
     set media_classes = [
     'hero-img',
     'hero-img-' ~ media_position,
-  ]|merge(media_utility_classes)
+  ]
   %}
 
   {%
     set content_classes = [
     'card-body',
-    'hero-card-content',
-    'l-flex__direction--column',
+    'hero-card-content'
   ]
   %}
 
   {%
     set row_classes = [
-    'row',
-    'row-cols-1',
-    'row-cols-lg-2',
+    'l-grid__inner',
   ]
   %}
 
   {% if media_position == 'end' %}
-    {% set row_classes = row_classes|merge(['flex-row-reverse']) %}
+    {% set row_classes = row_classes|merge(['l-grid__row-reverse']) %}
   {% endif %}
 
   {% if not row_attributes %}
@@ -123,8 +121,8 @@
   {% set content_attributes = content_attributes.addClass(content_classes) %}
   {% set media_attributes = media_attributes.addClass(media_classes) %}
   {% set row_attributes = row_attributes.addClass(row_classes) %}
-  {% set start_column_attributes = start_column_attributes.addClass('col') %}
-  {% set end_column_attributes = end_column_attributes.addClass('col') %}
+  {% set start_column_attributes = start_column_attributes.addClass('l-grid__item--col-6') %}
+  {% set end_column_attributes = end_column_attributes.addClass('l-grid__item--col-6') %}
 
   <div{{ card_attributes }}>
     <div{{ row_attributes.addClass(row_classes) }}>
@@ -153,20 +151,15 @@
     set media_classes = [
     'hero-img',
     'hero-img-' ~ media_position,
-  ]|merge(media_utility_classes)
+  ]
   %}
 
   {%
     set content_classes = [
     'card-body',
-    'hero-card-content',
-    'l-flex__direction--column',
+    'hero-card-content'
   ]
   %}
-
-  {% if media_position == 'bottom' %}
-    {% set card_classes = card_classes|merge(['l-flex__direction--column-reverse']) %}
-  {% endif %}
 
   {% set card_attributes = card_attributes.addClass(card_classes) %}
   {% set content_attributes = content_attributes.addClass(content_classes) %}

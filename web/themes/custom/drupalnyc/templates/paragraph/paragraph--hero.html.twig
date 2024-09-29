@@ -1,0 +1,20 @@
+{# This template connects the hero paragraph with the hero component #}
+
+{%
+  set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+]
+%}
+
+{% set card_attributes = create_attribute()  %}
+
+{{ include('drupalnyc:hero', {
+  media_position: media_position,
+  card_attributes: card_attributes,
+  media: content.extra_field_dnyc_hero_image,
+  heading: content.field_heading,
+  sub_heading: content.field_subheading
+}) }}

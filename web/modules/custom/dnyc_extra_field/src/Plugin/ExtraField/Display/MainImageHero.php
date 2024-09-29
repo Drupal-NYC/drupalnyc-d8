@@ -42,7 +42,7 @@ class MainImageHero extends ExtraFieldDisplayBase implements ContainerFactoryPlu
    */
   public function view(ContentEntityInterface $entity) {
     /** @var \Drupal\paragraphs\Entity\Paragraph $entity */
-    $mediaPosition = $entity->getBehaviorSetting('style_options', ['media_position', 'option_selector'], 'default');
+    $mediaPosition = $entity->getBehaviorSetting('style_options', ['media_position', 'media_position'], 'default');
     $node = $entity->getParentEntity();
     if (!($node instanceof Node)) {
       return [];
