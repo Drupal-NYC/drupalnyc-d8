@@ -1,0 +1,24 @@
+uuid: 9ee3b12f-c0b1-447a-821b-02991f451c29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subheading
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.media
+  module:
+    - text
+id: paragraph.media.field_subheading
+field_name: field_subheading
+entity_type: paragraph
+bundle: media
+label: Caption
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text

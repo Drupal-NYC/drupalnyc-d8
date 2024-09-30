@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.hero.field_subheading
     - paragraphs.paragraphs_type.hero
   module:
+    - nomarkup
     - text
 id: paragraph.hero.default
 targetEntityType: paragraph
@@ -16,20 +17,23 @@ content:
   extra_field_dnyc_hero_image:
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
-  field_heading:
-    type: text_default
-    label: hidden
+  extra_field_dnyc_hero_title:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_subheading:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
     weight: 2
     region: content
-hidden: {  }
+hidden:
+  field_heading: true

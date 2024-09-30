@@ -13,7 +13,7 @@ id: paragraph.media.field_media
 field_name: field_media
 entity_type: paragraph
 bundle: media
-label: media
+label: Media
 description: ''
 required: true
 translatable: false

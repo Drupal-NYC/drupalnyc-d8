@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.section.field_heading
     - paragraphs.paragraphs_type.section
   module:
+    - nomarkup
     - text
 id: paragraph.section.default
 targetEntityType: paragraph
@@ -14,9 +15,13 @@ mode: default
 content:
   field_heading:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
     weight: 0
     region: content
 hidden: {  }

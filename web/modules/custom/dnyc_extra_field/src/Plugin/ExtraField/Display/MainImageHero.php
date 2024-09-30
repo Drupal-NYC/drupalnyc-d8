@@ -23,6 +23,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class MainImageHero extends ExtraFieldDisplayBase implements ContainerFactoryPluginInterface {
 
+  /**
+   * Injected service.
+   */
   protected EntityViewBuilderInterface $viewBuilder;
 
   /**
