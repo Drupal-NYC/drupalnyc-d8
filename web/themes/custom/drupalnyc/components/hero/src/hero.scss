@@ -11,6 +11,7 @@
   }
 
   &.hero-style-overlay {
+    position: relative;
 
     .ratio {
       width: 100vw;
@@ -27,12 +28,7 @@
 
     .hero-card-content {
       position: absolute;
-      width: 100%;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 1.88rem;
+      inset: 0;
       z-index: 2;
       color: var(--dnyc-color-white);
       background: linear-gradient(

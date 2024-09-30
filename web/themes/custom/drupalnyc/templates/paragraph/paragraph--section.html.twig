@@ -4,6 +4,7 @@
   <div{{ attributes.addClass(classes).addClass('l-stack__section') }}>
     {% block content %}
       <h2 class="section-heading">{{ content.field_heading }}</h2>
-      {{ content|without('field_heading') }}    {% endblock %}
+      {{ content|without('field_heading') }}
+    {% endblock %}
   </div>
 {% endblock paragraph %}
