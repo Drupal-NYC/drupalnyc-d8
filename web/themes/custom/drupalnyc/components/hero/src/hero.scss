@@ -8,6 +8,16 @@
     align-items: flex-start;
     justify-content: center;
     text-align: left;
+
+    p {
+      font-size: var(--dnyc-fs-body-base);
+      line-height: var(--dnyc-fs-body-base);
+
+      @include bp-min(sm-tablet) {
+        font-size: var(--dnyc-fs-heading-h3);
+        line-height: var(--dnyc-lh-heading-h3);
+      }
+    }
   }
 
   &.hero-style-overlay {
@@ -38,7 +48,7 @@
 
 
       > * {
-        max-width: 53rem;
+        max-width: 60%;
       }
 
       .c-page-title {
