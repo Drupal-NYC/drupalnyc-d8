@@ -18,5 +18,7 @@
 			<a href="{{ path('<front>') }}" title="{{ title ? title : 'Home' }}" rel="home" {{ attributes.addClass('c-site-logo') }}> <img src="{{ site_logo }}" class="logo__image" alt="{{ 'Home'|t }}"/>
 		</a>
 	{% endif %}
-	{{ site_slogan }}
+	<div class="site-name">
+    {{ site_name }}
+  </div>
 {% endblock %}

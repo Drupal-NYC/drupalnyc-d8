@@ -7,20 +7,36 @@
   justify-content: center;
   margin: 0;
   padding: 0;
-  width: var(--size-width, rem(75px));
   z-index: 1;
-
-  @include bp-min(lg-tablet) {
-    width: rem(90px);
-  }
 
   a,
   img {
     display: block;
-    width: 100%;
+    width: rem(49px);
 
-    @include bp-min(tablet) {
-      min-width: rem(90px);
+    @include bp-between(sm-tablet, tablet) {
+      width: rem(49px);
+    }
+    @include bp-between(tablet, sm-desktop) {
+      width: rem(57px);
+    }
+    @include bp-between(sm-desktop, desktop) {
+      width: rem(65px);
+    }
+    @include bp-min(desktop) {
+      width: rem(90px);
+    }
+  }
+
+  .site-name {
+    color: var(--dnyc-color-dark-blue);
+    font-size: rem(24px);
+    line-height: rem(28px);
+    margin: var(--dnyc-space-8);
+
+    @include bp-min(sm-tablet) {
+      font-size: var(--dnyc-fs-heading-h3);
+      line-height: var(--dnyc-lh-heading-h3);
     }
   }
 }
