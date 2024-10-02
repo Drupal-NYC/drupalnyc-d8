@@ -5,9 +5,9 @@
   .hero-card-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    text-align: left;
+    text-align: center;
+    align-items: center;
 
     p {
       font-size: var(--dnyc-fs-body-base);
@@ -40,6 +40,8 @@
       position: absolute;
       inset: 0;
       z-index: 2;
+      align-items: flex-start;
+      text-align: left;
       color: var(--dnyc-color-white);
       background: linear-gradient(
           rgba(0, 0, 0, 0) 2.22%,
@@ -105,11 +107,6 @@
       }
     }
 
-    .hero-card-content {
-      text-align: center;
-      align-items: center;
-    }
-
     .hero-img {
       overflow: hidden;
       width: 100%;
@@ -165,9 +162,6 @@
   &.hero-style-start,
   &.hero-style-end {
     @include bp-min(sm-desktop) {
-      margin-right: 1.88rem;
-      margin-left: 1.88rem;
-
       .hero-img {
         overflow: hidden;
         width: 100%;

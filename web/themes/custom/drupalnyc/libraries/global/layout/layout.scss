@@ -24,9 +24,11 @@
 
 :root {
   --dnyc-grid-gap: 24px;
+  --space-gap-y: 12px;
 
   @include bp-min(lg-tablet) {
     --dnyc-grid-gap: 40px;
+    --space-gap-y: 16px;
   }
 }
 
