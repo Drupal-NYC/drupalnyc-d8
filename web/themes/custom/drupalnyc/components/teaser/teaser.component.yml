@@ -20,6 +20,12 @@ props:
       title: 'Title'
       examples:
         - 'A new exhibit opens at the Student Visitor Center'
+    teaser_date:
+      type: 'string'
+      title: 'Date'
+      examples:
+        - 'Oct. 5'
+        - 'Oct. 5, 2024'
     teaser_media:
       type: array
       title: Media

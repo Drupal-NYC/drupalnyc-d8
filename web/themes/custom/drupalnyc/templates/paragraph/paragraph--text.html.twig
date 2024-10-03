@@ -4,7 +4,7 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       {% if not paragraph.get('field_heading').isEmpty() %}
-      <h3 class="section-heading">{{ content.field_heading }}</h3>
+      <h3 class="text-content">{{ content.field_heading }}</h3>
       {% endif %}
       {{ content|without('field_heading') }}
     {% endblock %}

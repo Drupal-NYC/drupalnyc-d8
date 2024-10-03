@@ -1,6 +1,8 @@
 {{ include('drupalnyc:teaser', {
   teaser_title: label|default(''),
-  teaser_body: content.body,
+  teaser_media: content.schema_image,
+  teaser_date: content.schema_start_date|default(''),
+  teaser_body: content.schema_description,
   teaser_link:{ url: url, text: label|render},
   attr: attributes
 }) }}

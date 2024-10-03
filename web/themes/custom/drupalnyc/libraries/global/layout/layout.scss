@@ -24,11 +24,11 @@
 
 :root {
   --dnyc-grid-gap: 24px;
-  --space-gap-y: 12px;
+  --space-half-gap: 12px;
 
   @include bp-min(lg-tablet) {
-    --dnyc-grid-gap: 40px;
-    --space-gap-y: 16px;
+    --dnyc-grid-gap: 32px;
+    --space-half-gap: 16px;
   }
 }
 
@@ -273,11 +273,11 @@
 }
 
 [class*='l-stack'] > * + * {
-  margin-top: var(--space-gap-y);
+  margin-top: var(--space-half-gap);
 }
 
 .l-stack__ruled > * + * {
-  padding-top: var(--space-gap-y);
+  padding-top: var(--space-half-gap);
   border-top: var(--size-border, 1px) var(--style-border, solid)
     var(--color-border);
 }
@@ -305,3 +305,23 @@
 .l-stack__section {
   margin-top: 12px;
 }
+
+//------------------------------------
+//  08 - Gutters
+//------------------------------------
+
+@include bp-min(layout-cols) {
+  .l-column--outer-left > * {
+    margin-right: var(--space-half-gap);
+  }
+
+  .l-column--outer-right > *  {
+    margin-left: var(--space-half-gap);
+  }
+
+  .l-column--inner > *  {
+    margin-left: var(--space-half-gap);
+    margin-right: var(--space-half-gap);
+  }
+}
+

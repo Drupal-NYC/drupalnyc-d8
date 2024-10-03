@@ -14,18 +14,23 @@
   {% endif %}
 
   <div class="c-teaser__content">
-    <h3 class="c-teaser__title">{{ teaser_title }}</h3>
+    {% if teaser_link.url is not empty %}
+    <strong class="c-teaser__more-link">
+      <a href="{{ teaser_link.url }}">
+        {{ teaser_link.text }}
+      </a>
+    </strong>
+    {% else %}
+      <h3 class="c-teaser__title">{{ teaser_title }}</h3>
+    {% endif %}
+
+    {% if teaser_date %}
+      <div class="c-teaser__date">{{ teaser_date }}</div>
+    {% endif %}
 
     {% if teaser_body %}
       <div class="c-teaser__body">{{ teaser_body }}</div>
     {% endif %}
 
-    {% if teaser_link.url is not empty %}
-      <p class="c-teaser__actions">
-        <a class="c-teaser__more-link" href="{{ teaser_link.url }}">
-          <span class="text">{{ teaser_link.text }}</span>
-        </a>
-      </p>
-    {% endif %}
   </div>
 </article>

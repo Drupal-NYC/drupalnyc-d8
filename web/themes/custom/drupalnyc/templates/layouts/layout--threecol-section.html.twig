@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation to display a two-column layout.
+ * Default theme implementation for a three-column layout.
  *
  * Available variables:
  * - in_preview: Whether the plugin is being rendered in preview mode.
@@ -12,7 +12,7 @@
  */
 #}
 {% if content %}
-  <div{{ attributes }}>
+  <div{{ attributes.addClass(classes) }}>
 
     {% if content.first %}
       <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first', 'l-stack__minimal', 'l-column--outer-left') }}>
@@ -21,8 +21,14 @@
     {% endif %}
 
     {% if content.second %}
-      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second', 'l-stack__minimal', 'l-column--outer-right') }}>
+      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second', 'l-stack__minimal', 'l-column--inner') }}>
         {{ content.second }}
+      </div>
+    {% endif %}
+
+    {% if content.third %}
+      <div {{ region_attributes.third.addClass('layout__region', 'layout__region--third', 'l-stack__minimal', 'l-column--outer-right') }}>
+        {{ content.third }}
       </div>
     {% endif %}
 

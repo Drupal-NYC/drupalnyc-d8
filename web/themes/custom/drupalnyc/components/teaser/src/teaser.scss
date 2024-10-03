@@ -26,9 +26,8 @@
 }
 
 .c-teaser__more-link {
-  @include type-scale('body', '16');
-  color: var(--dnyc-color-gray-700);
-  font-weight: 900;
+  font-size: var(--dnyc-fs-heading-h4);
+  line-height: var(--dnyc-lh-heading-h4);
 
   &:hover {
     text-decoration: none;
