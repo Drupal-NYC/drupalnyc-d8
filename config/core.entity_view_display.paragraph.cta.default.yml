@@ -1,0 +1,57 @@
+uuid: b0d22721-0be0-4658-96cd-a39a018b0979
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta.field_heading
+    - field.field.paragraph.cta.field_link
+    - field.field.paragraph.cta.field_text
+    - paragraphs.paragraphs_type.cta
+  module:
+    - link
+    - nomarkup
+    - text
+id: paragraph.cta.default
+targetEntityType: paragraph
+bundle: cta
+mode: default
+content:
+  field_heading:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+hidden: {  }

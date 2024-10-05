@@ -9,4 +9,7 @@
       } only %}
     {% endblock %}
   </div>
+  {{ content.field_media|cache_metadata }}
+  {{ content.field_subheading|cache_metadata }}
+  {{ content|cache_metadata }}
 {% endblock paragraph %}

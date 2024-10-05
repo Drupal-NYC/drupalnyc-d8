@@ -13,4 +13,8 @@
       } only %}
     {% endblock %}
   </div>
+  {{ content.extra_field_dnyc_hero_image|cache_metadata }}
+  {{ content.extra_field_dnyc_hero_title|cache_metadata }}
+  {{ content.field_subheading|cache_metadata }}
+  {{ content|cache_metadata }}
 {% endblock paragraph %}
