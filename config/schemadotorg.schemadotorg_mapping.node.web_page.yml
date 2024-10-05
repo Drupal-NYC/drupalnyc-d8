@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.web_page.schema_about
+    - field.field.node.web_page.schema_description
     - field.field.node.web_page.schema_has_part
     - field.field.node.web_page.schema_image
     - field.field.node.web_page.schema_is_part_of
@@ -20,6 +21,7 @@ target_bundle: web_page
 schema_type: WebPage
 schema_properties:
   schema_about: about
+  schema_description: abstract
   created: dateCreated
   changed: dateModified
   schema_has_part: hasPart

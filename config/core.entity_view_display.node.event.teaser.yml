@@ -18,6 +18,7 @@ dependencies:
     - node.type.event
   module:
     - datetime
+    - nomarkup
     - text
     - user
 id: node.event.teaser
@@ -28,38 +29,50 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 200
+    weight: 3
     region: content
   schema_description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
-    third_party_settings: {  }
-    weight: 17
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
     region: content
-  schema_end_date:
-    type: datetime_default
-    label: above
+  schema_image:
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
-    weight: 15
+      view_mode: '3_2'
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: '0'
+    weight: 2
     region: content
   schema_start_date:
     type: datetime_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
       format_type: medium
-    third_party_settings: {  }
-    weight: 14
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
     region: content
 hidden:
   schema_about: true
   schema_address: true
   schema_duration: true
-  schema_image: true
+  schema_end_date: true
   schema_main_entity: true
   schema_related_link: true
   schema_significant_link: true

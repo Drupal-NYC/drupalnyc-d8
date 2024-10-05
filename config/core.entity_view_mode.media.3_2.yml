@@ -1,0 +1,11 @@
+uuid: d3757f1e-a577-47f8-802b-9a6cb1dffdaf
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.3_2
+label: '3_2'
+description: 'A 3:2 responsive image'
+targetEntityType: media
+cache: true

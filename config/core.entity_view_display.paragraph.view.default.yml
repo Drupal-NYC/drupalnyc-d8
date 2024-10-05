@@ -1,0 +1,47 @@
+uuid: dc67db1a-b23c-4452-b9c2-b12cd2726b62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.view.field_link
+    - field.field.paragraph.view.field_view
+    - paragraphs.paragraphs_type.view
+  module:
+    - link
+    - nomarkup
+    - viewsreference
+id: paragraph.view.default
+targetEntityType: paragraph
+bundle: view
+mode: default
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        htmx: htmx
+        block: block
+        default: '0'
+        page: '0'
+        feed: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden: {  }

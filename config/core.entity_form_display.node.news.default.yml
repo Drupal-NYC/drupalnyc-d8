@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.schema_about
+    - field.field.node.news.schema_description
     - field.field.node.news.schema_image
     - field.field.node.news.schema_main_entity
     - field.field.node.news.schema_related_link
@@ -65,6 +66,14 @@ content:
     settings:
       match_operator: CONTAINS
       match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  schema_description:
+    type: text_textfield
+    weight: 17
+    region: content
+    settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }

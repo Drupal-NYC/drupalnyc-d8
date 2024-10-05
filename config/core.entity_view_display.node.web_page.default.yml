@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.web_page.field_hero
     - field.field.node.web_page.schema_about
+    - field.field.node.web_page.schema_description
     - field.field.node.web_page.schema_has_part
     - field.field.node.web_page.schema_image
     - field.field.node.web_page.schema_is_part_of
@@ -46,6 +47,7 @@ content:
     region: content
 hidden:
   schema_about: true
+  schema_description: true
   schema_has_part: true
   schema_image: true
   schema_is_part_of: true

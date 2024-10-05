@@ -1,0 +1,9 @@
+.htmx__pager--mini {
+  .pager__item {
+    color: var(--dnyc-color-black);
+
+    .htmx__pager--action-link {
+      color: var(--dnyc-color-primary);
+    }
+  }
+}

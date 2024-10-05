@@ -24,6 +24,7 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
+  devel_generate: 0
   dnyc_amazee: 0
   dnyc_extra_field: 0
   dnyc_header_block: 0
@@ -46,6 +47,7 @@ module:
   google_tag: 0
   help: 0
   history: 0
+  htmx: 0
   image: 0
   imageapi_optimize: 0
   imageapi_optimize_avif_webp: 0
@@ -98,6 +100,7 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
+  viewsreference: 0
   workflows: 0
   extlink: 1
   menu_link_content: 1

@@ -1,0 +1,280 @@
+_core:
+  default_config_hash: gZZS63FEGJu9Fgs4PnNvyrJeh8JVBNZfXuRR18stSeA
+langcode: en
+events:
+  -
+    event: 'htmx:abort'
+    description: 'send this event to an element to abort a request'
+  -
+    event: 'htmx:afterOnLoad'
+    description: 'triggered after an AJAX request has completed processing a successful response'
+  -
+    event: 'htmx:afterProcessNode'
+    description: 'triggered after htmx has initialized a node'
+  -
+    event: 'htmx:afterRequest'
+    description: 'triggered after an AJAX request has completed'
+  -
+    event: 'htmx:afterSettle'
+    description: 'triggered after the DOM has settled'
+  -
+    event: 'htmx:afterSwap'
+    description: 'triggered after new content has been swapped in'
+  -
+    event: 'htmx:beforeCleanupElement'
+    description: 'triggered before htmx disables an element or removes it from the DOM'
+  -
+    event: 'htmx:beforeOnLoad'
+    description: 'triggered before any response processing occurs'
+  -
+    event: 'htmx:beforeProcessNode'
+    description: 'triggered before htmx initializes a node'
+  -
+    event: 'htmx:beforeRequest'
+    description: 'triggered before an AJAX request is made'
+  -
+    event: 'htmx:beforeSwap'
+    description: 'triggered before a swap is done, allows you to configure the swap'
+  -
+    event: 'htmx:beforeSend'
+    description: 'triggered just before an ajax request is sent'
+  -
+    event: 'htmx:configRequest'
+    description: 'triggered before the request, allows you to customize parameters, headers'
+  -
+    event: 'htmx:confirm'
+    description: 'triggered after a trigger occurs on an element, allows you to cancel (or delay) issuing the AJAX request'
+  -
+    event: 'htmx:historyCacheError'
+    description: 'triggered on an error during cache writing'
+  -
+    event: 'htmx:historyCacheMiss'
+    description: 'triggered on a cache miss in the history subsystem'
+  -
+    event: 'htmx:historyCacheMissError'
+    description: 'triggered on a unsuccessful remote retrieval'
+  -
+    event: 'htmx:historyCacheMissLoad'
+    description: 'triggered on a successful remote retrieval'
+  -
+    event: 'htmx:historyRestore'
+    description: 'triggered when htmx handles a history restoration action'
+  -
+    event: 'htmx:beforeHistorySave'
+    description: 'triggered before content is saved to the history cache'
+  -
+    event: 'htmx:load'
+    description: 'triggered when new content is added to the DOM'
+  -
+    event: 'htmx:noSSESourceError'
+    description: 'triggered when an element refers to a SSE event in its trigger, but no parent SSE source has been defined'
+  -
+    event: 'htmx:onLoadError'
+    description: 'triggered when an exception occurs during the onLoad handling in htmx'
+  -
+    event: 'htmx:oobAfterSwap'
+    description: 'triggered after an out of band element as been swapped in'
+  -
+    event: 'htmx:oobBeforeSwap'
+    description: 'triggered before an out of band element swap is done, allows you to configure the swap'
+  -
+    event: 'htmx:oobErrorNoTarget'
+    description: 'triggered when an out of band element does not have a matching ID in the current DOM'
+  -
+    event: 'htmx:prompt'
+    description: 'triggered after a prompt is shown'
+  -
+    event: 'htmx:pushedIntoHistory'
+    description: 'triggered after an url is pushed into history'
+  -
+    event: 'htmx:responseError'
+    description: 'triggered when an HTTP response error (non-200 or 300 response code) occurs'
+  -
+    event: 'htmx:sendError'
+    description: 'triggered when a network error prevents an HTTP request from happening'
+  -
+    event: 'htmx:sseError'
+    description: 'triggered when an error occurs with a SSE source'
+  -
+    event: 'htmx:sseOpen'
+    description: 'triggered when a SSE source is opened'
+  -
+    event: 'htmx:swapError'
+    description: 'triggered when an error occurs during the swap phase'
+  -
+    event: 'htmx:targetError'
+    description: 'triggered when an invalid target is specified'
+  -
+    event: 'htmx:timeout'
+    description: 'triggered when a request timeout occurs'
+  -
+    event: 'htmx:validation:validate'
+    description: 'triggered before an element is validated'
+  -
+    event: 'htmx:validation:failed'
+    description: 'triggered when an element fails validation'
+  -
+    event: 'htmx:validation:halted'
+    description: 'triggered when a request is halted due to validation errors'
+  -
+    event: 'htmx:xhr:abort'
+    description: 'triggered when an ajax request aborts'
+  -
+    event: 'htmx:xhr:loadend'
+    description: 'triggered when an ajax request ends'
+  -
+    event: 'htmx:xhr:loadstart'
+    description: 'triggered when an ajax request starts'
+  -
+    event: 'htmx:xhr:progress'
+    description: 'triggered periodically during an ajax request that supports progress events'
+  -
+    event: revealed
+    description: 'An HTMX event triggered when an element is scrolled into the viewport (also useful for lazy-loading). If you are using overflow in css like `overflow-y: scroll` you should use `intersect once` instead of `revealed`'
+  -
+    event: intersect
+    description: 'An HTMX event triggered when an element first intersects the viewport. This supports two additional options.  See the documentation for hx-trigger for more information.'
+  -
+    event: DOMContentLoaded
+    description: 'Fired at the Document once the parser has finished'
+  -
+    event: afterprint
+    description: 'Fired at the Window after printing'
+  -
+    event: beforeprint
+    description: 'Fired at the Window before printing'
+  -
+    event: beforematch
+    description: 'Fired on elements with the hidden=until-found attribute before they are revealed.'
+  -
+    event: beforetoggle
+    description: 'Fired on elements with the popover attribute when they are transitioning between showing and hidden'
+  -
+    event: beforeunload
+    description: 'Fired at the Window when the page is about to be unloaded, in case the page would like to show a warning prompt'
+  -
+    event: blur
+    description: 'Fired at nodes when they stop being focused'
+  -
+    event: cancel
+    description: 'Fired at CloseWatcher objects or dialog elements when they receive a close request, or at input elements in the File state when the user does not change their selection'
+  -
+    event: change
+    description: 'Fired at controls when the user commits a value change (see also the input event)'
+  -
+    event: click
+    description: 'Normally a mouse event; also synthetically fired at an element before its activation behavior is run, when an element is activated from a non-pointer input device (e.g. a keyboard)'
+  -
+    event: close
+    description: 'Fired at CloseWatcher objects or dialog elements when they are closed via a close request or via web developer code, or at MessagePort objects when disentangled'
+  -
+    event: connect
+    description: "Fired at a shared worker's global scope when a new client connects"
+  -
+    event: contextlost
+    description: 'Fired when the corresponding CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D is lost'
+  -
+    event: contextrestored
+    description: 'Fired when the corresponding CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D is restored after being lost'
+  -
+    event: currententrychange
+    description: 'Fired when navigation.currentEntry changes'
+  -
+    event: dispose
+    description: 'Fired when the session history entry corresponding to the NavigationHistoryEntry has been permanently evicted from session history and can no longer be traversed to'
+  -
+    event: error
+    description: 'Fired when unexpected errors occur (e.g. networking errors, script errors, decoding errors)'
+  -
+    event: focus
+    description: 'Fired at nodes gaining focus'
+  -
+    event: formdata
+    description: 'Fired at a form element when it is constructing the entry list'
+  -
+    event: hashchange
+    description: "Fired at the Window when the fragment part of the document's URL changes"
+  -
+    event: input
+    description: "Fired when the user changes the contenteditable element's content, or the form control's value. See also the change event for form controls."
+  -
+    event: invalid
+    description: 'Fired at controls during form validation if they do not satisfy their constraints'
+  -
+    event: languagechange
+    description: "Fired at the global scope object when the user's preferred languages change"
+  -
+    event: load
+    description: 'Fired at the Window when the document has finished loading; fired at an element containing a resource (e.g. img, embed) when its resource has finished loading'
+  -
+    event: message
+    description: 'Fired at an object when it receives a message'
+  -
+    event: messageerror
+    description: 'Fired at an object when it receives a message that cannot be deserialized'
+  -
+    event: navigate
+    description: 'Fired before the navigable navigates, reloads, traverses, or otherwise changes its URL'
+  -
+    event: navigateerror
+    description: 'Fired when a navigation does not complete successfully'
+  -
+    event: navigatesuccess
+    description: 'Fired when a navigation completes successfully'
+  -
+    event: offline
+    description: 'Fired at the global scope object when the network connections fails'
+  -
+    event: online
+    description: 'Fired at the global scope object when the network connections returns'
+  -
+    event: open
+    description: 'Fired at EventSource objects when a connection is established'
+  -
+    event: pageswap
+    description: 'Fired at the Window right before a document is unloaded as a result of a navigation.'
+  -
+    event: pagehide
+    description: "Fired at the Window when the page's session history entry stops being the active entry"
+  -
+    event: pagereveal
+    description: 'Fired at the Window when the page begins to render for the first time after it has been initialized or reactivated'
+  -
+    event: pageshow
+    description: "Fired at the Window when the page's session history entry becomes the active entry"
+  -
+    event: pointercancel
+    description: 'Fired at the source node when the user attempts to initiate a drag-and-drop operation'
+  -
+    event: popstate
+    description: 'Fired at the Window when in some cases of session history traversal'
+  -
+    event: readystatechange
+    description: 'Fired at the Document when it finishes parsing and again when all its subresources have finished loading'
+  -
+    event: rejectionhandled
+    description: 'Fired at global scope objects when a previously-unhandled promise rejection becomes handled'
+  -
+    event: reset
+    description: 'Fired at a form element when it is reset'
+  -
+    event: select
+    description: 'Fired at form controls when their text selection is adjusted (whether by an API or by the user)'
+  -
+    event: storage
+    description: 'Fired at Window event when the corresponding localStorage or sessionStorage storage areas change'
+  -
+    event: submit
+    description: 'Fired at a form element when it is submitted'
+  -
+    event: toggle
+    description: 'Fired at details elements when they open or close; fired on elements with the popover attribute when they are transitioning between showing and hidden'
+  -
+    event: unhandledrejection
+    description: "Global scope objects \tFired at global scope objects when a promise rejection goes unhandled"
+  -
+    event: unload
+    description: 'Fired at the Window object when the page is going away'
+  -
+    event: visibilitychange
+    description: 'Fired at the Document object when the page becomes visible or hidden to the user'

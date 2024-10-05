@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.web_page.field_hero
     - field.field.node.web_page.schema_about
+    - field.field.node.web_page.schema_description
     - field.field.node.web_page.schema_has_part
     - field.field.node.web_page.schema_image
     - field.field.node.web_page.schema_is_part_of
@@ -19,6 +20,7 @@ dependencies:
     - link
     - media_library
     - path
+    - text
 id: node.web_page.default
 targetEntityType: node
 bundle: web_page
@@ -68,6 +70,14 @@ content:
     settings:
       match_operator: CONTAINS
       match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  schema_description:
+    type: text_textfield
+    weight: 17
+    region: content
+    settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }

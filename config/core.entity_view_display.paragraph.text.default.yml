@@ -15,14 +15,18 @@ mode: default
 content:
   field_heading:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
     weight: 0
     region: content
   field_text:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1

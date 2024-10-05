@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.schema_about
+    - field.field.node.news.schema_description
     - field.field.node.news.schema_image
     - field.field.node.news.schema_main_entity
     - field.field.node.news.schema_related_link
@@ -19,6 +20,7 @@ target_bundle: news
 schema_type: Article
 schema_properties:
   schema_about: about
+  schema_description: abstract
   body: articleBody
   created: dateCreated
   changed: dateModified

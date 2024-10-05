@@ -8,6 +8,7 @@ global:
       dist/css/global/base/page.css: {}
       dist/css/global/base/reset.css: {}
       dist/css/global/base/tables.css: {}
+      dist/css/global/base/views.css: {}
     layout:
       dist/css/global/layout/layout.css: {}
     theme:
