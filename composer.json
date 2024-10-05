@@ -51,6 +51,7 @@
         "drupal/pantheon_advanced_page_cache": "^2.1.1",
         "drupal/paragraphs": "^1.18",
         "drupal/pathauto": "^1.13",
+        "drupal/redirect": "^1.10",
         "drupal/responsive_favicons": "^2.0.0",
         "drupal/scheduler": "^2.1.0",
         "drupal/scheduler_content_moderation_integration": "^3.0.3",
