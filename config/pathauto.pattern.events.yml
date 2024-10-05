@@ -1,22 +1,22 @@
-uuid: 1bf6207a-a584-43c5-a70b-547b066c13c9
+uuid: cbdb162f-ccdd-4c42-8b9d-83af13590969
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: article
-label: Article
+id: events
+label: Events
 type: 'canonical_entities:node'
-pattern: '/news/[node:title]'
+pattern: '/events/[node:title]'
 selection_criteria:
-  9adb81e7-a9b6-48e2-a912-0db57ef2bd94:
+  a95ae636-86af-4a15-be29-4e49831b771b:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 9adb81e7-a9b6-48e2-a912-0db57ef2bd94
+    uuid: a95ae636-86af-4a15-be29-4e49831b771b
     context_mapping:
       node: node
     bundles:
-      article: article
+      event: event
 selection_logic: and
 weight: -5
 relationships: {  }

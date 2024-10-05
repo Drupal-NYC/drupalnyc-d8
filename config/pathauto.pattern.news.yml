@@ -1,22 +1,22 @@
-uuid: 7326d714-01ed-4655-92d2-9dbdeb09e4cc
+uuid: 460dc6ba-49dc-43e2-ba4c-667540194f7f
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: meetup
-label: Meetup
+id: news
+label: News
 type: 'canonical_entities:node'
-pattern: '/meetups/[node:title]'
+pattern: '/news/[node:title]'
 selection_criteria:
-  66cf25d7-effa-446b-bbfc-6d85f5e945e8:
+  5c1b8b23-6f30-434e-a416-fb05790a854d:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 66cf25d7-effa-446b-bbfc-6d85f5e945e8
+    uuid: 5c1b8b23-6f30-434e-a416-fb05790a854d
     context_mapping:
       node: node
     bundles:
-      meetup: meetup
+      news: news
 selection_logic: and
 weight: -5
 relationships: {  }
