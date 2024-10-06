@@ -6,12 +6,13 @@ id: prod
 label: 'Live Site'
 description: 'Configuration confined to the production environment'
 weight: 0
+stackable: false
+no_patching: false
+storage: folder
 folder: ../config_splits/prod
 module:
   config_readonly: 0
 theme: {  }
-blacklist:
+complete_list:
   - system.performance
-graylist: {  }
-graylist_dependents: true
-graylist_skip_equal: true
+partial_list: {  }
