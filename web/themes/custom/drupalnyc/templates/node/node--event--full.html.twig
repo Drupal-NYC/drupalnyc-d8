@@ -1,0 +1,18 @@
+<article{{attributes.addClass(['article'])}}>
+
+  <header class="article__header l-constrained">
+    {{ title_prefix }}
+    {{ include('drupalnyc:page-title', {
+      page_title_title: label
+    }) }}
+    {{ title_suffix }}
+  </header>
+
+  <div class="l--1-col l-constrained">
+    <div class="l__primary">
+      {% if content %}
+        {{ content }}
+      {% endif %}
+    </div>
+  </div>
+</article>
