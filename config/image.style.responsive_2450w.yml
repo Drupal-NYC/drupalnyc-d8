@@ -13,3 +13,4 @@ effects:
       width: 2450
       height: null
       upscale: true
+pipeline: __default__
