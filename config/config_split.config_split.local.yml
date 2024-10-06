@@ -6,11 +6,12 @@ id: local
 label: Local
 description: 'Settings for local dev'
 weight: -1
-folder: ../config_splits/dev
+folder: ../config_splits/local
 module:
   devel: 0
 theme: {  }
 blacklist: {  }
-graylist: {  }
+graylist:
+  - imagemagick.settings
 graylist_dependents: true
 graylist_skip_equal: true
