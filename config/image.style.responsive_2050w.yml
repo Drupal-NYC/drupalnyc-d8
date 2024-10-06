@@ -1,0 +1,15 @@
+uuid: 31495153-abea-4bb5-a2ed-787c89667659
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_2050w
+label: responsive_2050w
+effects:
+  31ed1096-2fd3-4dfa-911f-3794017552f8:
+    uuid: 31ed1096-2fd3-4dfa-911f-3794017552f8
+    id: image_scale
+    weight: null
+    data:
+      width: 2050
+      height: null
+      upscale: true

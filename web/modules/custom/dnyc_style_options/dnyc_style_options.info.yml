@@ -1,0 +1,7 @@
+name: 'DrupalNYC Style Options'
+type: module
+description: 'Provides additional style options'
+package: DrupalNYC
+core_version_requirement: ^10 || ^11
+dependencies:
+  - style_options:style_options

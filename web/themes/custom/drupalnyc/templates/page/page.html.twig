@@ -1,0 +1,55 @@
+<div class='layout-container'>
+  {% if alert %}
+    <div class='l-constrained'>
+      {{ page.alert }}
+    </div>
+  {% endif %}
+  {# /alert #}
+
+  {% block header %}
+    <header class='site-header' role='banner'>
+      <div class='site-header__inner l-constrained'>
+        {{ page.branding }}
+        {{ page.navigation }}
+      </div>
+    </header>
+  {% endblock %}
+  {# /header #}
+
+  <a id='main-content' tabindex='-1'></a>
+
+  {% block breadcrumb %}
+    {{page.breadcrumb}}
+  {% endblock %}
+  {# /breadcrumb #}
+
+  {% block highlighted %}
+    {{ page.highlighted }}
+  {% endblock %}
+
+  {% block help %}
+    {{ page.help }}
+  {% endblock %}
+
+
+  {% block main %}
+    <main class="l-stack__minimal">
+
+      {% block content %}
+        <div class='l-constrained'>
+          {{ page.content }}
+        </div>
+      {% endblock %}
+      {# /content #}
+
+    </main>
+  {% endblock %}
+  {# /main #}
+
+  {% block footer %}
+    {{page.footer}}
+  {% endblock %}
+  {# /footer #}
+
+</div>
+{# /.layout-container #}

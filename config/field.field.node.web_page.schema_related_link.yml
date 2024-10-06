@@ -1,0 +1,23 @@
+uuid: e8747edd-b2ef-4bbf-8daa-a2cfa5fb7649
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_related_link
+    - node.type.web_page
+  module:
+    - link
+id: node.web_page.schema_related_link
+field_name: schema_related_link
+entity_type: node
+bundle: web_page
+label: 'Related links'
+description: 'A link related to this web page, for example to other related web pages.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,24 @@
+uuid: 3f7c4338-aec3-4e28-b8cc-8d4b72193ee4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_description
+    - filter.format.rich_text
+    - node.type.web_page
+  module:
+    - text
+id: node.web_page.schema_description
+field_name: schema_description
+entity_type: node
+bundle: web_page
+label: Abstract
+description: 'A description of the item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text

@@ -1,0 +1,64 @@
+uuid: 63ded885-789a-408e-87bd-2565fd9e71f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.organization.field_hero
+    - field.field.node.organization.schema_address
+    - field.field.node.organization.schema_area_served
+    - field.field.node.organization.schema_description
+    - field.field.node.organization.schema_founding_date
+    - field.field.node.organization.schema_founding_location
+    - field.field.node.organization.schema_image
+    - field.field.node.organization.schema_legal_name
+    - field.field.node.organization.schema_logo
+    - field.field.node.organization.schema_main_entity
+    - field.field.node.organization.schema_nonprofit_status
+    - field.field.node.organization.schema_related_link
+    - field.field.node.organization.schema_significant_link
+    - field.field.node.organization.schema_subject_of
+    - node.type.organization
+  module:
+    - layout_paragraphs
+    - user
+id: node.organization.default
+targetEntityType: node
+bundle: organization
+mode: default
+content:
+  field_hero:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  schema_main_entity:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  schema_address: true
+  schema_area_served: true
+  schema_description: true
+  schema_founding_date: true
+  schema_founding_location: true
+  schema_image: true
+  schema_legal_name: true
+  schema_logo: true
+  schema_nonprofit_status: true
+  schema_related_link: true
+  schema_significant_link: true
+  schema_subject_of: true

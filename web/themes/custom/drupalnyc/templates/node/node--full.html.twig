@@ -1,0 +1,14 @@
+<article{{attributes.addClass(['article'])}}>
+
+	<header class="article__header l-constrained">
+		{{ content.field_hero }}
+	</header>
+
+	<div class="l--1-col l-constrained">
+		<div class="l__primary">
+			{% if content %}
+				{{ content|without('field_hero') }}
+			{% endif %}
+		</div>
+	</div>
+</article>

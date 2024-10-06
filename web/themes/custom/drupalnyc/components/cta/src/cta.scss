@@ -1,0 +1,42 @@
+@use 'partials' as *;
+
+.c-cta {
+  position: relative;
+
+  @include bp-min(desktop) {
+    padding-right: rem(120px);
+  }
+}
+.c-cta__wrap {
+  padding: rem(20px);
+
+  @include bp-min(tablet) {
+    padding: rem(40px);
+  }
+
+  @include bp-min(lg-tablet) {
+    padding: rem(48px);
+  }
+}
+
+.c-cta__title {
+  @include type-scale(heading, h2);
+  font-weight: var(--dnyc-fw-medium);
+  margin: 0 0 rem(12px) 0;
+
+  @include bp-min(tablet) {
+    margin: 0 0 rem(24px) 0;
+  }
+}
+
+.c-cta__text {
+  margin: 0 0 rem(14px) 0;
+
+  @include bp-min(tablet) {
+    margin: 0 0 rem(24px) 0;
+  }
+}
+
+.c-cta__link {
+  @include type-scale(body, base);
+}

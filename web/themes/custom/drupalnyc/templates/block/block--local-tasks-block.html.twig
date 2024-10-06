@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override for the a Local Tasks navigation block.
+ *
+ * Available variables:
+ * - No additional variables are available for this block type.
+ *
+ * @see templates/blocks/block.html.twig
+ * @see components/menu-tabs/menu-tabs.twig
+ */
+#}
+
+{% embed 'drupalnyc:menu-tabs' with {
+    menu_tabs_attributes: create_attribute().merge(attributes),
+    menu_tabs_content: content,
+    menu_tabs_label: 'Local Tasks Navigation'
+} only %}
+    {% block menu_tabs_prefix %}
+        {{ title_prefix }}
+        {{ title_suffix }}
+    {% endblock %}
+{% endembed %}

@@ -46,6 +46,14 @@ web/console/log
 # managed
 node_modules
 
+# Theme compliation products
+web/themes/custom/drupalnyc/components/**/*.css
+web/themes/custom/drupalnyc/components/**/*.js
+web/themes/custom/drupalnyc/components/**/*.js.map
+web/themes/custom/drupalnyc/dist
+!web/themes/custom/drupalnyc/components/**/src/
+!web/themes/custom/drupalnyc/components/**/src/*.js
+
 # Dev files
 *.sql
 web/.ht.router.php

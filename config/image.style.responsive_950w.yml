@@ -1,0 +1,15 @@
+uuid: a603b2f4-0c51-4245-b631-690119117894
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_950w
+label: responsive_950w
+effects:
+  92ff2a68-c9c5-4dc2-a7f5-ac5cbe5f38b3:
+    uuid: 92ff2a68-c9c5-4dc2-a7f5-ac5cbe5f38b3
+    id: image_scale
+    weight: null
+    data:
+      width: 950
+      height: null
+      upscale: true

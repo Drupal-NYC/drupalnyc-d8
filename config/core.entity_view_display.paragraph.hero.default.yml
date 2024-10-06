@@ -1,0 +1,39 @@
+uuid: 1a8edae8-a8ca-406b-8284-e3fb59270b13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_heading
+    - field.field.paragraph.hero.field_subheading
+    - paragraphs.paragraphs_type.hero
+  module:
+    - nomarkup
+    - text
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  extra_field_dnyc_hero_image:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  extra_field_dnyc_hero_title:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_subheading:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 2
+    region: content
+hidden:
+  field_heading: true

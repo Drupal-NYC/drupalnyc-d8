@@ -1,0 +1,21 @@
+{% extends('paragraph.html.twig') %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {% include 'drupalnyc:cta' with {
+        cta_title: content.field_heading,
+        cta_text: content.field_text,
+        cta_icon: '',
+        cta_link: {
+          url: content.field_link.0['#url']|render,
+          title: content.field_link.0['#title'],
+        }
+      } only %}
+    {% endblock %}
+  </div>
+  {{ content.field_heading|cache_metadata }}
+  {{ content.field_text|cache_metadata }}
+  {{ content.field_link|cache_metadata }}
+  {{ content|cache_metadata }}
+{% endblock paragraph %}

@@ -1,0 +1,15 @@
+uuid: 53747d8e-c4a7-4f51-8b9a-c9d2962dbee0
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_450w
+label: responsive_450w
+effects:
+  4f8ad28b-b078-4020-9fc2-9f8f977107e4:
+    uuid: 4f8ad28b-b078-4020-9fc2-9f8f977107e4
+    id: image_scale
+    weight: null
+    data:
+      width: 450
+      height: null
+      upscale: true

@@ -1,0 +1,24 @@
+uuid: c7951047-6fbf-43b6-a453-9fab7b92507d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_description
+    - filter.format.rich_text
+    - node.type.news
+  module:
+    - text
+id: node.news.schema_description
+field_name: schema_description
+entity_type: node
+bundle: news
+label: Abstract
+description: 'A description of the item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text

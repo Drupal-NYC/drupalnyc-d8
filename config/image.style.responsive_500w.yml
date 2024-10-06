@@ -1,0 +1,15 @@
+uuid: 2db78481-18e5-4946-af10-aee9b36a3f83
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_500w
+label: responsive_500w
+effects:
+  65de34b0-fe02-47b4-9abd-bed9563444de:
+    uuid: 65de34b0-fe02-47b4-9abd-bed9563444de
+    id: image_scale
+    weight: null
+    data:
+      width: 500
+      height: null
+      upscale: true

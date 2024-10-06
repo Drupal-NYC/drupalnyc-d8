@@ -1,0 +1,182 @@
+{#
+/**
+ * @file
+ * Adapted from Varbase Components implementation for a Hero Card component.
+ *
+ * Available properties:
+ * - card_border: Add a default border to the card. (true|false)
+ * - padded: Add a default padding to the card. (true|false)
+ * - media_position: Choose the location of the media from (overlay|start|end|top|bottom).
+ *
+ * Available attributes:
+ * - card_attributes: Drupal attributes for featured card wrapper.
+ * - media_attributes: Drupal attributes for card media slot region.
+ * - content_attributes: Drupal attributes for card content slot region.
+ *
+ * Available slots:
+ * - media: Card Media slot region.
+ * - content: Card Content slot region.
+ */
+#}
+{% set media_position = media_position ?? 'overlay' %}
+
+{% if not card_attributes %}
+  {% set card_attributes = create_attribute() %}
+{% endif %}
+
+{% if not content_attributes %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+
+{% if not media_attributes %}
+  {% set media_attributes = create_attribute() %}
+{% endif %}
+
+{%
+  set card_classes = [
+  'c-hero-card',
+  'hero-style-' ~ media_position
+]
+%}
+
+{# Media position of media overlay #}
+{% if media_position == 'overlay' %}
+
+  {%
+    set media_classes = [
+    'hero-img',
+    'hero-img-overlay',
+    'u-p-0',
+    'u-m-0',
+  ]
+  %}
+
+  {%
+    set content_classes = [
+    'card-body',
+    'hero-card-content',
+  ]
+  %}
+
+  {% set card_attributes = card_attributes.addClass(card_classes) %}
+  {% set content_attributes = content_attributes.addClass(content_classes) %}
+  {% set media_attributes = media_attributes.addClass(media_classes) %}
+
+  <div{{ card_attributes }}>
+    {% if media is not empty %}
+      {% if media_classes|length > 0 %}<div{{ media_attributes }}>{% endif %}
+      {{ media }}
+      {% if media_classes|length > 0 %}</div>{% endif %}
+    {% endif %}
+    <div{{ content_attributes }}>
+      {{ include('drupalnyc:page-title', {
+        page_title_title: heading
+      }) }}
+      {{ sub_heading }}
+    </div>
+  </div>
+
+  {# Media position of media start or end #}
+{% elseif media_position == 'start' or media_position == 'end' %}
+
+  {% set card_attributes = card_attributes.addClass('l-grid') %}
+
+  {%
+    set media_classes = [
+    'hero-img',
+    'hero-img-' ~ media_position,
+  ]
+  %}
+
+  {%
+    set content_classes = [
+    'card-body',
+    'hero-card-content'
+  ]
+  %}
+
+  {%
+    set row_classes = [
+    'l-grid__inner',
+  ]
+  %}
+
+  {% if media_position == 'end' %}
+    {% set row_classes = row_classes|merge(['l-grid__row-reverse']) %}
+  {% endif %}
+
+  {% if not row_attributes %}
+    {% set row_attributes = create_attribute() %}
+  {% endif %}
+
+  {% if not start_column_attributes %}
+    {% set start_column_attributes = create_attribute() %}
+  {% endif %}
+
+  {% if not end_column_attributes %}
+    {% set end_column_attributes = create_attribute() %}
+  {% endif %}
+
+  {% set card_attributes = card_attributes.addClass(card_classes) %}
+  {% set content_attributes = content_attributes.addClass(content_classes) %}
+  {% set media_attributes = media_attributes.addClass(media_classes) %}
+  {% set row_attributes = row_attributes.addClass(row_classes) %}
+  {% set start_column_attributes = start_column_attributes.addClass('l-grid__item--col-6') %}
+  {% set end_column_attributes = end_column_attributes.addClass('l-grid__item--col-6') %}
+
+  <div{{ card_attributes }}>
+    <div{{ row_attributes.addClass(row_classes) }}>
+      <div{{ start_column_attributes }}>
+        {% if media is not empty %}
+          {% if media_classes|length > 0 %}<div{{ media_attributes }}>{% endif %}
+          {{ media }}
+          {% if media_classes|length > 0 %}</div>{% endif %}
+        {% endif %}
+      </div>
+      <div{{ end_column_attributes }}>
+        <div{{ content_attributes }}>
+          {{ include('drupalnyc:page-title', {
+            page_title_title: heading
+          }) }}
+          {{ sub_heading }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# Media position of media top or bottom #}
+{% elseif media_position == 'top' or media_position == 'bottom' %}
+
+  {%
+    set media_classes = [
+    'hero-img',
+    'hero-img-' ~ media_position,
+  ]
+  %}
+
+  {%
+    set content_classes = [
+    'card-body',
+    'hero-card-content'
+  ]
+  %}
+
+  {% set card_attributes = card_attributes.addClass(card_classes) %}
+  {% set content_attributes = content_attributes.addClass(content_classes) %}
+  {% set media_attributes = media_attributes.addClass(media_classes) %}
+
+  <div{{ card_attributes }}>
+    {% if media is not empty %}
+      {% if media_classes|length > 0 %}<div{{ media_attributes }}>{% endif %}
+      {{ media }}
+      {% if media_classes|length > 0 %}</div>{% endif %}
+    {% endif %}
+    <div{{ content_attributes }}>
+      {{ include('drupalnyc:page-title', {
+        page_title_title: heading
+      }) }}
+      {{ sub_heading }}
+    </div>
+  </div>
+
+{% endif %}

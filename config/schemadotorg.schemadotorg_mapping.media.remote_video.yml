@@ -1,0 +1,21 @@
+uuid: 5fd3f8f4-2d84-4dd8-96ce-08692b055b6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.remote_video.field_media_oembed_video
+    - media.type.remote_video
+  module:
+    - media
+id: media.remote_video
+target_entity_type_id: media
+target_bundle: remote_video
+schema_type: VideoObject
+schema_properties:
+  created: dateCreated
+  changed: dateModified
+  langcode: inLanguage
+  name: name
+  thumbnail: thumbnail
+  field_media_oembed_video: video
+additional_mappings: {  }

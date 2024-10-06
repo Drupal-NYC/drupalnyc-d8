@@ -1,0 +1,33 @@
+<div class='l--offset'>
+  <div id='styleguide-header' class='styleguide l-cluster--start'>
+    <div class='styleguide__toc'>
+      <div class='styleguide__toc-list'>
+        <h3>Single Directory Components</h3>
+        <ul>
+          <li><a href='#accordion-group'>Accordion Group</a></li>
+          <li><a href='#accordion'>Accordion</a></li>
+          <li><a href='#button'>Button</a></li>
+          <li><a href='#button_icon'>Button with icon</a></li>
+          <li><a href='#cta'>Call to action</a></li>
+          <li><a href='#figure'>Figure</a></li>
+          <li><a href='#image'>Image</a></li>
+          <li><a href='#link'>Link</a></li>
+          <li><a href='#link_icon'>Link with icon</a></li>
+          <li><a href='#page_title'>Page title</a></li>
+          <li><a href='#pullquote'>Pullquote</a></li>
+          <li><a href='#sidebar'>Sidebar</a></li>
+          <li><a href='#teaser'>Teaser</a></li>
+          <li><a href='#video'>Video</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class='styleguide__toc'>
+      {% for item in items %}
+        <div class='styleguide__toc-list'>
+          {{ item }}
+        </div>
+      {% endfor %}
+    </div>
+    <div class='break'><br/></div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+uuid: 7a239c5c-7e5e-46b2-a303-259f72c10f0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+id: text
+label: Text
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  style_options:
+    enabled: true

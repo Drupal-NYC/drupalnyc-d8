@@ -1,0 +1,22 @@
+uuid: af89b96a-9668-4164-861d-f478f25d9704
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupalnyc
+_core:
+  default_config_hash: 5-qPowDZGsHIWL-oHnjwQhTMC4wmXF_-efy6xlz7Ikg
+id: drupalnyc_secondary_local_tasks
+theme: drupalnyc
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

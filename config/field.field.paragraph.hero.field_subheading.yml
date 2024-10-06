@@ -1,0 +1,24 @@
+uuid: 42d171a4-fc21-4263-9583-746e0dd30445
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subheading
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.hero
+  module:
+    - text
+id: paragraph.hero.field_subheading
+field_name: field_subheading
+entity_type: paragraph
+bundle: hero
+label: Subheading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text

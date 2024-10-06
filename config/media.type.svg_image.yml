@@ -1,0 +1,15 @@
+uuid: c9d260a3-e008-4f3a-9020-b289c9cdcccb
+langcode: en
+status: true
+dependencies:
+  module:
+    - svg_image_field
+id: svg_image
+label: 'SVG Image'
+description: 'An image file.'
+source: svg
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_svg
+field_map: {  }

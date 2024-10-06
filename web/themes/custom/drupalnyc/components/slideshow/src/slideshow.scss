@@ -1,0 +1,41 @@
+@use '../../../libraries/partials/partials' as *;
+
+// This file is using Splide css styles
+.c-slideshow {
+  padding: 0 rem(64px);
+
+  // Default arrow style
+  .splide__arrow {
+    border-radius: rem(64px);
+    opacity: 1;
+
+    &.splide__arrow--prev {
+      left: 0;
+    }
+    &.splide__arrow--next {
+      right: 0;
+    }
+  }
+
+  // If no arrows
+  .splide__arrow[disabled] {
+    display: none;
+  }
+}
+
+// If using play button
+.splide__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: 1.75rem;
+  padding: 0;
+  width: 1.75rem;
+
+  &:focus {
+    outline: auto 1px solid;
+    outline-offset: 3px;
+    border-radius: 100px;
+  }
+}

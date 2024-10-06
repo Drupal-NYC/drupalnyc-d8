@@ -1,0 +1,31 @@
+//
+// Global - Lists
+//
+// - 01 - General
+//
+
+//------------------------------------
+//  01 - General
+//  A mixin is created and than instantly called here so that we can utilize the same styles within other
+//  stylesheets, like the `wysiwyg.scss` file.
+//------------------------------------
+
+@mixin lists-general() {
+  ul:not([class]),
+  ol:not([class]) {
+    font-size: inherit;
+    line-height: inherit;
+    list-style-position: inside;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  ul:not([class]):not(:first-child),
+  ol:not([class]):not(:first-child) {
+    margin-top: 16px;
+  }
+}
+
+@include lists-general();

@@ -1,0 +1,49 @@
+uuid: 7b897b60-0ca5-4dc7-ac45-bd083a861ed8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.organization.schema_address
+    - field.field.node.organization.schema_area_served
+    - field.field.node.organization.schema_description
+    - field.field.node.organization.schema_founding_date
+    - field.field.node.organization.schema_founding_location
+    - field.field.node.organization.schema_image
+    - field.field.node.organization.schema_legal_name
+    - field.field.node.organization.schema_logo
+    - field.field.node.organization.schema_main_entity
+    - field.field.node.organization.schema_nonprofit_status
+    - field.field.node.organization.schema_related_link
+    - field.field.node.organization.schema_significant_link
+    - field.field.node.organization.schema_subject_of
+    - node.type.organization
+  module:
+    - node
+id: node.organization
+target_entity_type_id: node
+target_bundle: organization
+schema_type: Organization
+schema_properties:
+  schema_address: address
+  schema_area_served: areaServed
+  schema_description: description
+  schema_founding_date: foundingDate
+  schema_founding_location: foundingLocation
+  schema_image: image
+  schema_legal_name: legalName
+  schema_logo: logo
+  title: name
+  schema_nonprofit_status: nonprofitStatus
+  schema_subject_of: subjectOf
+  schema_main_entity: mainEntity
+additional_mappings:
+  WebPage:
+    schema_type: WebPage
+    schema_properties:
+      created: dateCreated
+      changed: dateModified
+      langcode: inLanguage
+      title: name
+      schema_image: primaryImageOfPage
+      schema_related_link: relatedLink
+      schema_significant_link: significantLink

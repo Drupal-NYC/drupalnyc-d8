@@ -1,0 +1,34 @@
+uuid: 38063ed0-fbcf-4d3a-b81c-cc6b9b643f99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_about
+    - node.type.event
+    - node.type.news
+    - node.type.organization
+    - node.type.web_page
+id: node.event.schema_about
+field_name: schema_about
+entity_type: node
+bundle: event
+label: About
+description: 'The subject matter of the content.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'schemadotorg:node'
+  handler_settings:
+    target_type: node
+    schema_types:
+      Thing: Thing
+    excluded_schema_types: {  }
+    ignore_additional_mappings: false
+    target_bundles:
+      event: event
+      news: news
+      organization: organization
+      web_page: web_page
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 763bc3f7-c7f8-4dfb-9a65-6144bd276c88
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupalnyc
+_core:
+  default_config_hash: rdBF8qQtLmEadCSHrkgQRja3wsPzdW1L9kn3_M2h2zY
+id: drupalnyc_primary_admin_actions
+theme: drupalnyc
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

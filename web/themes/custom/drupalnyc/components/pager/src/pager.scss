@@ -1,0 +1,28 @@
+//
+// @file
+// Progress Bar Styles
+//
+
+@use 'partials' as *;
+
+.c-pager__items {
+  margin: 0;
+  text-align: center;
+}
+
+.c-pager__item {
+  display: inline-block;
+  margin: 0 0.25rem;
+
+  &.is-active a {
+    color: var(--dnyc-color-black);
+  }
+}
+
+.c-pager__link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

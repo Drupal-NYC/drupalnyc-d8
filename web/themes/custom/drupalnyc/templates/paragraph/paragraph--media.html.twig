@@ -1,0 +1,15 @@
+{% extends('paragraph.html.twig') %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {% include 'drupalnyc:figure' with {
+        figure_media: content.field_media,
+        figure_media_caption: content.field_subheading,
+      } only %}
+    {% endblock %}
+  </div>
+  {{ content.field_media|cache_metadata }}
+  {{ content.field_subheading|cache_metadata }}
+  {{ content|cache_metadata }}
+{% endblock paragraph %}

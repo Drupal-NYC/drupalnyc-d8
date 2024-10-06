@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Tabs Content
+status: stable
+group: Components
+props:
+  type: object
+  properties:
+    tabs_content_attributes:
+      title: Attributes
+      type: string
+    tabs_content_breakpoint:
+      title: Breakpoint
+      type: integer
+    tabs_content_items:
+      title: Items
+      type: array
+  slots:
+    tabs_content_items_override:
+      title: Override
+
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once

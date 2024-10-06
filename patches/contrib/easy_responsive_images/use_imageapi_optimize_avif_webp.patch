@@ -1,0 +1,16 @@
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/TwigExtension/ImageUrl.php b/src/TwigExtension/ImageUrl.php
+--- a/src/TwigExtension/ImageUrl.php
++++ b/src/TwigExtension/ImageUrl.php	(date 1727438460475)
+@@ -117,7 +117,7 @@
+     $file_url = $this->fileUrlGenerator->transformRelative($image_style->buildUrl($uri));
+
+     // If the avif module is installed, return the avif version of the image.
+-    if ($this->moduleHandler->moduleExists('avif')) {
++    if ($this->moduleHandler->moduleExists('imageapi_optimize_avif_webp')) {
+       $path_parts = pathinfo($uri);
+       $original_extension = '.' . $path_parts['extension'];
+       $pos = strrpos($file_url, $original_extension);

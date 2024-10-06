@@ -1,0 +1,64 @@
+uuid: fd4fbf6f-3b89-4b76-a84c-c6057c72a095
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.web_page.field_hero
+    - field.field.node.web_page.schema_about
+    - field.field.node.web_page.schema_description
+    - field.field.node.web_page.schema_has_part
+    - field.field.node.web_page.schema_image
+    - field.field.node.web_page.schema_is_part_of
+    - field.field.node.web_page.schema_main_entity
+    - field.field.node.web_page.schema_related_link
+    - field.field.node.web_page.schema_significant_link
+    - field.field.node.web_page.schema_subject_of
+    - node.type.web_page
+  module:
+    - nomarkup
+    - text
+    - user
+id: node.web_page.teaser
+targetEntityType: node
+bundle: web_page
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  schema_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+  schema_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: '3_2'
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: '0'
+    weight: 1
+    region: content
+hidden:
+  field_hero: true
+  schema_about: true
+  schema_has_part: true
+  schema_is_part_of: true
+  schema_main_entity: true
+  schema_related_link: true
+  schema_significant_link: true
+  schema_subject_of: true

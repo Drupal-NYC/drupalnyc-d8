@@ -2,6 +2,7 @@ _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   auto_entitylabel: -100
+  address: 0
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
@@ -10,6 +11,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  cer: 0
   ckeditor5: 0
   config: 0
   config_filter: 0
@@ -22,64 +24,96 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
-  dcnyc_pantheon: 0
   dnyc_amazee: 0
+  dnyc_extra_field: 0
   dnyc_header_block: 0
+  dnyc_style_options: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
+  easy_responsive_images: 0
   editor: 0
+  entity_reference_revisions: 0
+  extra_field: 0
   field: 0
   field_group: 0
   field_ui: 0
   file: 0
+  file_mdm: 0
   file_replace: 0
   filter: 0
   focal_point: 0
+  gin_toolbar: 0
   google_tag: 0
   help: 0
   history: 0
+  htmx: 0
   image: 0
+  imageapi_optimize: 0
+  imageapi_optimize_avif_webp: 0
+  imagemagick: 0
   inline_entity_form: 0
   key: 0
   layout_builder: 0
   layout_builder_expose_all_field_blocks: 0
   layout_discovery: 0
+  layout_paragraphs: 0
   link: 0
   media: 0
   media_library: 0
   menu_ui: 0
+  mercury_editor: 0
   mysql: 0
   node: 0
+  nomarkup: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
+  redirect: 0
   responsive_favicons: 0
   responsive_image: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
+  schemadotorg: 0
+  schemadotorg_address: 0
+  schemadotorg_cer: 0
+  schemadotorg_media: 0
+  schemadotorg_paragraphs: 0
+  schemadotorg_ui: 0
   search: 0
   settings_tray: 0
   shortcut: 0
   smart_trim: 0
+  sophron: 0
+  style_options: 0
+  svg_image_field: 0
   symfony_mailer: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   textarea_widget_for_text: 0
   token: 0
   toolbar: 0
   tour: 0
+  twig_field_value: 0
+  twig_tweak: 0
   update: 0
   user: 0
+  viewsreference: 0
   workflows: 0
   extlink: 1
   menu_link_content: 1
   pathauto: 1
+  schemadotorg_layout_paragraphs: 1
+  schemadotorg_mercury_editor: 2
+  schemadotorg_additional_mappings: 10
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
-  stark: 0
-  olivero: 0
   claro: 0
+  gin: 0
+  stable9: 0
+  drupalnyc: 0
 profile: standard

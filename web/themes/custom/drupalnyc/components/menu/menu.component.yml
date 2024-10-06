@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Menu
+description: This is a keyboard supported accessible menu component
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+props:
+  type: object
+  properties:
+    menu_mobile:
+      type: string
+      title: Mobile Toggle
+      description: If this menu has a collapse feature, pass the id of the button that toggles the collapse
+    menu_breakpoint:
+      type: integer
+      title: Menu Breakpoint
+      description: The breakpoint at which the menu will switch from desktop to mobile

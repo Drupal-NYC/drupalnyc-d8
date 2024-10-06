@@ -1,0 +1,57 @@
+{% set slideshow_classes = [
+  'c-slideshow',
+  'splide',
+] %}
+
+{% set slideshow_classes = slideshow_classes|merge(classes|default([])) %}
+{% set label_id = 'media-heading'|clean_unique_id  %}
+{% set index_id = 'slide-index'|clean_unique_id  %}
+
+{% set default_options = {
+  'breakpoints': {
+    768: {
+      'perPage': 1,
+    },
+    1024: {
+      'perPage': 2,
+    },
+  },
+  'drag': false,
+  'keyboard': true,
+  'pagination': false,
+  'perPage': 3,
+  'type': loop,
+} %}
+
+{% set data_splide = slideshow_options|default({})|merge(default_options) %}
+
+<section {{attributes.addClass(slideshow_classes)}} aria-labelledby="{{label_id}}" data-splide="{{data_splide|json_encode}}">
+
+  <h2 id="{{label_id}}" class="c-slideshow__heading visually-hidden">{{ heading|default('Slideshow'|t) }}</h2>
+  <div class="splide__track" aria-roledescription="carousel">
+    <ul class="c-slideshow__list splide__list">
+      {% block slides_block %}
+        {% for slide in slides %}
+          <li {{ slide.attributes }} class="c-slideshow__slide splide__slide">
+            {{ slide.content }}
+          </li>
+        {% endfor %}
+      {% endblock %}
+    </ul>
+  </div>
+
+  {% if data_splide.autoplay %}
+    <button class="splide__toggle" aria-label="{{'Pause Autoplay'|t}}">
+      <svg class="play-icon splide__toggle__play" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" aria-hidden="true">
+        <rect width="27" height="27" x=".5" y=".5" stroke="#000000" rx="13.5"/><path fill="#000000" d="m20 14-9 5.196V8.804L20 14Z"/>
+      </svg>
+
+      <svg class="pause-icon splide__toggle__pause" xmlns="http://www.w3.org/2000/svg" width="28" height="28" aria-hidden="true">
+        <g fill="none" fill-rule="evenodd">
+          <rect width="27" height="27" x=".5" y=".5" stroke="#000000" rx="13.5" class="circle"/>
+          <g fill="#000000" fill-rule="nonzero"><path d="M13 8v12h-2V8zM17 8v12h-2V8z"/></g>
+        </g>
+      </svg>
+    </button>
+  {% endif %}
+</section>

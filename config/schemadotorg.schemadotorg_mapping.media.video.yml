@@ -1,0 +1,21 @@
+uuid: 61d4ccba-c21e-4aae-961e-d7220637a00f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.video.field_media_oembed_video
+    - media.type.video
+  module:
+    - media
+id: media.video
+target_entity_type_id: media
+target_bundle: video
+schema_type: VideoObject
+schema_properties:
+  created: dateCreated
+  changed: dateModified
+  langcode: inLanguage
+  name: name
+  thumbnail: thumbnail
+  field_media_oembed_video: video
+additional_mappings: {  }

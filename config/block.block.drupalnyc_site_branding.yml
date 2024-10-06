@@ -1,0 +1,25 @@
+uuid: 8d7580e2-23a9-41da-9723-5bcd73d7b33c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupalnyc
+_core:
+  default_config_hash: Q77QB1-0-nPwkaIH9STDXwEOlrZegFZ1mWn3rpmJ5Dk
+id: drupalnyc_site_branding
+theme: drupalnyc
+region: branding
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,20 @@
+{% set video_classes = ['c-video']|merge(classes|default([])) %}
+<figure {{ attributes.addClass(video_classes) }}>
+
+  {% block video_media_block %}
+    {% if video_media %}
+      <div class='c-video__video-wrapper'>
+        <iframe src="{{ video_media }}" frameborder='0' allowtransparency='' width='426' height='240' title="{{ video_title }}"></iframe>
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block video_caption_block %}
+    {% if video_caption %}
+      <figcaption class='c-video__caption'>
+        {{video_caption}}
+      </figcaption>
+    {% endif %}
+  {% endblock %}
+
+</figure>

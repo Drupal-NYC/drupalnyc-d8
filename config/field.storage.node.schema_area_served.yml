@@ -1,0 +1,21 @@
+uuid: 1d3e903e-7de5-4a97-9d7d-db2aebb97a98
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.schema_area_served
+field_name: schema_area_served
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

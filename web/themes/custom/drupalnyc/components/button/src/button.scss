@@ -1,0 +1,25 @@
+@use 'partials' as *;
+
+.c-button {
+  @include type-scale(label, 18);
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  padding: rem(10px) rem(20px);
+  text-decoration: none;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.c-button__icon {
+  display: inline-flex;
+  height: rem(16px);
+  width: rem(16px);
+
+  svg {
+    fill: var(--dnyc-color-black);
+  }
+}

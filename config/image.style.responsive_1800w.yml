@@ -1,0 +1,15 @@
+uuid: 06372c04-eb95-4204-bebe-3c5ab409f839
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_1800w
+label: responsive_1800w
+effects:
+  468da53e-4d20-4ac4-ba06-4d87626c2f37:
+    uuid: 468da53e-4d20-4ac4-ba06-4d87626c2f37
+    id: image_scale
+    weight: null
+    data:
+      width: 1800
+      height: null
+      upscale: true

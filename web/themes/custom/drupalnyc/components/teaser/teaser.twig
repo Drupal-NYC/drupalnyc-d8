@@ -1,0 +1,36 @@
+{% set teaser_classes = [
+  'c-teaser',
+  'c-teaser--' ~ variant|default('card'),
+] %}
+
+{% set teaser_classes = teaser_classes|merge(classes|default([])) %}
+
+<article {{ attributes.addClass(teaser_classes) }}>
+
+  {% if teaser_media %}
+    <div class="c-teaser__media">
+      {{ teaser_media }}
+    </div>
+  {% endif %}
+
+  <div class="c-teaser__content">
+    {% if teaser_link.url is not empty %}
+    <strong class="c-teaser__more-link">
+      <a href="{{ teaser_link.url }}">
+        {{ teaser_link.text }}
+      </a>
+    </strong>
+    {% else %}
+      <h3 class="c-teaser__title">{{ teaser_title }}</h3>
+    {% endif %}
+
+    {% if teaser_date %}
+      <div class="c-teaser__date">{{ teaser_date }}</div>
+    {% endif %}
+
+    {% if teaser_body %}
+      <div class="c-teaser__body">{{ teaser_body }}</div>
+    {% endif %}
+
+  </div>
+</article>

@@ -1,0 +1,45 @@
+uuid: 1110b31b-a531-4df1-a24a-60ff80f64764
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.schema_about
+    - field.field.node.event.schema_address
+    - field.field.node.event.schema_description
+    - field.field.node.event.schema_duration
+    - field.field.node.event.schema_end_date
+    - field.field.node.event.schema_image
+    - field.field.node.event.schema_main_entity
+    - field.field.node.event.schema_related_link
+    - field.field.node.event.schema_significant_link
+    - field.field.node.event.schema_start_date
+    - field.field.node.event.schema_subject_of
+    - node.type.event
+  module:
+    - node
+id: node.event
+target_entity_type_id: node
+target_bundle: event
+schema_type: Event
+schema_properties:
+  schema_about: about
+  schema_description: description
+  schema_duration: duration
+  schema_end_date: endDate
+  langcode: inLanguage
+  schema_address: location
+  title: name
+  schema_start_date: startDate
+  schema_subject_of: subjectOf
+  schema_main_entity: mainEntity
+additional_mappings:
+  WebPage:
+    schema_type: WebPage
+    schema_properties:
+      created: dateCreated
+      changed: dateModified
+      langcode: inLanguage
+      title: name
+      schema_image: primaryImageOfPage
+      schema_related_link: relatedLink
+      schema_significant_link: significantLink

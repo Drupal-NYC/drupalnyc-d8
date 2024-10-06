@@ -1,0 +1,7 @@
+default:
+  label: Default
+  category: drupalnyc
+  template: templates/layouts/default
+  regions:
+    content:
+      label: Content

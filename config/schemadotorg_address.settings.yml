@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: oC3qlfQkdiK7_G-sLL5itXFGuDQVHndfq-RBUWGz19s
+field_overrides:
+  address:
+    givenName: optional
+    additionalName: optional
+    familyName: optional
+    organization: optional

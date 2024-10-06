@@ -1,0 +1,45 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Teaser
+status: 'experimental'
+description: A Teaser component
+props:
+  type: object
+  required:
+    - teaser_title
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    variant:
+      type: string
+      title: Variant
+      enum:
+        - card
+        - panel
+    teaser_title:
+      type: 'string'
+      title: 'Title'
+      examples:
+        - 'A new exhibit opens at the Student Visitor Center'
+    teaser_date:
+      type: 'string'
+      title: 'Date'
+      examples:
+        - 'Oct. 5'
+        - 'Oct. 5, 2024'
+    teaser_media:
+      type: array
+      title: Media
+      description: 'The url for the image'
+    teaser_link:
+      type: 'object'
+      title: 'More Link'
+      properties:
+        text:
+          type: string
+        url:
+          type: string
+    teaser_body:
+      title: Body
+      type: string
+      examples:
+        - '<p>The human body is a marvel and does so amazing things for us everyday.</p>'

@@ -1,0 +1,23 @@
+uuid: dbcc558d-eff2-4a97-b76f-340394b70cce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_significant_link
+    - node.type.web_page
+  module:
+    - link
+id: node.web_page.schema_significant_link
+field_name: schema_significant_link
+entity_type: node
+bundle: web_page
+label: 'Significant links'
+description: 'One of the more significant URLs on the page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

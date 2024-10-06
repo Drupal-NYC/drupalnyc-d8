@@ -1,0 +1,18 @@
+{% set breadcrumbs_classes = ['c-breadcrumb']|merge(classes|default([])) %}
+<nav role='navigation' aria-label='Breadcrumb' {{ attributes.addClass(breadcrumbs_classes) }}>
+  {% block breadcrumbs_block %}
+    <ol class='c-breadcrumb__list'>
+      {% for item in breadcrumbs_items %}
+        {% if item.is_current == true %}
+          <li class='c-breadcrumb__item'>
+            <a href="{{item.url}}" aria-current='page'>{{item.text}}</a>
+          </li>
+        {% else %}
+          <li class='c-breadcrumb__item'>
+            <a href="{{item.url}}">{{item.text}}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  {% endblock %}
+</nav>

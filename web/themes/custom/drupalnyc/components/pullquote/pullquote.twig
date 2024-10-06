@@ -1,0 +1,20 @@
+{% set pullquote_classes = ['c-pullquote']|merge(classes|default([])) %}
+
+<blockquote {{ attributes.addClass(pullquote_classes) }}>
+  {% block pullquote  %}
+    {% if pullquote_text %}
+      <div class='c-pullquote__content'>
+        {{pullquote_text }}
+      </div>
+    {% endif %}
+
+    {% block pullquote_citation %}
+      {% if pullquote_credit %}
+        <footer class='c-pullquote__footer'>
+          <cite>{{pullquote_credit}}</cite>
+        </footer>
+      {% endif %}
+    {% endblock %}
+
+  {% endblock %}
+</blockquote>

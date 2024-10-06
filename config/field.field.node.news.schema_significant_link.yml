@@ -1,0 +1,23 @@
+uuid: a14ca8a6-bf9d-45a9-bc44-f82f1087b65c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_significant_link
+    - node.type.news
+  module:
+    - link
+id: node.news.schema_significant_link
+field_name: schema_significant_link
+entity_type: node
+bundle: news
+label: 'Significant links'
+description: 'One of the more significant URLs on the page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

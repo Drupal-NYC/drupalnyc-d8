@@ -1,0 +1,42 @@
+@use 'partials' as *;
+
+.site-branding {
+  align-items: center;
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+
+  a,
+  img {
+    display: block;
+    width: rem(49px);
+
+    @include bp-between(sm-tablet, tablet) {
+      width: rem(49px);
+    }
+    @include bp-between(tablet, sm-desktop) {
+      width: rem(57px);
+    }
+    @include bp-between(sm-desktop, desktop) {
+      width: rem(65px);
+    }
+    @include bp-min(desktop) {
+      width: rem(90px);
+    }
+  }
+
+  .site-name {
+    color: var(--dnyc-color-dark-blue);
+    font-size: rem(24px);
+    line-height: rem(28px);
+    margin: var(--dnyc-space-8);
+
+    @include bp-min(sm-tablet) {
+      font-size: var(--dnyc-fs-heading-h3);
+      line-height: var(--dnyc-lh-heading-h3);
+    }
+  }
+}

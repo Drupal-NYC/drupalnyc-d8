@@ -1,0 +1,218 @@
+@use 'partials' as *;
+
+.c-hero-card {
+
+  .hero-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    p {
+      font-size: var(--dnyc-fs-body-base);
+      line-height: var(--dnyc-fs-body-base);
+
+      @include bp-min(sm-tablet) {
+        font-size: var(--dnyc-fs-heading-h3);
+        line-height: var(--dnyc-lh-heading-h3);
+      }
+    }
+  }
+
+  &.hero-style-overlay {
+    position: relative;
+
+    .ratio {
+      width: 100vw;
+
+      @include bp-min(sm-desktop) {
+        > .card__image,
+        > video,
+        > iframe {
+          position: fixed;
+          top: 20%;
+        }
+      }
+    }
+
+    .hero-card-content {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      align-items: flex-start;
+      text-align: left;
+      color: var(--dnyc-color-white);
+      background: linear-gradient(
+          rgba(0, 0, 0, 0) 2.22%,
+          rgba(0, 0, 0, .5) 73.4%
+      );
+
+
+      > * {
+        max-width: 60%;
+      }
+
+      .c-page-title {
+        color: var(--dnyc-color-white);
+      }
+    }
+
+
+    .media {
+      position: relative;
+      width: 100vw;
+      height: 130vh;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      padding-bottom: 0;
+
+      @include bp-min(desktop) {
+        height: auto;
+      }
+
+      img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .c-video-player {
+        video {
+          top: 0;
+          left: 0;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        iframe {
+          position: absolute;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &.hero-style-top,
+  &.hero-style-bottom {
+    display: flex;
+
+    .card-body {
+      @include bp-min(sm-desktop) {
+        padding-right: 9.375rem;
+        padding-left: 9.375rem;
+      }
+    }
+
+    .hero-img {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .media {
+      position: relative;
+      width: 100vw;
+      height: 130vh;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      padding-bottom: 0;
+
+      @include bp-min(lg-desktop) {
+        height: auto;
+      }
+
+      .card__image {
+        img {
+          top: 0;
+          left: 0;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .c-video-player {
+        video {
+          top: 0;
+          left: 0;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        iframe {
+          position: absolute;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &.hero-style-top {
+    flex-direction: column;
+  }
+
+  &.hero-style-bottom {
+    flex-direction: column-reverse;
+  }
+
+  &.hero-style-start,
+  &.hero-style-end {
+    @include bp-min(sm-desktop) {
+      .hero-img {
+        overflow: hidden;
+        width: 100%;
+      }
+    }
+
+    .hero-card-content {
+      height: 100%;
+    }
+
+    .media {
+      position: relative;
+      overflow: hidden;
+
+      .card__image img {
+        position: absolute;
+        width: 80vw;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        padding-bottom: 0;
+        object-fit: cover;
+      }
+
+      .c-video-player {
+        overflow: hidden;
+        position: static;
+
+        @include bp-min(sm-desktop) {
+          video {
+            position: absolute;
+            width: 80vw;
+            left: 20vw !important;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            padding-bottom: 0;
+            object-fit: cover;
+          }
+
+          iframe {
+            position: absolute;
+            width: 80vw;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            padding-bottom: 0;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display an image.
+ */
+#}
+{{ attach_library('easy_responsive_images/resizer') }}
+
+{% set file = media.field_media_image.entity %}
+{% set src = file.uri.value|image_url('responsive_3_2_50w') %}
+{% set srcset = [
+  file.uri.value|image_url('responsive_3_2_100w') ~ ' 100w',
+  file.uri.value|image_url('responsive_3_2_150w') ~ ' 150w',
+  file.uri.value|image_url('responsive_3_2_200w') ~ ' 200w',
+  file.uri.value|image_url('responsive_3_2_250w') ~ ' 250w',
+  file.uri.value|image_url('responsive_3_2_300w') ~ ' 300w',
+  file.uri.value|image_url('responsive_3_2_350w') ~ ' 350w',
+  file.uri.value|image_url('responsive_3_2_400w') ~ ' 400w',
+  file.uri.value|image_url('responsive_3_2_450w') ~ ' 450w',
+  file.uri.value|image_url('responsive_3_2_500w') ~ ' 500w',
+  file.uri.value|image_url('responsive_3_2_550w') ~ ' 550w',
+  file.uri.value|image_url('responsive_3_2_600w') ~ ' 600w',
+  file.uri.value|image_url('responsive_3_2_650w') ~ ' 650w',
+  file.uri.value|image_url('responsive_3_2_700w') ~ ' 700w',
+  file.uri.value|image_url('responsive_3_2_750w') ~ ' 750w',
+  file.uri.value|image_url('responsive_3_2_800w') ~ ' 800w',
+  file.uri.value|image_url('responsive_3_2_850w') ~ ' 850w',
+  file.uri.value|image_url('responsive_3_2_900w') ~ ' 900w',
+  file.uri.value|image_url('responsive_3_2_950w') ~ ' 950w',
+  file.uri.value|image_url('responsive_3_2_1000w') ~ ' 1000w',
+  file.uri.value|image_url('responsive_3_2_1050w') ~ ' 1050w',
+  file.uri.value|image_url('responsive_3_2_1100w') ~ ' 1100w',
+  file.uri.value|image_url('responsive_3_2_1150w') ~ ' 1150w',
+  file.uri.value|image_url('responsive_3_2_1200w') ~ ' 1200w',
+  file.uri.value|image_url('responsive_3_2_1250w') ~ ' 1250w',
+  file.uri.value|image_url('responsive_3_2_1300w') ~ ' 1300w',
+  file.uri.value|image_url('responsive_3_2_1350w') ~ ' 1350w',
+  file.uri.value|image_url('responsive_3_2_1400w') ~ ' 1400w',
+  file.uri.value|image_url('responsive_3_2_1450w') ~ ' 1450w',
+  file.uri.value|image_url('responsive_3_2_1500w') ~ ' 1500w',
+  file.uri.value|image_url('responsive_3_2_1600w') ~ ' 1600w',
+  file.uri.value|image_url('responsive_3_2_1700w') ~ ' 1700w',
+  file.uri.value|image_url('responsive_3_2_1800w') ~ ' 1800w',
+  file.uri.value|image_url('responsive_3_2_1900w') ~ ' 1900w',
+  file.uri.value|image_url('responsive_3_2_2000w') ~ ' 2000w',
+  file.uri.value|image_url('responsive_3_2_2100w') ~ ' 2100w',
+  file.uri.value|image_url('responsive_3_2_2200w') ~ ' 2200w',
+  file.uri.value|image_url('responsive_3_2_2300w') ~ ' 2300w',
+  file.uri.value|image_url('responsive_3_2_2400w') ~ ' 2400w',
+  file.uri.value|image_url('responsive_3_2_2500w') ~ ' 2500w',
+  file.uri.value|image_url('responsive_3_2_2600w') ~ ' 2600w',
+  file.uri.value|image_url('responsive_3_2_2700w') ~ ' 2700w',
+  file.uri.value|image_url('responsive_3_2_2800w') ~ ' 2800w',
+  file.uri.value|image_url('responsive_3_2_2900w') ~ ' 2900w',
+] %}
+<img src="{{ src }}" data-srcset="{{ srcset|join(',') }}" data-multiplier="2x" alt="{{ media.field_media_image.alt }}" loading="lazy" />

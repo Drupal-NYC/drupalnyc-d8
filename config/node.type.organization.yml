@@ -1,0 +1,11 @@
+uuid: a1b44e3d-e212-4a6e-8400-9cc004b2b1dc
+langcode: en
+status: true
+dependencies: {  }
+name: Organization
+type: organization
+description: 'An organization such as a school, NGO, corporation, club, etc.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

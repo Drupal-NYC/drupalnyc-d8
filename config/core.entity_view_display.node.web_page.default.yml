@@ -1,0 +1,56 @@
+uuid: a39bad5c-0373-421b-b9c7-058227bdd149
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.web_page.field_hero
+    - field.field.node.web_page.schema_about
+    - field.field.node.web_page.schema_description
+    - field.field.node.web_page.schema_has_part
+    - field.field.node.web_page.schema_image
+    - field.field.node.web_page.schema_is_part_of
+    - field.field.node.web_page.schema_main_entity
+    - field.field.node.web_page.schema_related_link
+    - field.field.node.web_page.schema_significant_link
+    - field.field.node.web_page.schema_subject_of
+    - node.type.web_page
+  module:
+    - layout_paragraphs
+    - user
+id: node.web_page.default
+targetEntityType: node
+bundle: web_page
+mode: default
+content:
+  field_hero:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 200
+    region: content
+  schema_main_entity:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 97
+    region: content
+hidden:
+  schema_about: true
+  schema_description: true
+  schema_has_part: true
+  schema_image: true
+  schema_is_part_of: true
+  schema_related_link: true
+  schema_significant_link: true
+  schema_subject_of: true

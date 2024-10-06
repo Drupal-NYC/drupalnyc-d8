@@ -1,0 +1,27 @@
+uuid: c0bf9253-1270-4a5b-b9a2-5e5aebf21e39
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - drupalnyc
+_core:
+  default_config_hash: 6iIb-wxtwXhk6C_x1t1FGKtr589wMePAPsoDmSDfyDo
+id: drupalnyc_main_menu
+theme: drupalnyc
+region: navigation
+weight: -7
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

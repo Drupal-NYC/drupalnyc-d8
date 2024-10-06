@@ -1,0 +1,15 @@
+uuid: 0d079929-8308-411b-b341-52114a567c41
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_550w
+label: responsive_550w
+effects:
+  a469e25b-4985-432d-ac1b-69dc5f414eb0:
+    uuid: a469e25b-4985-432d-ac1b-69dc5f414eb0
+    id: image_scale
+    weight: null
+    data:
+      width: 550
+      height: null
+      upscale: true

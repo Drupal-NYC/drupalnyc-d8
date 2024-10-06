@@ -1,0 +1,23 @@
+uuid: 94215358-3dc0-42bc-b0a9-38f74f8c5b55
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - drupalnyc
+_core:
+  default_config_hash: lXAJPsHulZZr8m_E1COWvyN7nf9REQRwYgFday_mLgk
+id: drupalnyc_search
+theme: drupalnyc
+region: navigation
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

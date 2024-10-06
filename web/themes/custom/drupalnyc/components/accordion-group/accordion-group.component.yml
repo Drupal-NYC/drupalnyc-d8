@@ -1,0 +1,8 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Accordion
+status: 'experimental'
+description: An accordion wrapper component that supports a title and multiple items.
+slots:
+  accordion_group_title: {}
+  accordion_group_title_block: {}
+  accordion_group_items: {}

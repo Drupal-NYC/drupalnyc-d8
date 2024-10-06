@@ -1,0 +1,54 @@
+{% set image_content %}
+  <img src="https://picsum.photos/900/500" alt="Placeholder Image">
+{% endset %}
+
+{% set body_content %}
+  <p>Avoid Deadly Backfeed & Help Keep Lineworkers Safe. Using a backup generator during an extended outage or winter storm can give you peace of mind.</p>
+{% endset %}
+
+{% set props = {
+  teaser_title: 'Beware of backfeed',
+  teaser_media: image_content,
+  teaser_body: body_content,
+  teaser_link: {
+    text: 'Read More',
+    url: 'https://www.google.com',
+  },
+} %}
+
+{% stories teaser with {
+  teaser_title: 'Components/Teaser',
+} %}
+
+  {% story card with {
+    name: 'Card',
+  } %}
+    <div style="max-width: 600px;">
+      {{ include('drupalnyc:teaser', props|merge({
+        variant: 'card',
+      }), with_context = false) }}
+    </div>
+  {% endstory %}
+
+  {% story card_no_media with {
+    name: 'Card w/o Media',
+  } %}
+    <div style="max-width: 600px;">
+      {{ include('drupalnyc:teaser', props|merge({
+        variant: 'card',
+        teaser_media: false,
+      }), with_context = false) }}
+    </div>
+  {% endstory %}
+
+  {% story panel with {
+    name: 'Panel',
+  } %}
+    <div style="max-width: 900px;">
+      {{ include('drupalnyc:teaser', props|merge({
+        variant: 'panel',
+      }), with_context = false) }}
+    </div>
+  {% endstory %}
+
+{% endstories %}

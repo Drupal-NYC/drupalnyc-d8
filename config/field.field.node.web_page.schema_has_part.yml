@@ -1,0 +1,30 @@
+uuid: 6d97c2ef-7fac-4d1c-9862-d9bd5d18acd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_has_part
+    - node.type.news
+    - node.type.web_page
+id: node.web_page.schema_has_part
+field_name: schema_has_part
+entity_type: node
+bundle: web_page
+label: 'Has part'
+description: 'Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'schemadotorg:node'
+  handler_settings:
+    target_type: node
+    schema_types:
+      CreativeWork: CreativeWork
+    excluded_schema_types: {  }
+    ignore_additional_mappings: true
+    target_bundles:
+      news: news
+      web_page: web_page
+field_type: entity_reference

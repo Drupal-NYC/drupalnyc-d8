@@ -1,0 +1,16 @@
+uuid: 130f2b98-a073-4801-9498-b13928200f5c
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_50w
+label: responsive_50w
+effects:
+  ace6e4e6-2252-424d-a113-737effa96b3d:
+    uuid: ace6e4e6-2252-424d-a113-737effa96b3d
+    id: image_scale
+    weight: -10
+    data:
+      width: 50
+      height: null
+      upscale: false
+pipeline: ''

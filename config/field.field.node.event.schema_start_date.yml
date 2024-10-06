@@ -1,0 +1,21 @@
+uuid: 9eb5b931-162e-4d3d-b099-a5f9b0de90b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_start_date
+    - node.type.event
+  module:
+    - datetime
+id: node.event.schema_start_date
+field_name: schema_start_date
+entity_type: node
+bundle: event
+label: 'Start date'
+description: 'The start date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
