@@ -20,6 +20,7 @@ settings:
       - superscript
       - bulletedList
       - numberedList
+      - link
   plugins:
     ckeditor5_heading:
       enabled_headings:
