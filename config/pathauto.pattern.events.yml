@@ -7,12 +7,12 @@ dependencies:
 id: events
 label: Events
 type: 'canonical_entities:node'
-pattern: '/events/[node:title]'
+pattern: '/events/[node:schema_start_date:date:html_date]/[node:title]'
 selection_criteria:
-  a95ae636-86af-4a15-be29-4e49831b771b:
+  8dd1f96d-cffd-4a5d-a726-018629ab1f58:
     id: 'entity_bundle:node'
     negate: false
-    uuid: a95ae636-86af-4a15-be29-4e49831b771b
+    uuid: 8dd1f96d-cffd-4a5d-a726-018629ab1f58
     context_mapping:
       node: node
     bundles:
