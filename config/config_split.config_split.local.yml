@@ -1,17 +1,18 @@
 uuid: 60db0c63-85f3-41f8-95c6-856eabcc0524
 langcode: en
-status: true
+status: false
 dependencies: {  }
 id: local
 label: Local
 description: 'Settings for local dev'
 weight: -1
+stackable: false
+no_patching: false
+storage: folder
 folder: ../config_splits/local
 module:
   devel: 0
 theme: {  }
-blacklist: {  }
-graylist:
+complete_list: {  }
+partial_list:
   - imagemagick.settings
-graylist_dependents: true
-graylist_skip_equal: true

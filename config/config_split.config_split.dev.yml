@@ -6,12 +6,13 @@ id: dev
 label: Development
 description: 'Settings and modules that should be on in development environments.'
 weight: 0
+stackable: false
+no_patching: false
+storage: folder
 folder: ../config_splits/dev
 module:
   views_ui: 0
 theme: {  }
-blacklist:
+complete_list:
   - system.performance
-graylist: {  }
-graylist_dependents: true
-graylist_skip_equal: true
+partial_list: {  }
