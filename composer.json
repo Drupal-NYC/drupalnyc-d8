@@ -67,8 +67,7 @@
         "drupal/viewsreference": "^2.0@beta",
         "drush/drush": "^12",
         "oomphinc/composer-installers-extender": "^2.0",
-        "webflo/drupal-finder": "^1.2.0",
-        "webmozart/path-util": "^2.3"
+        "webflo/drupal-finder": "^1.2.0"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
