@@ -89,7 +89,7 @@ class EventDetails extends ExtraFieldDisplayBase {
     }
 
     $details = [
-      '#type' => 'dnyc_event_details',
+      '#theme' => 'dnyc_event_details',
       '#start_date' => $startDate ?? NULL,
       '#end_date' => $endDate ?? NULL,
       '#location' => $location ?? NULL,
