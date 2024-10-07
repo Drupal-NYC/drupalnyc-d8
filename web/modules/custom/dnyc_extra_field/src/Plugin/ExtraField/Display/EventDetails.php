@@ -74,20 +74,6 @@ class EventDetails extends ExtraFieldDisplayBase {
         ]
       );
     }
-    if ($node->hasField('schema_start_date')
-      && !($node->get('schema_start_date')->isEmpty())
-    ) {
-      $startDate = $node->get('schema_start_date')->view(
-        [
-          'type' => 'datetime_default',
-          'label' => 'hidden',
-          'settings' => [
-            'timezone_override' => '',
-            'format_type' => 'medium',
-          ],
-        ]
-      );
-    }
     if (
       $useDescription instanceof BooleanItem
       && $useDescription->getValue()['value']

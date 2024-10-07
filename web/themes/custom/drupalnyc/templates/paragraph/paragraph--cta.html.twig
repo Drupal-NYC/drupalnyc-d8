@@ -14,5 +14,5 @@
       } only %}
     {% endblock %}
   </div>
-  {{ content ?? []|cache_metadata }}
+  {{ content|cache_metadata }}
 {% endblock paragraph %}
