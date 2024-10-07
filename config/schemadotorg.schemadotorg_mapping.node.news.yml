@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.news.body
     - field.field.node.news.schema_about
     - field.field.node.news.schema_description
     - field.field.node.news.schema_image
@@ -21,7 +20,6 @@ schema_type: Article
 schema_properties:
   schema_about: about
   schema_description: abstract
-  body: articleBody
   created: dateCreated
   changed: dateModified
   title: headline

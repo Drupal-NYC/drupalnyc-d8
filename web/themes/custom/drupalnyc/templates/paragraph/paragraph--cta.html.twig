@@ -14,8 +14,5 @@
       } only %}
     {% endblock %}
   </div>
-  {{ content.field_heading|cache_metadata }}
-  {{ content.field_text|cache_metadata }}
-  {{ content.field_link|cache_metadata }}
-  {{ content|cache_metadata }}
+  {{ content ?? []|cache_metadata }}
 {% endblock paragraph %}

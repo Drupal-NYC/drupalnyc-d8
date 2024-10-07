@@ -1,7 +1,13 @@
 <article{{attributes.addClass(['article'])}}>
 
 	<header class="article__header l-constrained">
-		{{ content.field_hero }}
+    {% if not node.get('field_hero').isEmpty() %}
+      {{ content.field_hero }}
+    {% else %}
+      {% include 'drupalnyc:page-title' with {
+        page_title_title: label
+      } only %}
+    {% endif %}
 	</header>
 
 	<div class="l--1-col l-constrained">
