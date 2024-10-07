@@ -1,0 +1,19 @@
+uuid: 57bfb368-a505-47da-b44f-a064eaafe462
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.event_details.field_include_event_description
+    - paragraphs.paragraphs_type.event_details
+id: paragraph.event_details.default
+targetEntityType: paragraph
+bundle: event_details
+mode: default
+content:
+  extra_field_dnyc_event_details:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_include_event_description: true

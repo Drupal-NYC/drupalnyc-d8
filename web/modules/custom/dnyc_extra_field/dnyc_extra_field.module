@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Functions to support extra fields.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function dnyc_extra_field_theme($existing, $type, $theme, $path) {
+  return [
+    'dnyc_event_details' => [
+      'variables' => [
+        'start_date' => NULL,
+        'end_date' => NULL,
+        'location' => NULL,
+        'description' => NULL,
+      ],
+    ],
+  ];
+}

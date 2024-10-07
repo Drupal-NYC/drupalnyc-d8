@@ -1,0 +1,10 @@
+uuid: 57f3b41f-2247-40e1-ab9c-a5687c0b3dc5
+langcode: en
+status: true
+dependencies: {  }
+id: event_details
+label: 'Event Details'
+icon_uuid: null
+icon_default: null
+description: 'Presents the details of the event within the layout'
+behavior_plugins: {  }

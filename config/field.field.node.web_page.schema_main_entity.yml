@@ -5,6 +5,12 @@ dependencies:
   config:
     - field.storage.node.schema_main_entity
     - node.type.web_page
+    - paragraphs.paragraphs_type.cta
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.reference
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.view
   module:
     - entity_reference_revisions
 id: node.web_page.schema_main_entity
@@ -20,6 +26,31 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: {  }
-    target_bundles_drag_drop: {  }
+    target_bundles:
+      cta: cta
+      media: media
+      reference: reference
+      section: section
+      text: text
+      view: view
+    negate: 0
+    target_bundles_drag_drop:
+      cta:
+        weight: 0
+        enabled: true
+      media:
+        weight: 1
+        enabled: true
+      reference:
+        weight: 2
+        enabled: true
+      section:
+        weight: 3
+        enabled: true
+      text:
+        weight: 4
+        enabled: true
+      view:
+        weight: 5
+        enabled: true
 field_type: entity_reference_revisions
