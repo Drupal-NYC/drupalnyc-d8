@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.news.body
+    - field.field.node.news.field_hero
     - field.field.node.news.schema_about
     - field.field.node.news.schema_description
     - field.field.node.news.schema_image
@@ -20,6 +20,15 @@ targetEntityType: node
 bundle: news
 mode: default
 content:
+  field_hero:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -35,7 +44,6 @@ content:
     weight: 97
     region: content
 hidden:
-  body: true
   schema_about: true
   schema_description: true
   schema_image: true
