@@ -1,0 +1,22 @@
+uuid: d49e1990-547f-4285-a477-e6e4ce5e5470
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.event_details.field_include_event_description
+    - paragraphs.paragraphs_type.event_details
+id: paragraph.event_details.default
+targetEntityType: paragraph
+bundle: event_details
+mode: default
+content:
+  field_include_event_description:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.event.field_hero
     - field.field.node.event.schema_about
     - field.field.node.event.schema_address
     - field.field.node.event.schema_description
@@ -17,13 +18,21 @@ dependencies:
     - node.type.event
   module:
     - layout_paragraphs
-    - text
     - user
 id: node.event.default
 targetEntityType: node
 bundle: event
 mode: default
 content:
+  field_hero:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,23 @@
+uuid: 3d292a89-6dd0-430b-b02e-0a2250a4899d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_include_event_description
+    - paragraphs.paragraphs_type.event_details
+id: paragraph.event_details.field_include_event_description
+field_name: field_include_event_description
+entity_type: paragraph
+bundle: event_details
+label: 'Include event description'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

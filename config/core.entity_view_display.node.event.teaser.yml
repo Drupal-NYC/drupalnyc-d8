@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.event.field_hero
     - field.field.node.event.schema_about
     - field.field.node.event.schema_address
     - field.field.node.event.schema_description
@@ -69,6 +70,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_hero: true
   schema_about: true
   schema_address: true
   schema_duration: true
