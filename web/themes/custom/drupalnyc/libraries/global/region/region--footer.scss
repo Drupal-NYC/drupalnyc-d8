@@ -12,7 +12,11 @@
 
   .site-footer__content {
     flex: initial;
+    display: flex;
+    min-width: 66%;
+    justify-content: space-between;
   }
+
   .site-footer__logo {
     display: block;
     width: fit-content;

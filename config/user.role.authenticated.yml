@@ -8,6 +8,7 @@ dependencies:
   module:
     - filter
     - media
+    - media_entity_download
     - search
     - shortcut
     - system
@@ -20,6 +21,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access shortcuts'
+  - 'download media'
   - 'search content'
   - 'use text format basic_html'
   - 'use text format headlines'
