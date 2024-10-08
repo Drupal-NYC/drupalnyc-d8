@@ -7,7 +7,6 @@ dependencies:
     - node.type.event
     - system.menu.main
   module:
-    - datetime
     - htmx
     - node
     - user
@@ -112,20 +111,20 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        schema_start_date_value:
-          id: schema_start_date_value
-          table: node__schema_start_date
-          field: schema_start_date_value
+        schema_event_schedule_value:
+          id: schema_event_schedule_value
+          table: node__schema_event_schedule
+          field: schema_event_schedule_value
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: datetime
+          plugin_id: date
           order: ASC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: hour
+          granularity: second
       arguments: {  }
       filters:
         status:
@@ -171,51 +170,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        schema_start_date_value:
-          id: schema_start_date_value
-          table: node__schema_start_date
-          field: schema_start_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: datetime
-          operator: '>='
-          value:
-            min: ''
-            max: ''
-            value: now
-            type: offset
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
