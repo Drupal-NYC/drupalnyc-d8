@@ -8,8 +8,6 @@ dependencies:
     - field.field.node.event.schema_about
     - field.field.node.event.schema_address
     - field.field.node.event.schema_description
-    - field.field.node.event.schema_duration
-    - field.field.node.event.schema_end_date
     - field.field.node.event.schema_event_schedule
     - field.field.node.event.schema_event_status
     - field.field.node.event.schema_image
@@ -17,7 +15,6 @@ dependencies:
     - field.field.node.event.schema_previous_date
     - field.field.node.event.schema_related_link
     - field.field.node.event.schema_significant_link
-    - field.field.node.event.schema_start_date
     - field.field.node.event.schema_subject_of
     - node.type.event
   module:
@@ -91,13 +88,10 @@ content:
 hidden:
   field_hero: true
   schema_about: true
-  schema_duration: true
-  schema_end_date: true
   schema_event_status: true
   schema_image: true
   schema_main_entity: true
   schema_previous_date: true
   schema_related_link: true
   schema_significant_link: true
-  schema_start_date: true
   schema_subject_of: true
