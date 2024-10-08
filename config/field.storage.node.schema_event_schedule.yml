@@ -1,0 +1,19 @@
+uuid: 9217fee4-c95c-4c88-aefd-e080d31855cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - smart_date
+id: node.schema_event_schedule
+field_name: schema_event_schedule
+entity_type: node
+type: smartdate
+settings: {  }
+module: smart_date
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

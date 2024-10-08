@@ -1,0 +1,33 @@
+uuid: e436e600-2ddb-4805-a034-30ec0e37b77c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_previous_date
+    - node.type.event
+  module:
+    - smart_date
+    - smart_date_recur
+third_party_settings:
+  smart_date_recur:
+    allow_recurring: true
+    month_limit: 12
+id: node.event.schema_previous_date
+field_name: schema_previous_date
+entity_type: node
+bundle: event
+label: 'Previous date'
+description: 'Used in conjunction with eventStatus for rescheduled or cancelled events.'
+required: false
+translatable: true
+default_value:
+  -
+    default_duration: 60
+    default_duration_increments: "30\r\n60|1 hour\r\n90\r\n120|2 hours\r\ncustom"
+    default_date_type: next_hour
+    default_date: ''
+    min: ''
+    max: ''
+default_value_callback: ''
+settings: {  }
+field_type: smartdate

@@ -1,9 +1,9 @@
-uuid: 57a7f781-860e-4957-8d31-45b386544830
+uuid: 652e94b1-220e-4fab-912e-947d7797191f
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.embed
     - field.field.node.event.field_hero
     - field.field.node.event.schema_about
     - field.field.node.event.schema_address
@@ -21,39 +21,48 @@ dependencies:
     - field.field.node.event.schema_subject_of
     - node.type.event
   module:
+    - address
     - date_augmenter
+    - layout_builder
     - nomarkup
     - smart_date
     - text
     - user
-id: node.event.teaser
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.event.embed
 targetEntityType: node
 bundle: event
-mode: teaser
+mode: embed
 content:
   links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  schema_address:
+    type: address_default
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 3
     region: content
   schema_description:
     type: text_default
-    label: hidden
+    label: inline
     settings: {  }
-    third_party_settings:
-      nomarkup:
-        enabled: true
-        separator: '|'
-        referenced_entity: ''
-    weight: 1
+    third_party_settings: {  }
+    weight: 2
     region: content
   schema_event_schedule:
     type: smartdate_default
-    label: hidden
+    label: inline
     settings:
       timezone_override: ''
       format_type: medium
-      format: compact
+      format: default
       force_chronological: false
       add_classes: false
       time_wrapper: true
@@ -73,38 +82,19 @@ content:
         separator: '|'
         referenced_entity: ''
       date_augmenter:
-        instances:
-          weights:
-            order: ''
-          augmenter_settings:
-            fields__schema_event_schedule__settings_edit_form__third_party_settings__date_augmenter__instances__augmenter_settings__active_tab: ''
-        rule:
-          weights:
-            order: ''
-          augmenter_settings:
-            fields__schema_event_schedule__settings_edit_form__third_party_settings__date_augmenter__rule__augmenter_settings__active_tab: ''
-    weight: 0
-    region: content
-  schema_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: '3_2'
-      link: false
-    third_party_settings:
-      nomarkup:
-        enabled: false
-        separator: '|'
-        referenced_entity: '0'
-    weight: 2
+        weights:
+          order: ''
+        augmenter_settings:
+          fields__schema_event_schedule__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
+    weight: 1
     region: content
 hidden:
   field_hero: true
   schema_about: true
-  schema_address: true
   schema_duration: true
   schema_end_date: true
   schema_event_status: true
+  schema_image: true
   schema_main_entity: true
   schema_previous_date: true
   schema_related_link: true

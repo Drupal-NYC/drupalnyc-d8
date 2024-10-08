@@ -8,8 +8,11 @@ dependencies:
     - field.field.node.event.schema_description
     - field.field.node.event.schema_duration
     - field.field.node.event.schema_end_date
+    - field.field.node.event.schema_event_schedule
+    - field.field.node.event.schema_event_status
     - field.field.node.event.schema_image
     - field.field.node.event.schema_main_entity
+    - field.field.node.event.schema_previous_date
     - field.field.node.event.schema_related_link
     - field.field.node.event.schema_significant_link
     - field.field.node.event.schema_start_date
@@ -26,9 +29,12 @@ schema_properties:
   schema_description: description
   schema_duration: duration
   schema_end_date: endDate
+  schema_event_schedule: eventSchedule
+  schema_event_status: eventStatus
   langcode: inLanguage
   schema_address: location
   title: name
+  schema_previous_date: previousStartDate
   schema_start_date: startDate
   schema_subject_of: subjectOf
   schema_main_entity: mainEntity

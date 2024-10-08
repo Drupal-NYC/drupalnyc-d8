@@ -1,0 +1,33 @@
+uuid: 9048dc5f-2ca1-4439-99e8-b49b63002e2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.schema_event_schedule
+    - node.type.event
+  module:
+    - smart_date
+    - smart_date_recur
+third_party_settings:
+  smart_date_recur:
+    allow_recurring: true
+    month_limit: 12
+id: node.event.schema_event_schedule
+field_name: schema_event_schedule
+entity_type: node
+bundle: event
+label: 'Event schedule'
+description: 'Associates an <a href="https://schema.org/Event">Event</a> with a <a href="https://schema.org/Schedule">Schedule</a>.'
+required: false
+translatable: true
+default_value:
+  -
+    default_duration: 60
+    default_duration_increments: "30\r\n60|1 hour\r\n90\r\n120|2 hours\r\ncustom"
+    default_date_type: next_hour
+    default_date: ''
+    min: ''
+    max: ''
+default_value_callback: ''
+settings: {  }
+field_type: smartdate

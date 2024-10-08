@@ -20,6 +20,7 @@ module:
   contextual: 0
   crop: 0
   ctools: 0
+  date_augmenter: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -58,6 +59,7 @@ module:
   layout_paragraphs: 0
   link: 0
   media: 0
+  media_entity_download: 0
   media_library: 0
   menu_ui: 0
   mercury_editor: 0
@@ -68,6 +70,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  quick_node_clone: 0
   redirect: 0
   responsive_favicons: 0
   responsive_image: 0
@@ -78,10 +81,13 @@ module:
   schemadotorg_cer: 0
   schemadotorg_media: 0
   schemadotorg_paragraphs: 0
+  schemadotorg_smart_date: 0
   schemadotorg_ui: 0
   search: 0
   settings_tray: 0
   shortcut: 0
+  smart_date: 0
+  smart_date_recur: 0
   smart_trim: 0
   sophron: 0
   style_options: 0

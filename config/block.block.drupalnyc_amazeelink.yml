@@ -9,7 +9,7 @@ dependencies:
 id: drupalnyc_amazeelink
 theme: drupalnyc
 region: footer
-weight: 0
+weight: -4
 provider: null
 plugin: dnyc_amazee_link
 settings:
