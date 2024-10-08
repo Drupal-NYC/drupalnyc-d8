@@ -23,31 +23,31 @@
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     {% if content.top %}
-      <div {{ region_attributes.top.addClass('layout__region', 'layout__region--top', 'l-stack__minimal') }}>
+      <div {{ region_attributes.top.addClass('layout__region', 'layout__region--top', 'l-stack__tight') }}>
         {{ content.top }}
       </div>
     {% endif %}
 
     {% if content.first %}
-      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first', 'l-stack__minimal', 'l-column--outer-left') }}>
+      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first', 'l-stack__tight', 'l-column--outer-left') }}>
         {{ content.first }}
       </div>
     {% endif %}
 
     {% if content.second %}
-      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second', 'l-stack__minimal', 'l-column--inner') }}>
+      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second', 'l-stack__tight', 'l-column--inner') }}>
         {{ content.second }}
       </div>
     {% endif %}
 
     {% if content.third %}
-      <div {{ region_attributes.third.addClass('layout__region', 'layout__region--third', 'l-stack__minimal', 'l-column--outer-right') }}>
+      <div {{ region_attributes.third.addClass('layout__region', 'layout__region--third', 'l-stack__tight', 'l-column--outer-right') }}>
         {{ content.third }}
       </div>
     {% endif %}
 
     {% if content.bottom %}
-      <div {{ region_attributes.bottom.addClass('layout__region', 'layout__region--bottom', 'l-stack__minimal') }}>
+      <div {{ region_attributes.bottom.addClass('layout__region', 'layout__region--bottom', 'l-stack__tight') }}>
         {{ content.bottom }}
       </div>
     {% endif %}

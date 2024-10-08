@@ -15,13 +15,13 @@
   <div{{ attributes }}>
 
     {% if content.first %}
-      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first', 'l-stack__minimal', 'l-column--outer-left') }}>
+      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first', 'l-stack__tight', 'l-column--outer-left') }}>
         {{ content.first }}
       </div>
     {% endif %}
 
     {% if content.second %}
-      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second', 'l-stack__minimal', 'l-column--outer-right') }}>
+      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second', 'l-stack__tight', 'l-column--outer-right') }}>
         {{ content.second }}
       </div>
     {% endif %}
