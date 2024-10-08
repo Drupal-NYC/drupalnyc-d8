@@ -284,11 +284,9 @@ schema_types:
       - text
     Event:
       - description
-      - duration
-      - endDate
+      - eventSchedule
       - inLanguage
       - name
-      - startDate
     CourseInstance:
       - courseMode
       - courseSchedule
@@ -1242,7 +1240,7 @@ schema_properties:
     estimatedFlightDuration:
       granularity: 'h:i'
     eventSchedule:
-      type: daterange
+      type: smartdate
       unlimited: true
     exceptDate:
       label: 'Except dates'

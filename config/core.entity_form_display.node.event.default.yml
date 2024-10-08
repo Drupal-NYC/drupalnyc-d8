@@ -9,8 +9,11 @@ dependencies:
     - field.field.node.event.schema_description
     - field.field.node.event.schema_duration
     - field.field.node.event.schema_end_date
+    - field.field.node.event.schema_event_schedule
+    - field.field.node.event.schema_event_status
     - field.field.node.event.schema_image
     - field.field.node.event.schema_main_entity
+    - field.field.node.event.schema_previous_date
     - field.field.node.event.schema_related_link
     - field.field.node.event.schema_significant_link
     - field.field.node.event.schema_start_date
@@ -24,6 +27,7 @@ dependencies:
     - link
     - media_library
     - path
+    - smart_date
     - text
 id: node.event.default
 targetEntityType: node
@@ -106,6 +110,33 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  schema_event_schedule:
+    type: smartdate_inline
+    weight: 13
+    region: content
+    settings:
+      modal: false
+      default_duration: 60
+      default_duration_increments: |-
+        30
+        60|1 hour
+        90
+        120|2 hours
+        custom
+      show_extra: false
+      hide_date: true
+      allday: true
+      remove_seconds: false
+      separator: to
+    third_party_settings: {  }
+  schema_event_status:
+    type: string_textfield
+    weight: 110
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   schema_image:
     type: media_library_widget
     weight: 10
@@ -124,6 +155,25 @@ content:
       nesting_depth: 0
       require_layouts: 0
       empty_message: 'Click the [+] sign below to choose your first component.'
+    third_party_settings: {  }
+  schema_previous_date:
+    type: smartdate_inline
+    weight: 150
+    region: content
+    settings:
+      modal: false
+      default_duration: 60
+      default_duration_increments: |-
+        30
+        60|1 hour
+        90
+        120|2 hours
+        custom
+      show_extra: false
+      hide_date: true
+      allday: true
+      remove_seconds: false
+      separator: to
     third_party_settings: {  }
   schema_related_link:
     type: link_default
