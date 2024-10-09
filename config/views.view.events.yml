@@ -111,20 +111,20 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        schema_event_schedule_value:
-          id: schema_event_schedule_value
-          table: node__schema_event_schedule
-          field: schema_event_schedule_value
+        schema_start_date_value:
+          id: schema_start_date_value
+          table: node__schema_start_date
+          field: schema_start_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: date
+          plugin_id: datetime
           order: ASC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: second
+          granularity: hour
       arguments: {  }
       filters:
         status:
@@ -170,6 +170,51 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        schema_start_date_value:
+          id: schema_start_date_value
+          table: node__schema_start_date
+          field: schema_start_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -257,6 +302,22 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      style:
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 4
+          cell_min_width: 100
+          grid_gutter: 12
+          alignment: horizontal
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
+      defaults:
+        style: false
+        row: false
       display_extenders: {  }
       path: events
       menu:

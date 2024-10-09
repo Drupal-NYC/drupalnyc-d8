@@ -1,0 +1,120 @@
+_core:
+  default_config_hash: 2jzSmmBCQHmXN72C2ZxWOB7DihAbJVqcG7ddCyEBMNE
+schema_type_default_values:
+  MonetaryAmount:
+    currency: USD
+  Offer:
+    priceCurrency: USD
+  accelerationTime--QuantitativeValue:
+    unitText: seconds
+    valueReference:
+      '@type': QuantitativeValue
+      unitText: '0..60 mp/h'
+  cargoVolume--QuantitativeValue:
+    unitCode: 'UOM:FT3'
+    unitText: 'cubic foot'
+  engineDisplacement--QuantitativeValue:
+    unitCode: 'UOM:IN3'
+    unitText: 'cubic inches'
+  enginePower-QuantitativeValue:
+    unitText: horsepower
+  fuelCapacity--QuantitativeValue:
+    unitCode: 'UOM:GAL'
+    unitText: gallon
+  fuelConsumption--QuantitativeValue:
+    unitCode: 'UOM:MPG'
+    unitText: 'miles per gallon'
+  fuelEfficiency--QuantitativeValue:
+    unitCode: 'UOM:MPG'
+    unitText: 'miles per gallon'
+  mileageFromOdometer--QuantitativeValue:
+    unitCode: 'UOM:MI'
+    unitText: miles
+  tongueWeight--QuantitativeValue:
+    unitCode: 'UOM:LB'
+    unitText: pounds
+  trailerWeight-QuantitativeValue:
+    unitCode: 'UOM:LB'
+    unitText: pounds
+  speed--QuantitativeValue:
+    unitText: 'miles per hour'
+  torque-QuantitativeValue:
+    unitText: pound-feet
+  weightTotal-QuantitativeValue:
+    unitCode: 'UOM:LB'
+    unitText: pounds
+  wheelbase-QuantitativeValue:
+    unitCode: 'UOM:FT'
+    unitText: feet
+schema_type_main_properties:
+  AudioObject: null
+  Clip: null
+  Comment: text
+  Duration: null
+  Energy: null
+  ImageObject: null
+  Mass: null
+  Offer: price
+  ProgramMembership: programName
+  QuantitativeValue: value
+  Rating: ratingValue
+  Role: roleName
+  VideoObject: null
+schema_property_order:
+  - url
+  - identifier
+  - inDefinedTermSet
+  - inLanguage
+  - name
+  - alternateName
+  - headline
+  - alternativeHeadline
+  - givenName
+  - additionalName
+  - familyName
+  - description
+  - disambiguatingDescription
+  - articleBody
+  - text
+  - author
+  - image
+  - photo
+  - primaryImageOfPage
+  - video
+  - thumbnail
+  - thumbnailUrl
+  - contentUrl
+  - address
+  - addressCountry
+  - addressRegion
+  - addressLocality
+  - postalCode
+  - postOfficeBoxNumber
+  - streetAddress
+  - streetAddress
+  - contactPoint
+  - telephone
+  - fax
+  - email
+  - startDate
+  - endDate
+  - duration
+schema_property_image_styles:
+  image: large
+  thumbnail: thumbnail
+schema_type_entity_references_display:
+  block_content: entity
+  paragraph: entity
+  paragraph--layout: none
+  media: entity
+  media--image: '[media:field_media_image:entity:url]'
+  node--Thing: url
+  node--Intangible: entity
+  taxonomy_term: entity
+  Intangible: entity
+exclude_url:
+  - PronounceableText
+  - block_content
+  - media
+  - paragraph
+  - taxonomy_term
