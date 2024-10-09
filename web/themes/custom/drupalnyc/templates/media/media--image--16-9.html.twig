@@ -7,7 +7,7 @@
 {{ attach_library('easy_responsive_images/resizer') }}
 
 {% set file = media.field_media_image.entity %}
-{% set src = file.uri.value|image_url('responsive_16_9_50w') %}
+{% set src = file.uri.value|image_url('responsive_16_9_100w') %}
 {% set srcset = [
   file.uri.value|image_url('responsive_16_9_100w') ~ ' 100w',
   file.uri.value|image_url('responsive_16_9_150w') ~ ' 150w',
