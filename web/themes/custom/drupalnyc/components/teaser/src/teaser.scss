@@ -13,6 +13,10 @@
   overflow: hidden;
 }
 
+.no-image .c-teaser__media {
+  aspect-ratio: 3 / 2;
+}
+
 .c-teaser__content > * + * {
   margin-top: var(--dnyc-space-rem-8);
 }

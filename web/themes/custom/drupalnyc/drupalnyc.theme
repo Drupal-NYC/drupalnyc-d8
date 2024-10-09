@@ -7,6 +7,7 @@
 
 use Drupal\block_content\BlockContentInterface;
 use Drupal\Component\Utility\Html;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_preprocess_page() for drupalnyc theme.
@@ -255,7 +256,7 @@ function drupalnyc_prepare_menu_items(&$items) {
 }
 
 /**
- * Implements hook_preprocess_page() for drupalnyc theme.
+ * Implements hook_preprocess_HOOK() for breadcrum.
  *
  * This preprocess adds the current page title to the end of a breadcrumb list.
  *
@@ -284,5 +285,20 @@ function drupalnyc_preprocess_breadcrumb(&$variables) {
 
       $variables['breadcrumb'][] = $breadcrumb_link;
     }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.
+ */
+function drupalnyc_preprocess_node(&$variables) {
+  $view_mode = $variables['elements']['#view_mode'] ?? '';
+  $node = $variables['node'];
+  if (
+    $view_mode === 'teaser'
+    && $node instanceof Node
+    && $node->get('schema_image')->isEmpty()
+  ) {
+    $variables['attributes']['class'][] = 'no-image';
   }
 }
