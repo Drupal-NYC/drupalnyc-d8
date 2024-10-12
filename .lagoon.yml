@@ -35,7 +35,7 @@ environments:
     # routes:
     cronjobs:
       - name: drush cron
-        schedule: "*/30 * * * *"
+        schedule: "M/30 * * * *"
         command: drush cron
         service: cli
     routes:
