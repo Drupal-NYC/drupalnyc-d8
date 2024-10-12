@@ -88,6 +88,7 @@ module:
   search: 0
   settings_tray: 0
   shortcut: 0
+  simple_sitemap: 0
   smart_date: 0
   smart_date_recur: 0
   smart_trim: 0

@@ -5,7 +5,6 @@ dependencies:
   config:
     - block_content.type.meetup
     - field.storage.block_content.field_meetup
-    - node.type.meetup
 id: block_content.meetup.field_meetup
 field_name: field_meetup
 entity_type: block_content
@@ -19,8 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
-    target_bundles:
-      meetup: meetup
+    target_bundles: {  }
     sort:
       field: _none
     auto_create: false
