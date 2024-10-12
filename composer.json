@@ -50,6 +50,7 @@
         "drupal/layout_paragraphs": "^2.1",
         "drupal/media_entity_download": "^2.3",
         "drupal/mercury_editor": "^2.1",
+        "drupal/metatag": "^2.0",
         "drupal/nomarkup": "^1.0",
         "drupal/pantheon_advanced_page_cache": "^2.1.1",
         "drupal/paragraphs": "^1.18",
