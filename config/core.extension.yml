@@ -63,6 +63,7 @@ module:
   media_library: 0
   menu_ui: 0
   mercury_editor: 0
+  metatag: 0
   mysql: 0
   node: 0
   nomarkup: 0
@@ -82,6 +83,7 @@ module:
   schemadotorg_jsonld: 0
   schemadotorg_jsonld_preview: 0
   schemadotorg_media: 0
+  schemadotorg_metatag: 0
   schemadotorg_paragraphs: 0
   schemadotorg_smart_date: 0
   schemadotorg_ui: 0

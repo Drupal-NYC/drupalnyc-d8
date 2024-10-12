@@ -1,0 +1,67 @@
+_core:
+  default_config_hash: DmM2-pPQMBYVIFU3ZQyM9KmBFEEby0C43NzOphkye_E
+default_groups:
+  - basic
+  - advanced
+default_tags:
+  node:
+    url:
+      og_url: '[node:url]'
+    name:
+      og_title: '[node:title]'
+      twitter_cards_title: '[node:title]'
+    description:
+      og_description: '[node:schema_description]'
+      twitter_cards_description: '[node:schema_description]'
+    image:
+      image_src: '[node:schema_image:entity:field_media_image:medium]'
+      og_image: '[node:schema_image:entity:field_media_image:medium]'
+      og_image_secure_url: '[node:schema_image:entity:field_media_image:medium]'
+      og_image_alt: '[node:schema_image:entity:field_media_image:alt]'
+      og_image_height: '[node:schema_image:entity:field_media_image:medium:height]'
+      og_image_type: '[node:schema_image:entity:field_media_image:medium:mimetype]'
+      og_image_width: '[node:schema_image:entity:field_media_image:medium:width]'
+      twitter_cards_image: '[node:schema_image:entity:field_media_image:medium]'
+      twitter_cards_image_alt: '[node:schema_image:entity:field_media_image:alt]'
+    video:
+      og_video: '[node:schema_video:entity:field_media_oembed_video]'
+      og_video_secure_url: '[node:schema_video:entity:field_media_oembed_video]'
+      og_video_type: movie
+      'og:video:duration': '[node:schema_video:entity:field_media_video_file:entity:duration]'
+      og_video_width: '[node:schema_video:entity:field_media_video_file:entity:width]'
+      og_video_height: '[node:schema_video:entity:field_media_video_file:entity:height]'
+      twitter_cards_player: '[node:schema_video:entity:field_media_oembed_video]'
+      twitter_cards_player_stream: '[node:schema_video:entity:field_media_oembed_video]'
+      twitter_cards_player_width: '[node:schema_video:entity:field_media_video_file:entity:width]'
+      twitter_cards_player_height: '[node:schema_video:entity:field_media_video_file:entity:height]'
+    email:
+      og_email: '[node:schema_mail]'
+    telephone:
+      og_phone_number: '[node:schema_telephone]'
+    keywords:
+      article_tag: '[node:schema_keywords]'
+      book_tag: '[node:schema_keywords]'
+    datePublished:
+      article_published_time: '[node:changed:html_datetime]'
+      og_updated_time: '[node:changed:html_datetime]'
+    dateModified:
+      article_modified_time: '[node:changed:html_datetime]'
+      og_updated_time: '[node:changed:html_datetime]'
+    Place--address:
+      og_street_address: '[node:schema_address]'
+    Person--givenName:
+      profile_first_name: '[node:schema_given_name]'
+    Person--familyName:
+      profile_last_name: '[node:schema_family_name]'
+    Person--gender:
+      profile_gender: '[node:schema_gender]'
+  taxonomy_term: {  }
+  user:
+    givenName:
+      profile_first_name: '[user:schema_given_name]'
+    familyName:
+      profile_last_name: '[user:schema_family_name]'
+    gender:
+      profile_gender: '[user:schema_gender]'
+    email:
+      og_email: '[user:mail]'
