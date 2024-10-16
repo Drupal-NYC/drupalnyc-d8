@@ -1,4 +1,5 @@
 @use 'partials' as *;
 
-.page-title {
+.c-page-title {
+  padding-bottom: var(--dnyc-grid-gap);
 }
