@@ -12,7 +12,6 @@ bower_components
 # Ignore sensitive information
 # /web/sites/*/settings.php
 /web/sites/*/settings.local.php
-codeship.aes
 /keys/
 id_rsa
 id_rsa.pub

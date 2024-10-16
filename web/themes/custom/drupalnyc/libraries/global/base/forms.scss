@@ -87,6 +87,18 @@ select::-ms-expand {
   display: none;
 }
 
+.field--label-inline.field {
+  display: flex;
+  flex-wrap: wrap;
+
+  .field__label {
+    font-style: oblique;
+  }
+  .field__item {
+    margin-left: calc(var(--dnyc-grid-gap) / 2)
+  }
+}
+
 //------------------------------------
 //  03 - Checkboxes / Radios
 //------------------------------------
