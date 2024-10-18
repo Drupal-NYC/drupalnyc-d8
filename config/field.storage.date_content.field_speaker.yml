@@ -1,0 +1,23 @@
+uuid: 603f5bcd-6552-4d00-9f99-faf1af07b9fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - date_content
+_core:
+  default_config_hash: 73vyq3FlXKURzxK0jRqROdxKcVS1CWn1bQ9-zDkbC_I
+id: date_content.field_speaker
+field_name: field_speaker
+entity_type: date_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

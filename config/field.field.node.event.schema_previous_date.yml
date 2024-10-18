@@ -10,7 +10,7 @@ dependencies:
     - smart_date_recur
 third_party_settings:
   smart_date_recur:
-    allow_recurring: true
+    allow_recurring: false
     month_limit: 12
 id: node.event.schema_previous_date
 field_name: schema_previous_date
