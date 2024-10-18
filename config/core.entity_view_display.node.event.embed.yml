@@ -74,15 +74,49 @@ content:
         decimals: 2
         suffix: h
     third_party_settings:
+      date_augmenter:
+        status:
+          addtocal: '1'
+          content: '1'
+          link: '1'
+        weights:
+          order:
+            addtocal:
+              weight: '0'
+            content:
+              weight: '0'
+            link:
+              weight: '0'
+        settings:
+          addtocal:
+            label: 'Add to calendar'
+            event_title: '[node:title]'
+            location: '[node:schema_address]'
+            description: '[node:schema_description]'
+            retain_spacing: '1'
+            icons: '1'
+            max_desc: '60'
+            ellipsis: '1'
+            target: modal
+            ignore_timezone_if_UTC: '1'
+            past_events: 0
+          content:
+            bundles:
+              session: session
+            past_events: '1'
+            target: ''
+            width: '600'
+          link:
+            link_text: 'Register on ti.to!'
+            link_url: 'https://ti.to/drupalnyc/[node:url:path]-[node:schema_event_schedule:0:value-format:short_dashed]'
+            class: event__rsvp_link
+            past_events: 0
+        augmenter_settings:
+          fields__schema_event_schedule__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
       nomarkup:
         enabled: false
         separator: '|'
         referenced_entity: ''
-      date_augmenter:
-        weights:
-          order: ''
-        augmenter_settings:
-          fields__schema_event_schedule__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
     weight: 1
     region: content
 hidden:

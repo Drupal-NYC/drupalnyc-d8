@@ -3,6 +3,7 @@ _core:
 module:
   auto_entitylabel: -100
   address: 0
+  addtocal_augment: 0
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
@@ -21,6 +22,7 @@ module:
   crop: 0
   ctools: 0
   date_augmenter: 0
+  date_content: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -58,6 +60,7 @@ module:
   layout_discovery: 0
   layout_paragraphs: 0
   link: 0
+  link_augment: 0
   media: 0
   media_entity_download: 0
   media_library: 0

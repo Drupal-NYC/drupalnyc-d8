@@ -11,7 +11,7 @@ dependencies:
 third_party_settings:
   smart_date_recur:
     allow_recurring: true
-    month_limit: 12
+    month_limit: 6
 id: node.event.schema_event_schedule
 field_name: schema_event_schedule
 entity_type: node
@@ -19,7 +19,7 @@ bundle: event
 label: 'Event schedule'
 description: 'Associates an <a href="https://schema.org/Event">Event</a> with a <a href="https://schema.org/Schedule">Schedule</a>.'
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     default_duration: 60

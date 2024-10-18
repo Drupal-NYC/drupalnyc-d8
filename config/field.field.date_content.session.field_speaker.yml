@@ -1,0 +1,21 @@
+uuid: 9c8acf78-046f-408d-93b3-68e19cb67fd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - date_content.date_content_type.session
+    - field.storage.date_content.field_speaker
+_core:
+  default_config_hash: j6XzFfHdzaJyTp8BjHT_ZbDlxcWhTZKRvWScRmKAGy8
+id: date_content.session.field_speaker
+field_name: field_speaker
+entity_type: date_content
+bundle: session
+label: Speaker
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
