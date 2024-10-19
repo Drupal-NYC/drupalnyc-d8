@@ -75,7 +75,7 @@ content:
         decimals: 2
         suffix: h
       past_display: 1
-      upcoming_display: 2
+      upcoming_display: 3
       show_next: true
       current_upcoming: true
     third_party_settings:
