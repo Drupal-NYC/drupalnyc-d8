@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_hero
+    - field.field.node.event.field_tito_link
     - field.field.node.event.schema_about
     - field.field.node.event.schema_address
     - field.field.node.event.schema_description
@@ -31,12 +32,22 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 0
+    region: content
+  field_tito_link:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 200
+    weight: 2
     region: content
   schema_main_entity:
     type: layout_paragraphs
@@ -45,7 +56,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 97
+    weight: 1
     region: content
 hidden:
   schema_about: true

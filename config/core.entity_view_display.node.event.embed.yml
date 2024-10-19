@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.embed
     - field.field.node.event.field_hero
+    - field.field.node.event.field_tito_link
     - field.field.node.event.schema_about
     - field.field.node.event.schema_address
     - field.field.node.event.schema_description
@@ -22,7 +23,7 @@ dependencies:
     - date_augmenter
     - layout_builder
     - nomarkup
-    - smart_date
+    - smart_date_recur
     - text
     - user
 third_party_settings:
@@ -54,7 +55,7 @@ content:
     weight: 2
     region: content
   schema_event_schedule:
-    type: smartdate_default
+    type: smartdate_recurring
     label: inline
     settings:
       timezone_override: ''
@@ -73,20 +74,113 @@ content:
         unit: ''
         decimals: 2
         suffix: h
+      past_display: 1
+      upcoming_display: 2
+      show_next: true
+      current_upcoming: true
     third_party_settings:
+      date_augmenter:
+        instances:
+          status:
+            content: true
+            dnyc_tito_link: true
+            addtocal: false
+            link: false
+          weights:
+            order:
+              addtocal:
+                weight: -50
+              dnyc_tito_link:
+                weight: -49
+              content:
+                weight: -48
+              link:
+                weight: -47
+          settings:
+            addtocal:
+              label: 'Add to calendar'
+              event_title: '[node:title]'
+              location: '[node:schema_address]'
+              description: '[node:schema_description]'
+              retain_spacing: true
+              icons: true
+              max_desc: 60
+              ellipsis: true
+              past_events: false
+              target: modal
+              ignore_timezone_if_UTC: true
+            content:
+              bundles:
+                session: session
+              past_events: '1'
+              target: ''
+              width: '600'
+            dnyc_tito_link:
+              link_text: 'RSVP on ti.to!'
+              class: ''
+              past_events: 0
+            link:
+              link_text: 'Register on ti.to!'
+              link_url: 'https://ti.to/drupalnyc[node:url:path]-[node:schema_event_schedule:0:value-format:short_dashed]'
+              class: event__rsvp_link
+              past_events: 0
+          augmenter_settings:
+            fields__schema_event_schedule__settings_edit_form__third_party_settings__date_augmenter__instances__augmenter_settings__active_tab: ''
+        rule:
+          status:
+            addtocal: true
+            content: false
+            dnyc_tito_link: false
+            link: false
+          weights:
+            order:
+              addtocal:
+                weight: 0
+              content:
+                weight: 0
+              dnyc_tito_link:
+                weight: 0
+              link:
+                weight: 0
+          settings:
+            addtocal:
+              label: 'Add to calendar'
+              event_title: '[node:title]'
+              location: '[node:schema_address]'
+              description: '[node:schema_description]'
+              retain_spacing: true
+              icons: true
+              max_desc: 60
+              ellipsis: true
+              past_events: false
+              target: ''
+              ignore_timezone_if_UTC: true
+            content:
+              bundles:
+                session: session
+              past_events: '1'
+              target: ''
+              width: '600'
+            dnyc_tito_link:
+              link_text: 'Register Now!'
+              class: ''
+              past_events: 0
+            link:
+              link_text: 'Register on ti.to!'
+              link_url: 'https://ti.to/drupalnyc/[node:url:path]-[node:schema_event_schedule:0:value-format:short_dashed]'
+              class: event__rsvp_link
+              past_events: 0
+          augmenter_settings:
+            fields__schema_event_schedule__settings_edit_form__third_party_settings__date_augmenter__rule__augmenter_settings__active_tab: ''
       nomarkup:
         enabled: false
         separator: '|'
         referenced_entity: ''
-      date_augmenter:
-        weights:
-          order: ''
-        augmenter_settings:
-          fields__schema_event_schedule__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
     weight: 1
     region: content
 hidden:
   field_hero: true
+  field_tito_link: true
   schema_about: true
   schema_event_status: true
   schema_image: true

@@ -1,0 +1,19 @@
+uuid: 11b7e43f-b468-4cb0-a993-bdaf1089672f
+langcode: en
+status: true
+dependencies:
+  module:
+    - date_content
+    - text
+id: date_content.field_topics
+field_name: field_topics
+entity_type: date_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
