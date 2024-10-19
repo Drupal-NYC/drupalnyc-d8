@@ -126,7 +126,8 @@ class TitoLink extends DateAugmenterPluginBase implements PluginFormInterface {
     $entity = $options['entity'] ?? NULL;
     if ($entity instanceof ContentEntityInterface) {
       if ($entity->hasField('field_tito_link')) {
-        $values = $entity->get('field_tito_link')->first()->getValue();
+        $useTitolink = $entity->get('field_tito_link');
+        $values = $useTitolink->isEmpty() ? FALSE : $useTitolink->first()->getValue();
         $value = (bool) $values['value'] ?? FALSE;
         if ($value === FALSE) {
           // Do not add the link.
