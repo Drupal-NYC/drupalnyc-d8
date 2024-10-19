@@ -1,0 +1,13 @@
+uuid: 31db6740-64cb-4bb6-a2e2-ca30296fcd0b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: nGcghu9ahOh1kpBmt3AMmnL4BEoZXtJQHLzwjPP4ST8
+label: Session
+id: session
+description: ''
+help: null
+new_revision: 1
+revision_expose: 0
+revision_log: 0

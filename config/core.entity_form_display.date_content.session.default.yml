@@ -1,0 +1,35 @@
+uuid: 946df70c-78e0-4d01-a4e7-8910ed4dacf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - date_content.date_content_type.session
+    - field.field.date_content.session.field_speaker
+    - field.field.date_content.session.field_topics
+  module:
+    - text
+_core:
+  default_config_hash: fa5M9AJ5jjBvdTb88SNAnZwQmnx5ERz3PTixQc8_0WQ
+id: date_content.session.default
+targetEntityType: date_content
+bundle: session
+mode: default
+content:
+  field_speaker:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_topics:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  user_id: true

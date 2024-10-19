@@ -1,0 +1,7 @@
+name: 'DNYC Date Augmenters'
+type: module
+description: 'Provides date augmenter plugins'
+package: DrupalNYC
+core_version_requirement: ^10 || ^11
+dependencies:
+  - date_augmenter:date_augmenter
