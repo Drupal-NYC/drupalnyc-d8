@@ -1,5 +1,6 @@
 <article{{attributes.addClass(['article'])}}>
 
+  {% if node.get('field_hero').isEmpty() %}
   <header class="article__header l-constrained">
     {{ title_prefix }}
     {{ include('drupalnyc:page-title', {
@@ -7,11 +8,16 @@
     }) }}
     {{ title_suffix }}
   </header>
+  {% else %}
+  <header class="article__header l-constrained">
+    {{ content.field_hero }}
+  </header>
+  {% endif %}
 
   <div class="l--1-col l-constrained">
     <div class="l__primary">
       {% if content %}
-        {{ content }}
+        {{ content|without('field_hero') }}
       {% endif %}
     </div>
   </div>

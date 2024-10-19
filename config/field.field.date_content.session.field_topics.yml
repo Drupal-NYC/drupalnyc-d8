@@ -1,0 +1,27 @@
+uuid: b7b65a00-6e0a-4772-9f9e-edc8afe58e3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - date_content.date_content_type.session
+    - field.storage.date_content.field_topics
+    - filter.format.rich_text
+  module:
+    - text
+id: date_content.session.field_topics
+field_name: field_topics
+entity_type: date_content
+bundle: session
+label: Topics
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '<p>Topic selection is in process in the <em>#meetup</em> channel of our Slack.</p>'
+    format: rich_text
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

@@ -284,10 +284,10 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        schema_event_schedule_value:
-          id: schema_event_schedule_value
+        schema_event_schedule_end_value:
+          id: schema_event_schedule_end_value
           table: node__schema_event_schedule
-          field: schema_event_schedule_value
+          field: schema_event_schedule_end_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -298,7 +298,7 @@ display:
             max: ''
             value: now
             type: date
-            granularity: day
+            granularity: hour
           group: 1
           exposed: false
           expose:
@@ -334,6 +334,7 @@ display:
         operator: AND
         groups:
           1: AND
+          2: OR
       style:
         type: grid_responsive
         options:

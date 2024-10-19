@@ -5,7 +5,9 @@ dependencies:
   config:
     - date_content.date_content_type.session
     - field.field.date_content.session.field_speaker
-    - field.field.date_content.session.field_topic
+    - field.field.date_content.session.field_topics
+  module:
+    - text
 _core:
   default_config_hash: fa5M9AJ5jjBvdTb88SNAnZwQmnx5ERz3PTixQc8_0WQ
 id: date_content.session.default
@@ -14,20 +16,20 @@ bundle: session
 mode: default
 content:
   field_speaker:
+    type: string_textfield
     weight: 27
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+  field_topics:
+    type: text_textarea
+    weight: 28
     region: content
-  field_topic:
-    weight: 26
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   user_id: true
