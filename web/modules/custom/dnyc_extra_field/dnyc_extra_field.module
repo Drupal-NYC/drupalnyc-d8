@@ -41,6 +41,5 @@ function dnyc_extra_field_preprocess_smart_date_recurring_formatter(&$variables)
       'date_content' => $content,
     ];
     $variables['next_display']['#children'] = $structured;
-    $variables['next_display']['#children']['#attributes']['class'][] = 'l-flex__direction--column';
   }
 }
