@@ -21,3 +21,25 @@ function dnyc_extra_field_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
+
+/**
+ * Implements hook_preprocess_HOOK() for smart_date_recurring_formatter.
+ */
+function dnyc_extra_field_preprocess_smart_date_recurring_formatter(&$variables) {
+  if (isset($variables['next_display']['#children'])) {
+    $link = $variables['next_display']['#children']['link'] ?? NULL;
+    unset($variables['next_display']['#children']['link']);
+    $content = $variables['next_display']['#children']['date_content'] ?? NULL;
+    unset($variables['next_display']['#children']['date_content']);
+    $date = $variables['next_display']['#children'];
+    // Restructure the content.
+    $structured = [
+      'date' => $date + [
+        '#type' => 'container',
+      ],
+      'link' => $link,
+      'date_content' => $content,
+    ];
+    $variables['next_display']['#children'] = $structured;
+  }
+}
