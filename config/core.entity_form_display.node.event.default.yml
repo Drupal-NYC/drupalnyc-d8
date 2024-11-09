@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.event.schema_address
     - field.field.node.event.schema_description
     - field.field.node.event.schema_event_schedule
+    - field.field.node.event.schema_event_status
     - field.field.node.event.schema_image
     - field.field.node.event.schema_main_entity
     - field.field.node.event.schema_previous_date
@@ -50,7 +51,7 @@ content:
     third_party_settings: {  }
   field_tito_link:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true
@@ -93,7 +94,7 @@ content:
     third_party_settings: {  }
   schema_description:
     type: text_textfield
-    weight: 6
+    weight: 7
     region: content
     settings:
       size: 60
@@ -118,6 +119,12 @@ content:
       remove_seconds: false
       separator: to
     third_party_settings: {  }
+  schema_event_status:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   schema_image:
     type: media_library_widget
     weight: 2
@@ -127,7 +134,7 @@ content:
     third_party_settings: {  }
   schema_main_entity:
     type: layout_paragraphs
-    weight: 10
+    weight: 11
     region: content
     settings:
       view_mode: default
@@ -171,7 +178,7 @@ content:
           YEARLY: '0'
   schema_related_link:
     type: link_default
-    weight: 9
+    weight: 10
     region: content
     settings:
       placeholder_url: ''
@@ -179,7 +186,7 @@ content:
     third_party_settings: {  }
   schema_significant_link:
     type: link_default
-    weight: 8
+    weight: 9
     region: content
     settings:
       placeholder_url: ''
@@ -233,7 +240,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.schema_address
     - field.field.node.event.schema_description
     - field.field.node.event.schema_event_schedule
+    - field.field.node.event.schema_event_status
     - field.field.node.event.schema_image
     - field.field.node.event.schema_main_entity
     - field.field.node.event.schema_previous_date
@@ -181,6 +182,7 @@ hidden:
   field_hero: true
   field_tito_link: true
   schema_about: true
+  schema_event_status: true
   schema_image: true
   schema_main_entity: true
   schema_previous_date: true

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.schema_address
     - field.field.node.event.schema_description
     - field.field.node.event.schema_event_schedule
+    - field.field.node.event.schema_event_status
     - field.field.node.event.schema_image
     - field.field.node.event.schema_main_entity
     - field.field.node.event.schema_previous_date
@@ -24,6 +25,7 @@ schema_properties:
   schema_about: about
   schema_description: description
   schema_event_schedule: eventSchedule
+  schema_event_status: eventStatus
   langcode: inLanguage
   schema_address: location
   title: name
