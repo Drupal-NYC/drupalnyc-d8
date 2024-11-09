@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.event.schema_address
     - field.field.node.event.schema_description
     - field.field.node.event.schema_event_schedule
-    - field.field.node.event.schema_event_status
     - field.field.node.event.schema_image
     - field.field.node.event.schema_main_entity
     - field.field.node.event.schema_previous_date
@@ -118,14 +117,6 @@ content:
       allday: true
       remove_seconds: false
       separator: to
-    third_party_settings: {  }
-  schema_event_status:
-    type: string_textfield
-    weight: 11
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   schema_image:
     type: media_library_widget
