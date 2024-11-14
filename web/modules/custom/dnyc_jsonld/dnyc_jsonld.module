@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for DrupalNYC JSON-LD module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\dnyc_jsonld\Data\EventStatusType;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements HOOK_schemadotorg_jsonld_alter for drupal_jsonld.
+ */
+function dnyc_jsonld_schemadotorg_jsonld_alter(array &$data, RouteMatchInterface $route_match, BubbleableMetadata $bubbleable_metadata) {
+  /** @var \Drupal\schemadotorg_jsonld\SchemaDotOrgJsonLdManagerInterface $manager */
+  $manager = \Drupal::service('schemadotorg_jsonld.manager');
+  $entity = $manager->getRouteMatchEntity($route_match);
+  if (!($entity instanceof Node) || !$entity->bundle() === 'event') {
+    return;
+  }
+  /** @var \Drupal\smart_date_recur\SmartDateRecurManager $recurring_manager */
+  $recurring_manager = \Drupal::service('smart_date_recur.manager');
+  if ($entity->hasField('schema_event_schedule')) {
+    /** @var \Drupal\smart_date\Plugin\Field\FieldType\SmartDateFieldItemList $schedule */
+    $schedule = $entity->get('schema_event_schedule');
+    if ($schedule->isEmpty()) {
+      return;
+    }
+    $instances = [];
+    foreach ($schedule as $date) {
+      $instances[$date->value] = $date;
+    }
+    ksort($instances);
+    $instances = array_values($instances);
+    $next_delta = $recurring_manager->findNextInstance($instances);
+    /** @var \Drupal\smart_date\Plugin\Field\FieldType\SmartDateItem $next */
+    $next = $schedule->get($next_delta);
+    $data['schemadotorg_jsonld_entity']['startDate'] = date('c', $next->value);
+  }
+  if (isset($data['schemadotorg_jsonld_entity']['eventStatus'])) {
+    $status = EventStatusType::tryFrom($data['schemadotorg_jsonld_entity']['eventStatus']);
+    if ($status instanceof EventStatusType) {
+      $data['schemadotorg_jsonld_entity']['eventStatus'] = $status->url();
+    }
+  }
+  if (isset($data['schemadotorg_jsonld_entity']['location'])) {
+    $name = $data['schemadotorg_jsonld_entity']['location']['name'] ?? NULL;
+    unset($data['schemadotorg_jsonld_entity']['location']['name']);
+    $address_location = $data['schemadotorg_jsonld_entity']['location'];
+    $data['schemadotorg_jsonld_entity']['location'] = [
+      '@type' => 'Place',
+      'address' => $address_location,
+    ];
+    if (!empty($name)) {
+      $data['schemadotorg_jsonld_entity']['location']['name'] = $name;
+    }
+  }
+  elseif ($entity->hasField('field_online_event')
+    && !$entity->get('field_online_event')->isEmpty()
+    && $entity->get('field_online_event')->first()->value) {
+    $data['schemadotorg_jsonld_entity']['location'] = [
+      '@type' => 'VirtualLocation',
+      'url' => $data['schemadotorg_jsonld_entity']['@url'] ?? 'https://www.drupalnyc.org',
+    ];
+  }
+}

@@ -1,0 +1,7 @@
+name: 'DrupalNYC JSON-LD'
+type: module
+description: 'Adjustments to schema.org JSON-LD'
+package: DrupalNYC
+core_version_requirement: ^10 || ^11
+dependencies:
+  - schemadotorg:schemadotorg_jsonld

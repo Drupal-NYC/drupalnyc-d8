@@ -30,6 +30,7 @@ module:
   dnyc_date_augmenters: 0
   dnyc_extra_field: 0
   dnyc_header_block: 0
+  dnyc_jsonld: 0
   dnyc_style_options: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0

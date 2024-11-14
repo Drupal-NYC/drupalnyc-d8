@@ -4,10 +4,10 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: nGcghu9ahOh1kpBmt3AMmnL4BEoZXtJQHLzwjPP4ST8
-label: Session
 id: session
+label: Session
 description: ''
 help: null
-new_revision: 1
-revision_expose: 0
-revision_log: 0
+new_revision: true
+revision_expose: false
+revision_log: false

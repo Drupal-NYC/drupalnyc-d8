@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_hero
+    - field.field.node.event.field_online_event
     - field.field.node.event.field_tito_link
     - field.field.node.event.schema_about
     - field.field.node.event.schema_address
     - field.field.node.event.schema_description
     - field.field.node.event.schema_event_schedule
+    - field.field.node.event.schema_event_status
     - field.field.node.event.schema_image
     - field.field.node.event.schema_main_entity
     - field.field.node.event.schema_previous_date
@@ -48,11 +50,13 @@ content:
     weight: 1
     region: content
 hidden:
+  field_online_event: true
   field_tito_link: true
   schema_about: true
   schema_address: true
   schema_description: true
   schema_event_schedule: true
+  schema_event_status: true
   schema_image: true
   schema_previous_date: true
   schema_related_link: true
