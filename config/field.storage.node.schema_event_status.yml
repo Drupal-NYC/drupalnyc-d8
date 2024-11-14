@@ -1,0 +1,36 @@
+uuid: d0d390e2-8e66-47e5-bb8a-576ca4484f9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.schema_event_status
+field_name: schema_event_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: event_scheduled
+      label: EventScheduled
+    -
+      value: event_cancelled
+      label: EventCancelled
+    -
+      value: event_moved_online
+      label: EventMovedOnline
+    -
+      value: event_postponed
+      label: EventPostponed
+    -
+      value: event_rescheduled
+      label: EventRescheduled
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

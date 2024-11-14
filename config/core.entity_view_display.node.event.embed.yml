@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.embed
     - field.field.node.event.field_hero
+    - field.field.node.event.field_online_event
     - field.field.node.event.field_tito_link
     - field.field.node.event.schema_about
     - field.field.node.event.schema_address
@@ -180,6 +181,7 @@ content:
     region: content
 hidden:
   field_hero: true
+  field_online_event: true
   field_tito_link: true
   schema_about: true
   schema_event_status: true

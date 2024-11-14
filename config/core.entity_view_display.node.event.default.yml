@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_hero
+    - field.field.node.event.field_online_event
     - field.field.node.event.field_tito_link
     - field.field.node.event.schema_about
     - field.field.node.event.schema_address
@@ -19,7 +20,6 @@ dependencies:
     - node.type.event
   module:
     - layout_paragraphs
-    - options
     - user
 id: node.event.default
 targetEntityType: node
@@ -50,14 +50,15 @@ content:
     weight: 1
     region: content
 hidden:
+  field_online_event: true
   field_tito_link: true
   schema_about: true
   schema_address: true
   schema_description: true
   schema_event_schedule: true
+  schema_event_status: true
   schema_image: true
   schema_previous_date: true
   schema_related_link: true
   schema_significant_link: true
   schema_subject_of: true
-  schema_event_status: true
