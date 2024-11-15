@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.svg_image.field_media_svg
     - media.type.svg_image
   module:
+    - nomarkup
     - svg_image_field
 id: media.svg_image.default
 targetEntityType: media
@@ -17,7 +18,7 @@ content:
     label: visually_hidden
     settings:
       inline: false
-      apply_dimensions: true
+      apply_dimensions: false
       width: 25
       height: 25
       enable_alt: true
@@ -26,7 +27,11 @@ content:
       force_fill: false
       sanitize: true
       sanitize_remote: false
-    third_party_settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
     weight: 0
     region: content
 hidden:
