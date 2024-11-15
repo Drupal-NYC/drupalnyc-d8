@@ -8,6 +8,7 @@ dependencies:
     - media.type.file
     - media.type.image
     - media.type.remote_video
+    - media.type.svg_image
     - paragraphs.paragraphs_type.media
 id: paragraph.media.field_media
 field_name: field_media
@@ -27,6 +28,7 @@ settings:
       file: file
       image: image
       remote_video: remote_video
+      svg_image: svg_image
     sort:
       field: _none
       direction: ASC
