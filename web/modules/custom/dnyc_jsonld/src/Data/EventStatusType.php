@@ -2,6 +2,9 @@
 
 namespace Drupal\dnyc_jsonld\Data;
 
+/**
+ * Correlates field values with Google required values.
+ */
 enum EventStatusType: string {
 
   case EventScheduled = 'event_scheduled';
@@ -18,11 +21,11 @@ enum EventStatusType: string {
    */
   public function url(): string {
     return match ($this) {
-      self::EventScheduled => 'http://schema.org/EventScheduled',
-      self::EventCancelled => 'http://schema.org/EventCancelled',
-      self::EventMovedOnline => 'http://schema.org/EventMovedOnline',
-      self::EventPostponed => 'http://schema.org/EventPostponed',
-      self::EventRescheduled => 'http://schema.org/EventRescheduled',
+      self::EventScheduled => 'https://schema.org/EventScheduled',
+      self::EventCancelled => 'https://schema.org/EventCancelled',
+      self::EventMovedOnline => 'https://schema.org/EventMovedOnline',
+      self::EventPostponed => 'https://schema.org/EventPostponed',
+      self::EventRescheduled => 'https://schema.org/EventRescheduled',
     };
   }
 
