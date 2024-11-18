@@ -44,6 +44,11 @@ function dnyc_jsonld_schemadotorg_jsonld_alter(array &$data, RouteMatchInterface
     $status = EventStatusType::tryFrom($data['schemadotorg_jsonld_entity']['eventStatus']);
     if ($status instanceof EventStatusType) {
       $data['schemadotorg_jsonld_entity']['eventStatus'] = $status->url();
+      if (isset($data['schemadotorg_jsonld_entity']['previousStartDate'])
+        && !($status === EventStatusType::EventPostponed || $status === EventStatusType::EventRescheduled)) {
+        // Google only allows previousStartDate with these statuses.
+        unset($data['schemadotorg_jsonld_entity']['previousStartDate']);
+      }
     }
   }
   if (isset($data['schemadotorg_jsonld_entity']['location'])) {
@@ -65,5 +70,6 @@ function dnyc_jsonld_schemadotorg_jsonld_alter(array &$data, RouteMatchInterface
       '@type' => 'VirtualLocation',
       'url' => $data['schemadotorg_jsonld_entity']['@url'] ?? 'https://www.drupalnyc.org',
     ];
+    $data['schemadotorg_jsonld_entity']['eventAttendanceMode'] = ["https://schema.org/OnlineEventAttendanceMode"];
   }
 }
