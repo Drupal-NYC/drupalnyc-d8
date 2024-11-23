@@ -7,18 +7,20 @@
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\dnyc_jsonld\Data\EventStatusType;
-use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\schemadotorg\SchemaDotOrgMappingInterface;
 
 /**
  * Implements HOOK_schemadotorg_jsonld_alter for drupal_jsonld.
  */
-function dnyc_jsonld_schemadotorg_jsonld_alter(array &$data, RouteMatchInterface $route_match, BubbleableMetadata $bubbleable_metadata) {
-  /** @var \Drupal\schemadotorg_jsonld\SchemaDotOrgJsonLdManagerInterface $manager */
-  $manager = \Drupal::service('schemadotorg_jsonld.manager');
-  $entity = $manager->getRouteMatchEntity($route_match);
-  if (!($entity instanceof Node) || !$entity->bundle() === 'event') {
+function dnyc_jsonld_schemadotorg_jsonld_schema_type_entity_alter(array &$data, EntityInterface $entity, ?SchemaDotOrgMappingInterface $mapping, BubbleableMetadata $bubbleable_metadata): void {
+  if (!($entity instanceof NodeInterface) || !($mapping instanceof SchemaDotOrgMappingInterface)) {
+    return;
+  }
+  $schema_type = $mapping->getSchemaType();
+  if ($schema_type !== 'Event') {
     return;
   }
   /** @var \Drupal\smart_date_recur\SmartDateRecurManager $recurring_manager */
@@ -38,38 +40,38 @@ function dnyc_jsonld_schemadotorg_jsonld_alter(array &$data, RouteMatchInterface
     $next_delta = $recurring_manager->findNextInstance($instances);
     /** @var \Drupal\smart_date\Plugin\Field\FieldType\SmartDateItem $next */
     $next = $schedule->get($next_delta);
-    $data['schemadotorg_jsonld_entity']['startDate'] = date('c', $next->value);
+    $data['startDate'] = date('c', $next->value);
   }
-  if (isset($data['schemadotorg_jsonld_entity']['eventStatus'])) {
-    $status = EventStatusType::tryFrom($data['schemadotorg_jsonld_entity']['eventStatus']);
+  if (isset($data['eventStatus'])) {
+    $status = EventStatusType::tryFrom($data['eventStatus']);
     if ($status instanceof EventStatusType) {
-      $data['schemadotorg_jsonld_entity']['eventStatus'] = $status->url();
-      if (isset($data['schemadotorg_jsonld_entity']['previousStartDate'])
+      $data['eventStatus'] = $status->url();
+      if (isset($data['previousStartDate'])
         && !($status === EventStatusType::EventPostponed || $status === EventStatusType::EventRescheduled)) {
         // Google only allows previousStartDate with these statuses.
-        unset($data['schemadotorg_jsonld_entity']['previousStartDate']);
+        unset($data['previousStartDate']);
       }
     }
   }
-  if (isset($data['schemadotorg_jsonld_entity']['location'])) {
-    $name = $data['schemadotorg_jsonld_entity']['location']['name'] ?? NULL;
-    unset($data['schemadotorg_jsonld_entity']['location']['name']);
-    $address_location = $data['schemadotorg_jsonld_entity']['location'];
-    $data['schemadotorg_jsonld_entity']['location'] = [
+  if (isset($data['location'])) {
+    $name = $data['location']['name'] ?? NULL;
+    unset($data['location']['name']);
+    $address_location = $data['location'];
+    $data['location'] = [
       '@type' => 'Place',
       'address' => $address_location,
     ];
     if (!empty($name)) {
-      $data['schemadotorg_jsonld_entity']['location']['name'] = $name;
+      $data['location']['name'] = $name;
     }
   }
   elseif ($entity->hasField('field_online_event')
     && !$entity->get('field_online_event')->isEmpty()
     && $entity->get('field_online_event')->first()->value) {
-    $data['schemadotorg_jsonld_entity']['location'] = [
+    $data['location'] = [
       '@type' => 'VirtualLocation',
-      'url' => $data['schemadotorg_jsonld_entity']['@url'] ?? 'https://www.drupalnyc.org',
+      'url' => $data['@url'] ?? 'https://www.drupalnyc.org',
     ];
-    $data['schemadotorg_jsonld_entity']['eventAttendanceMode'] = ["https://schema.org/OnlineEventAttendanceMode"];
+    $data['eventAttendanceMode'] = ["https://schema.org/OnlineEventAttendanceMode"];
   }
 }
