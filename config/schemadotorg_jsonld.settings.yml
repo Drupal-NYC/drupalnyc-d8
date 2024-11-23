@@ -110,6 +110,7 @@ schema_type_entity_references_display:
   media--image: '[media:field_media_image:entity:url]'
   node--Thing: url
   node--Intangible: entity
+  node--Event: entity
   taxonomy_term: entity
   Intangible: entity
 exclude_url:
