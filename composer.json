@@ -157,9 +157,6 @@
             ]
         },
         "patches": {
-            "drupal/gin": {
-                "Save button missing when using the Gutenberg/Mercury editor module": "patches/contrib/gin/issue-3460150-me-save-mr-476.patch"
-            },
             "drupal/easy_responsive_images": {
                 "issue-3444583: Improve lazy load behavior": "patches/contrib/easy_responsive_images/easy_responsive_images-issue-3444583-mr-25.patch",
                 "Use imageapi_optimize_avif_webp": "patches/contrib/easy_responsive_images/use_imageapi_optimize_avif_webp.patch"
