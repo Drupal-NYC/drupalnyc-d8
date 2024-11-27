@@ -27,8 +27,8 @@
         "drupal/config_filter": "^2.7",
         "drupal/config_readonly": "^1.0",
         "drupal/config_split": "^2.0",
-        "drupal/core-composer-scaffold": "^10.3",
-        "drupal/core-recommended": "^10.3",
+        "drupal/core-composer-scaffold": "^10.3.10",
+        "drupal/core-recommended": "^10.3.10",
         "drupal/date_augmenter": "^1.1",
         "drupal/date_content": "^1.0@alpha",
         "drupal/diff": "^1.0@RC",
@@ -157,9 +157,6 @@
             ]
         },
         "patches": {
-            "drupal/gin": {
-                "Save button missing when using the Gutenberg/Mercury editor module": "patches/contrib/gin/issue-3460150-me-save-mr-476.patch"
-            },
             "drupal/easy_responsive_images": {
                 "issue-3444583: Improve lazy load behavior": "patches/contrib/easy_responsive_images/easy_responsive_images-issue-3444583-mr-25.patch",
                 "Use imageapi_optimize_avif_webp": "patches/contrib/easy_responsive_images/use_imageapi_optimize_avif_webp.patch"

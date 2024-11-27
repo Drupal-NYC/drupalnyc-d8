@@ -18,7 +18,3 @@ paragraphs_library:
   - ImageGallery
   - VideoGallery
   - WebContent
-schema_property_access:
-  Person--ContactPoint:
-    - contactType
-    - telephone
