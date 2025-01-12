@@ -140,7 +140,7 @@ class TitoLink extends DateAugmenterPluginBase implements PluginFormInterface {
       ];
       $text = $this->token->replace($text, $token_data);
     }
-    $path .= $start->format('Y-m-j');
+    $path .= $start->format('Y-m-d');
     $path = $this->aliasCleaner->cleanString($path);
     $uri = $base . $path;
     $url = Url::fromUri($uri);
