@@ -1,5 +1,6 @@
 _core:
   default_config_hash: I1S7-EbDdmSRLjyIR5gh5Vlsu8BNVI3TOIZ12ypPX1E
+langcode: en
 requirements:
   recommended_modules: true
 schema_data:
