@@ -1,0 +1,44 @@
+_core:
+  default_config_hash: YnYGzABFG_wkWFWfKRWTzFmZX0z2tN9y25LhViEsPY4
+langcode: en
+default_vocabularies: {  }
+schema_property_vocabularies:
+  alumniOf:
+    id: alumni
+    label: Alumni
+  amenityFeature:
+    id: amenity
+    label: Amenity
+  audience:
+    id: audience
+    label: Audience
+  availableService:
+    id: medical_service
+    label: 'Medical service'
+  epidemiology:
+    id: epidemiology
+    label: Epidemiology
+  cookingMethod:
+    id: cooking_method
+    label: 'Cooking method'
+  keywords:
+    id: keywords
+    label: Keywords
+  medicalAudience:
+    id: medical_audience
+    label: 'Medical audience'
+  medicalSpecialty:
+    id: medical_specialty
+    label: 'Medical specialty'
+  occupationalCategory:
+    id: occupational_category
+    label: 'Occupational category'
+  recipeCategory:
+    id: recipe_category
+    label: 'Recipe category'
+  recipeCuisine:
+    id: recipe_cuisine
+    label: 'Recipe cuisine'
+  targetPopulation:
+    id: target_population
+    label: 'Target population'

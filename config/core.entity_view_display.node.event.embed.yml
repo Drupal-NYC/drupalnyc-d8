@@ -22,15 +22,10 @@ dependencies:
   module:
     - address
     - date_augmenter
-    - layout_builder
     - nomarkup
     - smart_date_recur
     - text
     - user
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
 id: node.event.embed
 targetEntityType: node
 bundle: event

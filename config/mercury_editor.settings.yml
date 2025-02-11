@@ -23,9 +23,12 @@ dialog_settings:
     drupalAutoButtons: false
     dialogClass: lpb-dialog
     resizable: true
+dialog_tray_width: 400
 bundles:
   node:
     news: news
     organization: organization
     event: event
     web_page: web_page
+rollover_padding_block: '10'
+rollover_padding_inline: '0'

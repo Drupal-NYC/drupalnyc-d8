@@ -58,7 +58,6 @@ module:
   inline_entity_form: 0
   key: 0
   layout_builder: 0
-  layout_builder_expose_all_field_blocks: 0
   layout_discovery: 0
   layout_paragraphs: 0
   link: 0
@@ -91,6 +90,7 @@ module:
   schemadotorg_metatag: 0
   schemadotorg_paragraphs: 0
   schemadotorg_smart_date: 0
+  schemadotorg_taxonomy: 0
   schemadotorg_ui: 0
   search: 0
   settings_tray: 0
@@ -110,7 +110,6 @@ module:
   textarea_widget_for_text: 0
   token: 0
   toolbar: 0
-  tour: 0
   twig_field_value: 0
   twig_tweak: 0
   update: 0
