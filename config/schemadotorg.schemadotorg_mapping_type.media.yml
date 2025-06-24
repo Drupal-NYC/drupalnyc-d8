@@ -46,17 +46,17 @@ default_base_fields:
     - dateCreated
   changed:
     - dateModified
-  field_media_audio_file:
+  AudioObject--field_media_audio_file:
     - contentUrl
-  field_media_document:
+  DataDownload--field_media_document:
     - contentUrl
-  field_media_image:
+  ImageObject--field_media_image:
     - image
     - contentUrl
-  field_media_oembed_video:
+  VideoObject--field_media_oembed_video:
     - video
     - contentUrl
-  field_media_video_file:
+  VideoObject--field_media_video_file:
     - video
     - contentUrl
 default_component_weights:
@@ -70,3 +70,4 @@ default_component_weights:
   uid: 200
   status: 200
   path: 210
+default_component_weights_update: true

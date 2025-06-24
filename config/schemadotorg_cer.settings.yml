@@ -2,14 +2,23 @@ _core:
   default_config_hash: cyF_TeB3JWVxRjXqK5b5DQZj9VtIIN_gvrbk8EbCg74
 default_schema_properties:
   subOrganization: parentOrganization
+  parentOrganization: subOrganization
   subEvent: superEvent
+  superEvent: subEvent
   memberOf: member
+  member: memberOf
   subjectOf: about
+  about: subjectOf
   containedInPlace: containsPlace
+  containsPlace: containedInPlace
   worksFor: employee
+  employee: worksFor
   department: parentOrganization
   offeredBy: makesOffer
+  makesOffer: offeredBy
   performerIn: performer
+  performer: performerIn
   healthCondition: study
   relatedDrug: relatedDrug
   isPartOf: hasPart
+  hasPart: isPartOf
