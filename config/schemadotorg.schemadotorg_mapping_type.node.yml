@@ -192,3 +192,4 @@ default_component_weights:
   simple_sitemap: 220
   path: 220
   status: 220
+default_component_weights_update: true

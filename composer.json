@@ -27,8 +27,8 @@
         "drupal/config_filter": "^2.7",
         "drupal/config_readonly": "^1.0",
         "drupal/config_split": "^2.0",
-        "drupal/core-composer-scaffold": "^10.4.3",
-        "drupal/core-recommended": "^10.4.3",
+        "drupal/core-composer-scaffold": "^10.5",
+        "drupal/core-recommended": "^10.5",
         "drupal/date_augmenter": "^1.1",
         "drupal/date_content": "^1.0@alpha",
         "drupal/diff": "^1.0@RC",
@@ -81,7 +81,7 @@
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-        "drupal/core-dev": "^10.4.3",
+        "drupal/core-dev": "^10.5",
         "drupal/coder": "^8.3",
         "drupal/devel": "^5.3",
         "php-parallel-lint/php-parallel-lint": "^1.3",
@@ -157,6 +157,9 @@
             ]
         },
         "patches": {
+            "drupal/core": {
+                "Issue #3524163 empty SDC slot metadata": "patches/core/core-issue-3524163-comment-8.patch"
+            },
             "drupal/easy_responsive_images": {
                 "issue-3444583: Improve lazy load behavior": "patches/contrib/easy_responsive_images/easy_responsive_images-issue-3444583-mr-25.patch",
                 "Use imageapi_optimize_avif_webp": "patches/contrib/easy_responsive_images/use_imageapi_optimize_avif_webp.patch"

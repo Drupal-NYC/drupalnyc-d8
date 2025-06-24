@@ -61,6 +61,7 @@ module:
   layout_paragraphs: 0
   link: 0
   link_augment: 0
+  mailer_transport: 0
   media: 0
   media_entity_download: 0
   media_library: 0

@@ -1,0 +1,20 @@
+diff --git a/core/lib/Drupal/Core/Theme/Component/ComponentValidator.php b/core/lib/Drupal/Core/Theme/Component/ComponentValidator.php
+index ff102b5170a..6af282c95c8 100644
+--- a/core/lib/Drupal/Core/Theme/Component/ComponentValidator.php
++++ b/core/lib/Drupal/Core/Theme/Component/ComponentValidator.php
+@@ -122,6 +122,15 @@ public function validateDefinition(array $definition, bool $enforce_schemas): bo
+       $classes_per_prop
+     );
+
++      // If a slot has an empty definition,
++    // force casting to object instead of array.
++    foreach ($definition['slots'] ?? [] as $slot_name => $slot) {
++      if ($slot === []) {
++        $definition['slots'][$slot_name] = new \stdClass();
++      }
++    }
++
++
+     $definition_object = Validator::arrayToObjectRecursive($definition);
+     $this->validator->reset();
+     $this->validator->validate(

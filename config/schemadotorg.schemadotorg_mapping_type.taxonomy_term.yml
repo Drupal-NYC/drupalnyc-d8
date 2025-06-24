@@ -45,3 +45,4 @@ default_component_weights:
   published: 100
   simple_sitemap: 90
   scheduler_settings: 90
+default_component_weights_update: true

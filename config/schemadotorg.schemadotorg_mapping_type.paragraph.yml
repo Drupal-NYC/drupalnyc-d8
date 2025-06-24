@@ -88,3 +88,4 @@ default_base_fields:
     - inLanguage
 default_component_weights:
   langcode: 200
+default_component_weights_update: true

@@ -1,5 +1,7 @@
 _core:
   default_config_hash: DmM2-pPQMBYVIFU3ZQyM9KmBFEEby0C43NzOphkye_E
+schema_types:
+  - node--Thing
 default_groups:
   - basic
   - advanced
