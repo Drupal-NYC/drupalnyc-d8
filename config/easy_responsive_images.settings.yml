@@ -5,3 +5,4 @@ aspect_ratios: "3:1\r\n3:2\r\n16:9"
 threshold_height: ''
 minimum_height: ''
 maximum_height: ''
+lazy_loading_threshold: 1250

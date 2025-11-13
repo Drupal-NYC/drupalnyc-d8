@@ -120,11 +120,11 @@ module:
   htmx: 1
   menu_link_content: 1
   pathauto: 1
-  schemadotorg_layout_paragraphs: 1
-  schemadotorg_mercury_editor: 2
   schemadotorg_additional_mappings: 10
   views: 10
   paragraphs: 11
+  schemadotorg_layout_paragraphs: 11
+  schemadotorg_mercury_editor: 12
   standard: 1000
 theme:
   claro: 0
