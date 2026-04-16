@@ -52,7 +52,7 @@ module:
   history: 0
   image: 0
   imageapi_optimize: 0
-  imageapi_optimize_avif_webp: 0
+  imageapi_optimize_webp: 0
   imagemagick: 0
   inline_entity_form: 0
   key: 0
