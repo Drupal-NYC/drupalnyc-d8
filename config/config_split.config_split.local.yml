@@ -12,6 +12,7 @@ storage: folder
 folder: ../config_splits/local
 module:
   devel: 0
+  upgrade_status: 0
 theme: {  }
 complete_list: {  }
 partial_list:

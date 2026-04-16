@@ -1,4 +1,6 @@
 adding:
+  quality: 100
   imagemagick_version: v6
 removing:
+  quality: 75
   imagemagick_version: v7
