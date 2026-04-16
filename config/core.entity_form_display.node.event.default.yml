@@ -34,13 +34,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 18
+    weight: 200
     region: content
     settings: {  }
     third_party_settings: {  }
   field_hero:
     type: layout_paragraphs
-    weight: 1
+    weight: 2
     region: content
     settings:
       view_mode: default
@@ -72,13 +72,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 22
+    weight: 220
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 19
+    weight: 210
     region: content
     settings:
       display_label: true
@@ -125,6 +125,7 @@ content:
       hide_date: true
       allday: true
       remove_seconds: false
+      duration_overlay: true
       separator: to
     third_party_settings: {  }
   schema_event_status:
@@ -135,7 +136,7 @@ content:
     third_party_settings: {  }
   schema_image:
     type: media_library_widget
-    weight: 2
+    weight: 3
     region: content
     settings:
       media_types: {  }
@@ -158,9 +159,6 @@ content:
     region: content
     settings:
       modal: false
-      default_tz: ''
-      custom_tz: ''
-      allowed_timezones: {  }
       default_duration: 60
       default_duration_increments: |-
         30
@@ -172,7 +170,11 @@ content:
       hide_date: true
       allday: true
       remove_seconds: false
+      duration_overlay: true
       separator: to
+      default_tz: ''
+      custom_tz: ''
+      allowed_timezones: {  }
       add_abbreviations: ''
     third_party_settings:
       smart_date_recur:
@@ -211,27 +213,27 @@ content:
       placeholder: ''
     third_party_settings: {  }
   simple_sitemap:
-    weight: 3
+    weight: 220
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 21
+    weight: 220
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 20
+    weight: 210
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -239,7 +241,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 17
+    weight: 200
     region: content
     settings:
       match_operator: CONTAINS
