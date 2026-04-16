@@ -2,7 +2,7 @@ name: DrupalNYC
 type: theme
 description: ''
 package: drupalnyc
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 dependencies:
   - 'twig_field_value:twig_field_value'
   - 'twig_tweak:twig_tweak'
@@ -24,7 +24,4 @@ ckeditor5-stylesheets:
   - dist/css/global/wysiwyg.css
 starterkit: true
 enforce_sdc_schemas: true
-version: 1.0.0
-project: drupalnyc
-datestamp: 1725552847
-generator: 'prototype:5.2.1-alpha2'
+version: 2.0.0
