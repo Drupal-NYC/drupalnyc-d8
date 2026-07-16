@@ -2,6 +2,8 @@ uuid: 460dc6ba-49dc-43e2-ba4c-667540194f7f
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.news
   module:
     - node
 id: news
@@ -12,7 +14,6 @@ selection_criteria:
   5c1b8b23-6f30-434e-a416-fb05790a854d:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 5c1b8b23-6f30-434e-a416-fb05790a854d
     context_mapping:
       node: node
     bundles:
