@@ -49,7 +49,6 @@ module:
   gin_toolbar: 0
   google_tag: 0
   help: 0
-  history: 0
   image: 0
   imageapi_optimize: 0
   imageapi_optimize_webp: 0
@@ -93,6 +92,8 @@ module:
   schemadotorg_taxonomy: 0
   schemadotorg_ui: 0
   search: 0
+  search_help: 0
+  search_node: 0
   settings_tray: 0
   shortcut: 0
   simple_sitemap: 0
