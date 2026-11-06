@@ -44,3 +44,5 @@ The lagoon hosting system uses Docker and Kubernettes.
   used to host the site.
 
 It's possible to ssh into the running containers.  See [https://uselagoon.github.io/lagoon-cli/](https://uselagoon.github.io/lagoon-cli/).
+
+Updated to Drupal 11 on 2026-11-06

@@ -116,7 +116,16 @@ display:
           id: schema_event_schedule_value
           table: node__schema_event_schedule
           field: schema_event_schedule_value
+          relationship: none
+          group_type: group
+          admin_label: ''
           plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: minute
       arguments: {  }
       filters:
         status:
@@ -222,12 +231,12 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: date
-          order: ASC
+          order: DESC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: second
+          granularity: minute
       filters:
         status:
           id: status

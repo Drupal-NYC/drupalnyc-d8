@@ -3,5 +3,7 @@ cache:
     max_age: 0
 css:
   preprocess: false
+  compress: false
 js:
   preprocess: false
+  compress: false

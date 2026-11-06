@@ -1,0 +1,22 @@
+uuid: 1facbbce-d888-491c-b556-d3d8cd7062c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.web_page
+id: node.web_page.promote
+field_name: promote
+entity_type: node
+bundle: web_page
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
