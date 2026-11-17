@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.schema_image
     - media.type.image
-    - media.type.svg_image
     - node.type.event
 id: node.event.schema_image
 field_name: schema_image

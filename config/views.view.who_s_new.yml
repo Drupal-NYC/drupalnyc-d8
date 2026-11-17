@@ -3,7 +3,6 @@ langcode: en
 status: false
 dependencies:
   module:
-    - smart_date
     - user
 _core:
   default_config_hash: o_8fSWHZOVIbydZACGsSX09DtuJhqkRmNOzcVj-4bQI

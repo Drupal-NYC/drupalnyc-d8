@@ -94,7 +94,6 @@ module:
   search: 0
   search_help: 0
   search_node: 0
-  search_user: 0
   settings_tray: 0
   shortcut: 0
   simple_sitemap: 0
@@ -109,7 +108,6 @@ module:
   taxonomy: 0
   telephone: 0
   text: 0
-  text_with_summary: 0
   textarea_widget_for_text: 0
   token: 0
   toolbar: 0

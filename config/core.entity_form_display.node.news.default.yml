@@ -12,9 +12,7 @@ dependencies:
     - field.field.node.news.schema_significant_link
     - field.field.node.news.schema_subject_of
     - node.type.news
-    - workflows.workflow.editorial
   module:
-    - content_moderation
     - layout_paragraphs
     - link
     - media_library
@@ -126,7 +124,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   simple_sitemap:
-    weight: 220
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
