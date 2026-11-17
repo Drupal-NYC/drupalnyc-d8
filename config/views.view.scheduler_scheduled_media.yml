@@ -843,6 +843,8 @@ display:
             min_placeholder: ''
             max_placeholder: ''
             placeholder: ''
+            min_label: Min
+            max_label: Max
           is_grouped: false
           group_info:
             label: ''
@@ -890,6 +892,8 @@ display:
             min_placeholder: null
             max_placeholder: null
             placeholder: null
+            min_label: Min
+            max_label: Max
           is_grouped: false
           group_info:
             label: ''

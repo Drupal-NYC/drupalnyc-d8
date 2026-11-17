@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.schema_logo
     - media.type.image
+    - media.type.svg_image
     - node.type.organization
 id: node.organization.schema_logo
 field_name: schema_logo

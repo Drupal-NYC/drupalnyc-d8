@@ -18,8 +18,10 @@ dependencies:
     - field.field.node.event.schema_significant_link
     - field.field.node.event.schema_subject_of
     - node.type.event
+    - workflows.workflow.editorial
   module:
     - address
+    - content_moderation
     - layout_paragraphs
     - link
     - media_library
